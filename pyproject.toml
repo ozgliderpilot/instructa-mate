@@ -1,0 +1,16 @@
+[project]
+name = "instructamate"
+version = "0.1.0"
+description = "InstructaMate RAG ingestion — stage-1 deterministic PDF -> verified Markdown parser."
+requires-python = ">=3.12"
+dependencies = [
+    "pymupdf>=1.24",   # primary text layer (settled by the extractor bake-off)
+    "pdfplumber>=0.11", # table sidekick (not used yet in slice 1)
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
