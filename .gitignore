@@ -1,0 +1,30 @@
+# --- Copyrighted GFA source material -------------------------------------
+# Do NOT commit the source guides. They are GFA copyright; the project
+# handover requires GFA sign-off before any public / open-source release.
+corpus/*.pdf
+corpus/*.pptx
+# Throwaway text extracts produced while inspecting the PDFs
+corpus/_extracted*.txt
+
+# --- Secrets -------------------------------------------------------------
+.env
+.env.*
+*.key
+
+# --- Python --------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# --- Node (future serving layer) -----------------------------------------
+node_modules/
+
+# --- OS / editor ---------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
