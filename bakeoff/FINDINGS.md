@@ -72,17 +72,29 @@ the handoff saw. PyMuPDF does not produce it.
 
 ## New finding the parser MUST handle
 
-**The first page of each unit has no readable footer.** `Page U-1` is absent from
-the text layer in *all three* extractors (the glyphs don't map). Footer-based
-page numbering works from `Page U-2` onward; **page 1 of each unit must be
-inferred** (it's the page immediately before `Page U-2`, carrying the unit title).
-The `<!-- page: U-1 -->` marker is computed, not read.
+**The unit's first content-page footer can be unreadable — but this is
+Source-specific (corrected while building stage-1 slice 1).** The two guides lay
+out the first page differently:
+
+- **Trainer:** the unit title, body, and the `Page U-1` footer share one page, and
+  that footer's glyphs don't map (absent in all three extractors). So `Page U-1`
+  must be **inferred** as the page immediately before `Page U-2`. (Confirmed on
+  Trainer Unit 5: p30 carries the Unit-5 title + content, footer unreadable.)
+- **Pilot:** each unit opens with a *separate* title/divider page (no footer, no
+  body), then content pages whose footers — including `Page U-1` — read **cleanly**.
+  So no inference fires; the footer is read directly. (Confirmed on Pilot Unit 1:
+  p1 = title page, p2–p5 = `Page 1-1`…`1-4`, all readable.)
+
+The parser handles both with one rule: read the footer where present; otherwise
+infer the footer-less page sitting immediately before `Page U-2` as `Page U-1`.
+The emitted `<!-- page: U-1 -->` marker is identical either way.
 
 ## Page map used (0-indexed physical pages)
 
 - Trainer Unit 5: p30 `5-1` (no footer), p31 competency table (`5-2`),
   p34/36/38 Suggested Patter (`5-5/5-7/5-9`).
-- Pilot Unit 1: p2 `1-1`, p3 `1-2`.
+- Pilot Unit 1: p1 title page (no footer/body), p2 `1-1`, p3 `1-2`, p4 `1-3`,
+  p5 `1-4` (all footers readable).
 
 ## Caveat to settle later
 
