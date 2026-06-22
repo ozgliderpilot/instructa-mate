@@ -13,6 +13,8 @@ revision: "1.0"
 ## AIM
 <!-- content_type: aim -->
 
+The aim of this Unit is to enable the student to assess cross wind conditions and describe their effects on take-off and landing operations with regard to different gliders. The student will describe and demonstrate the safe actions to take in the event of cross-winds on aerotow take- offs and landings.
+
 ## PREREQUISITE UNITS
 <!-- content_type: admin -->
 
@@ -188,6 +190,8 @@ landing thereby touching the wingtip and causing a ground loop.
 3. Watch for the tendency to be too early or too late in aligning the aircraft with the landing track
 
 when using the crabbing approach.
+
+4. Be vigilant, ready to take over on first signs of mishandling in the student’s first attempts.
 
 ### Advice to trainers regarding their responsibility to maintain safe flight.
 

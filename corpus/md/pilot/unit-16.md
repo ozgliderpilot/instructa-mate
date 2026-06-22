@@ -49,7 +49,9 @@ A typical circuit pattern is shown in the diagram below. Follow through the diag
 
 ### Setting the Speed
 
-- At the breakoff point, determine Approach speed (1.5Vs + ½ wind speed) • Establish safe speed near the ground (1.5Vs) below 1000ft • You should Set approach speed from the break-off point, but at the latest, before the pre- landing checks, (which is early on the downwind leg).
+- At the breakoff point, determine Approach speed (1.5Vs + ½ wind speed)
+- Establish safe speed near the ground (1.5Vs) below 1000ft
+- You should Set approach speed from the break-off point, but at the latest, before the pre- landing checks, (which is early on the downwind leg).
 
 ### Crosswind Leg
 

@@ -30,7 +30,9 @@ You’ll also refine your new essential aircraft handling skills (maintaining a 
 ## WHAT ARE THE PRE-REQUISITES FOR THIS UNIT?
 <!-- content_type: admin -->
 
-- GPC Unit 7 Straight flight, various speeds, trim • GPC Unit 8 Sustained turns, all controls • GPC Unit 9 Lookout scan procedures
+- GPC Unit 7 Straight flight, various speeds, trim
+- GPC Unit 8 Sustained turns, all controls
+- GPC Unit 9 Lookout scan procedures
 
 ## PILOT GUIDE FOR THIS UNIT
 <!-- content_type: theory -->

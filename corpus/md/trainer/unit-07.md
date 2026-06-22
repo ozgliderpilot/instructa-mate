@@ -142,6 +142,8 @@ Notes:
 
 on lookout so the trainer needs to be responsible for effective lookout. As the glider settles at each new speed the trainer should comment that we need to look out for others when we are flying and direct the student to look in the appropriate direction
 
+2. Some students don’t feel the pressure on the stick very well, so encourage them to
+
 relax their grip and identify which way the stick is trying to move. The more they relax the easier it is to trim the glider.
 
 ### Flying straight
@@ -159,7 +161,11 @@ In the early stages of training avoid drift by choosing clouds or directly into 
 
 ### Key factors:
 
-- Ask the student to confirm their heading and their track (allowance for wind drift). ● Relax on controls so as not to input to a change in direction. ● Focus on pilot flying with zero to minimal bank – look ahead. Look to the wing to confirm. ● Small coordinated movement of controls to change heading. ● On circuit, ask the student to fly downwind leg at circuit speed, trimmed, allowing for drift.
+- Ask the student to confirm their heading and their track (allowance for wind drift).
+- Relax on controls so as not to input to a change in direction.
+- Focus on pilot flying with zero to minimal bank – look ahead. Look to the wing to confirm.
+- Small coordinated movement of controls to change heading.
+- On circuit, ask the student to fly downwind leg at circuit speed, trimmed, allowing for drift.
 
 Notes:
 
@@ -176,6 +182,8 @@ or learnt successfully if the trainee cannot maintain a reasonably consistent, w
 4. Encourage trainees to hold the stick lightly between thumb and fingers rather than with a
 
 strong, white-knuckled grip. A tense trainee won’t learn very much, while a relaxed one is more likely to feel and be sensitive to what the glider is doing. Being relaxed (relatively speaking), trainees are also more likely to respond to your advice.
+
+5. Anyone learning a new and unusual skill will be unaware of most, if not all of the important
 
 clues needed to do the thing correctly, and it requires some subtle skills and perceptions to be able to fly well. They take time to develop. Their lack is characterised by the trainee making corrections long after the trainer has noticed things are going awry. Initially, you can only help by prompting. As the trainee’s flying improves, you can help the trainee develop and hone their skills further by requiring greater degrees of accuracy.
 

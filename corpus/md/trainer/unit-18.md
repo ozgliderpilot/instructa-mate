@@ -76,6 +76,8 @@ This unit has no complementary GPC Units.
 
 ### Classroom Briefing
 
+General
+
 - While spin and spiral dive recovery are very important - because most spinning accidents occur too low for recovery, spin prevention is at least as important as recovery.
 - Likely scenarios when spins might occur:
   - Mishandled (over-ruddered) turn
@@ -90,6 +92,9 @@ This unit has no complementary GPC Units.
 - Gliders certified to the EASA standard CS-22 must be able to be recovered from a spin in less than 1.5 additional turns regardless of configuration. If the aircraft is in a configuration approved for intentional spins, it must recover in one additional turn or less. Thus, all gliders designed to CS-22 must be recoverable.
 - However, not all CS-22 aircraft are certified for deliberate spins and not all gliders are certificated to CS-22. Furthermore, some certified aircraft may not be approved for spinning in certain configurations. This means it is critical that the pilot understands the limitations (if any) put in place by the manufacturer regarding spinning the aircraft.
 - Pilots must understand that the primary reference for spin approval to certified standards, or spin limitations, is the approved Aircraft Flight Manual or Pilot Operating Handbook (and applicable supplements).
+
+Spin Phases
+
 - A spin will not exist without both stall and yaw.
   - Note that the stall speed at any given moment varies with the load on the wing, which in turn depends on glider mass, angle of bank, use of airbrakes etc., therefore airspeed is only an indirect indication of an approaching stall.
   - If the aircraft is yawed, a roll will develop in the direction of yaw because the outer wing has increased airspeed, and therefore increased lift. The descending (inner) wing gains an increased angle of attack and if it is at or near the stall its lift will reduce. The effect of these differences in lift will be to produce an accelerating roll rate in the direction of the initial yaw.
@@ -109,6 +114,9 @@ This unit has no complementary GPC Units.
 - Note that spin characteristics will vary, the pitch angle may be steep or flat.
 - Spin entry, in-spin characteristics and responsiveness to recovery conditions will depend on the aircraft C of G position for that flight.
 - There is a tendency for some aircraft to transition from the spin into spiral dive during the incipient phase. This will also be influenced by location of the aircraft’s CoG.
+
+Spin Recovery
+
 - Pilots need to develop an acute detection of spin events and the ability to initiate an automatic recovery response.
 - The best time to recover from a spin is at the entry phase (stall and wing drop).
 - Use external references (ground, horizon, air-noise) to confirm spin and identify direction.
@@ -119,6 +127,9 @@ This unit has no complementary GPC Units.
 - Note that spin recovery process is the same basic procedure (with minor variations) for all aircraft but ALWAYS consult the Aircraft Flight Manual (AFM) for any specific actions to use in spin recovery.
 - Explain that during the recovery phase, the nose attitude may steepen and the rate of rotation may momentarily increase as well, giving the impression that the spin is actually getting worse.
 - Spin recovery may not be instantaneous. It may take up to several turns for the anti-spin control inputs to take effect.
+
+Spin Avoidance
+
 - Explain that preventing a spin is better than having to recover from one, by:
   - Avoiding skidding (over-ruddered) turns.
   - Maintaining safe speed when close to the ground.
@@ -126,6 +137,9 @@ This unit has no complementary GPC Units.
   - If the desired landing area is looking out of reach but another option is available closer, chose the safer closer option to maintain airspeed.
   - Have a disciplined approach to break-off height when thermalling - know when to transition to landing pilot.
   - Being aware of false horizons in hilly terrain that may distort the pilot’s perception of the aircraft’s pitch & roll.
+
+Spiral Dives
+
 - Note that it is possible to confuse a spiral dive with a spin. Spiral Dives are steep, descending turns that become progressively tighter over time. They occur at lower angles of attack (the wing is not stalled) and display the same over-banking tendency common to all steep turns.
 <!-- page: 18-5 -->
 - Describe the events that could lead to a spiral dive.
@@ -133,10 +147,15 @@ This unit has no complementary GPC Units.
 - Explain the different aerodynamics of the spin & spiral dive.
   - Spins result from a stall and yaw with auto-rotation about the lower wing.
   - Spiral dives are controlled flight in a descending spiral.
+
+Spiral Dive Recovery
+
 - Describe recovery from spiral dive.
 - Explain why the airbrake should not be used.
 - Discuss threats imposed by spins and spiral dives, particularly the potential for aircraft overstress.
 <!-- page: 18-6 -->
+
+Aids to Developed Spin/Spiral Dive Identification
 
 ### Attribute In Developed Spin In Spiral Dive Aircraft stalled YES NO G Loading Normal Increasing Load on controls Light (unresponsive) Effective and increasing control loads Yaw string Large deflection, pointing towards rudder for recovery
 
@@ -190,15 +209,23 @@ Ease out of dive with elevator.
 
 Demonstrate spin entry at altitude from the four spin scenarios described earlier (mis-ruddered turn, extended glide, turn whilst stalled and low thermaling).
 
+Entry Phase Spin Symptoms & Recovery
+
 - Demonstrate entry phase spin symptoms and recovery.
 - Explain recovery actions, stick, rudder, return to level flight.
 - Note amount of control input and responsiveness of aircraft.
+
+Incipient & Fully Developed Spin Symptoms & Recovery
+
 - Demonstrate incipient & fully developed phase spin symptoms and recovery off simulated base turn (over-ruddered turn, nose slightly higher than normal).
 - Point out ASI and yaw string indications.
 - Refer to internal and external references to determine the direction of rotation.
 - Note the aircraft is stable in the full spin phase, it generally will not recover by itself.
 - Emphasise use of full rudder whilst moving stick forward to restore the aircraft to flying condition.
 - Note: larger amount of control input and longer response from aircraft.
+
+Spiral Dive Symptoms & Recovery
+
 - Point out indicators of spiral dive and recovery technique. The earliest and most obvious symptom is the rate of rotation.
 - Point out ASI and yaw string indications.
 - Point out increasing G force – either through instrument or pilot sensation.
@@ -210,6 +237,9 @@ Demonstrate spin entry at altitude from the four spin scenarios described earlie
 - Where the aircraft has a tendency to migrate from a spin to a spiral dive ensure the student identifies the transition and applies the correct recovery technique as required.
 - Repeat demonstration as many times as needed for the student to recognize the symptoms and undertake the effective recovery of spins/spiral drives. Repeat using different duration of spin.
 - Ensure entry is demonstrated from straight and level and various angles of bank.
+
+Student practice (under supervision)
+
 - Student to practice recovery of entry, incipient phase and fully developed spins that have been initiated by the trainer.
 <!-- page: 18-9 -->
 - Recovery from fully developed spins may take longer to recover in some aircraft and the student should understand patience may be required for the recovery to take effect.

@@ -59,21 +59,36 @@ GPC Unit 24 Human Factors and Pilot limitations
 
 ### Errors
 
-- Slips
+- 
+
+### Slips
+
   - Observable externally
   - Inadvertent Fall to a lower level
-- Lapses
+- 
+
+### Lapses
+
   - Observable internally only
   - e.g. Lapse of memory
-- Mistakes
+- 
+
+### Mistakes
+
   - Rule or knowledge-based error
-- Violations
+- 
+
+### Violations
+
   - Deliberate avoidance of rules/Standard Operating Procedures (SOPs)
   - e.g. Minimum distance from other aircraft, thermalling rules, checks.
 
 ### Uncorrected errors can lead to an:
 
-- Undesired Aircraft State (UAS)
+- 
+
+### Undesired Aircraft State (UAS)
+
   - Pilot induced aircraft position or speed deviations, misapplication of flight controls, or incorrect systems configuration, associated with a reduction in margins of safety,
   - e.g. wheels up, stall, spin, Airprox (near miss), in-flight break-up, fuel exhaustion.
   - A UAS can lead to an aircraft incident or accident, which could have been prevented if the original threat or the resulting error had been handled better.

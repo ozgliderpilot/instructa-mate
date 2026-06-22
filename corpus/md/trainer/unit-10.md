@@ -13,15 +13,23 @@ revision: "1.0"
 ## AIM
 <!-- content_type: aim -->
 
+The aim of this GPC Unit is to:
+
 - develop the practical skills and knowledge to operate the Airbrakes, Flaps, Undercarriage, Canopy and Tow release in various gliders.
 
 ## PREREQUISITE UNITS
 <!-- content_type: admin -->
 
-- GPC Unit 4 Orientation & Sailplane Stability ● GPC Unit 5 Primary Effect of Controls ● GPC Unit 6 Aileron Drag & Rudder Coordination ● GPC Unit 7 Straight Flight, Various Speeds & Trim ● GPC Unit 9 Lookout Procedures
+- GPC Unit 4 Orientation & Sailplane Stability
+- GPC Unit 5 Primary Effect of Controls
+- GPC Unit 6 Aileron Drag & Rudder Coordination
+- GPC Unit 7 Straight Flight, Various Speeds & Trim
+- GPC Unit 9 Lookout Procedures
 
 ## COMPLEMENTARY UNITS
 <!-- content_type: admin -->
+
+There are no complementary units for this GPC unit
 
 <!-- page: 10-3 -->
 
@@ -86,6 +94,30 @@ All ancillary controls must be positively located and identified as the one requ
 The principle applies to all ancillary controls - airbrake, flaps, canopy, trim, tow release and undercarriage - and in the latter case extends to ensuring that the undercarriage selector is placed in the appropriate position (eg. Down and locked) in accordance with the placards fitted to the glider.
 
 Standard colour coding of controls, which are:
+
+CANOPY Normal Release WHITE .
+
+CANOPY Emergency Release
+
+### RED
+
+TRIM GREEN (See GPC 7)
+
+AIRBRAKES
+
+### BLUE
+
+TOW RELEASE
+
+### YELLOW
+
+FLAPS
+
+### GREY
+
+UNDERCARRIAGE
+
+### BLACK
 
 NOTE: Some manufactures may not conform to colours of flaps and undercarriage.
 

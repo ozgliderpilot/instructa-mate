@@ -117,6 +117,8 @@ Notes:
 
 check throughout the flight on orientation, relaxation and enjoyment, and will make their initial assessment of the student.
 
+2. During the flight, as in the air-experience flight, make all manoeuvres gently. Check on
+
 orientation several times by having the student point to the landing area and chosen landmarks.
 
 ### Stability:

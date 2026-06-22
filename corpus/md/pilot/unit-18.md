@@ -130,15 +130,28 @@ Accidental spins tend to occur in the following scenarios, in each of these ther
 
 ### Mishandled rudder
 
-- Normal nose attitude with small angle of bank. ● Rudder used to assist the turn - i.e., into-turn or ‘bottom’ rudder - encourages loss of stability and hence an uncommanded wing drop. ● Natural nose drop opposed by elevator, increasing angle of attack. ● If allowed to persist, the rudder against the elevator drags energy out of the glider and the inside wing stalls. ● Pre-stall turbulence misses the tail plane – so no buffet is felt. ● The induced drag makes the glider appear to commence to turn and the uncommanded wing drop may be not detected. ● This can occur in a turn started with safe speed near the ground - but the aircraft then turns more than 360°.
+- Normal nose attitude with small angle of bank.
+- Rudder used to assist the turn - i.e., into-turn or ‘bottom’ rudder - encourages loss of stability and hence an uncommanded wing drop.
+- Natural nose drop opposed by elevator, increasing angle of attack.
+- If allowed to persist, the rudder against the elevator drags energy out of the glider and the inside wing stalls.
+- Pre-stall turbulence misses the tail plane – so no buffet is felt.
+- The induced drag makes the glider appear to commence to turn and the uncommanded wing drop may be not detected.
+- This can occur in a turn started with safe speed near the ground - but the aircraft then turns more than 360°.
 
 ### Attempt to stretch the glide to a landing
 
-- Pilot running out of height attempting to stretch the glide to a landable area. ● The pilot is tense and overloaded. ● There is a need to turn the glider (possibly to avoid obstacles). ● Pilot allows the speed to decay but does not let the nose get low and does not use much bank. ● Stress causes pilot to use excessive unconscious application of into -turn rudder. ● Glider appears to begin to turn - but this is due to an uncommanded wing drop and is it is entering a spin which will require a full spin recovery which will generally require 300 ft to complete.
+- Pilot running out of height attempting to stretch the glide to a landable area.
+- The pilot is tense and overloaded.
+- There is a need to turn the glider (possibly to avoid obstacles).
+- Pilot allows the speed to decay but does not let the nose get low and does not use much bank.
+- Stress causes pilot to use excessive unconscious application of into -turn rudder.
+- Glider appears to begin to turn - but this is due to an uncommanded wing drop and is it is entering a spin which will require a full spin recovery which will generally require 300 ft to complete.
 
 ### Attempt to turn a stalled glider (such as after a winch launch failure or other situation)
 
-- Glider already slow (below straight flight stall speed) or stalled but this not detected by pilot. ● Attempt to turn can result in a wing drop which may not be detected as uncommanded – i.e. the aircraft appears to enter turn as commanded. ● Glider enters a spin which will require a full spin recovery.
+- Glider already slow (below straight flight stall speed) or stalled but this not detected by pilot.
+- Attempt to turn can result in a wing drop which may not be detected as uncommanded – i.e. the aircraft appears to enter turn as commanded.
+- Glider enters a spin which will require a full spin recovery.
 
 ### Thermaling too low
 
@@ -146,12 +159,17 @@ Many accidental spins have occurred when the pilot is trying to thermal too clos
 
 This is complicated by:
 
-- Broken, variable lift at low altitudes. ● Variable wind strengths and mechanical turbulence. ● The turn increasing the wing’s angle of attack. ● Initial turn down wind causes transient increase in the wing’s angle of attack. ● Entering a tight core causes a further transient increase in the wing’s angle of attack.
+- Broken, variable lift at low altitudes.
+- Variable wind strengths and mechanical turbulence.
+- The turn increasing the wing’s angle of attack.
+- Initial turn down wind causes transient increase in the wing’s angle of attack.
+- Entering a tight core causes a further transient increase in the wing’s angle of attack.
 <!-- page: 18-6 -->
 
 ### Overall Considerations
 
-- Warning signs for a spin are not always present - often there is no pre-stall buffet. ● Into-turn rudder i.e., rudder used to assist a turn is dangerous.
+- Warning signs for a spin are not always present - often there is no pre-stall buffet.
+- Into-turn rudder i.e., rudder used to assist a turn is dangerous.
 
 By far the most common cause of entry to an unintentional spin is the first of these – yaw at the stall caused by out-of-balance flight.
 
@@ -161,7 +179,9 @@ Pilots in a spinning aircraft may be confused as to which way the aircraft is ac
 
 The pilot has access to internal and external references to assist in identifying the spin direction:
 
-- External: look forward at the ground or horizon, which way does the earth appear to rotate, which wing is lower? ● Yaw string indicates YAW which caused the spin. It points towards the rudder required for recovery ● Internal: the compass will move as the aircraft rotates, which way does it spin?
+- External: look forward at the ground or horizon, which way does the earth appear to rotate, which wing is lower?
+- Yaw string indicates YAW which caused the spin. It points towards the rudder required for recovery
+- Internal: the compass will move as the aircraft rotates, which way does it spin?
 <!-- page: 18-7 -->
 
 ### Phases of the Spin

@@ -203,7 +203,7 @@ Student has not developed the required amount of anticipation needed to apply co
 - Transition from launching pilot to soaring or landing pilot is conducted
 
 ## THREAT AND ERROR MANAGEMENT
-<!-- content_type: None -->
+<!-- content_type: airmanship -->
 
 - Learning aerotow often results in such concentration on the towplane that Lookout tends to vanish. Try to lookout whilst learning aerotow to develop good habits.
 - Whilst on aerotow, maintain your situational awareness of height, position and other aircraft.

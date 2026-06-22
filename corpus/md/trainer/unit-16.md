@@ -120,7 +120,12 @@ Notes:
 - Correct phraseology to be used.
 - Positions for broadcasts – describe where these are essential and useful where situation permits.
 - How we might respond to other traffic radio broadcasts in the circuit area. Use a diagram to simulate aircraft positions and simulate different radio calls and responses.
-- At the breakoff point, determine Approach speed (1.5Vs + ½ wind speed) • Establish safe speed near the ground (1.5Vs) below 1000ft • Set approach speed from the break-off point, but at the latest, before the pre-landing checks, (which is early on the downwind leg).
+
+Setting the Speed
+
+- At the breakoff point, determine Approach speed (1.5Vs + ½ wind speed)
+- Establish safe speed near the ground (1.5Vs) below 1000ft
+- Set approach speed from the break-off point, but at the latest, before the pre-landing checks, (which is early on the downwind leg).
 
 ### Fly Circuit
 
@@ -130,6 +135,9 @@ Notes:
 - Maintain safe speed above ground at all times
 - Maintain separation from other aircraft wherever possible, and alert others if you may come into conflict with them in the circuit.
 - Maintain separation from obstacles and remain outside restricted airspace.
+
+Crosswind Leg
+
 - Some clubs and sites require a crosswind leg to be executed.
 - This would normally be perpendicular to the Downwind leg, entering abeam the other end of the runway.
 

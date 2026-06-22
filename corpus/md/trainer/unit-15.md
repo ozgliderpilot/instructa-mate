@@ -106,7 +106,8 @@ This unit should be read in conjunction with:
 - Good planning and situational awareness assist in reducing stress on the pilot in the landing sequence.
 - Situational awareness includes location, traffic, terrain and environment – in particular wind & areas of lift/sink.
 - Lookout remains essential – the pilot is entering a potentially high traffic area.
-- Break-off points and circuit joining areas are almost always different for each flight and not fixed locations over the ground. ● For various reasons the landing area used when returning to an airfield may be different to the take-off location.
+- Break-off points and circuit joining areas are almost always different for each flight and not fixed locations over the ground.
+- For various reasons the landing area used when returning to an airfield may be different to the take-off location.
 
 ### Break Off
 
@@ -250,6 +251,8 @@ to landing pilot mode has occurred.
 3. Ensure the pre-landing check is called that - it is NOT a ‘FUST’ check.
 
 4. Students may need to build skills in individual competency elements on separate flights.
+
+5. Students must be competent at basic flying skills (coordinated turns, straight & level flight and
 
 use of trim) at this stage to avoid overloading the student.
 

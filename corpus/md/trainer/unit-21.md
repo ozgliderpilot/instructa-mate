@@ -13,19 +13,30 @@ revision: "1.0"
 ## AIM
 <!-- content_type: aim -->
 
+The aim of this unit is to:
+
 - Develop the skills and knowledge required to operate aircraft radio equipment during flight in the local area; and
 - Ensure that the student’s use of the radio conforms to CASA and GFA requirements including relevant terminology.
+
+This Unit is a prerequisite for first solo.
 
 ## PREREQUISITE UNITS
 <!-- content_type: admin -->
 
+There are no prerequisite units for this GPC Unit.
+
 ## COMPLEMENTARY UNITS
 <!-- content_type: admin -->
 
-- GPC Unit 23 Basic Rules of the Air. ● GFA Unit 15 Break-off and Circuit Planning
+This unit should be read in conjunction with:
+
+- GPC Unit 23 Basic Rules of the Air.
+- GFA Unit 15 Break-off and Circuit Planning
 
 ## RECOGNITION OF PRIOR LEARNING
-<!-- content_type: None -->
+<!-- content_type: admin -->
+
+The possession by the student of one of the following satisfy the requirements for this Unit:
 
 - A CASA Flight Radiotelephone Operator Licence.
 - An RAAus Radio Operator (R) Endorsement.
@@ -95,7 +106,7 @@ revision: "1.0"
 - The practical assessment will be carried out by Level 1 or higher rated instructor, who will assess the applicant’s ability to operate the controls of a VHF Radio, communicate, annunciate and articulate using the radio (where English is a second language, refer also to GFA MoSP 2 Section 15.3). The practical assessment should also test the applicant’s knowledge of local procedures at the training airfield.
 
 ## RADIOTELEPHONE OPERATOR AUTHORISATION
-<!-- content_type: None -->
+<!-- content_type: admin -->
 
 ### Candidates who successfully pass the online theory examination and practical assessment will have their GFA Radiotelephone Operator authorisation issued as per GPC logbook endorsements.
 

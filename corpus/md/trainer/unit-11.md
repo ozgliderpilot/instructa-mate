@@ -12,7 +12,10 @@ revision: "1.0"
 ## AIM
 <!-- content_type: aim -->
 
-To introduce student pilots to soaring and what can be achieved by progressing through GPC training and beyond. It aims to foster enthusiasm to continue training and remain with the sport longer term. Thermal soaring is comprehensively covered in post-solo GPC units – this unit provides only a basic introduction to thermal soaring. Note: It is preferred that a Silver Coach train this unit when available to do so. PRE-REQUISITE UNITS
+To introduce student pilots to soaring and what can be achieved by progressing through GPC training and beyond. It aims to foster enthusiasm to continue training and remain with the sport longer term. Thermal soaring is comprehensively covered in post-solo GPC units – this unit provides only a basic introduction to thermal soaring. Note: It is preferred that a Silver Coach train this unit when available to do so.
+
+## PRE-REQUISITE UNITS
+<!-- content_type: admin -->
 
 - GPC Unit 7 Straight flight, various speeds, trim
 - GPC Unit 8 Sustained turns, all controls
@@ -62,7 +65,10 @@ about half for 2-3 seconds before resuming the original angle of bank.
 
 audio). 45 degrees (1/8 turn) after this point bank should be reduced to about half for 2-3 seconds before resuming the original angle of bank.
 
-Weather permitting, discuss where it may be possible to fly on a short cross country flight. Introduce planning and TEM for the flight. Flight Exercises
+Weather permitting, discuss where it may be possible to fly on a short cross country flight. Introduce planning and TEM for the flight.
+
+## Flight Exercises
+<!-- content_type: exercise -->
 
 Soaring is best experienced on a cross country flight. If the weather is suitable conduct a short cross country flight – reasonable thermal conditions are required to ensure a low stress flight and to enable the student pilot to feel the accelerations from lift and sink.
 
@@ -86,7 +92,16 @@ On a cross country flight, demonstrate initial climb, departure on task, cruisin
 
 Under direction the student practices thermal joining, centring, cruising and related skills. In particular:
 
-- Lookout ● Turning with a constant angle of bank and attitude ● Coming out of a turn on a heading ● Cruising towards a geographic feature holding constant attitude and heading ● Thermal entry – if they think they are in lift start a turn (don’t forget lookout) ● The student verbalises where they think the best lift is in a turn ● The student practices moving the centre of the circle in the direction of best lift using one of the basic methods COMMON PROBLEMS
+- Lookout
+- Turning with a constant angle of bank and attitude
+- Coming out of a turn on a heading
+- Cruising towards a geographic feature holding constant attitude and heading
+- Thermal entry – if they think they are in lift start a turn (don’t forget lookout)
+- The student verbalises where they think the best lift is in a turn
+- The student practices moving the centre of the circle in the direction of best lift using one of the basic methods
+
+## COMMON PROBLEMS
+<!-- content_type: common_problems -->
 
 ### Speed varying in turns Flying using airspeed indicator instead of nose attitude relative to the horizon
 
@@ -95,8 +110,13 @@ Not trimmed correctly
 ### Debrief
 
 - Identify the parts of the flight the student most enjoyed and elaborate on these to motivate them to complete the GPC.
-- Discuss the elements of the flight and how they will be trained in the GPC syllabus. ● Discuss the pathways in soaring for the student once post GPC.
-- If a cross country was not possible, it is important to strongly encourage the student fly a cross country with a coach or instructor as soon as the weather allows, or provide assistance in identifying a club where cross country flight is possible. THREAT AND ERROR MANAGEMENT
+- Discuss the elements of the flight and how they will be trained in the GPC syllabus.
+- Discuss the pathways in soaring for the student once post GPC.
+- If a cross country was not possible, it is important to strongly encourage the student fly a cross country with a coach or instructor as soon as the weather allows, or provide assistance in identifying a club where cross country flight is possible.
+
+## THREAT AND ERROR MANAGEMENT
+<!-- content_type: airmanship -->
+
 - There are a number of unique threats associated with conduct of the cross country flight for this unit; these must be managed and possible errors mitigated. In addition this unit is a good opportunity to introduce the student to the importance of appropriate TEM for a cross country flight.
 - The cross country flight may be one of many flights conducted by the trainer on the day with other such flights and/or training introducing threats related to time pressure, lack of preparation and outlanding. Pay attention to hydration for yourself and your student and manage heat stress. This flight will be longer and more stressful than a normal training flight.
 - Time pressure is a major source of errors. Consider rescheduling other training and do not attempt the flight if there is insufficient time. You may not have time for the preparation that you would normally complete prior to a cross country flight. Make sure that you always consider actions such as task planning, weather assessment, airspace assessment and arranging a retrieve crew.

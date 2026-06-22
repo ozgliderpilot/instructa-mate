@@ -69,8 +69,19 @@ There are no complementary units for this GPC Unit.
 
 Sub-gravity Sensation .
 
-- Some people show a sensitivity to “sub-gravity” sensations. The sensitivity is to reduced gravity (sub-gravity) not negative gravity.  You need to be aware of the condition and its consequences. ● A briefing is not strictly necessary.  At no point in this exercise should there be any extreme attitudes. ● Firstly produce an extended sub-(reduced) gravity sensation – NOT a zero or negative gravity – using a gentle bunt.  Some will enjoy the sensation and most will not be affected.  Some will find the sensation disturbing and often will react by raising hands or throwing the head back.  The test is only effective if the manoeuvre is as mild as possible while producing clearly reduced gravity for a period. ● If the student is sensitive
-  - Discuss and reassure o Demonstrate and have the student execute the bunt until the response is controlled and expected.  Such students may never be ‘happy’ but must understand the response and it must be controlled. o Be sure, in the following work on stalling that the student Clearly distinguishes sub-gravity from stalled flight. o Make an obvious note in the log book or other record and be sure to report to the panel.
+- Some people show a sensitivity to “sub-gravity” sensations. The sensitivity is to reduced gravity (sub-gravity) not negative gravity.  You need to be aware of the condition and its consequences.
+- A briefing is not strictly necessary.  At no point in this exercise should there be any extreme attitudes.
+- Firstly produce an extended sub-(reduced) gravity sensation – NOT a zero or negative gravity – using a gentle bunt.  Some will enjoy the sensation and most will not be affected.  Some will find the sensation disturbing and often will react by raising hands or throwing the head back.  The test is only effective if the manoeuvre is as mild as possible while producing clearly reduced gravity for a period.
+- If the student is sensitive
+  - Discuss and reassure
+  - Demonstrate and have the student execute the bunt until the response is controlled and expected.  Such students may never be ‘happy’ but must understand the response and it must be controlled.
+  - Be sure, in the following work on stalling that the student Clearly distinguishes sub-gravity from stalled flight.
+  - Make an obvious note in the log book or other record and be sure to report to the panel.
+
+Classroom Briefing
+
+General
+
 - Lookout is essential – before entering, during and before exiting the turn.
 - Gliders spend most of their time aloft in sustained turns.
 <!-- page: 8-5 -->
@@ -83,6 +94,9 @@ Sub-gravity Sensation .
 - The basic principle is as simple as that.
 - Remember that the primary turning controls are the ailerons, not the rudder.
 - The ailerons are used to bank the glider and it is the bank angle which produces the force which turns the glider.
+
+Entering the Turn
+
 - Ensure a good targeted LOOKOUT scan away from the direction of turn and then in the direction of turn.
 - Then look ahead over the nose and apply aileron and rudder together in the appropriate direction.
 - Correct coordination can be checked by noting whether the nose moves smoothly around into the turn as the bank develops.
@@ -94,19 +108,31 @@ Sub-gravity Sensation .
 - Higher angles of bank require greater control inputs.
 - Aileron and rudder must return to neutral at desired angle of bank.
 - Resume targeted scan. Scan regularly inside the turn along the horizon, not the wingtip and back to the nose. Each time you scan ahead, also check the nose attitude.
+
+Sustaining the Turn
+
 - During the turn, monitor and if necessary control bank angle with Aileron, suitably coordinated with Rudder. Maintain correct nose attitude with Elevator. Remember the little mnemonic A-R-E. "ARE we maintaining a correct turn?"
 <!-- page: 8-6 -->
 - Maintain targeted scan and regular full scan to maintain situational awareness.
+
+Correcting Coordination or Attitude Errors in the Turn
+
 - Uncoordinated flight is indicated by the yaw string and is corrected by use of the rudder.
 - Any change in attitude is indicated by referencing the nose to the horizon.
 - The nose should remain smoothly tracking at the same angle to the horizon “like a well oiled conveyer belt” without nodding up or down.
 - “The Nose Knows” telling you a change in airspeed before the ASI does, use the elevator smoothly to return the nose to the correct attitude/speed then use trim to relieve workload.
 - Look around frequently!
+
+Varying the Angle of Bank
+
 - To change angle of bank, the control column & rudder move the same way, maintaining coordination.
 - Use the rudder proportional to the ailerons and note the change in aircraft angle of bank on horizon.
 - If there is a steep angle of bank, the outer wing is travelling faster than the inner, developing more lift; so there is a tendency for the glider to overbank, especially large wingspan gliders. If the glider is allowed to overbank, the nose will drop further. If this is corrected by more back pressure, the turn will tighten into a spiral dive.
 - If the glider starts to overbank, demonstrate how to coordinate controls to take off bank to desired angle.
 - Check “A-R-E”.
+
+Exiting the Turn
+
 - Note the point on the horizon where we want to exit the turn, then conduct a targeted scan to the outside of the turn and then in the direction that you will exit to maintain situational awareness.
 - Before that point is reached in turn use simultaneous use of aileron and rudder to reduce angle of bank.
 - Adopt wings level position just before the desired heading is reached (remember the glider has some inertia)
@@ -118,6 +144,9 @@ Sub-gravity Sensation .
 - Explain the plan to conduct multiple sustained turns of at least one/two complete circles.
 - Reiterate coordinated use of all three primary flight controls.
 <!-- page: 8-7 -->
+
+Turn Entry
+
 - Targeted and full scan.
 - Looking straight ahead using the horizon as attitude.
 - Turn with simultaneous use of aileron and rudder.
@@ -126,10 +155,16 @@ Sub-gravity Sensation .
 - At the desired angle of bank, centralise the aileron and rudder simultaneously.
 - Move the control column aft slightly to maintain attitude.
 - Check coordinated flight indicated by yaw string.
+
+Sustaining the turn
+
 - Complete regular targeted and full scans to maintain situational awareness.
 - Angle of bank & attitude maintained by reference to horizon.
 - Feel apparent G-force straight down through the seat. Check coordinated flight indicated by yaw string.
 - Check “A-R-E”.
+
+Correcting coordination or attitude errors in the turn
+
 - Uncoordinated flight is indicated by yaw string.
 - Use of rudder to correct coordination.
 - Change in attitude indicated by reference to horizon. (The Nose Knows!)
@@ -140,12 +175,17 @@ Sub-gravity Sensation .
 - Use rudder proportional to aileron.
 - Note change in aircraft angle of bank on horizon.
 - Check “A-R-E”.
+
+Exiting the turn
+
 - Note point on horizon where we want to exit the turn.
 - Targeted scan outside turn and then in that direction to maintain situational awareness.
 - Before that point is reached in turn use simultaneous use of aileron and rudder to reduce angle of bank.
 <!-- page: 8-8 -->
 - Wings level position attained as the desired heading is reached.
 - Coordinated flight indicated by yaw string.
+
+Student Practice
 
 Student practices entering and maintaining a sustained turn in both directions:
 
@@ -213,6 +253,8 @@ expected action and verbal response to each. There must be no confusion about te
 10. Do not reference changes to flight instruments – at this stage of learning the student must learn
 
 with reference to external cues.
+
+11. Do not reference compass headings for these exercises, due to compass lag and inertia it will be
 
 difficult for low experience pilots to come out of a turn to a compass heading, instead use a point on the horizon.
 

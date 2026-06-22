@@ -53,7 +53,12 @@ This unit should be read in conjunction with:
 
 You will be shown in a parked glider the following information.  You will be expected to access this information as you perform a pre-flight inspection of your glider.
 
+Airworthiness Documentation
+
 - All gliders are certified as airworthy with the issue of a Certificate of Airworthiness (C of A). There is a requirement to conduct an annual inspection by authorised people. When deemed airworthy from the inspection, a Maintenance Release is issued, which is carried in the cockpit of the glider (see below).
+
+The Maintenance Release
+
 - This document certifies that the glider is being maintained in accordance with GFA requirements. It also validates the C of A or Permit to fly of the glider. It is issued by a GFA- qualified inspector and is renewed on completion of the relevant inspection. If a Maintenance Release is present in the glider and is within its validity period, the glider is legal to fly. Check this before flight.
 - Although it may be legal to fly, the glider is not necessarily airworthy to fly. For example, it may have suffered a heavy landing on its last flight the previous day and there may be damage present which, for some reason, the last pilot did not report and did not enter into the Major Defects section of the Maintenance Release.
 - It is therefore a requirement for a glider to receive a Daily Inspection by a qualified person before it is allowed to fly on any given day.
@@ -64,6 +69,11 @@ You will be shown in a parked glider the following information.  You will be exp
 <!-- page: 3-3 -->
 - This is used to certify that a glider has received a Daily Inspection from a suitably qualified person. Check that the correct date appears alongside the Inspector's signature. If the correct date does not appear there, do not fly the glider - make some enquiries.
 - The Maintenance Release and the Daily Inspection Record are contained in the same common booklet, which is kept in the glider at all times. It is a very important document and forms the link between the inspector who looks after the airworthiness of the glider and the pilot who flies it.
+
+The daily inspection is carried out before the first flight of the day. On each subsequent flight, the pilot must carry out a pre-flight inspection/check. See Pre-Boarding checks on Page 3.f
+
+Glider Limitation Placards
+
 - A typical glider speed and manoeuvres limitations placard appears below: -
 
 The permitted aerobatic manoeuvres will also be displayed, either on the same placard or on a separate one alongside. The maximum (and possibly the minimum) weak link strength will be displayed, internally on the placard and externally next to the release hook(s).
@@ -227,6 +237,8 @@ Your instructor will at an appropriate time demonstrate to you how to:
 
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
+
+COMMON PROBLEMS
 
 - There are many items and procedures to learn in this unit. You are not expected to have learnt all these procedures on day one! As your flying progresses you should be able to come to terms with these items before your first solo.
 

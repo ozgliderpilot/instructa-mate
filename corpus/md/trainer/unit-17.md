@@ -26,7 +26,8 @@ The aim of this unit is to train the student with the skills and knowledge requi
 
 This unit should be read in conjunction with:
 
-- Unit 19 Crosswind Take-off and Landing ● Unit 21 Radio Use & Endorsement
+- Unit 19 Crosswind Take-off and Landing
+- Unit 21 Radio Use & Endorsement
 
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
@@ -91,6 +92,9 @@ This unit should be read in conjunction with:
 - Airbrakes should not be used until the pilot has assessed that the aircraft is beginning to unmistakeably overshoot the intended touchdown area and will clear all obstructions with a half airbrake approach.
 - Once established, airbrakes/spoilers are then used as required to maintain the correct final stabilised approach path.
 - Any tendency to undershoot or overshoot the aiming point should be corrected by appropriate fine adjustment of the airbrake/spoiler settings. Coarse movement is to be avoided at this stage of the flight.
+
+Wind gradient
+
 - The glider is now about to enter an air mass which is affected by ground friction, resulting in a phenomenon known as "wind gradient". This means that the wind speed decreases progressively closer to the ground. The effect this has on the glider is to cause a decrease in airspeed at a constant approach attitude.
 - The reason it happens is related to the inertia of the glider and the fact that it cannot accelerate quickly enough to keep pace with the falling wind speed. This is the reason why the approach speed is set to 1.5Vs + ½ wind speed.
   - e.g. a glider with a safe speed near the ground of 50kts in nil wind, approaching into a 10 kt headwind, will set an Approach Speed of 55 kts in the pre-landing checks.
@@ -109,10 +113,16 @@ This unit should be read in conjunction with:
 ### Approach – Using the Aiming Point to maintain glide slope
 
 - The aiming point is an approach aid. It is a point (or to be more practical an area) on the ground which will appear stationary from the cockpit when the glider is stabilised on the selected final approach path.
-- OVERSHOOT
+- 
+
+### OVERSHOOT
+
   - When the glider is in an overshoot situation (i.e. it is above the final approach path), the aiming point moves downwards and tends to disappear out of view under the nose as the glider overshoots it. It becomes obvious that the glider will land well beyond the aiming point.
   - An OVERSHOOT requires further extension of the airbrakes to steepen the final approach path and restore the aiming point to a stationary position.
-- UNDERSHOOT
+- 
+
+### UNDERSHOOT
+
   - If the glider is undershooting (i.e. it is below the final approach path), the aiming point moves upwards in the canopy towards the horizon. It becomes obvious that the glider will land before the aiming point is reached.
   - An UNDERSHOOT requires reducing the extension of airbrakes, in order to make the approach path less steep and once more restore the aiming point to a stationary position.
 - Changes to the airbrake setting may result in changes to aircraft attitude and therefore light pressure on the elevator is required to return to the correct approach speed.
@@ -154,6 +164,8 @@ This unit should be read in conjunction with:
 
 ## FLIGHT EXERCISES
 <!-- content_type: exercise -->
+
+WARNING: Advice to trainers regarding their responsibility to maintain safe flight.
 
 - Adopt a defensive posture, with hands close to or limiting position of both elevator and airbrake, to guard against controls being operated to an irrecoverable situation.
 - The student pushing the stick forward or pulling the airbrake out without warning may not be recoverable at low height.

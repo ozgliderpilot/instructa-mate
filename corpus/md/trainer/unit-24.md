@@ -19,12 +19,14 @@ To develop the Skills and Knowledge to:
 - Develop personal limitations on operating aircraft.
 
 ## WHAT ARE THE PRE-REQUISITES FOR THIS UNIT?
-<!-- content_type: None -->
+<!-- content_type: admin -->
 
 - Nil
 
 ## COMPLEMENTARY UNITS
 <!-- content_type: admin -->
+
+This unit should be read in conjunction with:
 
 - GPC Unit 25 Threat and Error Management
 
@@ -79,7 +81,9 @@ To develop the Skills and Knowledge to:
 
 More than 75% of incidents/accidents are attributed to human factors:
 
-- All pilots are affected by human factors issues that can become threats to safe aviation. ● All pilots must learn to recognise and mitigate these issues in themselves and others as part of their TEM actions. ● HF issues are physical, cognitive and interpersonal.
+- All pilots are affected by human factors issues that can become threats to safe aviation.
+- All pilots must learn to recognise and mitigate these issues in themselves and others as part of their TEM actions.
+- HF issues are physical, cognitive and interpersonal.
 
 ## LESSON PLANNING AND CONDUCT
 <!-- content_type: briefing -->
@@ -91,9 +95,13 @@ This could be delivered as on-line sessions, part of a ground school or on non-f
 A GFA PowerPoint is available to assist in presenting this unit (see Theory courses) and the GFA Human Factors for Gliding is available on the GFA Website under Safety/Reference Materials.
 
 ## BRIEFING
-<!-- content_type: None -->
+<!-- content_type: briefing -->
+
+Fitness to Fly
 
 Medical fitness to fly is not just a doctor’s assessment, it is beholden on every pilot to self-assess their fitness to fly before and during each flight. The following mnemonic is an aid to that self-assessment:
+
+IMSAFE
 
 - Illness:
 <!-- page: 24-3 -->
@@ -145,6 +153,8 @@ Medical fitness to fly is not just a doctor’s assessment, it is beholden on ev
 
 ○ Glucose control throughout flights.
 
+The 5 Hazardous Attitudes All Pilots Should Avoid
+
 Anti-authority ("Don't tell me!")  - Don't like anyone telling them what to do.   Resentful of rules & regulations.
 
 - Antidote: Follow the rules, they're usually right (and written in blood!)
@@ -165,11 +175,15 @@ Resignation ("What's the use?") - I really can't make a difference.  It is going
 
 - Antidote: I'm not helpless, I can make a difference. Never give up.
 
+Aviation Decision Making (ADM) Model
+
 The accuracy of fast decisions may be improved with preparation and prior deliberation, for example choices about launch-failure options during the pre-take-off check.
 
 Decision making is divided into Fast (instinctive) and Slow (deliberate) thinking models. Pilots need to know when to use each system.
 
 Fast thinking is useful in emergencies and when decisions must be made quickly, generally from predetermined options (such as launch emergencies or spin recovery). Slow thinking is useful for deliberate decision making where time is available to consider different options and outcomes.
+
+DECIDE
 
 A formal model (based on the mnemonic ‘DECIDE’) is used to provide structured decision making that encourages deliberate decision-making.
 
@@ -179,6 +193,8 @@ A formal model (based on the mnemonic ‘DECIDE’) is used to provide structure
 - Identify – actions to control the change successfully.
 - Do – take the necessary actions.
 - Evaluate – the effects of the action to react to or counter the initial change.
+
+Additional Human limitations
 
 Discuss the following items with reference to GFA Human Factors for Gliding.
 
@@ -212,6 +228,8 @@ Discuss the following items with reference to GFA Human Factors for Gliding.
 ○ Hypoxia with altitude;
 
 ○ Legal requirements.
+
+AirManShip (an easy proword)
 
 - AIR –good aviators that have good technical skills.
 - MAN (kind) – people that can be an inspiration to their students and provide quality instruction.
@@ -266,6 +284,8 @@ and decide a course of action.
 
 ○ Proficiency.
 
+Pilot Currency
+
 Discuss Skills and Proficiency associated with Pilot Currency.
 
 <!-- page: 24-7 -->
@@ -278,6 +298,8 @@ Apart from demonstrating the performance standards, specific inflight demonstrat
 Choose appropriate occurrences from the Occurrence Summaries on the GFA website to analyse for Human Factors.
 
 Student should demonstrate and identify human factors affecting them pre, during and post flight.
+
+Advice to Instructors regarding their responsibility to maintain safe flight.
 
 Identify when the student’s performance is affected by human factors and take action to mitigate the factors affecting the safety of the operation.
 

@@ -74,15 +74,39 @@ HEADER_DICTIONARY: dict[str, dict[str, str]] = {
         "RESOURCES & REFERENCES": "admin",
         "COMPLEMENTARY UNITS": "admin",
         "SELF-CHECK QUESTIONS": "self_check",
+        # GPC (Units 27-44) and a few Solo units borrow Trainer-side vocabulary or
+        # introduce ground-operations sections (issue #8).
+        "THREAT AND ERROR MANAGEMENT": "airmanship",  # rare in Pilot (Solo 13A, GPC 42)
+        "COMMON PROBLEMS": "common_problems",  # Solo 14S uses the Trainer label
+        "FLIGHT EXERCISES": "exercise",  # Solo 17 drops "FOR THIS UNIT"
+        "EXERCISES FOR THIS UNIT": "exercise",  # GPC 35
+        "PERSONAL PREPARATION": "briefing",  # GPC 35 ground-ops prep
+        "GLIDER PREPARATION": "briefing",
+        "TRAILER AND RETRIEVE PREPARATION": "briefing",
     },
     "trainer": {
         "AIM": "aim",
         "PREREQUISITE UNITS": "admin",
+        "PRE-REQUISITE UNITS": "admin",  # GPC + Solo 11/13W/20S/25/26 hyphenate it
+        "WHAT ARE THE PRE-REQUISITES FOR THIS UNIT?": "admin",  # Solo 24 uses Pilot-side label
+        "RECOGNITION OF PRIOR LEARNING": "admin",  # Solo 21 (radio operator)
+        "RADIOTELEPHONE OPERATOR AUTHORISATION": "admin",  # Solo 21
         "COMPLEMENTARY UNITS": "admin",
         "KEY MESSAGES": "key_messages",
         "LESSON PLANNING AND CONDUCT": "briefing",
         "PRE-FLIGHT BRIEFING": "briefing",
+        "BRIEFING": "briefing",  # Solo 24, GPC 33
+        "INSTRUCTOR NOTES": "briefing",  # GPC 42 (powered)
+        "TRAINING NOTES AND LESSON PLANNING FOR POWERED SAILPLANE PILOTS": "briefing",  # GPC 42
         "FLIGHT EXERCISES": "exercise",
+        "STUDENT EXERCISES": "exercise",  # GPC 31
+        "EXERCISES": "exercise",  # GPC 35
+        "PERSONAL PREPARATION": "briefing",  # GPC 35 ground-ops prep
+        "GLIDER PREPARATION": "briefing",
+        "TRAILER AND RETRIEVE PREPARATION": "briefing",
+        "CHECKLIST": "briefing",  # GPC 35
+        "SEARCH AND RESCUE": "theory",  # GPC 36 (navigation)
+        "BASIC NAVIGATION PRINCIPLES": "theory",  # GPC 36
         "THREAT AND ERROR MANAGEMENT": "airmanship",
         "COMMON PROBLEMS": "common_problems",
         "COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS": "competency",
@@ -94,7 +118,10 @@ HEADER_DICTIONARY: dict[str, dict[str, str]] = {
 
 
 def _normalize_header(text: str) -> str:
-    return re.sub(r"\s+", " ", text).strip().upper()
+    # Strip a leading non-alphanumeric glyph: Pilot Unit 9 prints ".RESOURCES & REFERENCES"
+    # (a stray bullet mis-extracted as a period) which must still match the dictionary key.
+    norm = re.sub(r"\s+", " ", text).strip().upper()
+    return re.sub(r"^[^0-9A-Z]+", "", norm)
 
 
 def _content_type(source: str, text: str) -> str | None:
@@ -261,14 +288,40 @@ def _frontmatter(source: str, token: str, meta: dict[str, str]) -> str:
     )
 
 
+# Sections that print at sub-section (~12pt) size, so font size alone can't tell them
+# from an inline bold sub-heading — recognised by this curated per-Source vocabulary
+# instead. It is deliberately *only* the original Solo section vocabulary, NOT the whole
+# (expanded) header dictionary: the GPC headers added later are mapped for their
+# content_type but all print at >= 13pt, so they are detected by size and must not promote
+# a same-named sub-section-size sub-heading — e.g. the Trainer's 12pt "Briefing" in Unit
+# 13A, vs the 14pt "BRIEFING" section in Unit 24 / GPC Unit 33 — into a section.
+_SUBSECTION_SECTIONS: dict[str, frozenset[str]] = {
+    "trainer": frozenset({
+        "AIM", "PREREQUISITE UNITS", "COMPLEMENTARY UNITS", "KEY MESSAGES",
+        "LESSON PLANNING AND CONDUCT", "PRE-FLIGHT BRIEFING", "FLIGHT EXERCISES",
+        "THREAT AND ERROR MANAGEMENT", "COMMON PROBLEMS",
+        "COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS",
+        "TRAINING MATERIALS AND REFERENCES",
+    }),
+    "pilot": frozenset({
+        "WHAT THIS UNIT IS ABOUT", "WHAT ARE THE PRE-REQUISITES FOR THIS UNIT?",
+        "KEY MESSAGES", "PILOT GUIDE FOR THIS UNIT", "FLIGHT EXERCISES FOR THIS UNIT",
+        "THINGS YOU MIGHT HAVE DIFFICULTY WITH", "HOW DO YOU DEMONSTRATE COMPETENCE?",
+        "RESOURCES & REFERENCES", "COMPLEMENTARY UNITS", "SELF-CHECK QUESTIONS",
+    }),
+}
+
+
 def _is_section_header(line: Line, source: str) -> bool:
-    # Two signals, either sufficient: the large banner font (Pilot, and the 14pt
-    # Trainer sections) OR a dictionary match (the Trainer prints FLIGHT EXERCISES /
-    # PRE-FLIGHT BRIEFING at 12pt — sub-heading size — so font alone can't tell them
-    # from "Classroom Briefing"; only the curated vocabulary can).
+    # Two signals, either sufficient: the large banner font (Pilot, and the 14pt Trainer
+    # sections) OR membership in the curated sub-section-size vocabulary (the Trainer
+    # prints FLIGHT EXERCISES / PRE-FLIGHT BRIEFING at 12pt — sub-heading size — so font
+    # alone can't tell them from "Classroom Briefing"; only the vocabulary can).
     if not line.bold:
         return False
-    return line.size >= _SECTION_MIN_SIZE or _content_type(source, line.text) is not None
+    if line.size >= _SECTION_MIN_SIZE:
+        return True
+    return _normalize_header(line.text) in _SUBSECTION_SECTIONS.get(source, frozenset())
 
 
 def _is_subheading(line: Line) -> bool:
@@ -317,36 +370,145 @@ def _marker_body(block: list[Line]) -> str:
 Element = tuple[str, str]
 
 
-def _classify_block(block: list[Line], source: str) -> Element | None:
-    """Map a page block to a rendered element, or ``None`` for stripped chrome."""
-    head = block[0]
-    if all(line.size <= _FOOTER_MAX_SIZE for line in block):
-        return None  # footer chrome (Revision / date / Page) — already parsed
-    if _normalize_header(head.text) in _BANNER_TEXTS:
-        return None  # running banner, even where it prints large + bold (title page)
+# A running-title line: "Unit 30", "Unit 13A - Launch …", "Unit 20 S - …". Stripped
+# wherever it appears — large + bold on a title page, banner-sized + non-bold mid-content.
+_UNIT_CHROME_RE = re.compile(r"Unit\s+\d+\s*[A-Z]?\s*(?:[-–].*)?")
 
-    kind = _marker_kind(head)
-    if kind:  # list item: marker (own line or inline) + any wrapped continuation lines
-        # Tested before the banner-size strip below: a stray bullet glyph occasionally
-        # prints a touch larger (one KEY MESSAGES "●" is 11pt) and would otherwise be
-        # mistaken for the non-bold running banner and the whole bullet dropped.
-        return (kind, _marker_body(block))
-    if not head.bold and head.size >= _BANNER_MIN_SIZE:
-        return None  # running header banner (manual title / unit title)
-    if _is_reference_patter(head):
-        # The manual's "Suggested Patter:" heading = Reference Patter (verbatim,
-        # authoritative), NOT the app's Generated Patter feature (ADR 0001). Fenced
-        # as a #### sub-block and tagged; the bullets that follow are its content and
-        # render on the normal list path.
-        return ("patter", "#### Suggested Patter\n<!-- content_type: reference_patter -->")
-    if _is_section_header(head, source):
-        role = _content_type(source, head.text)
-        return ("section", f"## {head.text}\n<!-- content_type: {role} -->")
-    if _is_subheading(head):
-        # Join all lines so a wrapped/two-column bold label (the Problem / Probable
-        # Cause table header) keeps both parts instead of dropping the tail.
-        return ("subheading", "### " + " ".join(line.text for line in block))
-    return ("paragraph", " ".join(line.text for line in block))
+
+def _is_chrome_line(line: Line) -> bool:
+    """Whether a single line is running header/title chrome to strip wherever it sits.
+
+    The Solo guides print the manual banner / unit title as their own block, but the GPC
+    guides interleave them inside a content block (a running ``Unit NN`` title glued to the
+    end of a paragraph). So chrome is judged per line, not per block: the manual banner,
+    a ``Unit NN`` running title, or any other banner-sized non-bold line (the large unit
+    name on a title page). List markers are never chrome — a bullet glyph occasionally
+    prints at banner size and must survive.
+    """
+    if _marker_kind(line) is not None:
+        return False
+    if _normalize_header(line.text) in _BANNER_TEXTS:
+        return True
+    if _UNIT_CHROME_RE.fullmatch(line.text):
+        return True
+    # The big unit name on a title page is the only other non-bold chrome; body prose runs
+    # ~10-11pt, so the strip is keyed to section size — never the 11pt running banner (that
+    # is caught by its exact text above) and never an 11pt body line glued mid-block.
+    return not line.bold and line.size >= _SECTION_MIN_SIZE
+
+
+def _classify_block(block: list[Line], source: str) -> list[Element]:
+    """Segment a page block into its rendered elements (chrome dropped).
+
+    The Solo guides give one element per block (one bullet, one heading, one paragraph);
+    only table cells pack several items. The GPC guides group far more loosely — multiple
+    bullets per block, and a section heading glued onto the tail of the preceding paragraph
+    or bullet — so a block is segmented line-by-line rather than classified by its head:
+
+    * a list marker opens an item; the wrapped lines after it are its body, until the next
+      marker or heading;
+    * consecutive section-heading lines join into one ``##`` (a heading that wraps across
+      two lines, e.g. "TRAINING NOTES … FOR POWERED / SAILPLANE PILOTS"); a section heading
+      absent from the dictionary raises rather than emit ``content_type: None``;
+    * consecutive bold sub-heading lines join into one ``###`` (the wrapped Problem /
+      Probable Cause label);
+    * Reference Patter (``Suggested Patter:``) fences a ``####`` block (ADR 0001);
+    * everything else accumulates into a paragraph.
+
+    On a Solo block (a single item/heading/paragraph) this yields exactly the one element
+    the old head-based classifier did, so the committed Solo Markdown is unchanged.
+    """
+    if all(line.size <= _FOOTER_MAX_SIZE for line in block):
+        return []  # footer chrome (Revision / date / Page) — already parsed
+
+    elements: list[Element] = []
+    para: list[str] = []
+    item: list[str] | None = None
+    item_kind: str | None = None
+    heading: list[str] | None = None
+    heading_kind: str | None = None  # "section" | "subheading"
+
+    def flush_para() -> None:
+        nonlocal para
+        if para:
+            elements.append(("paragraph", " ".join(para)))
+            para = []
+
+    def flush_item() -> None:
+        nonlocal item, item_kind
+        if item is not None:
+            elements.append((item_kind, " ".join(item)))
+            item, item_kind = None, None
+
+    def flush_heading() -> None:
+        nonlocal heading, heading_kind
+        if heading is None:
+            return
+        text = " ".join(heading)
+        if heading_kind == "section":
+            role = _content_type(source, text)
+            if role is None:
+                raise UnitStructureError(
+                    f"unmapped section heading {text!r} in the {source} guide: it is "
+                    f"section-sized but absent from the header dictionary, so it would emit "
+                    f"'content_type: None' — add it to HEADER_DICTIONARY['{source}'] with its "
+                    f"content_type role (or it is chrome that must be stripped)"
+                )
+            elements.append(("section", f"## {text}\n<!-- content_type: {role} -->"))
+        else:
+            elements.append(("subheading", "### " + text))
+        heading, heading_kind = None, None
+
+    for line in block:
+        if _is_chrome_line(line):
+            continue
+        kind = _marker_kind(line)
+        if kind:  # a list item opens here; later wrapped lines are its body
+            flush_heading()
+            flush_para()
+            flush_item()
+            body = _marker_body([line])
+            item, item_kind = ([body] if body else []), kind
+            continue
+        if _is_reference_patter(line):
+            flush_heading()
+            flush_para()
+            flush_item()
+            elements.append(("patter", "#### Suggested Patter\n<!-- content_type: reference_patter -->"))
+            continue
+        if _is_section_header(line, source):
+            flush_para()
+            flush_item()
+            # Join only a genuine wrap: when the open heading is not yet a complete (mapped)
+            # section, this line continues it ("TRAINING NOTES … FOR POWERED" + "SAILPLANE
+            # PILOTS"). When the open heading already maps, this line is the next section
+            # ("LESSON PLANNING AND CONDUCT" then "Briefing", glued in one block) — flush.
+            if heading_kind == "section" and _content_type(source, " ".join(heading)) is None:
+                heading.append(line.text)
+            else:
+                flush_heading()
+                heading, heading_kind = [line.text], "section"
+            continue
+        if _is_subheading(line):
+            flush_para()
+            flush_item()
+            if heading_kind == "subheading":
+                heading.append(line.text)
+            else:
+                flush_heading()
+                heading, heading_kind = [line.text], "subheading"
+            continue
+        # plain text: the body of an open list item, else paragraph prose
+        if item is not None:
+            item.append(line.text)
+        else:
+            flush_heading()
+            para.append(line.text)
+
+    flush_item()
+    flush_para()
+    flush_heading()
+    return elements
 
 
 # Kinds that stay visually tight against a preceding list/marker. A page marker is
@@ -534,9 +696,7 @@ def render_unit_markdown(pdf_path, source: str, unit: int | str) -> str:
                         elements.extend(region.elements)
                         emitted.add(region.bbox)
                     continue
-                element = _classify_block(lines, source)
-                if element is not None:
-                    elements.append(element)
+                elements.extend(_classify_block(lines, source))
         return _frontmatter(source, token, meta) + "\n" + _assemble(elements)
     finally:
         plumber.close()
