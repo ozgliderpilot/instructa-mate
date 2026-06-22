@@ -63,25 +63,18 @@ This unit may be read in conjunction with:
 
 ### The Scanning Technique:
 
-### 1.
-
-FULL SCAN: A Systematic scan along the horizon from behind our left- wing tip, directly ahead through to behind our right- wing tip, Including the area above and below the horizon, and directly overhead our glider and below the glider. This will take a few minutes to do correctly and should be repeated regularly depending on traffic density.
-
+1. FULL SCAN: A Systematic scan along the horizon from behind our left- wing tip, directly ahead through to behind our right- wing tip, Including the area above and below the horizon, and directly overhead our glider and below the glider. This will take a few minutes to do correctly and should be repeated regularly depending on traffic density.
 <!-- page: 9-4 -->
 
 We may also have aircraft coming from the side, across out flight path, or overtaking us on either side, so we also need to monitor these areas. The technique is to focusing  on a spot for a few seconds, then moving our view 20-30 degrees ahead and repeating the process.
 
 This FULL SCAN can be completed in stages, interrupted by a CRUISING scan or TARGETED scan as required.
 
-### 2.
-
-CRUISING SCAN: When flying straight the most dangerous area is straight ahead and 60 degrees cone around the flight path, including the area above and below the horizon, We need to see aircraft in this region quickly so we can avoid any collisions risk. So we would focus on this cone of airspace (a CRUISING scan).
+2. CRUISING SCAN: When flying straight the most dangerous area is straight ahead and 60 degrees cone around the flight path, including the area above and below the horizon, We need to see aircraft in this region quickly so we can avoid any collisions risk. So we would focus on this cone of airspace (a CRUISING scan).
 
 In situations where there is random traffic (cross country, training area, etc) it may pay to broaden the size of the Cruising Scan cone to 120 degrees.
 
-### 3.
-
-TARGETED SCAN: This is where we focus on a smaller area which has potential increased traffic or greater risk. Examples include:
+3. TARGETED SCAN: This is where we focus on a smaller area which has potential increased traffic or greater risk. Examples include:
 
 a Turning the glider. You will be turning into an area that you may not have had clear vision of previously. You start this scan by firstly looking in the opposite direction to the planned turn to identify threats from behind and the side, then scanning around the horizon through straight ahead and finishing at the area behind the wing in the direction you are turning. This will progressively let you see any aircraft that may be coming from behind you.
 

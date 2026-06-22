@@ -128,14 +128,14 @@ To:
 ### Effect of Crosswind
 
 - When a launch failure occurs and there is a significantly strong cross-wind in a situation where you cannot land ahead and you have decided you need to conduct a modified circuit, you should turn in the downwind direction. Do not allow the glider to drift away from the strip. This is the preferred option in the absence of any local constraints such as obstacles or terrain at and around the airfield.
-- The turn to downwind will be through an arc of approx. 225 degrees (see first diagram). As the aircraft is flying with the wind it will require less height to move away from the runway centreline and out to a position where the modified circuit can be flown. The glider will fly the downwind leg along a track parallel to the strip, with the nose of the aircraft angled towards the airstrip to correct for drift and providing greater visibility. The base leg will also be flown against the wind giving more time to adjust.
-- The landing is conducted into wind if possible, or crosswind in the original take-off direction. Note that these are preferred situations, but they may need to be modified if circumstances dictate.
-- If the glider initially turns into wind (second diagram), it will consume more time (and height) to move away from the runway centreline to a downwind position and the glider is forced to point away from the strip on the downwind leg, making the task much more difficult due to a tailwind on the base leg.
 
 Modified Circuit when a turn downwind is made after the launch failure. You have clear vision of the landing area improving judgement
 
 Modified Circuit when a turn upwind is made after the launch failure. Poor visibility of the landing area throughout the circuit.
 
+- The turn to downwind will be through an arc of approx. 225 degrees (see first diagram). As the aircraft is flying with the wind it will require less height to move away from the runway centreline and out to a position where the modified circuit can be flown. The glider will fly the downwind leg along a track parallel to the strip, with the nose of the aircraft angled towards the airstrip to correct for drift and providing greater visibility. The base leg will also be flown against the wind giving more time to adjust.
+- The landing is conducted into wind if possible, or crosswind in the original take-off direction. Note that these are preferred situations, but they may need to be modified if circumstances dictate.
+- If the glider initially turns into wind (second diagram), it will consume more time (and height) to move away from the runway centreline to a downwind position and the glider is forced to point away from the strip on the downwind leg, making the task much more difficult due to a tailwind on the base leg.
 <!-- page: 20W-6 -->
 
 ### What Happens if the Cable will not Release (Hook-Up)

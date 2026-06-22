@@ -147,16 +147,6 @@ Airmanship (an easy proword)
 - MAN (fitness to fly, trained, recency, proficiency, type endorsed)
 - SHIP (airworthy, prepared, fit for task)
 
-### Situational awareness
-
-- What has happened recently?
-- What is happening now?
-- Projecting to: What might happen in the future?
-
-### Judgement
-
-- Using skills, knowledge, experience and intelligence to analyse a situation and decide a course of action.
-
 CAPSTONE OUTCOMES: Situational awareness
 
 Judgement
@@ -177,6 +167,15 @@ Skills
 
 Proficiency
 
+### Situational awareness
+
+- What has happened recently?
+- What is happening now?
+- Projecting to: What might happen in the future?
+
+### Judgement
+
+- Using skills, knowledge, experience and intelligence to analyse a situation and decide a course of action.
 <!-- page: 24-5 -->
 
 ### Pilot Currency

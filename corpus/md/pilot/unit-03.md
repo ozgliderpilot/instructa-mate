@@ -117,17 +117,11 @@ whether you are quite heavy enough, add some ballast.
 - You are not expected to perform a daily inspection on a glider at this stage of your training. Daily Inspection is covered in Unit 42 - Daily Inspection, Pilot Maintenance Limits, DI certificate and requires you to be trained and authorised
 - You will observe your instructor performing a daily inspection and you will progressively be invited to participate in some aspects.
 - There are five reasons for carrying out a Daily Inspection:
-
 1. To check for progressive deterioration caused by fair wear and tear.
-
 2. To check for unserviceability’s or sudden deterioration which fall outside the category of fair wear and tear.
-
 3. To check for unreported damage.
-
 4. To check that the glider is correctly rigged and the control circuits are properly connected and locked.
-
 5. To check that there are no tools or other loose objects lying around after maintenance.
-
 - When carrying out a DI, it is sometimes difficult to work out how far to go, how deep an inspection to do. Using the above five points as a guide, the answer is to go deep enough to satisfy your curiosity as to whether the glider can safely fly, without going to the extent of starting to overhaul it.
 - A DI is basically a visual inspection, using only those tools which are necessary to gain access to essential parts of the structure, such as wing roots or underneath nose fairings.
 

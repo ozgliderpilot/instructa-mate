@@ -162,25 +162,14 @@ Understanding Gliding: Derek Piggot: 3rd Issue; AC Black 1996.
 Use these questions to test your knowledge of the unit.
 
 1. What action must never be omitted before turning the aircraft?
-
 2. What are the controls used to turn the aircraft?
-
 3. Why does the nose drop in a turn?
-
 4. What controls the airspeed in a turn?
-
 5. What does the pneumonic “ARE” stand for and when is it used?
-
 6. What does the “Nose Know”?
-
 7. What is adverse yaw and what causes it?
-
 <!-- page: 8-6 -->
-
 8. What is the secondary effect of rudder?
-
 9. What does being "coordinated" mean in a turn.
-
 10. If the yaw string is to the right of centre, which control is used to correct it?
-
 11. If you are turning and the glider starts to noticeably increase its bank angle without any input from you, what is the problem and what would be your action?

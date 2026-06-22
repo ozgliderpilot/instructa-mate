@@ -24,6 +24,19 @@ You should become familiar with the operation of the devices you will use and ap
 
 GPC Unit 38 Meteorology and flight planning
 
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+You need to think and look ahead.
+
+Flight computers can be a distraction from the tasks at hand and degrade your performance.
+
+Flight computers display accurately what’s happening now and in the past. Predictions of finish height, ETA etc. are based on assumptions of climb rate and winds.
+
+Flight computers can display a huge amount of information - only relevant or useful information should be displayed.
+
+The display should be uncluttered to allow relevant information to be seen clearly and quickly.
+
 ## PILOT GUIDE FOR THIS UNIT
 <!-- content_type: theory -->
 
@@ -42,19 +55,6 @@ Configurable parameters such as total energy compensation based on a mix of the 
 Speed to fly information
 
 Many other display features blurring the distinction between varios and flight computers
-
-## KEY MESSAGES
-<!-- content_type: key_messages -->
-
-You need to think and look ahead.
-
-Flight computers can be a distraction from the tasks at hand and degrade your performance.
-
-Flight computers display accurately what’s happening now and in the past. Predictions of finish height, ETA etc. are based on assumptions of climb rate and winds.
-
-Flight computers can display a huge amount of information - only relevant or useful information should be displayed.
-
-The display should be uncluttered to allow relevant information to be seen clearly and quickly.
 
 Figure 1 - the LX S100
 
@@ -90,20 +90,15 @@ Display of required track and actual track
 
 Distance and bearing to next turn point
 
-Finish height or final glide data, including setting a safety height above the ground to finish the glide
-
 Figure 2 - Oudie flight computer with
+
+Finish height or final glide data, including setting a safety height above the ground to finish the glide
 
 simple uncluttered display
 
 <!-- page: 39-4 -->
 
 Task predictions and speed to fly information are based on MacCready setting (MacCready theory is introduced in GPC unit 40 – Cruising, speed to fly, height bands and thermal selection). This MacCready setting is typically manually set, but in some instruments can be automatic. It is recommended that you start with a manual and conservative setting – for example if you expect your next climb to average 4 knots then set MacCready to 2 knots. The MacCready setting makes a large difference to the prediction of Expected Time of Arrival (ETA) and arrival height.
-
-## FLIGHT EXERCISES FOR THIS UNIT
-<!-- content_type: exercise -->
-
-You’ll be asked to check the configuration on a flight computer and set up a task it. Before you fly, make sure that you are familiar with the main functions, can use it for navigation and can correctly interpret arrival height information. In the air make sure that you maintain good lookout at all times. You’ll be queried on some of the information displayed and the validity of the assumptions.
 
 ### Notes
 
@@ -118,6 +113,11 @@ When cruising, use the flight computer to get the correct direction and pick a p
 While thermalling, check the computer’s wind vector by comparing it to the snail trail on the screen. To achieve this, set the screen to zoom-in while thermalling.
 
 Focus on lookout when approaching the start, turn points and finish line.
+
+## FLIGHT EXERCISES FOR THIS UNIT
+<!-- content_type: exercise -->
+
+You’ll be asked to check the configuration on a flight computer and set up a task it. Before you fly, make sure that you are familiar with the main functions, can use it for navigation and can correctly interpret arrival height information. In the air make sure that you maintain good lookout at all times. You’ll be queried on some of the information displayed and the validity of the assumptions.
 
 <!-- page: 39-5 -->
 
@@ -162,4 +162,9 @@ Flight computer manuals and device simulators
 
 Use these questions to test your knowledge of the unit.
 
-1. What does the netto mode of a vario display? 2. Why is it important to configure an electronic variometer? 3. Why is it important to configure a flight computer? 4. How is wind typically calculated? 5. What are the main assumptions used for calculating ETA and arrival height? 6. Why is it important to divide in-flight changes on a flight computer into small tasks?
+1. What does the netto mode of a vario display?
+2. Why is it important to configure an electronic variometer?
+3. Why is it important to configure a flight computer?
+4. How is wind typically calculated?
+5. What are the main assumptions used for calculating ETA and arrival height?
+6. Why is it important to divide in-flight changes on a flight computer into small tasks?

@@ -9,8 +9,6 @@ revision: "1.0"
 
 <!-- page: 40-1 -->
 
-Revision 1.0 February 2022 Page 40 - 1
-
 ## AIM
 <!-- content_type: aim -->
 
@@ -48,9 +46,21 @@ To develop the student’s skills and ingrained habits in selecting a path throu
   - Sufficient height for final glide
 - Demonstrate
   - Monitoring glide and taking appropriate actions
+
+Revision 1.0 February 2022 Page 40 - 1
+
 <!-- page: 40-2 -->
 
-Revision 1.0 February 2022 Page 40 - 2
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+- Aim to fly a track through rising (or less sinking) air to improve glide performance and maximise the chance of finding the best climbs.
+- The speed to fly should be based on the expected conditions ahead, not the last thermal.
+- Cruising strictly to MacCready speed to fly theory is inefficient and impossible to achieve - use block speeds (plus or minus 10 knots) that approximate MacCready speeds.
+- Don't take every thermal unless necessary - be selective with thermal strength and avoid wasting time by centring too many thermals.
+- Don't climb to the top of each thermal - leave when you think the next climb will be better (or to remain below cloud).
+- Divide the convection height into three bands: in the top band cruise fastest and only take strong climbs; in the middle band cruise more conservatively and be prepared to take weaker climbs; below 2000 feet prepare for an outlanding and stay within reach of an appropriate landing site while searching for a climb.
+- Transition from a soaring pilot to a landing pilot with sufficient height for a safe circuit.
 
 ## LESSON PLANNING AND CONDUCT
 <!-- content_type: briefing -->
@@ -76,19 +86,9 @@ Review the set task:
 - Consider potential thermal sources on track, and areas with potentially weaker thermals.
 - Identify where the last thermal for final glide is likely to be.
 
-## KEY MESSAGES
-<!-- content_type: key_messages -->
+Revision 1.0 February 2022 Page 40 - 2
 
-- Aim to fly a track through rising (or less sinking) air to improve glide performance and maximise the chance of finding the best climbs.
-- The speed to fly should be based on the expected conditions ahead, not the last thermal.
-- Cruising strictly to MacCready speed to fly theory is inefficient and impossible to achieve - use block speeds (plus or minus 10 knots) that approximate MacCready speeds.
-- Don't take every thermal unless necessary - be selective with thermal strength and avoid wasting time by centring too many thermals.
-- Don't climb to the top of each thermal - leave when you think the next climb will be better (or to remain below cloud).
-- Divide the convection height into three bands: in the top band cruise fastest and only take strong climbs; in the middle band cruise more conservatively and be prepared to take weaker climbs; below 2000 feet prepare for an outlanding and stay within reach of an appropriate landing site while searching for a climb.
-- Transition from a soaring pilot to a landing pilot with sufficient height for a safe circuit.
 <!-- page: 40-3 -->
-
-Revision 1.0 February 2022 Page 40 - 3
 
 ## Flight Exercises
 <!-- content_type: exercise -->
@@ -130,9 +130,9 @@ Not selecting thermals in accordance with the selection criteria (is the next th
 
 Not leaving when the next thermal is likely to be better
 
-<!-- page: 40-4 -->
+Revision 1.0 February 2022 Page 40 - 3
 
-Revision 1.0 February 2022 Page 40 - 4
+<!-- page: 40-4 -->
 
 ## THREAT AND ERROR MANAGEMENT
 <!-- content_type: airmanship -->
@@ -147,3 +147,5 @@ Revision 1.0 February 2022 Page 40 - 4
 
 - G Dale. ‘The Soaring Engine – volume 1’, Chapter: Flatland soaring
 - G Dale. ‘The Soaring Engine – volume 3’, Chapter: Flying
+
+Revision 1.0 February 2022 Page 40 - 4

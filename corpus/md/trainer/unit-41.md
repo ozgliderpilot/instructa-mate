@@ -10,8 +10,6 @@ revision: "1.0"
 <!-- page: 41-1 -->
 <!-- page: 41-2 -->
 
-Revision 1.0 February 2022 Page 41 - 2
-
 ## AIM
 <!-- content_type: aim -->
 
@@ -40,9 +38,10 @@ To evaluate the student’s capability to combine the GPC competencies to safely
 
 - For safe and successful cross-country flight, good pre-flight preparation is essential.
 - In-flight choice of route, thermals and cruise speed must be constantly re-evaluated with consideration of weather, terrain, outlanding options and airspace.
-<!-- page: 41-3 -->
 
-Revision 1.0 February 2022 Page 41 - 3
+Revision 1.0 February 2022 Page 41 - 2
+
+<!-- page: 41-3 -->
 
 ## LESSON PLANNING AND CONDUCT
 <!-- content_type: briefing -->
@@ -80,9 +79,9 @@ Undertake review/s of flight traces and explain good and poor decisions, areas f
 
 Limited multitasking ability – this will improve with time but performance related to safety must not be compromised
 
-<!-- page: 41-4 -->
+Revision 1.0 February 2022 Page 41 - 3
 
-Revision 1.0 February 2022 Page 41 - 4
+<!-- page: 41-4 -->
 
 ## THREAT AND ERROR MANAGEMENT
 <!-- content_type: airmanship -->
@@ -90,3 +89,5 @@ Revision 1.0 February 2022 Page 41 - 4
 - Threats and errors related to cross country flying are covered in the prerequisite units.
 - For Demonstrated Cross Country look out for errors related to multi-tasking. For example, lookout may be acceptable in isolation, but may become poor when trying to navigate, while stressed at the low end of the height band, while trying to work out why the flight computer wind seems to be wrong etc. As previously trained, make sure that the student is always prepared for a safe outlanding.
 - The debrief is a good opportunity to review threats and errors related to the cross-country sequences.
+
+Revision 1.0 February 2022 Page 41 - 4

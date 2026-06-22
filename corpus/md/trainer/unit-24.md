@@ -241,9 +241,9 @@ Airmanship is like a building:
 
 CAPSTONE OUTCOMES
 
-BEDROCK PRINCIPLES
-
 PILLARS OF KNOWLEDGE
+
+BEDROCK PRINCIPLES
 
 <!-- page: 24-6 -->
 - Capstone Outcomes:

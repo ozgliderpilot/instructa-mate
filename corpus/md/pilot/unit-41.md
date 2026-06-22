@@ -9,8 +9,6 @@ revision: "1.0"
 
 <!-- page: 41-1 -->
 
-Revision 1.0 February 2022 Page 41 - 1
-
 ## WHAT THIS UNIT IS ABOUT
 <!-- content_type: aim -->
 
@@ -20,6 +18,13 @@ To evaluate your capability to combine the GPC competencies to safely plan and a
 <!-- content_type: admin -->
 
 - GPC Unit 40 Cruising, speed to fly, height bands and thermal selection
+
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+For safe and successful cross-country flight good pre-flight preparation is essential.
+
+In-flight choice of route, thermals and cruise speed must be constantly re-evaluated with consideration of weather, terrain, outlanding options and airspace.
 
 ## PILOT GUIDE FOR THIS UNIT
 <!-- content_type: theory -->
@@ -41,16 +46,9 @@ Congratulations on reaching the end of the cross-country training in the GPC syl
 
 Limited multitasking ability – this will improve with time but performance related to safety must not be compromised
 
-## KEY MESSAGES
-<!-- content_type: key_messages -->
-
-For safe and successful cross-country flight good pre-flight preparation is essential.
-
-In-flight choice of route, thermals and cruise speed must be constantly re-evaluated with consideration of weather, terrain, outlanding options and airspace.
+Revision 1.0 February 2022 Page 41 - 1
 
 <!-- page: 41-2 -->
-
-Revision 1.0 February 2022 Page 41 - 2
 
 ## HOW DO YOU DEMONSTRATE COMPETENCE?
 <!-- content_type: competency -->
@@ -71,3 +69,5 @@ Revision 1.0 February 2022 Page 41 - 2
   - Safe entry to thermals and centring within 2-3 turns
   - An appropriate cruise speed relative to anticipated climb rate and height
   - Competent use of a flight computer
+
+Revision 1.0 February 2022 Page 41 - 2

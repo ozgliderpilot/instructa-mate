@@ -49,6 +49,14 @@ To train how to safely and cooperatively fly with other gliders. This requires a
   - Thermaling
 <!-- page: 32-2 -->
 
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+- Lookout is essential for awareness of other aircraft and predicting behaviour
+- Separation is maintained by thinking ahead and predicting what other aircraft might do.
+- If you are in another pilot’s blind spot, you are responsible for giving way.
+- Adopt gentle, predictable maneuvering techniques, join in with other gliders cruising or circling patterns and don’t surprise anyone or burst any bubbles!
+
 ## LESSON PLANNING AND CONDUCT
 <!-- content_type: briefing -->
 
@@ -81,34 +89,19 @@ Explain the principle of Separation Priority when cruising:
 Explain the importance of predictability and the steps for Thermaling with other gliders below.
 
 1. Approaching a thermal
-
   - FULL scan and TARGETED scan is very important as discussed in GPC Unit 31 Thermal Entry
   - Locate gliders in the thermal and identify their direction of turn.
   - Plan ahead for arrival – which gliders will you be joining in with?
   - Slow down before arriving to synchronize with the other gliders’ speed. Never pull up in the core near another Thermaling glider.
-
 2. Thermal entry
-
   - Join with zero potential conflict – fly around the outside of the other gliders’ circle (with at least 60m separation) until an opening is available or they climb above.
-
-## KEY MESSAGES
-<!-- content_type: key_messages -->
-
-- Lookout is essential for awareness of other aircraft and predicting behaviour
-- Separation is maintained by thinking ahead and predicting what other aircraft might do.
-- If you are in another pilot’s blind spot, you are responsible for giving way.
-- Adopt gentle, predictable maneuvering techniques, join in with other gliders cruising or circling patterns and don’t surprise anyone or burst any bubbles!
 <!-- page: 32-3 -->
-
 3. Thermalling
-
   - Go with the flow – match other gliders bank angle and speed
   - Make small centring corrections when safe to do so
   - Don’t turn inside other gliders
   - Note that one pilot with a small bank angle disrupts the thermal for the others who are forced to follow him/her
-
 4. Leaving a thermal
-
   - Exit with a gentle roll-out after checking for potential conflict
   - If you roll to wings level (zero bank), others will assume you are leaving so don’t turn back into the thermal
 

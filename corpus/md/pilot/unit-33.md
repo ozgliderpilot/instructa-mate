@@ -10,15 +10,6 @@ revision: "1.0"
 <!-- page: 33-1 -->
 <!-- page: 33-2 -->
 
-## KEY MESSAGES
-<!-- content_type: key_messages -->
-
-- Thermals are rising buoyant air from a thermal source.
-- The ground is a thermal source when it is heated by the sun. Darker and hotter surfaces generate better thermals.
-- Thermals have a lifecycle and may have a bubble structure.
-- There may not be a thermal at the ‘perfect’ location relative to sources and triggers since you need to be at the right point of the cycle (the bubble may be below or above).
-- Thermalling at low level increases the risk of a spin – maintain safe speed near the ground and have a clear break-off point at a safe height for a circuit and landing
-
 ## WHAT THIS UNIT IS ABOUT
 <!-- content_type: aim -->
 
@@ -36,6 +27,15 @@ This unit should be read in conjunction with:
 
 - GPC Unit 38 Meteorology and flight planning
 - GPC Unit 40 Cruising, speed to fly, height bands and thermal selection
+
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+- Thermals are rising buoyant air from a thermal source.
+- The ground is a thermal source when it is heated by the sun. Darker and hotter surfaces generate better thermals.
+- Thermals have a lifecycle and may have a bubble structure.
+- There may not be a thermal at the ‘perfect’ location relative to sources and triggers since you need to be at the right point of the cycle (the bubble may be below or above).
+- Thermalling at low level increases the risk of a spin – maintain safe speed near the ground and have a clear break-off point at a safe height for a circuit and landing
 
 ## PILOT GUIDE FOR THIS UNIT
 <!-- content_type: theory -->
@@ -102,9 +102,6 @@ Don’t be frustrated if the thermals aren’t there when you get to a good loca
 Use these questions to test your knowledge of the unit.
 
 1. Does the sun heat the air?
-
 2. What is the difference between a thermal source and thermal trigger?
-
 3. Would a road make a good thermal source?
-
 4. Why might a thermal not be there when you arrive in the ‘perfect’ spot for a thermal?

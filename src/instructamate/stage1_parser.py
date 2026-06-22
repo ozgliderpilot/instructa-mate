@@ -338,19 +338,29 @@ def _is_reference_patter(line: Line) -> bool:
 
 _BULLET_GLYPHS = ("•", "●")  # Pilot prints "•" (SymbolMT); Trainer prints "●" (Calibri)
 _SUBBULLET_GLYPH = "o"
+# A numbered-list marker printed as its own line — a bare "1." / "2." token (Pilot Unit 11
+# SELF-CHECK and the centring-technique list). Only a standalone token qualifies: an inline
+# "1. What is …" line keeps its number as prose (Unit 6 self-check), so it is left untouched.
+# Capped at two digits so a paragraph that wraps a year or phone fragment onto its own line
+# ("2010.", "306630.") is not mistaken for a list marker — real list ordinals are 1..99.
+_ORDERED_MARKER_RE = re.compile(r"\d{1,2}\.")
 
 
 def _marker_kind(line: Line) -> str | None:
     """Classify a block's leading line as a list marker, by glyph font or lead glyph.
 
     The glyph is usually its own line (marker line + wrapped text), but a short item
-    can print the glyph inline (``● Theory Lesson 2``); both forms are recognised.
+    can print the glyph inline (``● Theory Lesson 2``); both forms are recognised. A bare
+    numeric token (``1.``) is an ordered-list marker whose number is kept as the rendered
+    prefix.
     """
     text = line.text
     if line.font == "SymbolMT" or any(text == g or text.startswith(g + " ") for g in _BULLET_GLYPHS):
         return "bullet"
     if line.font == "CourierNewPSMT" or text == _SUBBULLET_GLYPH:
         return "subbullet"
+    if _ORDERED_MARKER_RE.fullmatch(text):
+        return "ordered"
     return None
 
 
@@ -491,12 +501,24 @@ def _classify_block(block: list[Line], source: str) -> list[Element]:
             continue
         if _is_subheading(line):
             flush_para()
-            flush_item()
+            # A bare ordered marker ("1.") immediately followed by a bold sub-heading is a
+            # *numbered heading* ("1." + "Awareness" → "### 1. Awareness"), not a list whose
+            # first item is a heading — the number belongs to the heading. (A number followed
+            # by non-bold prose, as in a SELF-CHECK list, stays an ordered item.) Carry the
+            # pending number into the heading instead of flushing it as its own item.
+            number = item[0] if item_kind == "ordered" and len(item) == 1 else None
+            if number is not None:
+                item, item_kind = None, None
+            else:
+                flush_item()
             if heading_kind == "subheading":
+                if number is not None:
+                    heading.append(number)
                 heading.append(line.text)
             else:
                 flush_heading()
-                heading, heading_kind = [line.text], "subheading"
+                heading = [number, line.text] if number is not None else [line.text]
+                heading_kind = "subheading"
             continue
         # plain text: the body of an open list item, else paragraph prose
         if item is not None:
@@ -513,7 +535,7 @@ def _classify_block(block: list[Line], source: str) -> list[Element]:
 
 # Kinds that stay visually tight against a preceding list/marker. A page marker is
 # here so a page break falling mid-list doesn't split the list with blank lines.
-_TIGHT_KINDS = {"bullet", "subbullet", "marker"}
+_TIGHT_KINDS = {"bullet", "subbullet", "ordered", "marker"}
 
 
 def _blank_between(prev: str, cur: str) -> bool:
@@ -668,6 +690,42 @@ def _region_for(block_bbox: BBox, regions: list[TableRegion]) -> TableRegion | N
     return None
 
 
+def _emit_page(
+    page_blocks: list[tuple[BBox, list[Line]]], regions: list[TableRegion], source: str
+) -> list[Element]:
+    """Classify a page's blocks into elements in true reading order.
+
+    PyMuPDF's block order is not strictly geometric — a section box lower on the page can be
+    emitted before the prose above it (Pilot Unit 11's KEY MESSAGES box, Unit 7's "Feel"
+    sub-section), which scrambles section order. So the blocks are re-ordered top-to-bottom
+    (then left-to-right) here. A two-column table is the one structure that must *not* be
+    re-ordered — its left/right column blocks interleave by y, and sorting would split a
+    wrapped row label or shuffle its rows — so each detected region is treated as a single
+    indivisible unit anchored at its bbox top, keeping the natural intra-region order that
+    :func:`_two_column_region` already laid out.
+    """
+    # (y, x, payload): payload is a region (emit its pre-rendered elements) or a block.
+    units: list[tuple[float, float, TableRegion | list[Line]]] = []
+    seen: set[int] = set()
+    for bbox, lines in page_blocks:
+        region = _region_for(bbox, regions)
+        if region is not None:
+            if id(region) not in seen:
+                seen.add(id(region))
+                units.append((region.bbox[1], region.bbox[0], region))
+            continue
+        units.append((bbox[1], bbox[0], lines))
+    units.sort(key=lambda u: (round(u[0]), round(u[1])))
+
+    elements: list[Element] = []
+    for _y, _x, payload in units:
+        if isinstance(payload, TableRegion):
+            elements.extend(payload.elements)
+        else:
+            elements.extend(_classify_block(payload, source))
+    return elements
+
+
 def render_unit_markdown(pdf_path, source: str, unit: int | str) -> str:
     """Render the Markdown for a single ``(source, unit)`` of *pdf_path*.
 
@@ -684,19 +742,11 @@ def render_unit_markdown(pdf_path, source: str, unit: int | str) -> str:
         meta = _unit_metadata(doc, number, variant, pages)
 
         elements: list[Element] = [("h1", f"# Unit {token} — {meta['unit_name']}")]
-        emitted: set[BBox] = set()
         for idx, label in pages:
             elements.append(("marker", label))
             page_blocks = _page_blocks_with_bbox(doc[idx])
             regions = _table_regions(plumber.pages[idx], page_blocks)
-            for bbox, lines in page_blocks:
-                region = _region_for(bbox, regions)
-                if region is not None:  # block belongs to a two-column table
-                    if region.bbox not in emitted:  # emit the whole table at its first block
-                        elements.extend(region.elements)
-                        emitted.add(region.bbox)
-                    continue
-                elements.extend(_classify_block(lines, source))
+            elements.extend(_emit_page(page_blocks, regions, source))
         return _frontmatter(source, token, meta) + "\n" + _assemble(elements)
     finally:
         plumber.close()

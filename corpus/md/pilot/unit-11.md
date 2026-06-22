@@ -9,17 +9,6 @@ revision: "1.0"
 
 <!-- page: 11-1 -->
 
-## KEY MESSAGES
-<!-- content_type: key_messages -->
-
-Soaring is not just about safely taking off and landing. There are many opportunities such as flying advanced aircraft types, cross country flying, mountain flying, flying competitions, badges and records, and aerobatics. Training is available for all of these pathways.
-
-Soaring in thermals is a key skill essential for longer duration flights and cross country flying.
-
-More advanced soaring concepts are trained in the GPC syllabus after solo.
-
-Soaring is a great sport where you never stop learning.
-
 ## WHAT THIS UNIT IS ABOUT
 <!-- content_type: aim -->
 
@@ -33,6 +22,17 @@ You’ll also refine your new essential aircraft handling skills (maintaining a 
 - GPC Unit 7 Straight flight, various speeds, trim
 - GPC Unit 8 Sustained turns, all controls
 - GPC Unit 9 Lookout scan procedures
+
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+Soaring is not just about safely taking off and landing. There are many opportunities such as flying advanced aircraft types, cross country flying, mountain flying, flying competitions, badges and records, and aerobatics. Training is available for all of these pathways.
+
+Soaring in thermals is a key skill essential for longer duration flights and cross country flying.
+
+More advanced soaring concepts are trained in the GPC syllabus after solo.
+
+Soaring is a great sport where you never stop learning.
 
 ## PILOT GUIDE FOR THIS UNIT
 <!-- content_type: theory -->
@@ -60,7 +60,6 @@ Thermals are columns of rising air, so to climb in them you’ll need to circle 
 Centring Techniques. As part of Introduction to Soaring you’ll be introduced to two thermal centring methods discussed there:
 
 1. Using feel
-
 2. Using the variometer
 
 ## FLIGHT EXERCISES FOR THIS UNIT
@@ -102,4 +101,6 @@ Unit 31 Thermal entry
 
 Use these questions to test your knowledge of the unit.
 
-1. What are the pathways available in the sport of gliding? 2. What is the most common way that gliders can fly long cross country distances? 3. What are two standard techniques for centring a thermal?
+1. What are the pathways available in the sport of gliding?
+2. What is the most common way that gliders can fly long cross country distances?
+3. What are two standard techniques for centring a thermal?

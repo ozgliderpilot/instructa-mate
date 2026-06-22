@@ -9,8 +9,6 @@ revision: "1.0"
 
 <!-- page: 38-1 -->
 
-Revision 1.0 February 2022 Page 38-1
-
 ## AIM
 <!-- content_type: aim -->
 
@@ -50,9 +48,19 @@ This unit should be read in conjunction with:
   - Suitable task distance
   - Suitable task waypoints
   - Review NOTAMS and radio frequencies.
+
+Revision 1.0 February 2022 Page 38-1
+
 <!-- page: 38-2 -->
 
-Revision 1.0 February 2022 Page 38-2
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+- How to access and use weather information relevant to planning a flight.
+- Weather threats such as wind, rain, thunderstorms, and dust/smoke and effect on flight planning.
+- The concept of the soaring window.
+- The likely cross-country speed that can be achieved based on predicted thermal strength, wind and other conditions.
+- Selection of a suitable task.
 
 ## LESSON PLANNING AND CONDUCT
 <!-- content_type: briefing -->
@@ -85,18 +93,9 @@ A list of basic weather information required is below. This information is used 
 
 - Weather events and timing (fronts, wind, rain, thunderstorms, dust/smoke etc)
 
-## KEY MESSAGES
-<!-- content_type: key_messages -->
+Revision 1.0 February 2022 Page 38-2
 
-- How to access and use weather information relevant to planning a flight.
-- Weather threats such as wind, rain, thunderstorms, and dust/smoke and effect on flight planning.
-- The concept of the soaring window.
-- The likely cross-country speed that can be achieved based on predicted thermal strength, wind and other conditions.
-- Selection of a suitable task.
 <!-- page: 38-3 -->
-
-Revision 1.0 February 2022 Page 38-3
-
 - Wind speed and direction during the day (at surface and selected altitudes)
 - Cloud – cumulus cloud base and high cloud over the day
 - Maximum temperatures over the task area
@@ -129,9 +128,9 @@ The pilot guide for this unit includes guidance on typical achievable speeds for
 
 Some considerations for task planning are:
 
-<!-- page: 38-4 -->
+Revision 1.0 February 2022 Page 38-3
 
-Revision 1.0 February 2022 Page 38-4
+<!-- page: 38-4 -->
 
 1. Task time. This should be shorter than the soaring window as predicted from the weather
 
@@ -140,7 +139,6 @@ analysis and should take into account time to climb in the first thermal and bef
 2. Task distance. Calculated from the predicted cross-country speed in the task time available.
 
 3. Task waypoints. The following should be considered:
-
   - Airspace restrictions.
   - NOTAMS at aerodromes enroute.
   - Radio frequencies enroute
@@ -180,9 +178,9 @@ Ask your student to comment on task progress relative to the progress anticipate
 
 It is useful, regardless of whether or not a task was flown, to demonstrate basic elements of reviewing a flight (detailed flight analysis is in the post-GPC syllabus). It would be best to do this with a
 
-<!-- page: 38-5 -->
+Revision 1.0 February 2022 Page 38-4
 
-Revision 1.0 February 2022 Page 38-5
+<!-- page: 38-5 -->
 
 recorded flight of the student if possible. Alternatively, a flight showing examples of both good and poor climbs would be helpful.
 
@@ -199,3 +197,5 @@ If possible, show students how applications such as SeeYou can be used to determ
 - Ensure that the student is aware of the dangers of outlanding in difficult conditions such as strong winds or gust fronts. At all times it’s always a good idea for pilots to seek advice from experienced instructors.
 - Other than specifically related to weather events, unlandable terrain may be a major cross country flying threat. Ensure that the student understands areas of unlandable terrain in the local tasking area and how to assess this during task planning – for example through the use of Google Maps.
 - At some sites it is advisable to fly with a database of airfields and always keep at least one within glide at all times (stepping stones).
+
+Revision 1.0 February 2022 Page 38-5

@@ -10,8 +10,6 @@ revision: "1.0"
 <!-- page: 40-1 -->
 <!-- page: 40-2 -->
 
-Revision 1.0 February 2022 Page 40- 2
-
 ## WHAT THIS UNIT IS ABOUT
 <!-- content_type: aim -->
 
@@ -21,23 +19,6 @@ To develop your skills and ingrained habits in selecting a path through the air 
 <!-- content_type: admin -->
 
 - GPC Unit 39 Advanced soaring instruments and flight computers
-
-## PILOT GUIDE FOR THIS UNIT
-<!-- content_type: theory -->
-
-This GPC unit introduces the final cross-country elements of the GPC syllabus. It covers appropriate track and speed for cruising, height bands and thermal selection, and a very basic introduction to final glides.
-
-### Cruising – Track selection
-
-Cruising efficiently maximises your chances of finding the best thermals, reduces the number required and increases your average rate of climb. You’ll be more efficient if you select a pathway that optimises the amount of time you fly through rising air.
-
-This is most easily done when cumulus clouds can provide guidance to where lift will be – look to run along streets wherever possible as long as good progress is being made on task. On blue days the same pathways still exist but you have to rely on your feel for all of the improvement. This takes concentration and practice. Choose pathways that keep you generally on track – deviating more than 30 degrees is often a disadvantage. Always deviate upwind instead of downwind given an equal choice. (Ref GPC units 33/36/38)
-
-Looking 20-60km ahead enables you to pick better lines of energy and identify if weather is improving or getting worse. Learn to recognise the best looking cumulus clouds, or feel for lines of rising air in the blue. The feel of the air will be assisted if you maintain a constant speed, the glider is trimmed, and you have a light grip on the stick. If required, fly a little slower in order to feel the air between thermals and identify lines of reduced sinking air.
-
-### Height Bands
-
-Considering height bands is a way to determine when you can fly faster and when you should slow down so
 
 ## KEY MESSAGES
 <!-- content_type: key_messages -->
@@ -56,9 +37,26 @@ Divide the convection height into three bands: in the top band cruise fastest an
 
 Transition from a soaring pilot to a landing pilot with sufficient height for a safe circuit.
 
-<!-- page: 40-3 -->
+## PILOT GUIDE FOR THIS UNIT
+<!-- content_type: theory -->
 
-Revision 1.0 February 2022 Page 40- 3
+This GPC unit introduces the final cross-country elements of the GPC syllabus. It covers appropriate track and speed for cruising, height bands and thermal selection, and a very basic introduction to final glides.
+
+### Cruising – Track selection
+
+Cruising efficiently maximises your chances of finding the best thermals, reduces the number required and increases your average rate of climb. You’ll be more efficient if you select a pathway that optimises the amount of time you fly through rising air.
+
+This is most easily done when cumulus clouds can provide guidance to where lift will be – look to run along streets wherever possible as long as good progress is being made on task. On blue days the same pathways still exist but you have to rely on your feel for all of the improvement. This takes concentration and practice. Choose pathways that keep you generally on track – deviating more than 30 degrees is often a disadvantage. Always deviate upwind instead of downwind given an equal choice. (Ref GPC units 33/36/38)
+
+Looking 20-60km ahead enables you to pick better lines of energy and identify if weather is improving or getting worse. Learn to recognise the best looking cumulus clouds, or feel for lines of rising air in the blue. The feel of the air will be assisted if you maintain a constant speed, the glider is trimmed, and you have a light grip on the stick. If required, fly a little slower in order to feel the air between thermals and identify lines of reduced sinking air.
+
+### Height Bands
+
+Considering height bands is a way to determine when you can fly faster and when you should slow down so
+
+Revision 1.0 February 2022 Page 40- 2
+
+<!-- page: 40-3 -->
 
 as to avoid getting low. It is a way of determining risk and acting accordingly.
 
@@ -78,9 +76,9 @@ MacCready theory (developed by Paul MacCready in the 1950s) defines, based on th
 
 Based on MacCready theory a curve such as shown in the chart below can be derived to show average cross-country speed versus cruise speed. You can see in this typical case, for an unballasted LS4, that the cross-country speed achieved varies by only a small amount when cruising 10 knots faster or 10 knots slower than the theoretical optimum speed.
 
-<!-- page: 40-4 -->
+Revision 1.0 February 2022 Page 40- 3
 
-Revision 1.0 February 2022 Page 40- 4
+<!-- page: 40-4 -->
 
 MacCready speed to fly theory is theoretically sound but is almost impossible to accurately fly, and constantly changing speed is inefficient. Since plus or minus 10 knots cruise speed does not make much difference ‘block speeds’ are used that approximate MacCready speeds. In the case of the unballasted LS4 the theoretical block speeds are approximately 70/85/90 knots if your next thermal is 2/4/6 knots respectively; however if you cruise at these speeds you’ll find it hard to feel the air, it’s much harder because everything happens faster, and you’re likely to get low. The table below shows more appropriate LS4 cruising block speeds for typical weak, medium and strong thermals, and depending on the height band (see next section). As you become more experienced you can increase these speeds by up to 5 knots.
 
@@ -114,9 +112,9 @@ If you aren’t sure, sample the thermal:
 
 Once centred in a thermal stay with it until you reach cloud base (maintaining VMC), or you expect the bottom of the next climb to be stronger than your current climb rate. It’s rarely appropriate to keep climbing in weak lift near the top.
 
-<!-- page: 40-5 -->
+Revision 1.0 February 2022 Page 40- 4
 
-Revision 1.0 February 2022 Page 40- 5
+<!-- page: 40-5 -->
 
 ### Final Glides
 
@@ -127,6 +125,14 @@ There is an old rule of thumb for final glide height: allow 1000 feet per 10 km 
 At a constant cruise speed you may be able to see your destination move on the canopy in the same way as an aiming point for final approach – if it moves up the canopy you are below glide. With a final glide computer it is useful to display the required L/D (glide ratio) to your destination (with the safety height). If this number decreases you are improving on the glide.
 
 If you think you are falling below glide, take another thermal – simply slowing down to increase the glide angle rarely works. Allow yourself plenty of height to complete a safe circuit, hopefully at the home airfield but always be prepared to outland if you don’t make it home.
+
+### Safety
+
+Review the threats and mitigating actions identified in the Pilot Guides ‘Soaring with other gliders’, ‘Outlanding planning, demonstration and execution’ and ‘Navigation and airspace’.
+
+It is extremely important to transition at the appropriate time from a soaring pilot to a landing pilot and allow sufficient height for a full circuit. If you get low on final glide there is a temptation to try to stretch the glide to the airfield – don’t do this! Make an early decision to find a thermal and plan for a possible outlanding. Pay attention to possible unlandable terrain when flight planning and select your track to avoid flying over it.
+
+As always, maintain good lookout at all times.
 
 ## FLIGHT EXERCISES FOR THIS UNIT
 <!-- content_type: exercise -->
@@ -148,17 +154,9 @@ There is a lot to cover, and this is likely to take more than one flight to beco
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### Safety
-
-Review the threats and mitigating actions identified in the Pilot Guides ‘Soaring with other gliders’, ‘Outlanding planning, demonstration and execution’ and ‘Navigation and airspace’.
-
-It is extremely important to transition at the appropriate time from a soaring pilot to a landing pilot and allow sufficient height for a full circuit. If you get low on final glide there is a temptation to try to stretch the glide to the airfield – don’t do this! Make an early decision to find a thermal and plan for a possible outlanding. Pay attention to possible unlandable terrain when flight planning and select your track to avoid flying over it.
-
-As always, maintain good lookout at all times.
+Revision 1.0 February 2022 Page 40- 5
 
 <!-- page: 40-6 -->
-
-Revision 1.0 February 2022 Page 40- 6
 
 ### COMMON PROBLEMS Losing too much height in the glide Not selecting and following an appropriate track Cruising speed too slow or too fast for the conditions
 
@@ -200,9 +198,9 @@ Not leaving when the next thermal is likely to be better
 
 Use these questions to test your knowledge of the unit.
 
-<!-- page: 40-7 -->
+Revision 1.0 February 2022 Page 40- 6
 
-Revision 1.0 February 2022 Page 40- 7
+<!-- page: 40-7 -->
 
 1. What is the maximum track deviation angle you should generally fly?
 
@@ -219,3 +217,5 @@ expect your next climb to average 5 knots, what would be an appropriate cruise s
 6. If you are 30km from your airfield and want to arrive at 1500 feet, approximately how high would you
 
 expect to need to be without significant wind?
+
+Revision 1.0 February 2022 Page 40- 7

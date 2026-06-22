@@ -166,17 +166,10 @@ that pulling the stick back in this situation does not raise the nose. You must 
 <!-- content_type: self_check -->
 
 1. What are the symptoms of a stall in straight flight?
-
 2. What action must the pilot take if the glider stalls?
-
 3. Is it possible to stall in a turn without a nose-high attitude?
-
 4. What action must the pilot take if the glider stalls in a turn?
-
 5. Define "safe speed near the ground". Calculate the speed to fly the circuit in a glider which stalls at 33 knots in straight flight.
-
 6. If you are turning slowly and the glider suddenly starts to noticeably increase its bank angle without any input from you, what is the problem and what would be your action?
-
 7. What happens to the stalling speed when flaps are lowered?
-
 8. What happens to the stalling speed when the airbrakes are opened?

@@ -53,6 +53,31 @@ This unit should be read in conjunction with:
 <!-- page: 5-3 -->
   - The rudder is connected to the rudder pedals.
 - Different amounts of force on the controls will result in different rates of effect on the aircraft. If we use a lot of force on the control we get a large control surface movement and therefore a large amount of rotation on the aircraft axis that it effects. Conversely a small amount of force results in a small effect.
+
+Rotation of
+
+Control Movement
+
+Control Surface Position
+
+Force on an aircraft axis of
+
+aircraft around an
+
+that
+
+resulting
+
+changes
+
+rotation
+
+in
+
+creates
+
+axis.
+
 - The rotation of the aircraft in each axis is around the Centre of Gravity (C of G) of the aircraft.
 
 ### Our Reference – the Horizon
@@ -65,31 +90,6 @@ This unit should be read in conjunction with:
 ### Elevator
 
 - The effect of the elevator is to control the pitch of the glider. Firstly, the glider is placed into its correct attitude with respect to the horizon. “Attitude” is the standard gliding term used to describe the position of the nose in relation to the horizon. When this is done, we have our “stable platform” referred to earlier. The illustration following shows how this appears from the cockpit of the glider.
-
-Control Movement
-
-Control Surface Position
-
-Force on an aircraft axis of
-
-rotation
-
-Rotation of
-
-aircraft around an
-
-axis.
-
-changes
-
-that
-
-creates
-
-resulting
-
-in
-
 <!-- page: 5-4 -->
 - First observe the effect of the elevator. Hold the stick lightly in the right hand and move it smoothly forward. Look ahead at the horizon while doing this and it will be observed that the nose will go down below the previous attitude. The sound level in the cockpit increases as the speed builds up, due to the increase in speed of the airflow past the cockpit. During training, this sound level is an important clue to changing speed in a glider. The increase in speed is confirmed by a glance at the Air Speed Indicator (ASI).
 - Still looking ahead, the stick is brought smoothly back and the nose will come up (horizon falls). The airflow noise will decrease and a glance at the ASI shows that the speed is decreasing. See below.

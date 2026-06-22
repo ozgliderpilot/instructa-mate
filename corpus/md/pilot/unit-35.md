@@ -9,13 +9,6 @@ revision: "1.0"
 
 <!-- page: 35-1 -->
 
-## KEY MESSAGES
-<!-- content_type: key_messages -->
-
-- Effective personal and equipment preparation leads to a greater likelihood that you will achieve your goals and increases your overall enjoyment of the sport.
-- Being prepared and relaxed will reduce the risk when outlanding.
-- Concerns over the state of a retrieve vehicle, the trailer or availability of crew leads to concerns about the possibility of an outlanding and not being willing to leave the circuit area, abandoning tasks at the first sign of difficulty and/or not concentrating on the basics of flying. You need to be well prepared to enjoy cross country flight.
-
 ## WHAT THIS UNIT IS ABOUT
 <!-- content_type: aim -->
 
@@ -35,6 +28,13 @@ This unit should be read in conjunction with:
 - GPC Unit 38 Meteorology and Flight Planning
 - GPC Unit 39 Advanced Soaring Instruments and Flight Computers
 
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+- Effective personal and equipment preparation leads to a greater likelihood that you will achieve your goals and increases your overall enjoyment of the sport.
+- Being prepared and relaxed will reduce the risk when outlanding.
+- Concerns over the state of a retrieve vehicle, the trailer or availability of crew leads to concerns about the possibility of an outlanding and not being willing to leave the circuit area, abandoning tasks at the first sign of difficulty and/or not concentrating on the basics of flying. You need to be well prepared to enjoy cross country flight.
+
 ## PILOT GUIDE FOR THIS UNIT
 <!-- content_type: theory -->
 
@@ -50,8 +50,6 @@ A reason for concentrating on preparation is to minimise physiological impairmen
 Make sure you have essential items prepared for the day such as hat and sunglasses, drinking container with water and food for the flight. Have the right clothes for flying on a hot or cooler day. Use long sleeves in hot weather, have comfortable shoes that are stout enough to walk over open
 
 <!-- page: 35-2 -->
-
-Preparation does not begin 30 minutes before flying, or even on the morning of a flight. It begins weeks in advance. Having to fix equipment the day of the flight can lead the pilot to becoming frustrated and unsettled. Preparing earlier means no distractions on the day of the flight and less anxiety.
 
 fields. Make sure you have money and your (charged) mobile phone with all necessary phone numbers saved. If you are flying over remote areas carry an electronic locator transmitter – have you considered Search and Rescue (SAR) requirements?
 
@@ -80,6 +78,8 @@ Trailers are commonly poorly maintained and have missing fittings – check over
 Does your car have insurance for any driver and a full tank of fuel. Have you pre-arranged a crew and do they know where to find the trailer and know how to drive your car? And don’t forget to leave the keys to the car and trailer – you wouldn’t be the first to take off with the keys in your pocket!
 
 It is useful to use a checklist for preparation. The checklist below can be used as a guide but it is suggested that you make your own to match your circumstances and your club arrangements.
+
+Preparation does not begin 30 minutes before flying, or even on the morning of a flight. It begins weeks in advance. Having to fix equipment the day of the flight can lead the pilot to becoming frustrated and unsettled. Preparing earlier means no distractions on the day of the flight and less anxiety.
 
 <!-- page: 35-3 -->
 

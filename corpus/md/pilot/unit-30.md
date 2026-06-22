@@ -9,17 +9,6 @@ revision: "1.0"
 
 <!-- page: 30-1 -->
 
-## KEY MESSAGES
-<!-- content_type: key_messages -->
-
-- Typical thermals in Australia are large and can take 10 to 20 seconds, or more, to fly across
-- Maintain coordinated control of the glider with consistent bank and attitude (actual angle not critical)
-- It is important to develop a mental picture of the rising air and location of the core
-- There are two key techniques for centring a thermal – using feel and using the vario
-- Feel of vertical accelerations is instantaneous – you can use feel to determine the difference between a gust and a surge
-- The vario always lags because it takes time to accelerate the glider upwards or downwards, typically a glider turns through 45-60 degrees in this time – you need to compensate for this when using the vario to centre
-- You need to be able to use the feel technique and the vario technique
-
 ## WHAT THIS UNIT IS ABOUT
 <!-- content_type: aim -->
 
@@ -37,6 +26,17 @@ To develop your skills and ingrained habits in centring thermals effectively.
 This unit should be read in conjunction with:
 
 - GPC Unit 31 Thermal Entry
+
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+- Typical thermals in Australia are large and can take 10 to 20 seconds, or more, to fly across
+- Maintain coordinated control of the glider with consistent bank and attitude (actual angle not critical)
+- It is important to develop a mental picture of the rising air and location of the core
+- There are two key techniques for centring a thermal – using feel and using the vario
+- Feel of vertical accelerations is instantaneous – you can use feel to determine the difference between a gust and a surge
+- The vario always lags because it takes time to accelerate the glider upwards or downwards, typically a glider turns through 45-60 degrees in this time – you need to compensate for this when using the vario to centre
+- You need to be able to use the feel technique and the vario technique
 
 ## PILOT GUIDE FOR THIS UNIT
 <!-- content_type: theory -->
@@ -61,7 +61,7 @@ Thermalling by feel is by far the best technique and other techniques are second
 
 <!-- page: 30-3 -->
 
-To centre using the vario: Identify the minimum vario indication in the turn (preferably using audio). 45 degrees (1/8 turn) after this point bank should be reduced to about half for 2-3 seconds before resuming the original angle of bank. On the next turn repeat if necessary.
+To centre using feel: When a sustained upward acceleration is felt, bank should be reduced to about half for 2-3 seconds before resuming the original angle of bank. On the next turn repeat if necessary.
 
 On the diagram below the green area marked SURGE is where you should feel the upward acceleration. Correction (reduced bank) should start at the point where the glider is shown. The dotted line shows the path with reduced bank for 2-3 seconds and then the corrected circle that is hopefully better centred on the core. You’ll need to regularly repeat this process, particularly if the thermal is rough or your nose attitude and angle of bank are not constant.
 
@@ -69,11 +69,13 @@ On the diagram below the green area marked SURGE is where you should feel the up
 
 You may not be able to feel acceleration because the thermal is very wide, the strength is low, the glider has little natural feel, you are too tense (relax!), or for a number of other reasons. For this reason a secondary technique uses vario indications with compensation for vario lag. Vario lag is mostly due to the inertia of the glider (it takes time for the air to accelerate the glider before the vario can indicate the change). It will be different for each glider/weight/vario combination and generally equates to around a 45 to 60 degree portion of a typical thermalling turn.
 
+To centre using the vario: Identify the minimum vario indication in the turn (preferably using audio). 45 degrees (1/8 turn) after this point bank should be reduced to about half for 2-3 seconds before resuming the original angle of bank. On the next turn repeat if necessary.
+
 On the diagram below Point A is the point of the circle with the most sinking air (or least lifting air if the circle is a little closer to the core). Point B is where the vario indicates the minimum (after the lag). At this point identify a ground feature a further 45 degrees into the turn, then continue the turn to that heading, reduce bank for 2-3 seconds, and then resume the original angle of bank. As with the feel technique, you’ll need to regularly repeat this process. Ideally this technique should result in correction at the point where the glider is shown – the same point as for the feel technique.
 
-To centre using feel: When a sustained upward acceleration is felt, bank should be reduced to about half for 2-3 seconds before resuming the original angle of bank. On the next turn repeat if necessary.
-
 <!-- page: 30-4 -->
+
+Practice at every opportunity. Nobody ever perfects thermalling!
 
 ### Notes
 
@@ -82,9 +84,6 @@ To centre using feel: When a sustained upward acceleration is felt, bank should 
 - Do not change the direction of the turn while thermalling, even if you think there are no other gliders in the thermal or nearby.
 - Skidding turns when thermalling may result a spin without warning. Your yaw string should always be a little on the outside of the turn – in this state the glider is unlikely to spin (and it’s also most efficient).
 - Beware of vario installations that have leaks or produce variable lag. Vario installations can be checked by an airworthiness inspector.
-
-Practice at every opportunity. Nobody ever perfects thermalling!
-
 <!-- page: 30-5 -->
 
 ## FLIGHT EXERCISES FOR THIS UNIT
@@ -103,7 +102,8 @@ The vario technique will be demonstrated and you’ll have an opportunity to pra
 
 ### COMMON PROBLEMS Not maintaining constant nose attitude
 
-1. Flying using airspeed indicator instead of nose attitude relative to the horizon 2. Not trimmed correctly
+1. Flying using airspeed indicator instead of nose attitude relative to the horizon
+2. Not trimmed correctly
 
 ### Not maintaining constant angle of bank Not using visual references for angle of bank. Use visual references such as instrument screws and glare shields.
 
@@ -127,10 +127,14 @@ The vario technique will be demonstrated and you’ll have an opportunity to pra
 
 Use these questions to test your knowledge of the unit.
 
-1. Roughly how long does it take to fly across a typical thermal? 2. Why is it important to thermal with a consistent attitude and bank? 3. What speed and angle of bank is appropriate?
-
+1. Roughly how long does it take to fly across a typical thermal?
+2. Why is it important to thermal with a consistent attitude and bank?
+3. What speed and angle of bank is appropriate?
 <!-- page: 30-6 -->
 
 4. Ideally, is the point of correction and the action the same when using the feel and the vario
 
-technique? 5. Why is a skidding thermalling turn dangerous? 6. Is it OK to change the direction of your turn within a thermal?
+technique?
+
+5. Why is a skidding thermalling turn dangerous?
+6. Is it OK to change the direction of your turn within a thermal?

@@ -102,6 +102,14 @@ relate this to the vario indication when it happens. Ask the student to tell you
 
 The student practices thermal entry as many times as possible on a cross country flight. (If conditions are not suitable for cross country, the trainer can fly out of a thermal for about 20-30 seconds and then turn back. Hand over to the student when approaching the thermal again)
 
+### Note
+
+- Don’t introduce thermal entry when there are other gliders in the thermal at similar height (within 500 feet). Once the student has a good grasp of the concepts this can be relaxed.
+- The student must be relaxed to be able to feel the thermal. Trying to combine other exercises may overload them and be counterproductive.
+- Make sure appropriate lookout scan is continuing at all times. Be aware of the student fixating on the panel and attitude only. NEVER allow the student to turn without a clear lookout first.
+- If the student is reacting to the vario and not feel, ask the student to turn the sound off (check they know how to do this before the flight) and cover the vario display(s) (this will likely have to be done on the ground).
+- Make sure attitude is held constant from well before the area of rising air is entered. Changing attitude applies vertical accelerations to the glider, masking the thermal feel.
+
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->
 
@@ -110,14 +118,6 @@ The student practices thermal entry as many times as possible on a cross country
 - Turning in a gust Not waiting for a sustained surge of at least 5 seconds
 - Turning too late The student taking too long deciding which way to turn – get the student to pick a direction before reaching the thermal
 - Turning too early Not waiting for at least 5 seconds or until the surge subsides before turning
-
-### Note
-
-- Don’t introduce thermal entry when there are other gliders in the thermal at similar height (within 500 feet). Once the student has a good grasp of the concepts this can be relaxed.
-- The student must be relaxed to be able to feel the thermal. Trying to combine other exercises may overload them and be counterproductive.
-- Make sure appropriate lookout scan is continuing at all times. Be aware of the student fixating on the panel and attitude only. NEVER allow the student to turn without a clear lookout first.
-- If the student is reacting to the vario and not feel, ask the student to turn the sound off (check they know how to do this before the flight) and cover the vario display(s) (this will likely have to be done on the ground).
-- Make sure attitude is held constant from well before the area of rising air is entered. Changing attitude applies vertical accelerations to the glider, masking the thermal feel.
 <!-- page: 31-5 -->
 
 ### Debrief

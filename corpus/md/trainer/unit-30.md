@@ -47,6 +47,16 @@ This unit should be read in conjunction with:
   - Effective Thermaling in both directions
 <!-- page: 30-2 -->
 
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+- Horizontal thermal structure and size
+- Awareness of accelerations and gusts and how they feel - feel of vertical accelerations is instantaneous
+- The vario always lags because it takes time to accelerate the glider upwards or downwards, typically a glider turns through 45-60 degrees in this time – this must be compensated for when using the vario to centre
+- Maintain coordinated control of the glider with consistent bank and attitude (actual angle not critical)
+- Use terms vertical acceleration or surge, not lift and sink
+- Students who are successful using the feel technique need to understand the vario technique as well
+
 ## LESSON PLANNING AND CONDUCT
 <!-- content_type: briefing -->
 
@@ -75,16 +85,6 @@ The student may not feel acceleration because the thermal is very wide, the stre
 Note:
 
 - The period of 2-3 seconds at reduced bank is the time to hold that bank; it does not include the time to reduce and increase bank.
-
-## KEY MESSAGES
-<!-- content_type: key_messages -->
-
-- Horizontal thermal structure and size
-- Awareness of accelerations and gusts and how they feel - feel of vertical accelerations is instantaneous
-- The vario always lags because it takes time to accelerate the glider upwards or downwards, typically a glider turns through 45-60 degrees in this time – this must be compensated for when using the vario to centre
-- Maintain coordinated control of the glider with consistent bank and attitude (actual angle not critical)
-- Use terms vertical acceleration or surge, not lift and sink
-- Students who are successful using the feel technique need to understand the vario technique as well
 <!-- page: 30-3 -->
 - Speed and bank angle changes will change the turn radius and centre; unless these are constant when centred, the centre of the thermal will be quickly lost.
 - With both techniques, the vario indication is used to confirm that the thermal has been centred. If a positive vario indication remains reasonably constant throughout a turn, then the thermal has been centred.
@@ -98,14 +98,6 @@ Note:
 
 Demonstration. Position the glider in a thermal so that it is not centred. Ask the student to describe what is being felt at each point in the turn and from that identify where the centre of the thermal is most likely to be. Ask the student to identify the surge and correct using the feel technique. It is importantly to fly smoothly at a constant attitude so that the student has the best chance of feeling the surge.
 
-Student Exercises. Position the student in the thermal as before and have them repeat the actions demonstrated. Once the student has centred the thermal, take control again and move them away from the core to repeat the exercise.
-
-### Vario Technique
-
-Demonstration. Position the glider in a thermal so that it is not centred. Fly a complete accurate circle and ask the student to identify the vario minimum. Emphasise the importance of maintaining lookout – use audio as a cue. Identify a ground feature 45 degrees from that point and correct when at that identified heading.
-
-Student Exercises. Position the student in the thermal as before and have them repeat the actions demonstrated. Once the student has centred the thermal, take control again and move them away from the core to repeat the exercise.
-
 #### Suggested Patter
 <!-- content_type: reference_patter -->
 
@@ -113,10 +105,18 @@ Student Exercises. Position the student in the thermal as before and have them r
 
 we’ll do a full turn to see if it worked… Do you think we need to try again? …”
 
+Student Exercises. Position the student in the thermal as before and have them repeat the actions demonstrated. Once the student has centred the thermal, take control again and move them away from the core to repeat the exercise.
+
+### Vario Technique
+
+Demonstration. Position the glider in a thermal so that it is not centred. Fly a complete accurate circle and ask the student to identify the vario minimum. Emphasise the importance of maintaining lookout – use audio as a cue. Identify a ground feature 45 degrees from that point and correct when at that identified heading.
+
 #### Suggested Patter
 <!-- content_type: reference_patter -->
 
 “Now demonstrating using just the vario. We need to keep looking out, listen to the audio and check the vario needle when necessary. On the next turn let me know when you think the vario is indicating the peak and the minimum… OK, that’s great. On the next turn we’ll pick a ground feature 45 degrees to our right when the vario is at the minimum then reduce bank on that heading… lookout in the direction we’ll be correcting … OK, there’s the minimum. That farmhouse looks like about the right angle… reducing bank …1…2…3. Back into the turn…”
+
+Student Exercises. Position the student in the thermal as before and have them repeat the actions demonstrated. Once the student has centred the thermal, take control again and move them away from the core to repeat the exercise.
 
 <!-- page: 30-4 -->
 

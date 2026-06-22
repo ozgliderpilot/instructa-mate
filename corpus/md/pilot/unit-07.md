@@ -54,16 +54,16 @@ This unit should be read in conjunction with:
 - Hold and maintain the stick position and pressure to achieve the desired attitude/speed. Then move the trim to remove the pressure. Do not move the trim to achieve the attitude that you want. The trim control is a little coarse in its action so trying to fly by moving the trim will not be smooth and is slower to give the required outcomes.
 - Whenever you change the attitude/speed and wish to return to the stable platform, you must adjust the trim also.
 
-### Flying Straight
-
-- When flying back to the airfield, or to a thermal, or travelling to a nearby town, or flying the circuit, you need to fly in a straight line.
-- To achieve this, you need to look into the distance and identify a point to fly towards. Looking ahead in the distance lets you spot any deviation from your proposed track as well as letting
-
 ### How do you achieve “Feel” when flying
 
 - This typically relates to how you hold the stick. If you grip the stick hard then you will not feel responses from the glider, you will constantly fight it and by the end of a 30 minute battle you will be tired, your hand sore and you will have not had a chance to relax and enjoy the view. The aim is to relax in the seat, relax your hands and feet. A light grip on the stick will let you feel what the air is doing to the glider which will improve your control and also your ability to feel thermals.
 - Most problems you will have with aircraft control at this stage of your training will be caused by a tight grip and unnecessary, small control movements, Sit back and relax your body, and relax your grip and relax your legs and the glider will stop moving all over the place.
 - When changing attitude, you will need to apply smooth pressure on the stick, and then move the trim to remove that pressure. When you can completely relax any pressure the glider will “fly itself”.
+
+### Flying Straight
+
+- When flying back to the airfield, or to a thermal, or travelling to a nearby town, or flying the circuit, you need to fly in a straight line.
+- To achieve this, you need to look into the distance and identify a point to fly towards. Looking ahead in the distance lets you spot any deviation from your proposed track as well as letting
 <!-- page: 7-3 -->
 
 you keep a better lookout for other traffic. Detecting that the glider is not flying straight takes some practice but it is an important skill in flying.

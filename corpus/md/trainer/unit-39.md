@@ -42,6 +42,15 @@ Describe
   - Correct interpretation of the information displayed
 <!-- page: 39-2 -->
 
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+- The pilot needs to think and look ahead.
+- Flight computers can be a distraction from the tasks at hand and degrade pilot performance.
+- Flight computers display accurately what’s happening now and in the past. Predictions of finish height, ETA etc. are based on assumptions of climb rate and winds.
+- Flight computers can display a huge amount of information - only relevant or useful information should be displayed.
+- The display should be uncluttered to allow relevant information to be seen clearly and quickly.
+
 ## LESSON PLANNING AND CONDUCT
 <!-- content_type: briefing -->
 
@@ -75,14 +84,6 @@ All systems display and allow configuration of:
 
 Using an example device such as those available in the club gliders, demonstrate configuration and display of the above items. Most devices have a simulator that can be run on a computer – these are a great way to
 
-## KEY MESSAGES
-<!-- content_type: key_messages -->
-
-- The pilot needs to think and look ahead.
-- Flight computers can be a distraction from the tasks at hand and degrade pilot performance.
-- Flight computers display accurately what’s happening now and in the past. Predictions of finish height, ETA etc. are based on assumptions of climb rate and winds.
-- Flight computers can display a huge amount of information - only relevant or useful information should be displayed.
-- The display should be uncluttered to allow relevant information to be seen clearly and quickly.
 <!-- page: 39-3 -->
 
 demonstrate use of the device. Or use the appropriate pages from the manual and then demonstrate in a glider. If the club gliders don’t have flight computers try using the Oudie simulator (search for it on google).

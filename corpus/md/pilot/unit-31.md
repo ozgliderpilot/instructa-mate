@@ -10,16 +10,6 @@ revision: "1.0"
 <!-- page: 31-1 -->
 <!-- page: 31-2 -->
 
-## KEY MESSAGES
-<!-- content_type: key_messages -->
-
-- Initial turn direction is less important than making the turn – it can be corrected if wrong
-- Minimise changes in attitude during entry to maximise feel
-- Lookout with respect to thermal entry and ongoing scan
-- The vario indication is not particularly useful for thermal entry due to lag and gust sensitivity. In particular the vario indicates rising are with a lag and horizontal gusts instantaneously, so it’s very important to learn to enter thermals by feel
-- Steps for thermal entry
-- Patience
-
 ## WHAT THIS UNIT IS ABOUT
 <!-- content_type: aim -->
 
@@ -36,6 +26,16 @@ This unit will develop your knowledge and skills for safe thermal entry and the 
 This unit should be read in conjunction with:
 
 - GPC Unit 32 Soaring with Other Gliders
+
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+- Initial turn direction is less important than making the turn – it can be corrected if wrong
+- Minimise changes in attitude during entry to maximise feel
+- Lookout with respect to thermal entry and ongoing scan
+- The vario indication is not particularly useful for thermal entry due to lag and gust sensitivity. In particular the vario indicates rising are with a lag and horizontal gusts instantaneously, so it’s very important to learn to enter thermals by feel
+- Steps for thermal entry
+- Patience
 
 ## PILOT GUIDE FOR THIS UNIT
 <!-- content_type: theory -->

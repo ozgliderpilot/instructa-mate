@@ -45,6 +45,16 @@ This unit should be read in conjunction with:
   - Navigation to relevant thermal sources and triggers in a search for thermals
 <!-- page: 33-2 -->
 
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+- Thermals are rising buoyant air from a thermal source.
+- The ground is a thermal source when it is heated by the sun. Darker and hotter surfaces generate better thermals.
+- Thermals have a lifecycle and may have a bubble structure.
+- There may not be a thermal at the ‘perfect’ location relative to sources and triggers since you need to be at the right point of the cycle (the bubble may be below or above).
+- When navigating to likely locations of thermals relative to sources and triggers the effect of wind drift needs to be considered.
+- Thermaling at low level increases the risk of a spin – maintain safe speed near the ground and have a clear break-off point at a safe height for a circuit and landing.
+
 ## LESSON PLANNING AND CONDUCT
 <!-- content_type: briefing -->
 
@@ -76,16 +86,6 @@ The flight exercises for this unit are best combined with flight exercises for o
 ### Student exercises
 
 - Ask the student to identify potential thermal sources and triggers, and sample as many as practical to develop understanding of how to use them and the cycling behaviour.
-
-## KEY MESSAGES
-<!-- content_type: key_messages -->
-
-- Thermals are rising buoyant air from a thermal source.
-- The ground is a thermal source when it is heated by the sun. Darker and hotter surfaces generate better thermals.
-- Thermals have a lifecycle and may have a bubble structure.
-- There may not be a thermal at the ‘perfect’ location relative to sources and triggers since you need to be at the right point of the cycle (the bubble may be below or above).
-- When navigating to likely locations of thermals relative to sources and triggers the effect of wind drift needs to be considered.
-- Thermaling at low level increases the risk of a spin – maintain safe speed near the ground and have a clear break-off point at a safe height for a circuit and landing.
 <!-- page: 33-3 -->
 
 ## COMMON PROBLEMS

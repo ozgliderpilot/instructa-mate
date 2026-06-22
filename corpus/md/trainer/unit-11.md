@@ -43,6 +43,10 @@ To introduce student pilots to soaring and what can be achieved by progressing t
 - Demonstrate
   - Basic thermal centring using minor corrections
 <!-- page: 11-2 -->
+- Soaring is not just about safely taking off and landing. There are many opportunities such as flying advanced aircraft types, cross country flying, mountain flying, flying competitions, badges and records, and aerobatics. Training is available for all of these pathways.
+- Soaring in thermals is a key skill essential for longer duration flights and cross country flying.
+- More advanced soaring concepts are trained in the GPC syllabus after solo.
+- Soaring is a great sport where you never stop learning.
 
 ## LESSON PLANNING AND CONDUCT
 <!-- content_type: briefing -->
@@ -80,10 +84,6 @@ All efforts should be made to enable the student pilot to experience soaring fli
 
 Demonstrate thermal entry and centring. Verbalise your mental picture of where the core is and approach to recentring. Ask the student to describe where they think the core is. Keep control movements slow and smooth and try to get the student to feel acceleration. Re-iterate the importance of maintaining a constant nose attitude and constant angle of bank once centred.
 
-- Soaring is not just about safely taking off and landing. There are many opportunities such as flying advanced aircraft types, cross country flying, mountain flying, flying competitions, badges and records, and aerobatics. Training is available for all of these pathways.
-- Soaring in thermals is a key skill essential for longer duration flights and cross country flying.
-- More advanced soaring concepts are trained in the GPC syllabus after solo.
-- Soaring is a great sport where you never stop learning.
 <!-- page: 11-3 -->
 
 On a cross country flight, demonstrate initial climb, departure on task, cruising towards a goal, basic thermal joining, basic Thermaling and thermal departure. Allow the student to enjoy the experience and do not explain complex concepts. Point out ground features, local towns etc.

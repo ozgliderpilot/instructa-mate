@@ -19,6 +19,14 @@ To learn how to safely and cooperatively fly with other gliders. This requires a
 
 - GPC Unit 31 Thermal Entry
 
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
+- Lookout is essential for awareness of other aircraft and predicting behaviour.
+- Separation is maintained by thinking ahead and predicting what other aircraft might do.
+- If you are in another pilot’s blind spot, you are responsible for giving way.
+- Adopt gentle, predictable manoeuvring techniques, join in with other gliders cruising or circling patterns and don’t surprise anyone or burst any bubbles!
+
 ## PILOT GUIDE FOR THIS UNIT
 <!-- content_type: theory -->
 
@@ -34,13 +42,6 @@ Your flying should be predictable at all times so that other pilots can maintain
 
 1 Double blind situations are where pilots of each aircraft cannot see each other due to being in each other’s blind arc. Refer to Pilot Guides ‘Lookout Introduction’ and ‘Lookout Scan Procedures’.
 
-## KEY MESSAGES
-<!-- content_type: key_messages -->
-
-- Lookout is essential for awareness of other aircraft and predicting behaviour.
-- Separation is maintained by thinking ahead and predicting what other aircraft might do.
-- If you are in another pilot’s blind spot, you are responsible for giving way.
-- Adopt gentle, predictable manoeuvring techniques, join in with other gliders cruising or circling patterns and don’t surprise anyone or burst any bubbles!
 <!-- page: 32-2 -->
 
 The key to safety when soaring with other gliders is Awareness, Separation and Predictability.
@@ -120,6 +121,12 @@ Near other gliders: Cruising, thermal joining, thermalling and leaving thermals 
 
 You’ll then have an opportunity to try it for yourself.
 
+### Notes
+
+Judgement of the distance to gliders and the closing rate or relative speed between gliders will take time to develop.
+
+You may find this exercise challenging because you need to concentrate on what’s happening outside the glider while maintaining accurate control of the glider – this gets better with practice.
+
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
@@ -139,13 +146,6 @@ You’ll then have an opportunity to try it for yourself.
 ### Not maintaining position opposite another glider in a thermal
 
 - Heading at the glider ahead in the turn instead of outside the tail
-
-### Notes
-
-Judgement of the distance to gliders and the closing rate or relative speed between gliders will take time to develop.
-
-You may find this exercise challenging because you need to concentrate on what’s happening outside the glider while maintaining accurate control of the glider – this gets better with practice.
-
 <!-- page: 32-7 -->
 
 ## HOW DO YOU DEMONSTRATE COMPETENCE?
@@ -169,11 +169,7 @@ You may find this exercise challenging because you need to concentrate on what�
 Use these questions to test your knowledge of the unit.
 
 1. What are the three key principles for safely soaring with other gliders?
-
 2. What is the minimum separation from other aircraft at all times?
-
 3. Why is it important to fly predictably?
-
 4. Why is it not safe to turn inside another glider when thermalling?
-
 5. Why should you not turn back into a thermal after rolling wings-level?
