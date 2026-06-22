@@ -1,11 +1,11 @@
 ---
 source: trainer
 unit: 12
-unit_name: 2
+unit_name: Slow Flight, Stalling
 revision: "1.0"
 ---
 
-# Unit 12 — 2
+# Unit 12 — Slow Flight, Stalling
 
 <!-- page: 12-1 -->
 <!-- page: 12-2 -->

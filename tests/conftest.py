@@ -20,6 +20,7 @@ TRAINER_PDF = CORPUS / "00 Combined Trainer Guides units 1-26 Solo  BBB.pdf"
 # as the golden the parser must reproduce.
 PILOT_UNIT1_GOLDEN = CORPUS / "md" / "pilot" / "unit-01.md"
 TRAINER_UNIT5_GOLDEN = CORPUS / "md" / "trainer" / "unit-05.md"
+TRAINER_UNIT13A_GOLDEN = CORPUS / "md" / "trainer" / "unit-13A.md"
 
 
 @pytest.fixture
@@ -58,3 +59,10 @@ def trainer_unit5_golden() -> str:
     if not TRAINER_UNIT5_GOLDEN.exists():
         pytest.skip(f"Golden not present at {TRAINER_UNIT5_GOLDEN}")
     return TRAINER_UNIT5_GOLDEN.read_text(encoding="utf-8")
+
+
+@pytest.fixture
+def trainer_unit13A_golden() -> str:
+    if not TRAINER_UNIT13A_GOLDEN.exists():
+        pytest.skip(f"Golden not present at {TRAINER_UNIT13A_GOLDEN}")
+    return TRAINER_UNIT13A_GOLDEN.read_text(encoding="utf-8")

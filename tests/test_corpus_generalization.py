@@ -103,16 +103,25 @@ def test_write_corpus_emits_clean_tree_and_reports_skips(corpus_sources, tmp_pat
     assert ("trainer", 5) in written
     assert ("pilot", 1) in written
 
-    # The variant-split (13/14/20) and absent units (Trainer 23, Pilot 26) are skipped —
-    # loudly, with a reason — not silently emitted.
-    assert {u for s, u in skipped if s == "trainer"} == {13, 14, 20, 23}
-    assert {u for s, u in skipped if s == "pilot"} == {13, 14, 20, 26}
+    # The variant-split units (13/14/20) are now expanded into their A/S/W sub-units and
+    # emitted — no longer skipped — through the same pipeline (issue #7).
+    variant_ids = {f"{u}{v}" for u in (13, 14, 20) for v in ("A", "S", "W")}
+    assert {f"{u}" for s, u in written if s == "trainer"} >= variant_ids
+    assert {f"{u}" for s, u in written if s == "pilot"} >= variant_ids
+
+    # Only genuinely absent units still skip — loudly, with a reason: the Trainer has no
+    # Unit 23 body, the Pilot no Unit 26.
+    assert {u for s, u in skipped if s == "trainer"} == {23}
+    assert {u for s, u in skipped if s == "pilot"} == {26}
     assert all(o.error for o in report.skipped)
     assert all(o.path is None for o in report.skipped)
 
-    # Files land at the stable path only for written units.
+    # Variant files land at the variant path; plain units keep theirs; nothing emits at
+    # the bare variant-split number.
     assert (tmp_path / "trainer" / "unit-05.md").exists()
     assert (tmp_path / "pilot" / "unit-01.md").exists()
+    assert (tmp_path / "trainer" / "unit-13A.md").exists()
+    assert (tmp_path / "pilot" / "unit-20S.md").exists()
     assert not (tmp_path / "trainer" / "unit-13.md").exists()
     assert not (tmp_path / "pilot" / "unit-26.md").exists()
     assert all(o.path is not None and o.path.exists() for o in report.written)
