@@ -35,7 +35,19 @@ class UnitStructureError(ValueError):
 # recognised (not mistaken for footer-less) and routed to a clear variant error.
 FOOTER_RE = re.compile(r"Page\s*(\d+)\s*([A-Z])?\s*-\s*(\d+)")
 REVISION_RE = re.compile(r"Revision:?\s+([0-9.]+)")  # Trainer prints "Revision: 1.0", Pilot "Revision 1.0"
-UNIT_TITLE_RE = re.compile(r"Unit\s+\d+\s*[-–]?\s*(.+)")
+# A unit identity: a plain number ("5") or a variant sub-unit token ("13A"). The letter
+# is the variant (A/S/W = aerotow / self-launch / winch); units 13/14/20 are split this
+# way in both Sources (see :func:`_resolve_unit_pages`).
+UNIT_ID_RE = re.compile(r"(\d+)([A-Z]*)")
+
+
+def _parse_unit_id(unit: int | str) -> tuple[int, str]:
+    """Split a unit identity into ``(number, variant)`` — ``(13, "A")`` for ``"13A"``,
+    ``(5, "")`` for a plain ``5``."""
+    m = UNIT_ID_RE.fullmatch(str(unit).strip())
+    if not m:
+        raise ValueError(f"not a unit identity: {unit!r} (expected e.g. 5 or '13A')")
+    return int(m.group(1)), m.group(2)
 
 _BOLD_FLAG = 1 << 4  # PyMuPDF span flag bit for bold
 # The running banner. Non-bold and banner-sized on content pages (stripped by size),
@@ -158,51 +170,75 @@ def _scan_footers(doc) -> dict[int, tuple[int, str, int]]:
     return footers
 
 
-def _resolve_unit_pages(doc, source: str, unit: int) -> list[tuple[int, str]]:
-    """Physical pages of *unit* as ``(page_index, "U-P")`` in order, or raise.
+def _variant_letters(footers: Mapping[int, tuple[int, str, int]], number: int) -> list[str]:
+    """The variant letters footers carry for *number* — ``["A", "S", "W"]`` for a
+    variant-split unit (13/14/20), ``[]`` for a plain one. Lets the resolver and the batch
+    wrapper agree on what a unit's sub-units are from the single footer scan."""
+    return sorted({v for (u, v, _p) in footers.values() if u == number and v})
 
-    The footer-less first page of a unit (``Page U-1``, whose glyphs don't map in any
-    extractor) is *inferred* as the page immediately before ``Page U-2``. Rather than
-    return a silently-incomplete run, this raises :class:`UnitStructureError` when the
-    unit is variant-split (13/14/20 → A/S/W), absent from the Source, or non-consecutive
-    — so a missing Citation is caught at parse time, not at answer time.
+
+def _resolve_unit_pages(doc, source: str, number: int, variant: str) -> list[tuple[int, str]]:
+    """Physical pages of a ``(number, variant)`` unit as ``(page_index, "U-P")``, or raise.
+
+    The same resolver serves a plain unit (``variant=""``) and a variant sub-unit
+    (``variant="A"`` for 13A): it keeps the footer pages whose letter matches and labels
+    them with the variant token (``"13A-1"``). The footer-less first page (``Page U-1``,
+    whose glyphs don't map in any extractor) is *inferred* as the page immediately before
+    ``Page U-2`` — true for variant title pages too. Rather than return a silently-
+    incomplete run, this raises :class:`UnitStructureError` when a plain unit is in fact
+    variant-split (13/14/20 → A/S/W), the unit is absent from the Source, or the run is
+    non-consecutive — so a missing Citation is caught at parse time, not at answer time.
     """
+    token = f"{number}{variant}"
     footers = _scan_footers(doc)
-    plain = sorted(i for i, (u, v, _p) in footers.items() if u == unit and not v)
-    if not plain:
-        variants = sorted({f"{unit}{v}" for (u, v, _p) in footers.values() if u == unit and v})
+    matched = sorted(i for i, (u, v, _p) in footers.items() if u == number and v == variant)
+    if not matched:
+        if variant:
+            raise UnitStructureError(
+                f"no pages found for variant sub-unit {token} in the {source} guide "
+                f"(absent from this Source, or its footers don't map)"
+            )
+        variants = [f"{number}{v}" for v in _variant_letters(footers, number)]
         if variants:
             raise UnitStructureError(
-                f"unit {unit} of the {source} guide is variant-split into "
+                f"unit {number} of the {source} guide is variant-split into "
                 f"{', '.join(variants)} (footer e.g. 'Page {variants[0]} - 1'); "
-                f"variant sub-units are not yet rendered"
+                f"render each variant sub-unit by its token (e.g. render_unit_markdown(..., '{variants[0]}'))"
             )
         raise UnitStructureError(
-            f"no pages found for unit {unit} in the {source} guide "
+            f"no pages found for unit {number} in the {source} guide "
             f"(absent from this Source, or its footers don't map)"
         )
 
     pages: list[tuple[int, str]] = []
-    if footers[plain[0]][2] == 2:  # Page U-1 footer unreadable -> infer it
-        pages.append((plain[0] - 1, f"{unit}-1"))
-    pages.extend((i, f"{unit}-{footers[i][2]}") for i in plain)
+    if footers[matched[0]][2] == 2:  # Page U-1 footer unreadable -> infer it
+        pages.append((matched[0] - 1, f"{token}-1"))
+    pages.extend((i, f"{token}-{footers[i][2]}") for i in matched)
 
     pnums = [int(label.rsplit("-", 1)[1]) for _idx, label in pages]
     if pnums != list(range(1, len(pnums) + 1)):
         raise UnitStructureError(
-            f"unit {unit} of the {source} guide has a non-consecutive page run "
+            f"unit {token} of the {source} guide has a non-consecutive page run "
             f"{pnums}; expected 1..{len(pnums)} — a page's footer Citation is missing"
         )
     return pages
 
 
-def _unit_metadata(doc, unit: int, pages: list[tuple[int, str]]) -> dict[str, str]:
-    """Pull ``unit_name`` and ``revision`` from the unit's running banner/footer."""
+def _unit_metadata(doc, number: int, variant: str, pages: list[tuple[int, str]]) -> dict[str, str]:
+    """Pull ``unit_name`` and ``revision`` from the unit's running banner/footer.
+
+    The name regex is anchored to this unit's *known* number and variant rather than a
+    bare ``Unit \\d+`` pattern, because the variant running header reads ``Unit 13S -
+    Launch …`` (or, for Pilot 20S, ``Unit 20 S - …`` with a space). A generic optional
+    ``[A-Z]?`` would swallow the first letter of an un-dashed plain name (``Unit 1
+    Lookout Awareness``); anchoring to the resolved variant avoids that ambiguity.
+    """
+    title_re = re.compile(rf"Unit\s+{number}(?!\d)\s*{variant}\s*[-–]?\s*(.+)")
     name, revision = "", ""
     for idx, _label in pages:
         for line in _page_lines(doc[idx]):
             if not name and not line.bold:
-                m = UNIT_TITLE_RE.fullmatch(line.text)
+                m = title_re.fullmatch(line.text)
                 if m:
                     name = m.group(1).strip()
             if not revision:
@@ -214,11 +250,11 @@ def _unit_metadata(doc, unit: int, pages: list[tuple[int, str]]) -> dict[str, st
     return {"unit_name": name, "revision": revision}
 
 
-def _frontmatter(source: str, unit: int, meta: dict[str, str]) -> str:
+def _frontmatter(source: str, token: str, meta: dict[str, str]) -> str:
     return (
         "---\n"
         f"source: {source}\n"
-        f"unit: {unit}\n"
+        f"unit: {token}\n"
         f"unit_name: {meta['unit_name']}\n"
         f'revision: "{meta["revision"]}"\n'
         "---\n"
@@ -470,15 +506,22 @@ def _region_for(block_bbox: BBox, regions: list[TableRegion]) -> TableRegion | N
     return None
 
 
-def render_unit_markdown(pdf_path, source: str, unit: int) -> str:
-    """Render the Markdown for a single ``(source, unit)`` of *pdf_path*."""
+def render_unit_markdown(pdf_path, source: str, unit: int | str) -> str:
+    """Render the Markdown for a single ``(source, unit)`` of *pdf_path*.
+
+    *unit* is a plain number (``5``) or a variant sub-unit token (``"13A"``); both run
+    through this one seam. The variant letter flows into the page Citations (``13A-1``),
+    the frontmatter ``unit:`` field, and the H1.
+    """
+    number, variant = _parse_unit_id(unit)
+    token = f"{number}{variant}"
     doc = fitz.open(pdf_path)
     plumber = pdfplumber.open(pdf_path)
     try:
-        pages = _resolve_unit_pages(doc, source, unit)
-        meta = _unit_metadata(doc, unit, pages)
+        pages = _resolve_unit_pages(doc, source, number, variant)
+        meta = _unit_metadata(doc, number, variant, pages)
 
-        elements: list[Element] = [("h1", f"# Unit {unit} — {meta['unit_name']}")]
+        elements: list[Element] = [("h1", f"# Unit {token} — {meta['unit_name']}")]
         emitted: set[BBox] = set()
         for idx, label in pages:
             elements.append(("marker", label))
@@ -494,19 +537,21 @@ def render_unit_markdown(pdf_path, source: str, unit: int) -> str:
                 element = _classify_block(lines, source)
                 if element is not None:
                     elements.append(element)
-        return _frontmatter(source, unit, meta) + "\n" + _assemble(elements)
+        return _frontmatter(source, token, meta) + "\n" + _assemble(elements)
     finally:
         plumber.close()
         doc.close()
 
 
-def write_unit_markdown(pdf_path, source: str, unit: int, out_root="corpus/md") -> Path:
+def write_unit_markdown(pdf_path, source: str, unit: int | str, out_root="corpus/md") -> Path:
     """Render a unit and persist it to ``<out_root>/<source>/unit-NN.md``.
 
-    Thin batch wrapper around :func:`render_unit_markdown`. Writes LF line endings so
+    Thin batch wrapper around :func:`render_unit_markdown`. A variant sub-unit lands at
+    ``unit-13A.md`` (zero-padded number + variant letter). Writes LF line endings so
     re-running on an unchanged PDF yields a byte-identical file on every platform.
     """
-    out_path = Path(out_root) / source / f"unit-{unit:02d}.md"
+    number, variant = _parse_unit_id(unit)
+    out_path = Path(out_root) / source / f"unit-{number:02d}{variant}.md"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(render_unit_markdown(pdf_path, source, unit), encoding="utf-8", newline="\n")
     return out_path
@@ -521,7 +566,7 @@ class UnitOutcome:
     """
 
     source: str
-    unit: int
+    unit: int | str  # a plain number, or a variant token like "13A"
     path: Path | None
     error: str | None
 
@@ -548,18 +593,29 @@ def write_corpus(
 ) -> CorpusReport:
     """Render every ``(source, unit)`` through the single seam and emit the clean tree.
 
-    Both Source PDFs run through one pipeline. Units whose structure can't be faithfully
-    rendered (variant-split, absent, non-consecutive) raise :class:`UnitStructureError`;
-    those are *collected* as skips with their reason rather than aborting the batch, so a
-    re-runnable, diffable ``corpus/md/<source>/unit-NN.md`` tree is produced for the
-    ADR-0002 human-verification gate while Citation errors stay visible.
+    Both Source PDFs run through one pipeline. A variant-split unit (13/14/20) is expanded
+    into its A/S/W sub-units — discovered from the footer scan, not hard-coded — and each
+    variant is emitted to its own ``unit-13A.md`` through the same seam. Units whose
+    structure can't be faithfully rendered (absent, non-consecutive) raise
+    :class:`UnitStructureError`; those are *collected* as skips with their reason rather
+    than aborting the batch, so a re-runnable, diffable ``corpus/md/<source>/unit-NN.md``
+    tree is produced for the ADR-0002 human-verification gate while Citation errors stay
+    visible.
     """
     outcomes: list[UnitOutcome] = []
     for source, pdf_path in sources.items():
+        doc = fitz.open(pdf_path)
+        try:
+            footers = _scan_footers(doc)
+        finally:
+            doc.close()
         for unit in units:
-            try:
-                path = write_unit_markdown(pdf_path, source, unit, out_root=out_root)
-                outcomes.append(UnitOutcome(source, unit, path, None))
-            except UnitStructureError as exc:
-                outcomes.append(UnitOutcome(source, unit, None, str(exc)))
+            letters = _variant_letters(footers, unit)
+            identities = [f"{unit}{v}" for v in letters] if letters else [unit]
+            for identity in identities:
+                try:
+                    path = write_unit_markdown(pdf_path, source, identity, out_root=out_root)
+                    outcomes.append(UnitOutcome(source, identity, path, None))
+                except UnitStructureError as exc:
+                    outcomes.append(UnitOutcome(source, identity, None, str(exc)))
     return CorpusReport(tuple(outcomes))
