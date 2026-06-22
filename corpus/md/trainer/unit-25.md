@@ -20,7 +20,7 @@ To develop the skills and knowledge required to:
 This unit develops non-technical skills and knowledge that underpins all GPC units and aviation activity.
 
 ## PRE-REQUISITE UNITS
-<!-- content_type: None -->
+<!-- content_type: admin -->
 
 There are no pre-requisite GPC units to this unit.
 

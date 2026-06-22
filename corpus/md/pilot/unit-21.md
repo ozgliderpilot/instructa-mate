@@ -84,8 +84,9 @@ The logbook endorsement should carry the instructor's name, instructor level, si
 
 Your instructor will show you how to operate your particular radio in your glider. This information will
 
-include operation of a VHF radio to: ● Change frequencies,
+include operation of a VHF radio to:
 
+- Change frequencies,
 - Set volume & squelch levels,
 - Press to transmit and use the microphone.
 

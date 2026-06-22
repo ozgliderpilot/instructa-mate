@@ -114,7 +114,7 @@ BGA Instructors Manual 2017
 <!-- page: 17-6 -->
 
 ## FLIGHT EXERCISES
-<!-- content_type: None -->
+<!-- content_type: exercise -->
 
 Flying for this unit ideally requires benign weather conditions with little turbulence and wind effects for initial exercises, building up to more demanding conditions as experience and competency develop.
 

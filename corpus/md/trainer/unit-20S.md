@@ -15,7 +15,7 @@ revision: "1.0"
 To describe types of launch emergency and demonstrate approaches to prevent these emergencies, and safe actions in the event of them happening on the ground and in the air. Competency in this unit is a prerequisite to solo flight when this involves self-launch aircraft.
 
 ## PRE-REQUISITE UNITS
-<!-- content_type: None -->
+<!-- content_type: admin -->
 
 - GPC Unit 13S Launch
 - GPC Unit 14S Take-off
@@ -88,7 +88,10 @@ o Taking appropriate action with simulated engine failure, including landing on 
 
 - (Consider using a Simulator)
 - Summary of the range of emergencies that pilots need to avoid and to know how to react.
-- Ground signals to abort launch prior to ground roll.
+- 
+
+### Ground signals to abort launch prior to ground roll.
+
   - Anyone outside can abort launch:
 
 ▪ Shouting “STOP! STOP! STOP!” and holds both hands vertically above head.
@@ -101,12 +104,18 @@ o Taking appropriate action with simulated engine failure, including landing on 
   - Close throttle;
   - Maintain directional control;
   - Apply full airbrake and wheel brake(s).
-- Engine problem airborne, runway remaining:
+- 
+
+### Engine problem airborne, runway remaining:
+
   - Lower nose to adopt safe speed;
   - Close throttle;
   - Land straight ahead on runway;
   - If over running the runway, ground loop prior to hitting fence.
-- Engine problem airborne, no runway remaining
+- 
+
+### Engine problem airborne, no runway remaining
+
   - Lower nose to adopt and maintain safe speed;
   - If time permits, conduct CFMOST check:
 <!-- page: 20S-4 -->
@@ -129,9 +138,15 @@ o Taking appropriate action with simulated engine failure, including landing on 
   - If time permits: Fuel and Switches off.
   - Outland straight ahead or within 30 degrees either side of straight ahead;
   - If above safe height either 180 degree turnback or modified circuit to a runway depending on aircraft type, aerodrome layout and/or weather conditions.
-  - Remember priorities: 1. Aviate 2. Navigate 3. Communicate.
+  - 
+
+### Remember priorities: 1. Aviate 2. Navigate 3. Communicate.
+
 - Low rate of climb – check if the airbrakes may be out.
-- Fire in flight:
+- 
+
+### Fire in flight:
+
   - Adopt glide attitude;
   - Throttle Back;
   - Fuel and Switches off.
@@ -164,11 +179,14 @@ o Taking appropriate action with simulated engine failure, including landing on 
 
 ### Advice to trainer regarding their responsibility to maintain safe flight.
 
-- Do not exceed your own limitations when setting difficult tasks for the student. The student may just say to you – ‘you have control’. ● Maintain safe speed near the ground at all times.
+- Do not exceed your own limitations when setting difficult tasks for the student. The student may just say to you – ‘you have control’.
+- Maintain safe speed near the ground at all times.
 - Maintain currency with modified circuits/ turnback procedures.
 - Maintain at all times situational awareness, aircraft control and safety.
 - Ensure student locates, identifies and operates correctly controls and equipment during all phases of operation during practice emergencies.
-- During a real (not practice) emergency, the trainer will take command.
+- 
+
+### During a real (not practice) emergency, the trainer will take command.
 
 Notes
 

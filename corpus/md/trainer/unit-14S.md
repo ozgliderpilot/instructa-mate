@@ -144,7 +144,9 @@ and be introduced with a batch of fuel.  Fueling from partially full drums is a 
 
 - Apply full power with gradual application of the throttle over a few seconds. “Slamming” the throttle open may strain some of the components over time. An immediate effect may cause the engine to “bog” and stutter due to incorrect fuel/air mixture in the carburettor. Smooth application of the throttle is required.
 - Most people have heard that powered aircraft sometimes have a tendency to swing to one side on takeoff, powered sailplanes often swing quite badly on takeoff, even those with only 30 or 40 Kw under the cowling. It is often quite a shock to a glider pilot, who is unused to such behaviour.
-- As power develops, periodically scan engine instruments to ensure that expected values are being achieved and prepare to abort the launch if not.
+- As power develops, periodically scan engine instruments to ensure that expected values
+
+### are being achieved and prepare to abort the launch if not.
 
 Propeller torque
 

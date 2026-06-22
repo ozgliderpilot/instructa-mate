@@ -15,12 +15,16 @@ revision: "1.0"
 
 THE AIM OF THIS GPC UNIT IS TO ENSURE THE STUDENT:
 
-- Can fly accurately and confidently close to the stall; ● Is aware of the importance of always maintaining a safe margin from the stall whenever close to the ground i.e. below 1000’ AGL; ● Can recognise the approach of a stall; and ● Will initiate prompt prevention and recovery from stalls.
+- Can fly accurately and confidently close to the stall;
+- Is aware of the importance of always maintaining a safe margin from the stall whenever close to the ground i.e. below 1000’ AGL;
+- Can recognise the approach of a stall; and
+- Will initiate prompt prevention and recovery from stalls.
 
 ## PREREQUISITE UNITS
 <!-- content_type: admin -->
 
-- GPC Unit 7 Straight flight various speeds and Trim ● GPC Unit 8 Sustained turns all controls
+- GPC Unit 7 Straight flight various speeds and Trim
+- GPC Unit 8 Sustained turns all controls
 
 ## COMPLEMENTARY UNITS
 <!-- content_type: admin -->
@@ -127,16 +131,32 @@ i. With and without engine power; ii. With and without engine pod extended:
 
 Objective
 
-- Principally precautionary – recognition of condition • Introduce and explain loss of lateral damping • Use of rudder to catch wing drop – but does not result in recovery. Rudder may pick the wing up but without stick forward the other wing will drop. • BUT recovery is immediate with reduced angle of attack • However, if the manoeuvres which resulted in the approach to stall resulted in a speed lower than the stall speed the stick must be held forward till the speed increases to above the stall speed before the stick can be eased back so that the wing again can take the full load of the weight of the glider.
+- Principally precautionary – recognition of condition
+- Introduce and explain loss of lateral damping
+- Use of rudder to catch wing drop – but does not result in recovery. Rudder may pick the wing up but without stick forward the other wing will drop.
+- BUT recovery is immediate with reduced angle of attack
+- However, if the manoeuvres which resulted in the approach to stall resulted in a speed lower than the stall speed the stick must be held forward till the speed increases to above the stall speed before the stick can be eased back so that the wing again can take the full load of the weight of the glider.
 
 Three issues:
 
-- Rudder can pick the dropped wing up but does not recover the stalled wing and is not actually necessary • Stick forward reduces the angle of attack immediately and hence recovers normal flight characteristics • The glider speed must be higher than the stall speed before the wing will carry the full weight of the glider. Briefing
-- Describe as precautionary • Describe loss of lateral damping and aileron control reversed if anything (except for wash out). • Recovery with elevator • Optional use of rudder to remove yaw.
+- Rudder can pick the dropped wing up but does not recover the stalled wing and is not actually necessary
+- Stick forward reduces the angle of attack immediately and hence recovers normal flight characteristics
+- The glider speed must be higher than the stall speed before the wing will carry the full weight of the glider.
+
+### Briefing
+
+- Describe as precautionary
+- Describe loss of lateral damping and aileron control reversed if anything (except for wash out).
+- Recovery with elevator
+- Optional use of rudder to remove yaw.
 
 ### Air demonstration and exercise
 
-- Emphasise feel of loss of lateral damping. • And recovery of lateral damping immediately with angle of attack • And recovery of flying speed • Rudder to catch yaw – does not recover. • Explain - may need to wait for speed recovery before
+- Emphasise feel of loss of lateral damping.
+- And recovery of lateral damping immediately with angle of attack
+- And recovery of flying speed
+- Rudder to catch yaw – does not recover.
+- Explain - may need to wait for speed recovery before
 
 The important competence is recognition of the feel of loss of lateral damping and the development of an AUTOMATIC response to move the stick forward.
 

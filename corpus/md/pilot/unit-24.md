@@ -139,6 +139,9 @@ Oxygen
 
 - Hypoxia with altitude
 - Legal requirements
+
+Airmanship (an easy proword)
+
 <!-- page: 24-4 -->
 - AIR (Heat, cold, noise, wind, weather, fit for task)
 - MAN (fitness to fly, trained, recency, proficiency, type endorsed)

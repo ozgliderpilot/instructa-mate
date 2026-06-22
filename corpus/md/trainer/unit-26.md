@@ -19,7 +19,7 @@ To:
 - promote continuance of further training towards the GPC.
 
 ## PRE-REQUISITE UNITS
-<!-- content_type: None -->
+<!-- content_type: admin -->
 
 - GPC Units 1 through 25.
 

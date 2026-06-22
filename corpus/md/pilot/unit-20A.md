@@ -114,6 +114,8 @@ There are a number of potential Aerotow launch emergencies that pilots need to b
 
 ### Tug Emergency
 
+Engine Failure (e.g. fuel starvation) Tug descends without warning or signal and may disappear
+
 under nose
 
 <!-- page: 20A-4 -->
@@ -121,12 +123,17 @@ under nose
 - Maintain safe speed near the ground
 - Land ahead if low or manoeuvre for circuit
 
+Partial Engine Failure (e.g. mechanical, fuel vaporisation, magneto failure, carbie heat selection)
+
 or about to enter cloud
 
 - Pilot should identify the problem and determine safest option. Don’t release if you don’t have a safe option
 - If Tug pilot signals wave-off by Rocking the wings, Release IMMEDIATELY and avoid the tug – tow-pilot has a bigger problem than you do.
 - Maintain safe speed near the ground.
 - Land ahead if low or manoeuvre for circuit.
+
+Low rate of climb tug pilot attributing to glider (eg dive brakes may be out)
+
 - Tug pilot signals by rapid Rudder Waggle.
 - Do NOT release.
 - Check glider configuration and correct if necessary.

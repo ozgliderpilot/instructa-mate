@@ -168,6 +168,9 @@ Failure to consider all other potential obstacles in the aircraft’s path.
 ## TRAINING MATERIALS AND REFERENCES
 <!-- content_type: admin -->
 
-- Pilot Guide GPC Unit 2 – Note! The Pilot guide contains necessary information for the Trainer to cover for all 3 forms of launching – aerotow, winch and auot-tow (it is not covered in detail in the Trainer notes – please refer to the Pilot Guide)
+- Pilot Guide GPC Unit 2 – Note! The Pilot guide contains necessary information for the
+
+### Trainer to cover for all 3 forms of launching – aerotow, winch and auot-tow (it is not covered in detail in the Trainer notes – please refer to the Pilot Guide)
+
 - GPC Logbook.
 - GFA MoSP 2 Operations

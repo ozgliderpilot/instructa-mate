@@ -74,6 +74,9 @@ NOTES:
 - The airbrake control colour is always BLUE and this control handle should always be identified before using.
 - All spoiler and airbrakes have maximum speeds for activation. See Aircraft Flight Manual and placards in cockpit.
 - Airbrakes can also be used in other circumstances such as trying to reduce height quickly or to reduce the chances of an overspeed.
+
+Flaps: (GREY)
+
 <!-- page: 10-3 -->
 
 ### Why flaps are fitted?

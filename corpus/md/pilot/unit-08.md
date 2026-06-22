@@ -115,7 +115,8 @@ To develop the knowledge and skill to:
 - Varying the speed
 - Exiting the turn pointing to a specific heading
 - Reversing turns
-- The table below gives a guide to the various factors to be considered in making turns. • The table represents a modern training two-seater of about 600kg All Up Weight (AUW) and 34 to 1 glide angle.
+- The table below gives a guide to the various factors to be considered in making turns.
+- The table represents a modern training two-seater of about 600kg All Up Weight (AUW) and 34 to 1 glide angle.
 
 ### To complete a 180 degree turn at 65 knots
 

@@ -255,7 +255,13 @@ May be caused by student attempting large bank angles on the rolls. Have the stu
 
 The threats and errors that can apply to this unit are:
 
-- Misunderstanding of use of rudder simultaneously with aileron. ● Left-handed student may have difficulty in controlling ailerons with non-dominant hand. ● Higher force required to operate rudder relative to lateral stick movement. ● Loss of SA during exercises when focussing on coordination. ● Potential for loss of controlled flight if airspeed reduces towards stall in yawed configuration. ● Loss of height during conduct of exercises away from the landing area – maintain SA with relation to the airfield. ● Ineffective communication between student & instructor (including distractions, hearing difficulties or English as a second language).
+- Misunderstanding of use of rudder simultaneously with aileron.
+- Left-handed student may have difficulty in controlling ailerons with non-dominant hand.
+- Higher force required to operate rudder relative to lateral stick movement.
+- Loss of SA during exercises when focussing on coordination.
+- Potential for loss of controlled flight if airspeed reduces towards stall in yawed configuration.
+- Loss of height during conduct of exercises away from the landing area – maintain SA with relation to the airfield.
+- Ineffective communication between student & instructor (including distractions, hearing difficulties or English as a second language).
 
 ## TRAINING MATERIALS AND REFERENCES
 <!-- content_type: admin -->

@@ -62,12 +62,18 @@ rudder to keep the glider travelling straight, but the amount of rudder is limit
 ### Crosswind Landing
 
 - Crosswind landings are the reverse of this situation. To fly in the required landing direction on final will require a Crabbing approach or a Wing-down approach
-- Wing-down approach:
+- 
+
+### Wing-down approach:
+
   - Turn the glider directly into line with the landing path.
   - Lower the into wind wing sufficient to counter drift.
   - Maintain landing track with opposite rudder.
   - Flare, hold off and ground roll with above drift countering controls, taking care to ensure the lower (into wind) wingtip does not come close to the ground.
-- Crabbing approach:
+- 
+
+### Crabbing approach:
+
   - Maintain track line by adjusting heading sufficiently into wind to adjust for drift.
   - During flare and hold off, rudder the aircraft straight on to the landing track line and maintain parallel heading with rudder.
 <!-- page: 19-3 -->

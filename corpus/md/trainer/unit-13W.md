@@ -20,7 +20,7 @@ Note that this aligns with the normal training sequence and risk profile for the
 Whilst the precursor for launch emergencies is discussed here (speed out of tolerance) the actual briefing and handling of the emergency is covered in GPC unit 20.
 
 ## PRE-REQUISITE UNITS
-<!-- content_type: None -->
+<!-- content_type: admin -->
 
 - GPC 7 – Straight Flight various Speeds & Trim
 - GPC 8 – Sustained turns, all controls

@@ -46,7 +46,9 @@ This unit should be read in conjunction with:
 
 ### Preparation for Take off
 
-- Pre Boarding and Pre Take off checks must be performed (ABCD-CHAOTIC) and options discussed for launch emergencies. Your instructor will indicate areas on your runway and around the airfield where you can land if the rope breaks. • You will be shown the hand signals and correct procedure in connecting the rope to your glider. • You will be given clearance from the ground crew that the airspace is clear.
+- Pre Boarding and Pre Take off checks must be performed (ABCD-CHAOTIC) and options discussed for launch emergencies. Your instructor will indicate areas on your runway and around the airfield where you can land if the rope breaks.
+- You will be shown the hand signals and correct procedure in connecting the rope to your glider.
+- You will be given clearance from the ground crew that the airspace is clear.
 <!-- page: 14A-2 -->
 - When ready you will give the “thumbs up” signal to the ground crew who will lift the wing indicating you are ready for takeoff.
 
@@ -67,7 +69,9 @@ This unit should be read in conjunction with:
 
 ### Initial Climb
 
-- The glider should remain just below the turbulence of the tug with its wings parallel to the tugs wings. • Its important that a good lookout is maintained for conflicting traffic and we maintain a good situational awareness during the climb. • As we climb, our options for launch failures change. Call out the change in options when they become available.
+- The glider should remain just below the turbulence of the tug with its wings parallel to the tugs wings.
+- Its important that a good lookout is maintained for conflicting traffic and we maintain a good situational awareness during the climb.
+- As we climb, our options for launch failures change. Call out the change in options when they become available.
 
 ## FLIGHT EXERCISES FOR THIS UNIT
 <!-- content_type: exercise -->
