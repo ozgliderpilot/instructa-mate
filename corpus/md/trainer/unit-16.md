@@ -1,11 +1,11 @@
 ---
 source: trainer
 unit: 16
-unit_name: 6
+unit_name: Circuit Joining & Execution
 revision: "1.0"
 ---
 
-# Unit 16 — 6
+# Unit 16 — Circuit Joining & Execution
 
 <!-- page: 16-1 -->
 <!-- page: 16-2 -->
