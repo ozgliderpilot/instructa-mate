@@ -13,13 +13,27 @@ by brittle "ALL-CAPS at col 0" text heuristics.
 from __future__ import annotations
 
 import re
+from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from pathlib import Path
 
 import fitz
 import pdfplumber
 
-FOOTER_RE = re.compile(r"Page\s*(\d+)\s*-\s*(\d+)")
+class UnitStructureError(ValueError):
+    """A ``(source, unit)`` whose page/footer structure can't be faithfully rendered.
+
+    Raised instead of emitting silently-wrong Markdown when a unit's pages don't form a
+    clean consecutive ``U-1..U-n`` run — it is variant-split (e.g. 13A/13S/13W), absent
+    from the Source, or non-consecutive. The batch wrapper catches it and reports the
+    skip so Citation errors surface at parse time, not at answer time.
+    """
+
+
+# Footer Citation: "Page 5 - 5" (Unit 5, page 5). Units 13/14/20 are variant-split and
+# print a letter token — "Page 13A - 1" — captured in group 2 so those pages are
+# recognised (not mistaken for footer-less) and routed to a clear variant error.
+FOOTER_RE = re.compile(r"Page\s*(\d+)\s*([A-Z])?\s*-\s*(\d+)")
 REVISION_RE = re.compile(r"Revision:?\s+([0-9.]+)")  # Trainer prints "Revision: 1.0", Pilot "Revision 1.0"
 UNIT_TITLE_RE = re.compile(r"Unit\s+\d+\s*[-–]?\s*(.+)")
 
@@ -129,27 +143,56 @@ def _page_lines(page) -> list[Line]:
     return [line for block in _page_blocks(page) for line in block]
 
 
-def _unit_pages(doc, unit: int) -> list[tuple[int, str]]:
-    """Physical pages of *unit* as ``(page_index, "U-P")``, in order.
+def _scan_footers(doc) -> dict[int, tuple[int, str, int]]:
+    """Every page with a readable footer, as ``page_index -> (unit, variant, page)``.
 
-    Footer page numbers are read with a lenient regex. The footer-less first page of
-    a unit (``Page U-1``, whose glyphs don't map in any extractor) is *inferred* as
-    the page immediately before ``Page U-2``.
+    ``variant`` is ``""`` for a plain numeric unit and the letter for a variant sub-unit
+    (``"A"`` for the 13A footer ``Page 13A - 1``), so variant pages are recognised here
+    rather than looking footer-less. One scan serves every structure decision below.
     """
-    footers: dict[int, tuple[int, int]] = {}
+    footers: dict[int, tuple[int, str, int]] = {}
     for i in range(doc.page_count):
         m = FOOTER_RE.search(doc[i].get_text("text"))
         if m:
-            footers[i] = (int(m.group(1)), int(m.group(2)))
+            footers[i] = (int(m.group(1)), m.group(2) or "", int(m.group(3)))
+    return footers
 
-    unit_phys = sorted(i for i, (u, _p) in footers.items() if u == unit)
-    if not unit_phys:
-        return []
+
+def _resolve_unit_pages(doc, source: str, unit: int) -> list[tuple[int, str]]:
+    """Physical pages of *unit* as ``(page_index, "U-P")`` in order, or raise.
+
+    The footer-less first page of a unit (``Page U-1``, whose glyphs don't map in any
+    extractor) is *inferred* as the page immediately before ``Page U-2``. Rather than
+    return a silently-incomplete run, this raises :class:`UnitStructureError` when the
+    unit is variant-split (13/14/20 → A/S/W), absent from the Source, or non-consecutive
+    — so a missing Citation is caught at parse time, not at answer time.
+    """
+    footers = _scan_footers(doc)
+    plain = sorted(i for i, (u, v, _p) in footers.items() if u == unit and not v)
+    if not plain:
+        variants = sorted({f"{unit}{v}" for (u, v, _p) in footers.values() if u == unit and v})
+        if variants:
+            raise UnitStructureError(
+                f"unit {unit} of the {source} guide is variant-split into "
+                f"{', '.join(variants)} (footer e.g. 'Page {variants[0]} - 1'); "
+                f"variant sub-units are not yet rendered"
+            )
+        raise UnitStructureError(
+            f"no pages found for unit {unit} in the {source} guide "
+            f"(absent from this Source, or its footers don't map)"
+        )
 
     pages: list[tuple[int, str]] = []
-    if footers[unit_phys[0]][1] == 2:  # Page U-1 footer unreadable -> infer it
-        pages.append((unit_phys[0] - 1, f"{unit}-1"))
-    pages.extend((i, f"{u}-{p}") for i in unit_phys for (u, p) in [footers[i]])
+    if footers[plain[0]][2] == 2:  # Page U-1 footer unreadable -> infer it
+        pages.append((plain[0] - 1, f"{unit}-1"))
+    pages.extend((i, f"{unit}-{footers[i][2]}") for i in plain)
+
+    pnums = [int(label.rsplit("-", 1)[1]) for _idx, label in pages]
+    if pnums != list(range(1, len(pnums) + 1)):
+        raise UnitStructureError(
+            f"unit {unit} of the {source} guide has a non-consecutive page run "
+            f"{pnums}; expected 1..{len(pnums)} — a page's footer Citation is missing"
+        )
     return pages
 
 
@@ -432,7 +475,7 @@ def render_unit_markdown(pdf_path, source: str, unit: int) -> str:
     doc = fitz.open(pdf_path)
     plumber = pdfplumber.open(pdf_path)
     try:
-        pages = _unit_pages(doc, unit)
+        pages = _resolve_unit_pages(doc, source, unit)
         meta = _unit_metadata(doc, unit, pages)
 
         elements: list[Element] = [("h1", f"# Unit {unit} — {meta['unit_name']}")]
@@ -467,3 +510,56 @@ def write_unit_markdown(pdf_path, source: str, unit: int, out_root="corpus/md") 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(render_unit_markdown(pdf_path, source, unit), encoding="utf-8", newline="\n")
     return out_path
+
+
+@dataclass(frozen=True)
+class UnitOutcome:
+    """The result of attempting one ``(source, unit)`` in a corpus batch.
+
+    Exactly one of ``path`` / ``error`` is set: ``path`` for a written file, ``error``
+    for a unit skipped because its structure couldn't be faithfully rendered.
+    """
+
+    source: str
+    unit: int
+    path: Path | None
+    error: str | None
+
+
+@dataclass(frozen=True)
+class CorpusReport:
+    """Outcome of a corpus batch — what got written and what was skipped (with reasons)."""
+
+    outcomes: tuple[UnitOutcome, ...]
+
+    @property
+    def written(self) -> tuple[UnitOutcome, ...]:
+        return tuple(o for o in self.outcomes if o.path is not None)
+
+    @property
+    def skipped(self) -> tuple[UnitOutcome, ...]:
+        return tuple(o for o in self.outcomes if o.path is None)
+
+
+def write_corpus(
+    sources: Mapping[str, str | Path],
+    out_root: str | Path = "corpus/md",
+    units: Iterable[int] = range(1, 27),
+) -> CorpusReport:
+    """Render every ``(source, unit)`` through the single seam and emit the clean tree.
+
+    Both Source PDFs run through one pipeline. Units whose structure can't be faithfully
+    rendered (variant-split, absent, non-consecutive) raise :class:`UnitStructureError`;
+    those are *collected* as skips with their reason rather than aborting the batch, so a
+    re-runnable, diffable ``corpus/md/<source>/unit-NN.md`` tree is produced for the
+    ADR-0002 human-verification gate while Citation errors stay visible.
+    """
+    outcomes: list[UnitOutcome] = []
+    for source, pdf_path in sources.items():
+        for unit in units:
+            try:
+                path = write_unit_markdown(pdf_path, source, unit, out_root=out_root)
+                outcomes.append(UnitOutcome(source, unit, path, None))
+            except UnitStructureError as exc:
+                outcomes.append(UnitOutcome(source, unit, None, str(exc)))
+    return CorpusReport(tuple(outcomes))

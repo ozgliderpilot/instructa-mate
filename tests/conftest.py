@@ -37,6 +37,16 @@ def trainer_pdf() -> Path:
 
 
 @pytest.fixture
+def corpus_sources() -> dict[str, Path]:
+    """The ``{source: pdf_path}`` mapping the batch wrapper ingests. Skips unless both
+    copyright PDFs are present locally."""
+    missing = [p for p in (PILOT_PDF, TRAINER_PDF) if not p.exists()]
+    if missing:
+        pytest.skip(f"corpus PDFs not present: {missing} (gitignored)")
+    return {"trainer": TRAINER_PDF, "pilot": PILOT_PDF}
+
+
+@pytest.fixture
 def pilot_unit1_golden() -> str:
     if not PILOT_UNIT1_GOLDEN.exists():
         pytest.skip(f"Golden not present at {PILOT_UNIT1_GOLDEN}")
