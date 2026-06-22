@@ -88,3 +88,23 @@ def test_numbered_bold_subheading_is_preserved_not_split(pilot_gpc_pdf):
     assert "### 2. Separation" in md
     assert "### 3. Predictability" in md
     assert "### Awareness" not in md.replace("### 1. Awareness", "")
+
+
+def test_diagram_labels_on_page_5_3_are_suppressed(pilot_pdf):
+    # Pilot Unit 5 page 5-3 has a "control movement → surface → force → rotation" figure
+    # whose labels are scattered body-sized text blocks (each its own block, lines like
+    # "Control" + "Movement"). They pass every font filter and read out as garbled prose,
+    # so they are dropped by the curated _FIGURE_LABELS set. Each fragment must be gone as a
+    # standalone block, while the real bullets framing the diagram survive.
+    md = render_unit_markdown(pilot_pdf, "pilot", 5)
+    lines = md.splitlines()
+
+    for fragment in (
+        "Control Movement", "Control Surface Position", "Force on an aircraft axis of",
+        "aircraft around an", "Rotation of", "creates", "changes", "resulting",
+    ):
+        assert fragment not in lines, f"diagram label leaked as its own line: {fragment!r}"
+
+    # The bullets on either side of the figure are real content and must remain.
+    assert "  - The rudder is connected to the rudder pedals." in lines
+    assert any(l.startswith("- The rotation of the aircraft in each axis") for l in lines)

@@ -384,6 +384,21 @@ Element = tuple[str, str]
 # wherever it appears — large + bold on a title page, banner-sized + non-bold mid-content.
 _UNIT_CHROME_RE = re.compile(r"Unit\s+\d+\s*[A-Z]?\s*(?:[-–].*)?")
 
+# Labels scattered around an in-diagram image cluster, each its own body-sized block, so
+# they pass every font filter and read out as garbled prose (Pilot Unit 5 page 5-3's
+# "control → surface → force → rotation" figure). There is no safe corpus-wide geometric
+# signal — real prose and captions also overlay images elsewhere — so these are suppressed
+# by a curated set scoped per ``(source, unit token)``. The scope is essential: generic
+# fragments like "in"/"that" must not suppress real text in other units. The diagram
+# graphic itself is not captured, so dropping its labels loses no rendered content.
+_FIGURE_LABELS: dict[tuple[str, str], frozenset[str]] = {
+    ("pilot", "5"): frozenset({
+        "Rotation of", "Control Movement", "Control Surface Position",
+        "Force on an aircraft axis of", "aircraft around an", "that",
+        "resulting", "changes", "rotation", "in", "creates", "axis.",
+    }),
+}
+
 
 def _is_chrome_line(line: Line) -> bool:
     """Whether a single line is running header/title chrome to strip wherever it sits.
@@ -407,7 +422,7 @@ def _is_chrome_line(line: Line) -> bool:
     return not line.bold and line.size >= _SECTION_MIN_SIZE
 
 
-def _classify_block(block: list[Line], source: str) -> list[Element]:
+def _classify_block(block: list[Line], source: str, token: str) -> list[Element]:
     """Segment a page block into its rendered elements (chrome dropped).
 
     The Solo guides give one element per block (one bullet, one heading, one paragraph);
@@ -430,6 +445,10 @@ def _classify_block(block: list[Line], source: str) -> list[Element]:
     """
     if all(line.size <= _FOOTER_MAX_SIZE for line in block):
         return []  # footer chrome (Revision / date / Page) — already parsed
+    # A scattered in-diagram label is its own block whose lines join to a curated, unit-
+    # scoped phrase ("Control" + "Movement" -> "Control Movement"); drop the whole block.
+    if " ".join(line.text for line in block) in _FIGURE_LABELS.get((source, token), frozenset()):
+        return []
 
     elements: list[Element] = []
     para: list[str] = []
@@ -691,7 +710,7 @@ def _region_for(block_bbox: BBox, regions: list[TableRegion]) -> TableRegion | N
 
 
 def _emit_page(
-    page_blocks: list[tuple[BBox, list[Line]]], regions: list[TableRegion], source: str
+    page_blocks: list[tuple[BBox, list[Line]]], regions: list[TableRegion], source: str, token: str
 ) -> list[Element]:
     """Classify a page's blocks into elements in true reading order.
 
@@ -722,7 +741,7 @@ def _emit_page(
         if isinstance(payload, TableRegion):
             elements.extend(payload.elements)
         else:
-            elements.extend(_classify_block(payload, source))
+            elements.extend(_classify_block(payload, source, token))
     return elements
 
 
@@ -746,7 +765,7 @@ def render_unit_markdown(pdf_path, source: str, unit: int | str) -> str:
             elements.append(("marker", label))
             page_blocks = _page_blocks_with_bbox(doc[idx])
             regions = _table_regions(plumber.pages[idx], page_blocks)
-            elements.extend(_emit_page(page_blocks, regions, source))
+            elements.extend(_emit_page(page_blocks, regions, source, token))
         return _frontmatter(source, token, meta) + "\n" + _assemble(elements)
     finally:
         plumber.close()

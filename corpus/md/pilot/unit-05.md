@@ -53,31 +53,6 @@ This unit should be read in conjunction with:
 <!-- page: 5-3 -->
   - The rudder is connected to the rudder pedals.
 - Different amounts of force on the controls will result in different rates of effect on the aircraft. If we use a lot of force on the control we get a large control surface movement and therefore a large amount of rotation on the aircraft axis that it effects. Conversely a small amount of force results in a small effect.
-
-Rotation of
-
-Control Movement
-
-Control Surface Position
-
-Force on an aircraft axis of
-
-aircraft around an
-
-that
-
-resulting
-
-changes
-
-rotation
-
-in
-
-creates
-
-axis.
-
 - The rotation of the aircraft in each axis is around the Centre of Gravity (C of G) of the aircraft.
 
 ### Our Reference – the Horizon
