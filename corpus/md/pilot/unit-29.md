@@ -46,7 +46,15 @@ Nil.
 
 (Knots)
 
-### 0 degrees 1 33 10 degrees 1.02 33 20 degrees 1.06 34 30 degrees 1.15 35 40 degrees 1.2 38
+### 0 degrees 1 33
+
+### 10 degrees 1.02 33
+
+### 20 degrees 1.06 34
+
+### 30 degrees 1.15 35
+
+### 40 degrees 1.2 38
 
 <!-- page: 29-2 -->
 

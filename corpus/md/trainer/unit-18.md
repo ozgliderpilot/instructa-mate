@@ -157,11 +157,21 @@ Spiral Dive Recovery
 
 Aids to Developed Spin/Spiral Dive Identification
 
-### Attribute In Developed Spin In Spiral Dive Aircraft stalled YES NO G Loading Normal Increasing Load on controls Light (unresponsive) Effective and increasing control loads Yaw string Large deflection, pointing towards rudder for recovery
+### Attribute In Developed Spin In Spiral Dive
+
+### Aircraft stalled YES NO
+
+### G Loading Normal Increasing
+
+### Load on controls Light (unresponsive) Effective and increasing control loads
+
+### Yaw string Large deflection, pointing towards rudder for recovery
 
 Generally normal flight position
 
-### ASI Low or unreliable Steady and increasing Air sounds Stable (but may vary on rotation) Increasing
+### ASI Low or unreliable Steady and increasing
+
+### Air sounds Stable (but may vary on rotation) Increasing
 
 <!-- page: 18-7 -->
 
@@ -177,11 +187,15 @@ From Spiral Dive
 
 UNLOAD wings, move control column forward.
 
-### Rudder to correct yaw. Aileron neutral. ROLL wings level gently using aileron & rudder. Ease control column forward until rotation ceases.
+### Rudder to correct yaw. Aileron neutral. ROLL wings level gently using aileron & rudder.
+
+### Ease control column forward until rotation ceases.
 
 Ease out of dive with elevator.
 
-### Rudders neutral and ease out of dive with elevator. Adopt gliding position, re-orientate yourself, regain situational awareness with FULL SCAN.
+### Rudders neutral and ease out of dive with elevator.
+
+### Adopt gliding position, re-orientate yourself, regain situational awareness with FULL SCAN.
 
 ### Human Factors
 

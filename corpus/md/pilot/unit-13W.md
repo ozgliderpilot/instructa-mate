@@ -127,7 +127,9 @@ A winch launch consists of 5 stages – ground run, separation, initial climb, f
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Problem Solutions Failing to ease back to maintain a correct launch angle in full climb.
+### COMMON PROBLEMS
+
+### Failing to ease back to maintain a correct launch angle in full climb.
 
 Ensure that you monitor the angle the wingtip makes with the horizon and use this to determine whether you need to adjust the pressure on the control column during the launch.
 

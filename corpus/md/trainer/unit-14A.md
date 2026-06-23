@@ -137,7 +137,9 @@ There are three parts to the briefing:
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->
 
-### Problem Probable Causes Wings are not kept level. Student may not identify that one wing is lower, they need to identify this through reference to the horizon ahead and through peripheral vision.
+### Problem Probable Causes
+
+### Wings are not kept level. Student may not identify that one wing is lower, they need to identify this through reference to the horizon ahead and through peripheral vision.
 
 Insufficient control movement at low speed, aileron and rudder. Student will need to intervene early and use rudder secondary effect as necessary at early stages of the launch.
 

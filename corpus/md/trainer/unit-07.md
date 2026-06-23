@@ -205,7 +205,9 @@ Possible confusion with regards to defining nose attitude. Emphasise horizon, qu
 
 Have the student hold the attitude constant to maintain a constant airspeed without worrying too much about the actual airspeed.
 
-### Speed change is very slow. Student is possibly flying with the trim.  Ask the student to make a 20-knot speed change and hold the pressure to maintain attitude. After some time, then allow the student to adjust the trim to remove pressure. Glider wanders off track. Possible lack of focus by the student. Direct the student to positively identify the target point and to state when the glider is not tracking. Teach appropriate control movements to change heading.
+### Speed change is very slow. Student is possibly flying with the trim.  Ask the student to make a 20-knot speed change and hold the pressure to maintain attitude. After some time, then allow the student to adjust the trim to remove pressure.
+
+### Glider wanders off track. Possible lack of focus by the student. Direct the student to positively identify the target point and to state when the glider is not tracking. Teach appropriate control movements to change heading.
 
 Possibly unnecessary movement of controls. Ask the student to completely relax their grip, or even remove their hand from the stick. This may demonstrate that they have been making unnecessary movements.
 

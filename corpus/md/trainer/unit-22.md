@@ -58,7 +58,9 @@ The aim of this GPC Unit is to enable the student to:
 - Sterile cockpit operations.
 - Distraction from the primacy of lookout.
 
-### Different aircraft will be fitted with different electronic situational awareness aids. The student needs to be able to effectively operate the situational awareness aids that are present in the aircraft that they will be flying as well as understand the general principles for aids they may encounter in other situations.
+### Different aircraft will be fitted with different electronic situational awareness aids.
+
+### The student needs to be able to effectively operate the situational awareness aids that are present in the aircraft that they will be flying as well as understand the general principles for aids they may encounter in other situations.
 
 <!-- page: 22-3 -->
 

@@ -99,7 +99,23 @@ There are no complementary GPC units to this unit.
 
 SPEED (KTS)
 
-### 0 degrees 1 33 10 degrees 1.02 33 20 degrees 1.06 34 30 degrees 1.15 35 40 degrees 1.2 38 50 degrees 1.56 41 60 degrees 2.0 46 70 degrees 2.92 56 80 degrees 5.75 79
+### 0 degrees 1 33
+
+### 10 degrees 1.02 33
+
+### 20 degrees 1.06 34
+
+### 30 degrees 1.15 35
+
+### 40 degrees 1.2 38
+
+### 50 degrees 1.56 41
+
+### 60 degrees 2.0 46
+
+### 70 degrees 2.92 56
+
+### 80 degrees 5.75 79
 
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->

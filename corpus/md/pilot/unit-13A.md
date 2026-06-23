@@ -168,7 +168,9 @@ out of station, and in most cases the glider will tend to return to the central 
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Glider swinging from side to side behind tug.
+### COMMON PROBLEMS
+
+### Glider swinging from side to side behind tug.
 
 Trying to use aileron alone to control the glider in roll, thereby inducing large amounts of adverse yaw.
 

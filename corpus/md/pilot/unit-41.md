@@ -42,7 +42,9 @@ Congratulations on reaching the end of the cross-country training in the GPC syl
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Lapses in proficiency of previously trained cross-country competencies
+### COMMON PROBLEMS
+
+### Lapses in proficiency of previously trained cross-country competencies
 
 Limited multitasking ability – this will improve with time but performance related to safety must not be compromised
 

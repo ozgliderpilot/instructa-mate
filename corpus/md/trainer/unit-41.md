@@ -23,7 +23,9 @@ To evaluate the student’s capability to combine the GPC competencies to safely
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Plan a cross country flight • Demonstrate satisfactory flight planning considering at least: personal preparation o meteorology o airspace and radio frequencies o NOTAM o safe outlanding options and trailer/crew arrangements o task setting, task declaration and official observer awareness o flight computer programming 2. Demonstrated cross country flight • Demonstrate
+### 1. Plan a cross country flight • Demonstrate satisfactory flight planning considering at least:
+
+### personal preparation o meteorology o airspace and radio frequencies o NOTAM o safe outlanding options and trailer/crew arrangements o task setting, task declaration and official observer awareness o flight computer programming 2. Demonstrated cross country flight • Demonstrate
 
   - Effective lookout throughout all stages of the flight
   - Proficient navigation and choice of route considering thermal sources, weather and airspace

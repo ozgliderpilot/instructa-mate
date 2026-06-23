@@ -136,7 +136,9 @@ Set approach speed from the break-off point, but at the latest, before the pre-l
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Transits through active circuit area, over runway (if winch club) or other inappropriate path to joining area.
+### COMMON PROBLEMS
+
+### Transits through active circuit area, over runway (if winch club) or other inappropriate path to joining area.
 
 - Fixation on joining circuit may result in failure to maintain adequate situational awareness of where aircraft is in relation to airfield.
 - Incorrect decision as to where to locate the circuit joining area – where possible it should be located such that flying over the strip is not required.

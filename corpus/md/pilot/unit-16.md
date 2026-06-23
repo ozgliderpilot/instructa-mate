@@ -148,7 +148,15 @@ Anyone can make a misjudgement or get caught by unusual conditions; the importan
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Incorrect downwind leg Too close or too far away Incorrect speed Not parallel to the landing direction
+### COMMON PROBLEMS
+
+### Incorrect downwind leg
+
+### Too close or too far away
+
+### Incorrect speed
+
+### Not parallel to the landing direction
 
 Not monitoring angle down to the aiming point
 
@@ -156,7 +164,9 @@ Not monitoring nose attitude
 
 Not monitoring track
 
-### Late or early turn onto base lag Poor judgement of angle to aiming point Too high turning final Too early turning base
+### Late or early turn onto base lag Poor judgement of angle to aiming point
+
+### Too high turning final Too early turning base
 
 Lack of angle adjustment on base leg
 

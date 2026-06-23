@@ -121,7 +121,33 @@ Numbers are spoken as follows:-
 
 Standard words and phrases should be used as follows:-
 
-### Affirm Yes, or permission granted, or that is correct. Negative No, or permission denied or that is not correct. Correction An error has been made, correct message follows. Acknowledge Confirm that you have received and understood my message. Roger Message received and understood. Wilco Message received, understood and will be complied with. Go ahead Transmit your message. Verify Check that the transmission is correct. Say again Self-explanatory. I say again Self-explanatory. Speak slower Self-explanatory. Stand by Self-explanatory. That is correct Self-explanatory. How do you read? Used to gauge effectiveness or serviceability of radio and should not be used in normal transmissions. Answered by "Reading you strength...."
+### Affirm Yes, or permission granted, or that is correct.
+
+### Negative No, or permission denied or that is not correct.
+
+### Correction An error has been made, correct message follows.
+
+### Acknowledge Confirm that you have received and understood my message.
+
+### Roger Message received and understood.
+
+### Wilco Message received, understood and will be complied with.
+
+### Go ahead Transmit your message.
+
+### Verify Check that the transmission is correct.
+
+### Say again Self-explanatory.
+
+### I say again Self-explanatory.
+
+### Speak slower Self-explanatory.
+
+### Stand by Self-explanatory.
+
+### That is correct Self-explanatory.
+
+### How do you read? Used to gauge effectiveness or serviceability of radio and should not be used in normal transmissions. Answered by "Reading you strength...."
 
 One: Your transmissions are unreadable.
 
@@ -151,11 +177,35 @@ Three Fife" and 26,000ft would be broadcast as "Flight Level Two Six Zero".
 
 Units of measurement to be used in airways operations and air-ground communications are as follows:
 
-### Measurement Units Distances used in navigation (generally in excess of 2NM)
+### Measurement Units
+
+### Distances used in navigation (generally in excess of 2NM)
 
 nautical miles and tenths
 
-### Short distances metres Altitudes, elevations and heights Feet Horizontal speed, including wind speed Knots Vertical speed Feet per minute Wind direction for runway operations Degrees Magnetic Wind direction except for runway operations Degrees True Visibility, including runway visual range kilometres or metres Altimeter setting hectopascals Temperature degrees celsius Weight (Mass) Metric tonnes or kilograms Time hours and minutes Time System Coordinated Universal Time (UTC)
+### Short distances metres
+
+### Altitudes, elevations and heights Feet
+
+### Horizontal speed, including wind speed Knots
+
+### Vertical speed Feet per minute
+
+### Wind direction for runway operations Degrees Magnetic
+
+### Wind direction except for runway operations Degrees True
+
+### Visibility, including runway visual range kilometres or metres
+
+### Altimeter setting hectopascals
+
+### Temperature degrees celsius
+
+### Weight (Mass) Metric tonnes or kilograms
+
+### Time hours and minutes
+
+### Time System Coordinated Universal Time (UTC)
 
 *Miles must be read as meaning nautical miles unless otherwise stated. The word “nautical” may be omitted from air-ground communications.
 
@@ -202,7 +252,13 @@ The key words and their uses are as follows:-
 - The height may vary considerably in consideration of local traffic and other circumstances at particular aerodromes. However, all aircraft are expected to be operating on the CTAF frequency whenever at or below 3,000ft as a minimum above the aerodrome reference point and higher when appropriate.
 - The following table sets out the recommended broadcasts, but pilots may use discretion in determining the number and type of broadcasts they make. For example, when operating from a private or remote airstrip, a single broadcast declaring an intention to take-off and track in particular direction may be all that is required where there is no response to the initial transmission.
 
-### Circumstance Item (non-towered Pilot’s radio broadcasts aerodromes) 1  The pilot intends to take-off. Immediately before, or during, taxiing. 2  The pilot intends to enter a runway. Immediately before entering a runway. 3  The pilot is inbound.
+### Circumstance Item (non-towered Pilot’s radio broadcasts aerodromes)
+
+### 1  The pilot intends to take-off. Immediately before, or during, taxiing.
+
+### 2  The pilot intends to enter a runway. Immediately before entering a runway.
+
+### 3  The pilot is inbound.
 
 10 NM or earlier from the aerodrome, commensurate with aircraft performance and pilot workload, with an estimated time of arrival (ETA) for the aerodrome
 

@@ -85,13 +85,53 @@ Preparation does not begin 30 minutes before flying, or even on the morning of a
 
 Flight Preparation Checklist
 
-### Personal Preparation Trailer and Car Preparation  Hat, Sunscreen  Car insurance  Hydration (including emergency water)  Full fuel tank  Nutrition
+### Personal Preparation Trailer and Car Preparation
+
+###  Hat, Sunscreen  Car insurance
+
+###  Hydration (including emergency water)  Full fuel tank
+
+###  Nutrition
 
  Retrieve crew available, know where
 
 the car and trailer are and can access the keys
 
-###  Relief  Car and trailer road legal  Weather forecast  Electrics are compatible  Flight Planning (task, airspace, frequencies)  Rigging / de-rigging aids  Maps  Trailer fittings working  Charged mobile phone (with you)  Tyre condition and inflation  SAR arrangements (ELT?)   Flight declaration, logger and official observer   Car and trailer keys not with you!    Glider Preparation  Ready to fly  Clean  Comfortable  Parachute  Oxygen (if needed)  Instruments working and use understood  Batteries working and charged  Tie-down kit
+###  Relief  Car and trailer road legal
+
+###  Weather forecast  Electrics are compatible
+
+###  Flight Planning (task, airspace, frequencies)  Rigging / de-rigging aids
+
+###  Maps  Trailer fittings working
+
+###  Charged mobile phone (with you)  Tyre condition and inflation
+
+###  SAR arrangements (ELT?)   Flight declaration, logger and official observer 
+
+###  Car and trailer keys not with you! 
+
+### 
+
+### 
+
+### Glider Preparation
+
+###  Ready to fly
+
+###  Clean
+
+###  Comfortable
+
+###  Parachute
+
+###  Oxygen (if needed)
+
+###  Instruments working and use understood
+
+###  Batteries working and charged
+
+###  Tie-down kit
 
 <!-- page: 35-4 -->
 
@@ -103,7 +143,11 @@ You’ll spend time looking at and finding faults with various trailers and glid
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Not remaining hydrated in flight Not set up for or comfortable peeing in flight Rushed preparation on the day of a flight
+### COMMON PROBLEMS
+
+### Not remaining hydrated in flight Not set up for or comfortable peeing in flight
+
+### Rushed preparation on the day of a flight
 
 Lack of preparation prior to the day of the flight
 

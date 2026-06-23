@@ -124,7 +124,9 @@ You’ll be asked to check the configuration on a flight computer and set up a t
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Distraction with flight computers resulting in poor lookout
+### COMMON PROBLEMS
+
+### Distraction with flight computers resulting in poor lookout
 
 Lack of familiarity with use of flight computers
 

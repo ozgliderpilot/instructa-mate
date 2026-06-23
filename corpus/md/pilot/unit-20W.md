@@ -161,7 +161,9 @@ Modified Circuit when a turn upwind is made after the launch failure. Poor visib
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Problem Solution Inability to detect a gradual failure of the launch.
+### COMMON PROBLEMS
+
+### Inability to detect a gradual failure of the launch.
 
 Monitor airspeed as part of the launch work cycle to ensure that any degrading of speed is noted early.
 

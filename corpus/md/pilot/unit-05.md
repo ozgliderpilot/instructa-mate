@@ -140,7 +140,9 @@ For example, rough air can cause changes in nose attitude or bank angle and the 
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Problem Solution Looking at glider instruments for input.
+### COMMON PROBLEMS
+
+### Looking at glider instruments for input.
 
 You must lookout to the horizon and reference all instructions to aircraft attitude. It is more accurate and a faster response.
 

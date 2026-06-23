@@ -232,7 +232,7 @@ Your instructor will at an appropriate time demonstrate to you how to:
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-COMMON PROBLEMS
+### COMMON PROBLEMS
 
 - There are many items and procedures to learn in this unit. You are not expected to have learnt all these procedures on day one! As your flying progresses you should be able to come to terms with these items before your first solo.
 

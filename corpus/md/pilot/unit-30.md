@@ -100,7 +100,9 @@ The vario technique will be demonstrated and you’ll have an opportunity to pra
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Not maintaining constant nose attitude
+### COMMON PROBLEMS
+
+### Not maintaining constant nose attitude
 
 1. Flying using airspeed indicator instead of nose attitude relative to the horizon
 2. Not trimmed correctly

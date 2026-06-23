@@ -145,7 +145,7 @@ This unit should be read in conjunction with:
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### Problem Solution Some devices can be complex to set up and use, which can distract you from your core flying skills.
+### Some devices can be complex to set up and use, which can distract you from your core flying skills.
 
 Use the basic information available rather than trying to use all capabilities.
 

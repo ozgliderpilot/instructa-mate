@@ -174,7 +174,7 @@ S  SWER Single Wire Earth Return power lines are very hard to see. Overhead powe
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-COMMON PROBLEMS
+### COMMON PROBLEMS
 
 - Making the decision to land enables you to concentrate on a safe outlanding. Set personal minima for making this decision and then stick with it.
 - You will be making a lot of decisions in preparing for and flying the circuit and landing. Make sure that you have enough time so that you are not overly pressured.

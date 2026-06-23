@@ -179,7 +179,13 @@ before approving a first solo.
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->
 
-### Student talks too quickly. Student may be nervous or distracted. Trainer may choose to take over flying duties to allow student to correctly use the radio. Student fails to transmit. Student fails to depress PTT or does not press sufficiently. Incorrect phraseology used. Student has not recalled correct phraseology. Practice with student on the ground using a model of airfield area prior to next flight. Student transmission not legible by other aircraft
+### Student talks too quickly. Student may be nervous or distracted. Trainer may choose to take over flying duties to allow student to correctly use the radio.
+
+### Student fails to transmit. Student fails to depress PTT or does not press sufficiently.
+
+### Incorrect phraseology used. Student has not recalled correct phraseology. Practice with student on the ground using a model of airfield area prior to next flight.
+
+### Student transmission not legible by other aircraft
 
 Student is speaking too softly or does not have the microphone correctly positioned.
 

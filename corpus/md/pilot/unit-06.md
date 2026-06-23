@@ -66,7 +66,9 @@ Nil
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Problem Actions required Insufficient rudder used such that there is no, or minimal countering of aileron drag:
+### COMMON PROBLEMS
+
+### Insufficient rudder used such that there is no, or minimal countering of aileron drag:
 
 - Simultaneous application and removal of rudder force with aileron use.
 - Refer to the yaw string to check correct amount of rudder is applied.

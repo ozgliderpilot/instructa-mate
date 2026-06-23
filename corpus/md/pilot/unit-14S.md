@@ -105,7 +105,9 @@ Instructor demonstrates takeoff with student lightly on the controls.
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Wings not kept level • Students may not identify that one wing is lower, they need to identify this through reference to the horizon ahead and through peripheral vision;
+### COMMON PROBLEMS
+
+### Wings not kept level • Students may not identify that one wing is lower, they need to identify this through reference to the horizon ahead and through peripheral vision;
 
 - Insufficient control movement at low speed, aileron and rudder
 

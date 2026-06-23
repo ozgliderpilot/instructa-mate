@@ -79,7 +79,11 @@ Gliders are only permitted to fly in Visual Meteorological Conditions (VMC). The
 
 Additional conditions
 
-### At or above 10,000ft AMSL 8Km 1.5 Km horizontal 1,000 ft vertical Below 10,000 ft AMSL 5Km 1.5 Km Horizontal 1,000ft Vertical At or below 3,000ft AMSL or 1,000ft AGL, whichever is the higher 5Km Clear of cloud and in sight of the ground or water.
+### At or above 10,000ft AMSL 8Km 1.5 Km horizontal 1,000 ft vertical
+
+### Below 10,000 ft AMSL 5Km 1.5 Km Horizontal 1,000ft Vertical
+
+### At or below 3,000ft AMSL or 1,000ft AGL, whichever is the higher 5Km Clear of cloud and in sight of the ground or water.
 
 Carriage and use of radio is required when operating to these conditions for communication on the CTAF when required within the vicinity of a non-controlled aerodrome.
 

@@ -310,11 +310,23 @@ Whilst a pin and a spiral dive might look similar, the recovery actions needed f
 
 ### AID TO DEVELOPED SPIN/SPIRAL DIVE IDENTIFICATION
 
-### Attribute In Developed Spin In Spiral Dive Aircraft stalled YES NO G Loading Normal Increasing Load on controls Light (unresponsive) Effective and increasing control loads Yaw string Large deflection, pointing towards rudder for recovery
+### Attribute In Developed Spin In Spiral Dive
+
+### Aircraft stalled YES NO
+
+### G Loading Normal Increasing
+
+### Load on controls Light (unresponsive) Effective and increasing control loads
+
+### Yaw string Large deflection, pointing towards rudder for recovery
 
 Generally normal flight position
 
-### ASI Low or unreliable Steady and increasing* Air sounds Stable (but may vary on rotation) Increasing * If a pilot enters the spiral dive from a spin and is continuing to apply pro-spin control settings the ASI may still indicate low airspeed due to pitot/static errors.
+### ASI Low or unreliable Steady and increasing*
+
+### Air sounds Stable (but may vary on rotation) Increasing
+
+### * If a pilot enters the spiral dive from a spin and is continuing to apply pro-spin control settings the ASI may still indicate low airspeed due to pitot/static errors.
 
 <!-- page: 18-11 -->
 
@@ -336,11 +348,15 @@ From Spiral Dive
 
 Unload wings, control column forward.
 
-### Rudder to correct yaw. Aileron neutral. Roll wings level gently using aileron & rudder. Ease control column forward until rotation ceases.
+### Rudder to correct yaw. Aileron neutral. Roll wings level gently using aileron & rudder.
+
+### Ease control column forward until rotation ceases.
 
 Ease out of dive with elevator.
 
-### Rudders neutral and ease out of dive with elevator. Adopt gliding position, re-orientate yourself, regain situational awareness with FULL SCAN.
+### Rudders neutral and ease out of dive with elevator.
+
+### Adopt gliding position, re-orientate yourself, regain situational awareness with FULL SCAN.
 
 ### Spin Avoidance
 
@@ -397,7 +413,9 @@ Pilots need to understand that their primary training cannot cover all possible 
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Failure to conduct adequate pre- aerobatic check.
+### COMMON PROBLEMS
+
+### Failure to conduct adequate pre- aerobatic check.
 
 Forgetting that spins are an aerobatic manoeuvre and require the pre-aerobatic check to be completed.
 

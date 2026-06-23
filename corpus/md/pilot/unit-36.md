@@ -196,7 +196,9 @@ From 180 Degrees through West to 359 Degrees
 
 8,500
 
-### Cruising Flight Levels (1013 HPa)
+### Cruising Flight Levels
+
+### (1013 HPa)
 
 115
 

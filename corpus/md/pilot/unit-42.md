@@ -98,7 +98,9 @@ To develop the skills and knowledge required for assessment and examination by a
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Problem Solution Not knowing what “correct” looks like for the glider you are flying
+### COMMON PROBLEMS
+
+### Not knowing what “correct” looks like for the glider you are flying
 
 Study the Aircraft Flight Manual
 

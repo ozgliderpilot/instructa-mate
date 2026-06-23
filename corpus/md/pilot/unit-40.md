@@ -82,7 +82,9 @@ Revision 1.0 February 2022 Page 40- 3
 
 MacCready speed to fly theory is theoretically sound but is almost impossible to accurately fly, and constantly changing speed is inefficient. Since plus or minus 10 knots cruise speed does not make much difference ‘block speeds’ are used that approximate MacCready speeds. In the case of the unballasted LS4 the theoretical block speeds are approximately 70/85/90 knots if your next thermal is 2/4/6 knots respectively; however if you cruise at these speeds you’ll find it hard to feel the air, it’s much harder because everything happens faster, and you’re likely to get low. The table below shows more appropriate LS4 cruising block speeds for typical weak, medium and strong thermals, and depending on the height band (see next section). As you become more experienced you can increase these speeds by up to 5 knots.
 
-### Block Speeds – Unballasted LS4 Thermal strength (your average climb rate in the thermal) Cruise Speed Mid height band
+### Block Speeds – Unballasted LS4
+
+### Thermal strength (your average climb rate in the thermal) Cruise Speed Mid height band
 
 Cruise Speed Upper height band
 
@@ -158,7 +160,11 @@ Revision 1.0 February 2022 Page 40- 5
 
 <!-- page: 40-6 -->
 
-### COMMON PROBLEMS Losing too much height in the glide Not selecting and following an appropriate track Cruising speed too slow or too fast for the conditions
+### COMMON PROBLEMS
+
+### Losing too much height in the glide Not selecting and following an appropriate track
+
+### Cruising speed too slow or too fast for the conditions
 
 Incorrect understanding of appropriate cruise speed
 
@@ -166,7 +172,9 @@ Not considering the height band and looking at the conditions ahead
 
 Inattention to cruising speed
 
-### Limited ability to feel the air Cruising too fast Taking every thermal regardless of strength
+### Limited ability to feel the air Cruising too fast
+
+### Taking every thermal regardless of strength
 
 Not selecting thermals in accordance with the selection criteria (is the next thermal likely to be better?)
 

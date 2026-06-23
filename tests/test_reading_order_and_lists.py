@@ -108,3 +108,32 @@ def test_diagram_labels_on_page_5_3_are_suppressed(pilot_pdf):
     # The bullets on either side of the figure are real content and must remain.
     assert "  - The rudder is connected to the rudder pedals." in lines
     assert any(l.startswith("- The rotation of the aircraft in each axis") for l in lines)
+
+
+def test_common_problems_table_does_not_merge_into_one_heading(pilot_pdf):
+    # Pilot Unit 6's "THINGS YOU MIGHT HAVE DIFFICULTY WITH" holds a ruled two-column
+    # table whose left column stacks a non-bold "COMMON PROBLEMS" title, the bold
+    # "Problem | Actions required" column-header row, and the first problem label above
+    # the first bullet. They must NOT collapse into one run: COMMON PROBLEMS is its own
+    # ### heading, the column-header is dropped, and the first problem is a separate ###.
+    md = render_unit_markdown(pilot_pdf, "pilot", 6)
+    lines = md.splitlines()
+
+    assert "### COMMON PROBLEMS" in lines
+    assert (
+        "### Insufficient rudder used such that there is no, or minimal countering of "
+        "aileron drag:"
+    ) in lines
+    assert "Actions required" not in md  # the column-header row is dropped, not rendered
+    assert not any(l.startswith("### COMMON PROBLEMS ") for l in lines)  # never glued
+
+
+def test_nonbold_common_problems_is_promoted_to_subheading(pilot_pdf):
+    # Pilot Unit 3 prints "COMMON PROBLEMS" non-bold (12pt) and outside any table, so font
+    # signal alone reads it as prose. The curated non-bold sub-heading vocabulary promotes
+    # it to a ### heading rather than leaving it as a bare paragraph line.
+    md = render_unit_markdown(pilot_pdf, "pilot", 3)
+    lines = md.splitlines()
+
+    assert "### COMMON PROBLEMS" in lines
+    assert "COMMON PROBLEMS" not in [l for l in lines if l == "COMMON PROBLEMS"]

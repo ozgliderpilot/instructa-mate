@@ -32,7 +32,9 @@ This unit should be read in conjunction with:
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### ELEMENT PERFORMANCE STANDARD 1. Airspace Classification
+### ELEMENT PERFORMANCE STANDARD
+
+### 1. Airspace Classification
 
 - Identify:
   - A, C, D, E and G airspace on charts and explain limitations on their use.

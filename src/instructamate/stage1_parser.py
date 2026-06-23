@@ -324,11 +324,26 @@ def _is_section_header(line: Line, source: str) -> bool:
     return _normalize_header(line.text) in _SUBSECTION_SECTIONS.get(source, frozenset())
 
 
-def _is_subheading(line: Line) -> bool:
+# Sub-section labels a Source prints WITHOUT bold (the Pilot "COMMON PROBLEMS" inside
+# "THINGS YOU MIGHT HAVE DIFFICULTY WITH" is a non-bold ~12pt line — body-plus-two, but
+# the author left it unbolded). Font alone reads them as prose, so they are promoted to
+# ### sub-headings by this curated per-Source vocabulary. Kept deliberately minimal: only
+# labels seen unbolded that must still render as headings.
+_NONBOLD_SUBHEADINGS: dict[str, frozenset[str]] = {
+    "pilot": frozenset({"COMMON PROBLEMS"}),
+}
+
+
+def _is_subheading(line: Line, source: str = "") -> bool:
     # A whole-line-bold label below section size. An inline bold fragment inside a
     # sentence does not qualify: its line also carries non-bold spans, so Line.bold
-    # (all spans bold) is False.
-    return line.bold and line.size < _SECTION_MIN_SIZE
+    # (all spans bold) is False. A curated non-bold label (Pilot "COMMON PROBLEMS") is
+    # promoted too, when below section size.
+    if line.size >= _SECTION_MIN_SIZE:
+        return False
+    if line.bold:
+        return True
+    return _normalize_header(line.text) in _NONBOLD_SUBHEADINGS.get(source, frozenset())
 
 
 def _is_reference_patter(line: Line) -> bool:
@@ -518,7 +533,7 @@ def _classify_block(block: list[Line], source: str, token: str) -> list[Element]
                 flush_heading()
                 heading, heading_kind = [line.text], "section"
             continue
-        if _is_subheading(line):
+        if _is_subheading(line, source):
             flush_para()
             # A bare ordered marker ("1.") immediately followed by a bold sub-heading is a
             # *numbered heading* ("1." + "Awareness" → "### 1. Awareness"), not a list whose
@@ -598,9 +613,21 @@ def _assemble(elements: list[Element]) -> str:
 # falls through to the normal prose/bullet path.
 
 _COLUMN_GAP_MIN = 50.0  # min x-gap (pt) between two real table columns
+# Max y-gap (pt) from one left-column block to the next for them to be one wrapped label
+# rather than two table rows. A wrap's continuation abuts the line above (gap ~0-1pt);
+# distinct rows/labels are separated by the inter-row spacing (>=8pt observed).
+_WRAP_GAP_MAX = 5.0
 # Column-header rows to drop (their labels become the structure, not content). Matched
-# on the whole header block, whose two labels PyMuPDF joins onto one line.
-_TABLE_HEADER_TEXTS = {"ELEMENT PERFORMANCE STANDARDS", "PROBLEM PROBABLE CAUSE"}
+# on the whole header block, whose two labels PyMuPDF joins onto one line. The Pilot
+# COMMON PROBLEMS tables head the right column variously (Solution / Solutions / Actions
+# required) where the Trainer uses Probable Cause.
+_TABLE_HEADER_TEXTS = {
+    "ELEMENT PERFORMANCE STANDARDS",
+    "PROBLEM PROBABLE CAUSE",
+    "PROBLEM SOLUTION",
+    "PROBLEM SOLUTIONS",
+    "PROBLEM ACTIONS REQUIRED",
+}
 
 
 def _page_blocks_in(blocks: list[tuple[BBox, list[Line]]], bbox: BBox) -> list[tuple[BBox, list[Line]]]:
@@ -651,9 +678,16 @@ def _two_column_region(page_blocks: list[tuple[BBox, list[Line]]], bbox: BBox) -
     """Render a ruled region as left-column sub-headings + right-column bullets.
 
     Returns ``None`` when the region is really one column (a mis-detected bullet list).
-    Consecutive left-column blocks merge into one heading (an ELEMENT label wraps onto a
-    second block); right-column blocks split into their bullets and attach to the open
-    heading; the column-header row is dropped.
+    Consecutive left-column blocks merge into one heading only when the next one *abuts*
+    the previous — a true wrap, where a label spills onto a second block on the very next
+    text line ("1. Effects of controls –" + "general"; or the Trainer 13A label whose
+    continuation even flips to bold, "1. Conduct an aerotow" + "glider launch above …").
+    A left block separated by a row gap is a *distinct* label, not a continuation, so the
+    open heading is flushed first: this keeps the Pilot COMMON PROBLEMS tables (a non-bold
+    "COMMON PROBLEMS" title, then the "Problem | Actions required" header row, then the
+    first problem label, all stacked above the first bullet) from collapsing into one run.
+    Right-column blocks split into their bullets and attach to the open heading; the
+    column-header row is dropped.
     """
     blocks = _page_blocks_in(page_blocks, bbox)
     if len(blocks) < 2:
@@ -666,6 +700,7 @@ def _two_column_region(page_blocks: list[tuple[BBox, list[Line]]], bbox: BBox) -
 
     elements: list[Element] = []
     heading: list[str] = []
+    last_bottom: float | None = None  # y-bottom of the last block merged into the heading
     flushed = False
 
     def flush() -> None:
@@ -679,8 +714,12 @@ def _two_column_region(page_blocks: list[tuple[BBox, list[Line]]], bbox: BBox) -
             continue  # column-header row
         if bb[0] < split:  # left column — (part of) a row label
             if flushed:  # the previous row's bullets are done → start a new label
-                heading, flushed = [], False
+                heading, last_bottom, flushed = [], None, False
+            elif heading and bb[1] - last_bottom > _WRAP_GAP_MAX:  # a row gap, not a wrap
+                flush()
+                heading, last_bottom, flushed = [], None, False
             heading.append(_block_text(lines))
+            last_bottom = bb[3]
         else:  # right column — the label's bullets
             flush()
             elements.extend(_split_list_items(lines))

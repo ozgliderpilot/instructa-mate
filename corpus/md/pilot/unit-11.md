@@ -74,7 +74,9 @@ Review the flight. What did you enjoy most about it? What else do you want to do
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Speed varying in turns 1. Flying using airspeed indicator instead of nose
+### COMMON PROBLEMS
+
+### Speed varying in turns 1. Flying using airspeed indicator instead of nose
 
 attitude relative to the horizon
 

@@ -84,7 +84,9 @@ Close study of the self-launching glider’s Aircraft Flight Manual is required 
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### COMMON PROBLEMS Failing to monitor engine parameters.
+### COMMON PROBLEMS
+
+### Failing to monitor engine parameters.
 
 Pilot distraction or confusion.
 
