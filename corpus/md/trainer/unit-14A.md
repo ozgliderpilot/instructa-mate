@@ -61,8 +61,9 @@ This unit can be read in conjunction with:
   - Use of coordinated control movements once off the ground.
   - Controlled transition to low tow when the tug is positively established in the climb at a safe height.
 
-### 3. Initial climb. ● Demonstrate:
+### 3. Initial climb.
 
+- Demonstrate:
   - Position just below the slipstream of the tug.
   - Wings parallel to the tug wings.
   - Lookout for conflicting traffic.

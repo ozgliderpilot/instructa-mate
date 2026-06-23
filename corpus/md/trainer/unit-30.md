@@ -30,14 +30,16 @@ This unit should be read in conjunction with:
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Demonstrate glider control and awareness • Demonstrate
+### 1. Demonstrate glider control and awareness
 
+- Demonstrate
   - Good lookout
   - Consistent bank and attitude in Thermaling turns
   - Use of coordinated controls in Thermaling turns
 
-### 2. Thermal centring • Describe
+### 2. Thermal centring
 
+- Describe
   - Lag limitation of total energy vario and impact on centring
   - The feel and vario techniques for thermal centring
 - Predict

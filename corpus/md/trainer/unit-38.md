@@ -31,16 +31,18 @@ This unit should be read in conjunction with:
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Predict soaring conditions • Demonstrate
+### 1. Predict soaring conditions
 
+- Demonstrate
   - Accessing relevant weather information for the local area
 - Predict
   - Wind speed and direction at different times and heights
   - Cloud layers
   - Thermal heights, strengths and the soaring window
 
-### 2. Plan flight • Describe
+### 2. Plan flight
 
+- Describe
   - Weather threats and mitigation strategies
 - Predict
   - Cross country speed

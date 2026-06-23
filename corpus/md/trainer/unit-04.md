@@ -42,8 +42,9 @@ The aim of this unit is for the student to:
   - The local flying operations briefs.
   - The distance/height/glide angle required to reach the aerodrome.
 
-### 2. Sailplane stability. ● Describe:
+### 2. Sailplane stability.
 
+- Describe:
   - The horizon as the primary attitude reference.
   - Stability in all 3 axes/planes.
   - Positive stability in Pitch and Yaw.

@@ -58,8 +58,9 @@ There are no complementary units for this GPC unit.
 - Demonstrate:
   - application of ballast as required for the current aircrew configuration for a safe flight. This will be different in most types.
 
-### 3. Inspect the aircraft ● Describe:
+### 3. Inspect the aircraft
 
+- Describe:
   - the difference between a pre-flight and a daily inspection (DI).
 - Demonstrate:
   - a pre-flight inspection, explaining key observations.
@@ -77,8 +78,9 @@ There are no complementary units for this GPC unit.
   - Operating / avoiding the Press-to Transmit (PTT) switch.
 <!-- page: 3-4 -->
 
-### 5. Confirm Cockpit Safety ● Describe:
+### 5. Confirm Cockpit Safety
 
+- Describe:
   - The canopy operation & canopy jettison system.
   - Ventilation controls and their operation.
 - Demonstrate:

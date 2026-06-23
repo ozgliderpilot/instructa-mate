@@ -107,12 +107,14 @@ Instructor demonstrates takeoff with student lightly on the controls.
 
 ### COMMON PROBLEMS
 
-### Wings not kept level • Students may not identify that one wing is lower, they need to identify this through reference to the horizon ahead and through peripheral vision;
+### Wings not kept level
 
+- Students may not identify that one wing is lower, they need to identify this through reference to the horizon ahead and through peripheral vision;
 - Insufficient control movement at low speed, aileron and rudder
 
-### Instability on takeoff • Failure to adopt the takeoff attitude results in very fast taxiing with unstable handling.
+### Instability on takeoff
 
+- Failure to adopt the takeoff attitude results in very fast taxiing with unstable handling.
 - Instructor intervention will likely be required in the first attempts.
 - Insufficient rudder to compensate for swing on takeoff and initial climb due to engine/propeller effects;
 

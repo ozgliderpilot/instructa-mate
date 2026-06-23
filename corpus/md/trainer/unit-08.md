@@ -31,8 +31,9 @@ There are no complementary units for this GPC Unit.
   - ○ The requirement for lookout and scan procedures whilst in a sustained turn.
   - ○ How coordination is maintained in the turn.
 
-### 2. Enters a coordinated turn ● Demonstrate:
+### 2. Enters a coordinated turn
 
+- Demonstrate:
   - ○ Targeted and full scan to maintain situational awareness.
   - ○ Use of aircraft controls to enter a coordinated turn in both directions to various angles of bank up to 40 degrees.
   - ○ Coordinated turn at various speeds from Minimum sink through to 70 knots.

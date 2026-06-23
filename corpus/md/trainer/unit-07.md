@@ -38,8 +38,9 @@ This unit should be read in conjunction with:
   - Maintaining a constant airspeed with the Airspeed Indicator covered;
   - Maintaining straight flight with wings level and balanced (as per yaw string).
 
-### 2. Trim aircraft: ● Demonstrate:
+### 2. Trim aircraft:
 
+- Demonstrate:
   - Maintaining nominated attitude whilst aircraft is trimmed;
   - Confirmation of correct trim;
   - Adjustment of trim whenever speed is varied.

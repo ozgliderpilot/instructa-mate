@@ -31,14 +31,16 @@ To introduce student pilots to soaring and what can be achieved by progressing t
 - Identify
   - Soaring goals beyond solo
 
-### 2. Demonstrate basic aircraft control ● Demonstrate
+### 2. Demonstrate basic aircraft control
 
+- Demonstrate
   - Cruising at a constant attitude and heading in the direction of a geographic feature
   - Constant attitude while rolling to 35-45 degree angle of bank
   - Constant angle of bank and attitude in a sustained turn
 
-### 3. Demonstrate basic Thermaling skills ● Identify
+### 3. Demonstrate basic Thermaling skills
 
+- Identify
   - A thermal through feel or using the variometer
 - Demonstrate
   - Basic thermal centring using minor corrections

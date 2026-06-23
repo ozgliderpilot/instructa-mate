@@ -44,8 +44,9 @@ There are no complementary units for this GPC Unit
   - Actions the pilot can take to reduce the risks of launch emergencies.
   - Causes of towplane upset and the actions to prevent it.
 
-### 2. Ground roll emergencies. ● Describe:
+### 2. Ground roll emergencies.
 
+- Describe:
   - Appropriate action if the towplane has engine failure during ground roll.
   - Causes of Pilot Induced Oscillation (PIO).
   - How to prevent loss of directional control.
@@ -58,8 +59,9 @@ There are no complementary units for this GPC Unit
 - Wing drop, possibly due to cross wind.
 <!-- page: 20A-3 -->
 
-### 3. Initial climb emergencies ● Describe:
+### 3. Initial climb emergencies
 
+- Describe:
   - Causes of Tug upsets and actions to prevent these.
   - Suitable landing areas off the airfield for emergency use.
   - Appropriate actions to Towplane problems including low power issues.
@@ -69,8 +71,9 @@ There are no complementary units for this GPC Unit
   - Calling out options on climb out on all flights.
   - Taking appropriate action with simulated launch failure below 500 feet AGL, including landing on airfield or turnback.
 
-### 4. Full climb emergencies. ● Describe:
+### 4. Full climb emergencies.
 
+- Describe:
   - Required actions in the event of a double release failure.
 - Demonstrate:
   - Taking appropriate actions to simulated launch failure above 500 ft AGL.

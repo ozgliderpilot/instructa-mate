@@ -47,8 +47,9 @@ There are no complementary units to this GPC unit.
   - Assessment of the student’s medical, attitude and physical suitability for solo flight.
   - Acknowledgement of the solo flight approval, parameters, limitations & instructions set by the authorising Trainer.
 
-### 2. Solo glider flight. ● Demonstrate: Solo flight conducted in accordance with:
+### 2. Solo glider flight.
 
+- Demonstrate: Solo flight conducted in accordance with:
   - CASA/GFA Regulations, airframe operational procedures & limitations and local aerodrome procedures.
   - Briefed procedures with a normal aircraft landing.
 

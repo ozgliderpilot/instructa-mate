@@ -39,8 +39,9 @@ This unit should be read in conjunction with:
   - Threats from wind and other environmental factors.
   - Threats due to turbulence and wind shear, and corrective actions.
 
-### 2. Conduct approach. ● Describe:
+### 2. Conduct approach.
 
+- Describe:
   - Illusions present when landing upslope or downslope.
 - Demonstrate:
   - Rollout from final turn to line up with intended landing path.

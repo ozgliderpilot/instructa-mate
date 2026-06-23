@@ -137,7 +137,11 @@ You may find this exercise challenging because you need to concentrate on what�
 - Poor lookout and/or spatial awareness (develop good lookout habits)
 - Lack of understanding of potential conflict situations (discuss with your trainer)
 
-### Not maintaining separation • Misjudging closing speeds and geometry (you’ll get better at this with practice) • Incorrectly predicting behaviours of others (you’ll get better at this with practice) • Flying unpredictably (if you don’t fly predictably then other pilots may misjudge what you are doing – follow the guidelines in this unit)
+### Not maintaining separation
+
+- Misjudging closing speeds and geometry (you’ll get better at this with practice)
+- Incorrectly predicting behaviours of others (you’ll get better at this with practice)
+- Flying unpredictably (if you don’t fly predictably then other pilots may misjudge what you are doing – follow the guidelines in this unit)
 
 ### Poorer aircraft handling when near other gliders
 

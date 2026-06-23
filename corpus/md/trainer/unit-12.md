@@ -40,8 +40,9 @@ There are no complementary units for this GPC Unit
   - Monitoring of attitude and air sounds together with the ‘feel’ of the stick to maintain flight above the stall without reference to instruments.
   - Moving the stick forward when a wing drop is experienced, to lower the angle of attack with sufficient rudder away from the wing drop direction to counter any yaw.
 
-### 2. Safe flying practices ● Describe:
+### 2. Safe flying practices
 
+- Describe:
   - The individual glider’s ‘flight envelope’ as indicated by the cockpit weight and speed placard and the use of ballast to ensure flight is within these limits.
   - The significance of the yellow triangle on the airspeed instrument.
   - The need for coordinated turns in the circuit.
@@ -52,7 +53,9 @@ There are no complementary units for this GPC Unit
   - Selection and maintenance of a suitable safety margin above stall speed (1.5 Vs) habitually when flying below 1000 ft AGL.
 <!-- page: 12-3 -->
 
-### 3. Stall recognition ● Describe:
+### 3. Stall recognition
+
+- Describe:
 
 ○ The aerodynamics of the stall. ○ Factors that impact stall speed – angle of attack and wing loading (G force, angle of bank, flaps and use of airbrakes).
 
@@ -60,7 +63,9 @@ There are no complementary units for this GPC Unit
 
 ○ Recognition of symptoms of flying near and below the stall speed.
 
-### 4. Stall recovery ● Demonstrate:
+### 4. Stall recovery
+
+- Demonstrate:
 
 ○ Moving the stick forward to decrease the angle of attack to regain and maintain a safe speed, prior to the stall. ○ Stall recoveries with minimal height loss appropriate to type:
 

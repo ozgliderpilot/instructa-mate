@@ -38,7 +38,9 @@ To describe types of launch emergency and demonstrate approaches to prevent thes
   - possible launch emergencies that may occur with ground run, initial climb (to 500 feet AGL) and during full climb above 500 feet;
   - actions to reduce the chances of launch emergencies.
 
-### 2. Ground roll emergencies ● Demonstrate:
+### 2. Ground roll emergencies
+
+- Demonstrate:
 
 o Prevention of loss of directional control and taking appropriate actions;
 
@@ -62,8 +64,9 @@ o Briefing and calling out options on climb out on all flights;
 
 o Taking appropriate action with simulated engine failure, including landing on airfield, 180 turn, and explains options re: outlanding.
 
-### 4. Full climb emergencies. ● Demonstrate:
+### 4. Full climb emergencies.
 
+- Demonstrate:
   - Taking appropriate actions to simulated engine failure above
 
 500 ft AGL.

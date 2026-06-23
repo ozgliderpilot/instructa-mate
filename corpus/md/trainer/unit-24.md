@@ -61,8 +61,10 @@ This unit should be read in conjunction with:
 
 <!-- page: 24-2 -->
 
-### 5. Factors of Airmanship. ● Describe: ● Bedrock Principles:
+### 5. Factors of Airmanship.
 
+- Describe:
+- Bedrock Principles:
   - Discipline.
   - Skills.
   - Proficiency using currency barograph diagram.

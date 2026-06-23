@@ -22,8 +22,9 @@ To train how to safely and cooperatively fly with other gliders. This requires a
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Demonstrate situation awareness • Demonstrate
+### 1. Demonstrate situation awareness
 
+- Demonstrate
   - Consistent lookout locating other gliders
 - Recognise
   - Potential conflicts such as converging headings or converging height changes
@@ -31,8 +32,9 @@ To train how to safely and cooperatively fly with other gliders. This requires a
 - Predict
   - Intentions of other pilots
 
-### 2. Maintain separation • Describe
+### 2. Maintain separation
 
+- Describe
   - The concept of a separation bubble
   - How “separation priority” works
 - Demonstrate
@@ -41,8 +43,9 @@ To train how to safely and cooperatively fly with other gliders. This requires a
   - Entering a thermal
   - Thermaling
 
-### 3. Fly predictability • Demonstrate
+### 3. Fly predictability
 
+- Demonstrate
   - Predictable behaviour when:
   - Cruising
   - Entering a thermal

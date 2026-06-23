@@ -34,8 +34,9 @@ This unit should be delivered in close conjunction with:
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. TEM definitions. ● Describe:
+### 1. TEM definitions.
 
+- Describe:
   - Pristine flights,
   - Threats,
   - Errors, and

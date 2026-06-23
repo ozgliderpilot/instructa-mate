@@ -32,8 +32,9 @@ There are no complementary units to this GPC Unit.
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Changing station on tow • Describe
+### 1. Changing station on tow
 
+- Describe
   - The correct high and low tow position.
 - Demonstrate
   - Advising the tow pilot prior to commencing such manoeuvres.
@@ -41,8 +42,9 @@ There are no complementary units to this GPC Unit.
   - Transition from high tow to low tow.
   - Correct pace to avoid getting caught in the slipstream and to avoid kiting manoeuvres.
 
-### 2. Boxing the slipstream • Describe:
+### 2. Boxing the slipstream
 
+- Describe:
   - The steps involved in boxing the slipstream.
 - Demonstrate:
   - The correct pace to complete the manoeuvre.

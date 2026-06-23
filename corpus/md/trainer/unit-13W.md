@@ -47,8 +47,9 @@ Whilst the precursor for launch emergencies is discussed here (speed out of tole
   - Correct handling of the aircraft in the initial and full climb stages of the launch.
   - The actions to take when there is a significant crosswind during the launch.
 
-### 2. Winch Launch Release ● Describe:
+### 2. Winch Launch Release
 
+- Describe:
   - How to release the winch cable from the glider.
 - Demonstrate:
   - The release of the cable without significant tension.

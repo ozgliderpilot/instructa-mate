@@ -46,8 +46,9 @@ The possession by the student of one of the following satisfy the requirements f
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Practical standards ● Demonstrate:
+### 1. Practical standards
 
+- Demonstrate:
   - Operation of a VHF radio controls to:
 - Select and change frequencies.
 - Set volume & squelch levels.

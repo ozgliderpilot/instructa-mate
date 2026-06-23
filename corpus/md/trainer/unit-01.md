@@ -35,23 +35,26 @@ This unit should be read in conjunction with:
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Lookout Priority ● Describe:
+### 1. Lookout Priority
 
+- Describe:
   - the priority of lookout to avoid collisions through see and avoid;
   - the potential collision risks in flight;
   - the use of radio for alerted see-and-avoid;
   - Situational Awareness at all times in flight;
   - the risks of excessive focus on instruments and devices.
 
-### 2. Application of Lookout ● Describe:
+### 2. Application of Lookout
 
+- Describe:
   - the importance of checking airspace before commencing any manoeuvre.
 - Demonstrate:
   - the limits of vision and how to look in difficult to see airspace (above, below, behind), when turning;
   - the use the clock code to report other aircraft and identify prominent landmarks.
 
-### 3. Collision Avoidance ● Describe:
+### 3. Collision Avoidance
 
+- Describe:
   - the rules of the air applicable to aircraft safe separation; (head to head actions, give way to the right, overtaking on the right, no flying over the top of someone).
 - Demonstrate:
   - radio listening watch and provide an interpretation of traffic location and intentions.

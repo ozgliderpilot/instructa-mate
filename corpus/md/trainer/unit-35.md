@@ -31,17 +31,20 @@ This unit should be read in conjunction with:
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Describe personal preparation • Describe
+### 1. Describe personal preparation
 
+- Describe
   - Physical limitations that may affect a pilot’s performance on the day of a flight
   - Personal needs for cross-country flying
 
-### 2. Demonstrate glider preparation • Demonstrate
+### 2. Demonstrate glider preparation
 
+- Demonstrate
   - Glider preparation to ensure the glider is ready to go
 
-### 3. Demonstrate retrieve readiness • List
+### 3. Demonstrate retrieve readiness
 
+- List
   - Common faults that would prevent or delay a retrieve
 - Demonstrate
   - Trailer inspection to ensure the trailer is ready for go

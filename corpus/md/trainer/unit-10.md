@@ -36,30 +36,34 @@ There are no complementary units for this GPC unit
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Airbrake controls ● Describe:
+### 1. Airbrake controls
 
+- Describe:
   - The purpose and limitations of the airbrakes on a glider.
 - Demonstrate:
   - Identification and correct operation of the airbrake to control the rate of descent of the glider.
 
-### 2. Flap controls ● Describe:
+### 2. Flap controls
 
+- Describe:
   - The purpose and limitations of the various flaps on a glider.
   - The limitations on when flaps can be used.
   - The threats that flaps can introduce.
 - Demonstrate:
   - Identification and correct operation of the different types of flap on the glider.
 
-### 3. Undercarriage controls ● Describe:
+### 3. Undercarriage controls
 
+- Describe:
   - The purpose and limitations of the undercarriage controls on a glider.
 - Demonstrate:
   - Identification of the undercarriage lever and its action.
   - Raising and lowering the undercarriage in accordance with Flight Manual limits.
   - Confirming how the undercarriage is down and locked.
 
-### 4. Canopy latches ● Describe:
+### 4. Canopy latches
 
+- Describe:
   - The way that the canopy latches work on the aircraft in both normal and emergency operations.
   - How to avoid damage to the canopy.
   - Why an unattended aircraft must always have its canopies secured.
@@ -68,8 +72,9 @@ There are no complementary units for this GPC unit
   - Operation of the canopy in both normal and emergency operations.
 <!-- page: 10-4 -->
 
-### 5. Tow release. ● Describe:
+### 5. Tow release.
 
+- Describe:
   - The purpose of the tow release handle and how it operates the aerotow and winch tow hooks.
 - Demonstrate:
   - Identification and operation of the tow release.

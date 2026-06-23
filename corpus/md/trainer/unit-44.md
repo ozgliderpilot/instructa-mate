@@ -27,8 +27,9 @@ There are no complementary units to this training.
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Completion of all pre- requisite GPC Elements. • Demonstrate
+### 1. Completion of all pre- requisite GPC Elements.
 
+- Demonstrate
   - Completion of all previous GPC elements by examination of the student’s training record.
 
 ## KEY MESSAGES

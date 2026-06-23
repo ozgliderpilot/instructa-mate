@@ -35,8 +35,9 @@ If radio calls are to be introduced for launching, training in GPC Unit 21 may b
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Preparation for take-off. ● Describe:
+### 1. Preparation for take-off.
 
+- Describe:
   - The purpose of the weak link fitted to the winch cable.
   - Threats associated with a winch launch through the separation and initial climb.
 - Demonstrate:

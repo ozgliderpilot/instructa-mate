@@ -666,6 +666,24 @@ def _split_list_items(block: list[Line]) -> list[Element]:
     return [(kind, " ".join(parts)) for kind, parts in items]
 
 
+def _split_glued_bullets(lines: list[Line]) -> tuple[list[Line], list[Line]]:
+    """Split a left-column block that swallowed the start of its right-column bullets.
+
+    When an ELEMENT label is short enough to share a visual row with the first ``●``
+    bullet of its PERFORMANCE STANDARDS (Trainer Unit 1 "Lookout Priority", Unit 3
+    "Inspect the aircraft"), PyMuPDF groups the label and that bullet into one left-column
+    block — ``1. Lookout Priority ● Describe:``. Split at the first ●/o glyph so the leading
+    lines stay the row label and the glyph-onward lines render as its bullets. A normal
+    label (no embedded glyph, because its bullets wrap to their own block) is returned
+    unchanged. The ``i and`` guard keeps the label line itself (a numbered title never opens
+    with a glyph) from being mistaken for a bullet.
+    """
+    for i, line in enumerate(lines):
+        if i and _marker_kind(line) in ("bullet", "subbullet"):
+            return lines[:i], lines[i:]
+    return lines, []
+
+
 @dataclass(frozen=True)
 class TableRegion:
     """A ruled two-column table, pre-rendered to reading-order elements."""
@@ -713,13 +731,17 @@ def _two_column_region(page_blocks: list[tuple[BBox, list[Line]]], bbox: BBox) -
         if _normalize_header(_block_text(lines)) in _TABLE_HEADER_TEXTS:
             continue  # column-header row
         if bb[0] < split:  # left column — (part of) a row label
+            label_lines, bullet_lines = _split_glued_bullets(lines)
             if flushed:  # the previous row's bullets are done → start a new label
                 heading, last_bottom, flushed = [], None, False
             elif heading and bb[1] - last_bottom > _WRAP_GAP_MAX:  # a row gap, not a wrap
                 flush()
                 heading, last_bottom, flushed = [], None, False
-            heading.append(_block_text(lines))
+            heading.append(_block_text(label_lines))
             last_bottom = bb[3]
+            if bullet_lines:  # a short label shared its row with the first ● bullet
+                flush()
+                elements.extend(_split_list_items(bullet_lines))
         else:  # right column — the label's bullets
             flush()
             elements.extend(_split_list_items(lines))

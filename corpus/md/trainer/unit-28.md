@@ -40,8 +40,10 @@ Instructors should review the Aircraft Flight Manual to verify that sideslipping
   - The control movements required to commence and leave a sideslip.
   - False airspeed indications in a sideslip.
 
-### 2. Conduct sideslips • Demonstrate o A controlled sideslip at height.
+### 2. Conduct sideslips
 
+- Demonstrate
+  - A controlled sideslip at height.
   - Maintaining a constant track across ground whilst in the sideslip.
   - Recovery from sideslip at the same speed as the entry.
   - A controlled sideslip on final approach (subject to local restrictions).

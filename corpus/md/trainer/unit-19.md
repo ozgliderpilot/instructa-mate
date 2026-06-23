@@ -49,15 +49,17 @@ This unit should be read in conjunction with:
 - Wind socks.
 - The GFA cross-wind chart.
 
-### 2. Crosswind Take-offs. ● Describe:
+### 2. Crosswind Take-offs.
 
+- Describe:
   - The possible impacts of the crosswind on take-off and mitigators.
   - The actions to take to abort a crosswind take-off.
 - Demonstrate:
   - Safe conduct of a crosswind take-off unaided at least three times.
 
-### 3. Crosswind Landings. ● Describe:
+### 3. Crosswind Landings.
 
+- Describe:
   - The possible impacts of the crosswind on landing and mitigators.
   - The difference between a crabbing and wing-down approach.
 - Demonstrate:

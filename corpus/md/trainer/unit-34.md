@@ -61,8 +61,9 @@ Demonstrate
 - Final turn above 300 feet AGL
 <!-- page: 34-2 -->
 
-### 4. Land in field Demonstrate ● Adjust touchdown point to optimise safety
+### 4. Land in field Demonstrate
 
+- Adjust touchdown point to optimise safety
 - Ensure clearance from any obstacles
 - Minimise ground roll
 

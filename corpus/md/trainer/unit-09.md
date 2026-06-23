@@ -33,8 +33,9 @@ This unit may be read in conjunction with:
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Effective lookout ● Describe:
+### 1. Effective lookout
 
+- Describe:
   - The practice of alerted see and avoid.
   - Visual scanning techniques and their applications.
   - Focus of attention and time management in the cockpit.

@@ -53,20 +53,25 @@ and other relevant charts.
   - Operation and application of ADS-B and Transponders
   - Compatibility between Flarm and ADS-B/transponder
 
-### 3. Altimetry ● Demonstrate:
+### 3. Altimetry
 
+- Demonstrate:
   - Altimeter settings to be used above and below 10,000 feet.
 - Describe:
   - The use of cruising levels that would apply to a powered aircraft and Touring Motor Gliders
 <!-- page: 36-2 -->
 
-### 4. Search and Rescue ● Describe: o Knowledge of SAR phases and pilot responsibilities.
+### 4. Search and Rescue
 
+- Describe:
+  - Knowledge of SAR phases and pilot responsibilities.
   - Knowledge of local club procedures regarding SAR.
   - How to use an emergency beacon
 
-### 5. Basic Navigation ● Demonstrate (pre-flight): o Obtain and interpret NOTAMs and determine if the NOTAMs will impact on the flight.
+### 5. Basic Navigation
 
+- Demonstrate (pre-flight):
+  - Obtain and interpret NOTAMs and determine if the NOTAMs will impact on the flight.
   - Discuss conversion of UTC time/date to local time/date.
   - Draw a proposed flight path onto WAC and VNC/VTC.
   - Identify key landmarks that should assist with navigation decisions.

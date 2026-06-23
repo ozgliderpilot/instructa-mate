@@ -28,8 +28,10 @@ There are no complementary GPC units to this unit.
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Enter Steep Turn • Describe o The higher stall speeds, lift vector, induced drag and aircraft operating limits for steep turns.
+### 1. Enter Steep Turn
 
+- Describe
+  - The higher stall speeds, lift vector, induced drag and aircraft operating limits for steep turns.
   - Risks associated with steep turns.
 - Demonstrate
   - Targeted scan prior to commencement of turn.
@@ -37,8 +39,10 @@ There are no complementary GPC units to this unit.
   - Use of coordinated controls when rolling into the turn.
   - Judgement of required bank angle.
 
-### 2. Maintain Steep Turn • Demonstrate o Maintenance of attitude, airspeed and G loading.
+### 2. Maintain Steep Turn
 
+- Demonstrate
+  - Maintenance of attitude, airspeed and G loading.
   - Maintenance of nominated angle of bank.
   - Flying by attitude as opposed to speed.
   - Alternating between lookout and monitoring of attitude and angle of bank/rudder coordination.

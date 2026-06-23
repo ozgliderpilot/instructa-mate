@@ -30,12 +30,14 @@ This unit should be read in conjunction with:
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Identify a thermal • Identify
+### 1. Identify a thermal
 
+- Identify
   - A thermal (as opposed to a gust)
 
-### 2. Enter a thermal • Demonstrate
+### 2. Enter a thermal
 
+- Demonstrate
   - Appropriate lookout
   - Appropriate nose attitude
   - Waiting for the peak before turning

@@ -21,28 +21,33 @@ To develop the student’s skills and ingrained habits in selecting a path throu
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Demonstrate Cruising - Track selection • Demonstrate
+### 1. Demonstrate Cruising - Track selection
 
+- Demonstrate
   - Looking to the distance on track to identify several thermal sources and/or cumulus clouds and following a pathway through these to maximise the chance of finding thermals
   - Identifying and following a pathway through areas of rising air to extend glide performance whilst making progress on task
 
-### 2. Identify Height Bands • Identify
+### 2. Identify Height Bands
 
+- Identify
   - Appropriate height bands for the conditions
 
-### 3. Demonstrate appropriate cruise speeds • Demonstrate
+### 3. Demonstrate appropriate cruise speeds
 
+- Demonstrate
   - Consistently determining and adjusting cruise speed based on height band and expected conditions
   - Maintaining the nominated speed throughout the flight +/- 5 knots
 
-### 4. Select thermals appropriately • Identify
+### 4. Select thermals appropriately
 
+- Identify
   - The thermal strength required appropriate to the height band and conditions
 - Demonstrate
   - Selecting only thermals that meet criteria
 
-### 5. Demonstrate final glide • Identify
+### 5. Demonstrate final glide
 
+- Identify
   - Sufficient height for final glide
 - Demonstrate
   - Monitoring glide and taking appropriate actions

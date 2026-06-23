@@ -34,8 +34,9 @@ Describe
   - The purpose of relevant items shown on flight computer pages and at what stage of the flight each item is of use
   - The basis on which flight computer predictions of wind, ETA and arrival height are made
 
-### 2. Demonstrate practical use of a flight computer • Demonstrate
+### 2. Demonstrate practical use of a flight computer
 
+- Demonstrate
   - Setting up a task and parameters on the ground
   - Navigating a task and adjusting parameters (such as thermal strength) in the air
   - Excellent lookout with minimum “screen time”

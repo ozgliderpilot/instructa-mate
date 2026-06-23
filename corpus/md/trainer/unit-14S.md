@@ -35,8 +35,9 @@ This unit should be read in conjunction with:
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### 1. Preparation for takeoff. ● Describe:
+### 1. Preparation for takeoff.
 
+- Describe:
   - How to calculate the takeoff distance required for the aircraft.
 - Demonstrate :
   - Pre-Take Off checks with options for launch emergencies briefed in accordance with the Aircraft Flight Manual.
@@ -45,8 +46,9 @@ This unit should be read in conjunction with:
   - Transmission of appropriate radio calls.
   - Confirmation of airspace clearance for launch.
 
-### 2. Taxi to launch point. ● Describe:
+### 2. Taxi to launch point.
 
+- Describe:
   - The use of the controls whilst taxiing the aircraft (and how these are affected by the surface wind).
 - Demonstrate:
   - Planning of taxi route allowing for wingtip clearance.

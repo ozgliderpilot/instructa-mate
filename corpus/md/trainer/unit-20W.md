@@ -46,8 +46,9 @@ There are no complementary units for this GPC Unit.
   - The Non-Manoeuvring Area (NMA) and how a pilot can enter it and avoid it.
   - The actions required if a cable hook up is suspected.
 
-### 2. Ground roll emergencies. ● Describe:
+### 2. Ground roll emergencies.
 
+- Describe:
   - The dangers of allowing a wingtip to touch the ground in the early stages of a winch launch:
   - The immediate actions to take during the ground stage of the winch launch when:
 - A wingtip touches the ground.
@@ -59,8 +60,9 @@ There are no complementary units for this GPC Unit.
 - Demonstrate:
   - The correct immediate actions for a launch failure that occurs on the ground.
 
-### 3. Initial climb emergencies ● Describe:
+### 3. Initial climb emergencies
 
+- Describe:
   - The immediate three actions to take during the separation through release stage of the winch/autotow launch when:
 - There is an immediate loss of power in the launch.
 - There is a gradual loss of power in the launch.
@@ -70,8 +72,9 @@ There are no complementary units for this GPC Unit.
   - The correct immediate actions for a launch failure that occurs just after separation.
   - The correct three actions and return for safe landing from an abrupt launch failure at a low level and intermediate level (initial climb or early full climb).
 
-### 4. Full climb emergencies. ● Describe:
+### 4. Full climb emergencies.
 
+- Describe:
   - How allowing the aircraft into the NMA will increase the risks during the launch.
 - Demonstrate:
   - The correct immediate actions for a launch failure that occurs just after separation.

@@ -36,8 +36,9 @@ There are no complementary units to this training.
   - The environmental factors that would be taken into consideration when operating independently.
   - The human factors that would be taken into consideration when operating independently.
 
-### 2. Knowledge of SAR processes. • Describe
+### 2. Knowledge of SAR processes.
 
+- Describe
   - The entities that can be used for monitoring SAR time.
   - The process the PIC can use to cancel SAR.
 
@@ -49,8 +50,9 @@ There are no complementary units to this training.
   - The mechanisms that are used for reporting aviation occurrences.
   - The information that needs to be included in an occurrence report.
 
-### 4. Knowledge of rating and site limitations. • Describe
+### 4. Knowledge of rating and site limitations.
 
+- Describe
   - The limitations and responsibilities of a pilot operating independently.
   - The processes and limitations associated with the site used by the pilot.
 <!-- page: 43-2 -->
