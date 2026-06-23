@@ -317,11 +317,15 @@ def _is_section_header(line: Line, source: str) -> bool:
     # sections) OR membership in the curated sub-section-size vocabulary (the Trainer
     # prints FLIGHT EXERCISES / PRE-FLIGHT BRIEFING at 12pt — sub-heading size — so font
     # alone can't tell them from "Classroom Briefing"; only the vocabulary can).
-    if not line.bold:
-        return False
     if line.size >= _SECTION_MIN_SIZE:
-        return True
-    return _normalize_header(line.text) in _SUBSECTION_SECTIONS.get(source, frozenset())
+        if line.bold:
+            return True
+        # A non-bold section-sized line is normally the title-page unit name (chrome), but
+        # Trainer Units 8 & 11 print some/all section headings in non-bold 14pt Sylfaen
+        # rather than bold Helvetica. The header dictionary disambiguates: the unit name is
+        # never in it, a real section heading always is.
+        return _content_type(source, line.text) is not None
+    return line.bold and _normalize_header(line.text) in _SUBSECTION_SECTIONS.get(source, frozenset())
 
 
 # Sub-section labels a Source prints WITHOUT bold (the Pilot "COMMON PROBLEMS" inside
@@ -415,7 +419,7 @@ _FIGURE_LABELS: dict[tuple[str, str], frozenset[str]] = {
 }
 
 
-def _is_chrome_line(line: Line) -> bool:
+def _is_chrome_line(line: Line, source: str = "") -> bool:
     """Whether a single line is running header/title chrome to strip wherever it sits.
 
     The Solo guides print the manual banner / unit title as their own block, but the GPC
@@ -433,8 +437,11 @@ def _is_chrome_line(line: Line) -> bool:
         return True
     # The big unit name on a title page is the only other non-bold chrome; body prose runs
     # ~10-11pt, so the strip is keyed to section size — never the 11pt running banner (that
-    # is caught by its exact text above) and never an 11pt body line glued mid-block.
-    return not line.bold and line.size >= _SECTION_MIN_SIZE
+    # is caught by its exact text above) and never an 11pt body line glued mid-block. A
+    # non-bold section-sized line that maps to a known section heading is real content, not
+    # chrome (Trainer Units 8/11 print sections in non-bold 14pt Sylfaen).
+    return (not line.bold and line.size >= _SECTION_MIN_SIZE
+            and _content_type(source, line.text) is None)
 
 
 def _classify_block(block: list[Line], source: str, token: str) -> list[Element]:
@@ -504,7 +511,7 @@ def _classify_block(block: list[Line], source: str, token: str) -> list[Element]
         heading, heading_kind = None, None
 
     for line in block:
-        if _is_chrome_line(line):
+        if _is_chrome_line(line, source):
             continue
         kind = _marker_kind(line)
         if kind:  # a list item opens here; later wrapped lines are its body

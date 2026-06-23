@@ -45,6 +45,10 @@ To introduce student pilots to soaring and what can be achieved by progressing t
 - Demonstrate
   - Basic thermal centring using minor corrections
 <!-- page: 11-2 -->
+
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
 - Soaring is not just about safely taking off and landing. There are many opportunities such as flying advanced aircraft types, cross country flying, mountain flying, flying competitions, badges and records, and aerobatics. Training is available for all of these pathways.
 - Soaring in thermals is a key skill essential for longer duration flights and cross country flying.
 - More advanced soaring concepts are trained in the GPC syllabus after solo.

@@ -10,6 +10,9 @@ revision: "1.0"
 <!-- page: 8-1 -->
 <!-- page: 8-2 -->
 
+## AIM
+<!-- content_type: aim -->
+
 The aim of this GPC Unit is to develop the knowledge and skill to:
 
 - use all primary controls to enter, maintain and exit a sustained turn in a coordinated manner;
@@ -17,12 +20,22 @@ The aim of this GPC Unit is to develop the knowledge and skill to:
 - vary the angle of bank in a turn;
 - describe the relationship between the angle of bank and the radius of the turn; and
 - demonstrate smooth and coordinated entry, maintenance and exit of sustained turns at various angles of bank and speeds.
+
+## PREREQUISITE UNITS
+<!-- content_type: admin -->
+
 - GPC Unit 6 Aileron Drag & Rudder Coordination.
 - GPC Unit 9 Lookout Scan Procedures
+
+## COMPLEMENTARY UNITS
+<!-- content_type: admin -->
 
 There are no complementary units for this GPC Unit.
 
 <!-- page: 8-3 -->
+
+## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
+<!-- content_type: competency -->
 
 ### 1. Describes control usage in turns
 
@@ -57,6 +70,10 @@ There are no complementary units for this GPC Unit.
   - ○ Use of aircraft controls to return the aircraft to wings level in a coordinated manner whilst maintaining aircraft attitude.
   - ○ Return to wings level on roll out heading +/- 10 degrees.
 <!-- page: 8-4 -->
+
+## KEY MESSAGES
+<!-- content_type: key_messages -->
+
 - Gliders spend most of their time aloft in sustained turns.
 - Lookout is essential – before entering, during and before exiting the turn.
 - Have a relaxed grip on the control column and controls adjusted correctly for reach during flight.
@@ -78,6 +95,9 @@ Sub-gravity Sensation .
   - Demonstrate and have the student execute the bunt until the response is controlled and expected.  Such students may never be ‘happy’ but must understand the response and it must be controlled.
   - Be sure, in the following work on stalling that the student Clearly distinguishes sub-gravity from stalled flight.
   - Make an obvious note in the log book or other record and be sure to report to the panel.
+
+## LESSON PLANNING AND CONDUCT
+<!-- content_type: briefing -->
 
 Classroom Briefing
 
@@ -141,10 +161,17 @@ Exiting the Turn
 - Coordinated flight is indicated by centering the yaw string.
 - Use elevator trim for the new configuration.
 - Maintain cruise scan and regular full scan to maintain situational awareness.
+
+## PRE-FLIGHT BRIEFING
+<!-- content_type: briefing -->
+
 - Cover instruments if required and brief for maintaining view outside the cockpit.
 - Explain the plan to conduct multiple sustained turns of at least one/two complete circles.
 - Reiterate coordinated use of all three primary flight controls.
 <!-- page: 8-7 -->
+
+## FLIGHT EXERCISES
+<!-- content_type: exercise -->
 
 Turn Entry
 
@@ -259,6 +286,9 @@ with reference to external cues.
 
 difficult for low experience pilots to come out of a turn to a compass heading, instead use a point on the horizon.
 
+## COMMON PROBLEMS
+<!-- content_type: common_problems -->
+
 ### Failure to look out properly before turning.
 
 Student may forget or be distracted. Do not let turns proceed without adequate lookout.
@@ -284,9 +314,17 @@ Student looking at ASI instead of monitoring nose attitude
 Student may misunderstand how rudder is used in an aircraft. Check understanding of correct use of controls from GPC 6. Brief student that we NEVER try to turn a glider in flight by using rudder alone.
 
 <!-- page: 8-10 -->
+
+## THREAT AND ERROR MANAGEMENT
+<!-- content_type: airmanship -->
+
 - Risks associated with uncoordinated flight (either too little or too much application of rudder).
 - Control risks associated with excessive angle of bank.
 - Failure to maintain situational awareness during sustained turns.
+
+## TRAINING MATERIALS AND REFERENCES
+<!-- content_type: admin -->
+
 - GPC Pilot Guide Unit 8
 - Gliding Handbook: FAA 2013 https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/glider_handbook/
 - Gliding Basics: British Gliding Association 2019
