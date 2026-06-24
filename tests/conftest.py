@@ -15,11 +15,18 @@ CORPUS = ROOT / "corpus"
 
 PILOT_PDF = CORPUS / "00-Combined Pilot Guides 1-26 Solo.pdf"
 TRAINER_PDF = CORPUS / "00 Combined Trainer Guides units 1-26 Solo  BBB.pdf"
+# GPC half of the Corpus (Units 27-44) — the issue #8 expansion. Same Source names
+# ("trainer"/"pilot"), different PDFs and unit range.
+PILOT_GPC_PDF = CORPUS / "Combined Pilot Guides 27 - 44 GPC.pdf"
+TRAINER_GPC_PDF = CORPUS / "00 Combined Trainer Guides units 27-44 GPC.pdf"
 
 # The hand-verified Markdown is the committed source of truth (ADR 0002); it doubles
 # as the golden the parser must reproduce.
 PILOT_UNIT1_GOLDEN = CORPUS / "md" / "pilot" / "unit-01.md"
 TRAINER_UNIT5_GOLDEN = CORPUS / "md" / "trainer" / "unit-05.md"
+TRAINER_UNIT13A_GOLDEN = CORPUS / "md" / "trainer" / "unit-13A.md"
+TRAINER_UNIT30_GOLDEN = CORPUS / "md" / "trainer" / "unit-30.md"
+PILOT_UNIT27_GOLDEN = CORPUS / "md" / "pilot" / "unit-27.md"
 
 
 @pytest.fixture
@@ -37,6 +44,41 @@ def trainer_pdf() -> Path:
 
 
 @pytest.fixture
+def pilot_gpc_pdf() -> Path:
+    if not PILOT_GPC_PDF.exists():
+        pytest.skip(f"Pilot GPC guide PDF not present at {PILOT_GPC_PDF} (gitignored corpus)")
+    return PILOT_GPC_PDF
+
+
+@pytest.fixture
+def trainer_gpc_pdf() -> Path:
+    if not TRAINER_GPC_PDF.exists():
+        pytest.skip(f"Trainer GPC guide PDF not present at {TRAINER_GPC_PDF} (gitignored corpus)")
+    return TRAINER_GPC_PDF
+
+
+@pytest.fixture
+def corpus_sources() -> dict[str, Path]:
+    """The ``{source: pdf_path}`` mapping the batch wrapper ingests. Skips unless both
+    copyright PDFs are present locally."""
+    missing = [p for p in (PILOT_PDF, TRAINER_PDF) if not p.exists()]
+    if missing:
+        pytest.skip(f"corpus PDFs not present: {missing} (gitignored)")
+    return {"trainer": TRAINER_PDF, "pilot": PILOT_PDF}
+
+
+@pytest.fixture
+def gpc_sources() -> dict[str, Path]:
+    """The ``{source: pdf_path}`` mapping for the GPC half (Units 27-44). Same Source
+    names as the Solo corpus so its Markdown lands in the same ``corpus/md/<source>/``
+    tree; skips unless both GPC PDFs are present locally."""
+    missing = [p for p in (PILOT_GPC_PDF, TRAINER_GPC_PDF) if not p.exists()]
+    if missing:
+        pytest.skip(f"GPC corpus PDFs not present: {missing} (gitignored)")
+    return {"trainer": TRAINER_GPC_PDF, "pilot": PILOT_GPC_PDF}
+
+
+@pytest.fixture
 def pilot_unit1_golden() -> str:
     if not PILOT_UNIT1_GOLDEN.exists():
         pytest.skip(f"Golden not present at {PILOT_UNIT1_GOLDEN}")
@@ -48,3 +90,24 @@ def trainer_unit5_golden() -> str:
     if not TRAINER_UNIT5_GOLDEN.exists():
         pytest.skip(f"Golden not present at {TRAINER_UNIT5_GOLDEN}")
     return TRAINER_UNIT5_GOLDEN.read_text(encoding="utf-8")
+
+
+@pytest.fixture
+def trainer_unit13A_golden() -> str:
+    if not TRAINER_UNIT13A_GOLDEN.exists():
+        pytest.skip(f"Golden not present at {TRAINER_UNIT13A_GOLDEN}")
+    return TRAINER_UNIT13A_GOLDEN.read_text(encoding="utf-8")
+
+
+@pytest.fixture
+def trainer_unit30_golden() -> str:
+    if not TRAINER_UNIT30_GOLDEN.exists():
+        pytest.skip(f"Golden not present at {TRAINER_UNIT30_GOLDEN}")
+    return TRAINER_UNIT30_GOLDEN.read_text(encoding="utf-8")
+
+
+@pytest.fixture
+def pilot_unit27_golden() -> str:
+    if not PILOT_UNIT27_GOLDEN.exists():
+        pytest.skip(f"Golden not present at {PILOT_UNIT27_GOLDEN}")
+    return PILOT_UNIT27_GOLDEN.read_text(encoding="utf-8")
