@@ -1,11 +1,11 @@
 ---
 source: pilot
 unit: 18
-unit_name: 
+unit_name: Spin / Spiral Dive Avoidance and Recovery
 revision: "1.0"
 ---
 
-# Unit 18 — 
+# Unit 18 — Spin / Spiral Dive Avoidance and Recovery
 
 <!-- page: 18-1 -->
 

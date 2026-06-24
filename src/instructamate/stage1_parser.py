@@ -13,6 +13,7 @@ by brittle "ALL-CAPS at col 0" text heuristics.
 from __future__ import annotations
 
 import re
+from collections import Counter
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from pathlib import Path
@@ -258,7 +259,9 @@ def _resolve_unit_pages(doc, source: str, number: int, variant: str) -> list[tup
     return pages
 
 
-def _unit_metadata(doc, number: int, variant: str, pages: list[tuple[int, str]]) -> dict[str, str]:
+def _unit_metadata(
+    doc, source: str, number: int, variant: str, pages: list[tuple[int, str]]
+) -> dict[str, str]:
     """Pull ``unit_name`` and ``revision`` from the unit's running banner/footer.
 
     The name regex is anchored to this unit's *known* number and variant rather than a
@@ -266,6 +269,11 @@ def _unit_metadata(doc, number: int, variant: str, pages: list[tuple[int, str]])
     Launch …`` (or, for Pilot 20S, ``Unit 20 S - …`` with a space). A generic optional
     ``[A-Z]?`` would swallow the first letter of an un-dashed plain name (``Unit 1
     Lookout Awareness``); anchoring to the resolved variant avoids that ambiguity.
+
+    A few units (both Sources' Unit 18) print the running banner as the *bare* name —
+    "Spin / Spiral Dive Avoidance and Recovery", with no ``Unit 18 -`` prefix — so the
+    anchored regex never matches. Rather than emit a blank title, fall back to the
+    repeating banner line (see :func:`_running_banner_name`).
     """
     title_re = re.compile(rf"Unit\s+{number}(?!\d)\s*{variant}\s*[-–]?\s*(.+)")
     name, revision = "", ""
@@ -281,7 +289,39 @@ def _unit_metadata(doc, number: int, variant: str, pages: list[tuple[int, str]])
                     revision = m.group(1)
         if name and revision:
             break
+    if not name:
+        name = _running_banner_name(doc, source, pages)
     return {"unit_name": name, "revision": revision}
+
+
+def _running_banner_name(doc, source: str, pages: list[tuple[int, str]]) -> str:
+    """The bare-name running banner for units that omit the ``Unit NN -`` title prefix.
+
+    The unit-name banner is the one non-bold, section-sized line that repeats on every
+    page; a genuine section heading is the same size but appears once and maps to a
+    ``content_type``. So the banner is the most-repeated section-sized non-bold line that
+    is neither manual-banner / ``Unit NN`` chrome nor a known section heading. Requiring it
+    on >= 2 pages keeps a one-off large line from being mistaken for a title; if nothing
+    repeats, the name stays empty rather than guessing wrong.
+    """
+    counts: Counter[str] = Counter()
+    for idx, _label in pages:
+        seen: set[str] = set()
+        for line in _page_lines(doc[idx]):
+            text = line.text.strip()
+            if line.bold or line.size < _SECTION_MIN_SIZE or text in seen:
+                continue
+            if _normalize_header(text) in _BANNER_TEXTS or _UNIT_CHROME_RE.fullmatch(text):
+                continue
+            if _content_type(source, text) is not None:
+                continue
+            seen.add(text)
+            counts[text] += 1
+    if counts:
+        text, pages_seen = counts.most_common(1)[0]
+        if pages_seen >= 2:
+            return text
+    return ""
 
 
 def _frontmatter(source: str, token: str, meta: dict[str, str]) -> str:
@@ -874,7 +914,7 @@ def render_unit_markdown(pdf_path, source: str, unit: int | str) -> str:
     plumber = pdfplumber.open(pdf_path)
     try:
         pages = _resolve_unit_pages(doc, source, number, variant)
-        meta = _unit_metadata(doc, number, variant, pages)
+        meta = _unit_metadata(doc, source, number, variant, pages)
 
         elements: list[Element] = [("h1", f"# Unit {token} — {meta['unit_name']}")]
         for idx, label in pages:
