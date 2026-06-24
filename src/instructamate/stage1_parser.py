@@ -4,8 +4,8 @@ The single public seam is :func:`render_unit_markdown`; :func:`write_unit_markdo
 is a thin batch wrapper that persists the result to the stable path convention
 ``corpus/md/<source>/unit-NN.md``. See ADR 0002 for the output contract.
 
-PyMuPDF (``fitz``) is the only text layer (settled by the extractor bake-off — no
-``pdftotext`` engine, no LLM fallback). We read ``get_text("dict")`` rather than
+PyMuPDF (``fitz``) is the only text layer (settled by the extractor bake-off, ADR 0003 —
+no ``pdftotext`` engine, no LLM fallback). We read ``get_text("dict")`` rather than
 ``get_text("text")``: it is the *same* PyMuPDF extraction enriched with the per-span
 font/size/weight that lets section structure be detected deterministically instead of
 by brittle "ALL-CAPS at col 0" text heuristics.
