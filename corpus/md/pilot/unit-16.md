@@ -164,9 +164,13 @@ Not monitoring nose attitude
 
 Not monitoring track
 
-### Late or early turn onto base lag Poor judgement of angle to aiming point
+### Late or early turn onto base lag
 
-### Too high turning final Too early turning base
+Poor judgement of angle to aiming point
+
+### Too high turning final
+
+Too early turning base
 
 Lack of angle adjustment on base leg
 

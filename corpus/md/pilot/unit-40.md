@@ -88,7 +88,17 @@ MacCready speed to fly theory is theoretically sound but is almost impossible to
 
 Cruise Speed Upper height band
 
-### 2 knots 55 knots 65 knots 4 knots 70 knots 80 knots 6 knots 75 knots 85 knots
+### 2 knots 55 knots
+
+65 knots
+
+### 4 knots 70 knots
+
+80 knots
+
+### 6 knots 75 knots
+
+85 knots
 
 As a rule of thumb, cruise at 75 knots between thermals. You can vary this by plus or minus 10 knots depending on height and thermal strength. If you fly through an extended area sink you should increase your speed by up to 10 knots, similarly decrease your speed when flying through an extended area of lift.
 
@@ -162,7 +172,9 @@ Revision 1.0 February 2022 Page 40- 5
 
 ### COMMON PROBLEMS
 
-### Losing too much height in the glide Not selecting and following an appropriate track
+### Losing too much height in the glide
+
+Not selecting and following an appropriate track
 
 ### Cruising speed too slow or too fast for the conditions
 
@@ -172,7 +184,9 @@ Not considering the height band and looking at the conditions ahead
 
 Inattention to cruising speed
 
-### Limited ability to feel the air Cruising too fast
+### Limited ability to feel the air
+
+Cruising too fast
 
 ### Taking every thermal regardless of strength
 

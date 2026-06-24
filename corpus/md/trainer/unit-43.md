@@ -127,9 +127,9 @@ There are no flight exercises associated with this unit.
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->
 
-### Problem Probable Cause
+### Unable to access SOAR.
 
-- Unable to access SOAR. Pilot may not have current URL or telephone numbers for reporting points within GFA (EM/Ops, RM/Ops etc.).
+Pilot may not have current URL or telephone numbers for reporting points within GFA (EM/Ops, RM/Ops etc.).
 
 ## THREAT AND ERROR MANAGEMENT
 <!-- content_type: airmanship -->

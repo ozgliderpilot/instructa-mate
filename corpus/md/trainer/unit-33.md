@@ -91,9 +91,8 @@ The flight exercises for this unit are best combined with flight exercises for o
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->
 
-### Problem Probable Cause
+### Confusing sources with triggers
 
-- Confusing sources with triggers
 - Thermal source areas are large
 - Triggers are small
 - Only a small amount of experience with which to judge – the student needs to devote the time to watch and learn.

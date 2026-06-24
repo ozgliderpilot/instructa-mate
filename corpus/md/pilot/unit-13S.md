@@ -100,7 +100,9 @@ Pilot distraction or failure to note passage of time.
 
 Note need to confirm engine is operating within required limits throughout the launch.
 
-### Failure to climb at expected rate. Best climb speed is not being maintained.
+### Failure to climb at expected rate.
+
+Best climb speed is not being maintained.
 
 Monitor airspeed during launch and note attitude for Best Climb.
 

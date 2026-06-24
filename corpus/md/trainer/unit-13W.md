@@ -314,9 +314,13 @@ Student moving control column forward too quickly, possibly not monitoring nose 
 
 Failure to monitor wing tips for correct climb angle.
 
-### Excessive rotation rate into full climb. Over enthusiastic or nervous student – demonstrate correct technique and external references for correct climb angle for the aircraft.
+### Excessive rotation rate into full climb.
 
-### Excessive deviation from runway. Failure to keep wings level (or correct for cross wind) in the launch.
+Over enthusiastic or nervous student – demonstrate correct technique and external references for correct climb angle for the aircraft.
+
+### Excessive deviation from runway.
+
+Failure to keep wings level (or correct for cross wind) in the launch.
 
 ## THREAT AND ERROR MANAGEMENT
 <!-- content_type: airmanship -->

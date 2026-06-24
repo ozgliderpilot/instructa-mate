@@ -265,7 +265,9 @@ Reduce Airbrakes and ease stick forward if height permits. If unsure, take over,
 
 Emphasise work cycle including AIRSPEED.
 
-### Early or late flare. Excessive or slow reaction to ground rush by student.
+### Early or late flare.
+
+Excessive or slow reaction to ground rush by student.
 
 Have hands in defensive posture adjacent to dive airbrakes and elevator control if student fails to correct and especially guard against student pushing stick forward, or excessive use of airbrake.
 

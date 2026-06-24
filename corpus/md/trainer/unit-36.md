@@ -32,7 +32,9 @@ This unit should be read in conjunction with:
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### ELEMENT PERFORMANCE STANDARD
+### ELEMENT
+
+PERFORMANCE STANDARD
 
 ### 1. Airspace Classification
 

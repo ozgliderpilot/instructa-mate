@@ -106,7 +106,9 @@ Study the Aircraft Flight Manual
 
 Seek guidance from a qualified DI Inspector/Examiner
 
-### Distraction by other people Ask others not to interfere until you have finished the DI.
+### Distraction by other people
+
+Ask others not to interfere until you have finished the DI.
 
 <!-- page: 42-4 -->
 

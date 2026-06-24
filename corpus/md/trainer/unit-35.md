@@ -118,13 +118,17 @@ Observe the student preparing for a cross country flight (even if the flight is 
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->
 
-### Not remaining hydrated in flight Not set up for comfortable peeing in flight
+### Not remaining hydrated in flight
+
+Not set up for comfortable peeing in flight
 
 ### Rushed preparation on the day of the flight
 
 Lack of preparation prior to the day of the flight
 
-### Missing preparation items Not using a check list
+### Missing preparation items
+
+Not using a check list
 
 ## THREAT AND ERROR MANAGEMENT
 <!-- content_type: airmanship -->

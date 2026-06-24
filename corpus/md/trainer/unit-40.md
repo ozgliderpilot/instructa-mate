@@ -127,7 +127,9 @@ Not considering the height band and looking at the conditions ahead
 
 Inattention to cruising speed
 
-### Limited ability to feel the air Cruising too fast
+### Limited ability to feel the air
+
+Cruising too fast
 
 ### Taking every thermal regardless of strength
 

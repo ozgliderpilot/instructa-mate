@@ -128,17 +128,23 @@ def _content_type(source: str, text: str) -> str | None:
     return HEADER_DICTIONARY.get(source, {}).get(_normalize_header(text))
 
 
+BBox = tuple[float, float, float, float]
+
+
 @dataclass(frozen=True)
 class Line:
-    """One visual line of a page, with the font signal used for classification."""
+    """One visual line of a page, with the font signal used for classification.
+
+    ``bbox`` is the line's ``(x0, y0, x1, y1)`` on the page. It is carried so a table
+    block whose left and right cells PyMuPDF grouped together can be re-segmented by the
+    column boundary (see :func:`_column_runs`); the prose/heading path ignores it.
+    """
 
     text: str
     size: float
     bold: bool
     font: str
-
-
-BBox = tuple[float, float, float, float]
+    bbox: BBox = (0.0, 0.0, 0.0, 0.0)
 
 
 def _page_blocks_with_bbox(page) -> list[tuple[BBox, list[Line]]]:
@@ -165,6 +171,7 @@ def _page_blocks_with_bbox(page) -> list[tuple[BBox, list[Line]]]:
                     size=round(max(s["size"] for s in spans), 1),
                     bold=all(s["flags"] & _BOLD_FLAG for s in spans),
                     font=spans[0]["font"],
+                    bbox=tuple(line["bbox"]),
                 )
             )
         if lines:
@@ -691,6 +698,37 @@ def _split_glued_bullets(lines: list[Line]) -> tuple[list[Line], list[Line]]:
     return lines, []
 
 
+def _lines_bbox(lines: list[Line]) -> BBox:
+    """The bounding box enclosing *lines* — the union of their per-line bboxes."""
+    return (
+        min(l.bbox[0] for l in lines),
+        min(l.bbox[1] for l in lines),
+        max(l.bbox[2] for l in lines),
+        max(l.bbox[3] for l in lines),
+    )
+
+
+def _column_runs(lines: list[Line], split: float) -> list[tuple[BBox, list[Line]]]:
+    """Re-segment a block's lines into maximal runs that sit on one side of *split*.
+
+    PyMuPDF sometimes groups a table row's left (label) cell and right (body) cell into a
+    single block — ``● Speed change is very slow.`` glued onto its Probable Cause prose —
+    even though each visual line keeps its own column's x. Splitting by line x recovers the
+    two cells as separate ``(bbox, lines)`` sub-blocks, so the row renders as a heading plus
+    its body rather than one glued heading. A block already wholly in one column yields a
+    single run identical to the input, so a table PyMuPDF did *not* merge is untouched.
+    """
+    runs: list[list[Line]] = []
+    side: bool | None = None
+    for line in lines:
+        left = line.bbox[0] < split
+        if not runs or left != side:
+            runs.append([])
+            side = left
+        runs[-1].append(line)
+    return [(_lines_bbox(run), run) for run in runs]
+
+
 @dataclass(frozen=True)
 class TableRegion:
     """A ruled two-column table, pre-rendered to reading-order elements."""
@@ -713,15 +751,27 @@ def _two_column_region(page_blocks: list[tuple[BBox, list[Line]]], bbox: BBox) -
     first problem label, all stacked above the first bullet) from collapsing into one run.
     Right-column blocks split into their bullets and attach to the open heading; the
     column-header row is dropped.
+
+    The column split is taken from *line* x-positions, not block x0: PyMuPDF sometimes
+    groups a row's left and right cells into one block (Trainer Unit 7's COMMON PROBLEMS —
+    ``● Speed change is very slow.`` fused to its cause prose), and where *every* row is
+    merged the block x0 collapses to one column and the table would be missed. Header rows
+    are dropped whole — their two labels ("Problem"/"Probable Cause") may share a block —
+    then each remaining block is re-segmented by column so a merged row splits back into its
+    label and its body.
     """
     blocks = _page_blocks_in(page_blocks, bbox)
-    if len(blocks) < 2:
-        return None
-    xs = sorted({round(bb[0]) for bb, _ in blocks})
+    xs = sorted({round(line.bbox[0]) for _bb, lines in blocks for line in lines})
     gap, at = max(((xs[i + 1] - xs[i], i) for i in range(len(xs) - 1)), default=(0, 0))
     if gap < _COLUMN_GAP_MIN:
-        return None  # one column — not a two-column table
+        return None  # one column (or too little content) — not a two-column table
     split = (xs[at] + xs[at + 1]) / 2
+
+    subblocks: list[tuple[BBox, list[Line]]] = []
+    for bb, lines in blocks:
+        if _normalize_header(_block_text(lines)) in _TABLE_HEADER_TEXTS:
+            continue  # column-header row (its two labels may share one block)
+        subblocks.extend(_column_runs(lines, split))
 
     elements: list[Element] = []
     heading: list[str] = []
@@ -734,9 +784,7 @@ def _two_column_region(page_blocks: list[tuple[BBox, list[Line]]], bbox: BBox) -
             elements.append(("subheading", "### " + " ".join(heading)))
             flushed = True
 
-    for bb, lines in blocks:
-        if _normalize_header(_block_text(lines)) in _TABLE_HEADER_TEXTS:
-            continue  # column-header row
+    for bb, lines in subblocks:
         if bb[0] < split:  # left column — (part of) a row label
             label_lines, bullet_lines = _split_glued_bullets(lines)
             if flushed:  # the previous row's bullets are done → start a new label
@@ -749,10 +797,10 @@ def _two_column_region(page_blocks: list[tuple[BBox, list[Line]]], bbox: BBox) -
             if bullet_lines:  # a short label shared its row with the first ● bullet
                 flush()
                 elements.extend(_split_list_items(bullet_lines))
-        else:  # right column — the label's bullets
+        else:  # right column — the label's body (● bullets, or a plain-prose cause)
             flush()
             elements.extend(_split_list_items(lines))
-    flush()  # a trailing label with no right-column bullets
+    flush()  # a trailing label with no right-column body
     return TableRegion(bbox, tuple(elements)) if elements else None
 
 

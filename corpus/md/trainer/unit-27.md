@@ -238,7 +238,7 @@ Student in rush to complete exercise or cannot maintain station at the step posi
 
 <!-- page: 27-7 -->
 
-### Reiterate need to pause at each step position, maintaining control inputs.
+Reiterate need to pause at each step position, maintaining control inputs.
 
 ### Student allows rope to bow when descending behind tug.
 

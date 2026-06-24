@@ -109,7 +109,9 @@ Under direction the student practices thermal joining, centring, cruising and re
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->
 
-### Speed varying in turns Flying using airspeed indicator instead of nose attitude relative to the horizon
+### Speed varying in turns
+
+Flying using airspeed indicator instead of nose attitude relative to the horizon
 
 Not trimmed correctly
 

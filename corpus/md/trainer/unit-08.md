@@ -297,7 +297,9 @@ Student may forget or be distracted. Do not let turns proceed without adequate l
 
 Student may use no or insufficient rudder. Check understanding of correct use of controls from GPC 6.
 
-### Grip too tight on the controls. Student may be nervous or unsure how to hold the control column. Brief use of two fingers and thumb as a means of a lighter hold.
+### Grip too tight on the controls.
+
+Student may be nervous or unsure how to hold the control column. Brief use of two fingers and thumb as a means of a lighter hold.
 
 ### Failure to remove rudder once bank achieved.
 

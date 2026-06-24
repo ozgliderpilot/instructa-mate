@@ -42,29 +42,49 @@ Nil.
 - Hence as you can see from the table below, we need to commence the steep turn and maintain a speed comfortably above the stall speed for your bank angle.
 - 60 degree stall speed is approximately 1.4 times your normal straight and level stall speed.
 
-### ANGLE OF BANK ‘G’ LOADING TYPICAL STALLING SPEED
+### ANGLE OF BANK
+
+‘G’ LOADING TYPICAL STALLING SPEED
 
 (Knots)
 
-### 0 degrees 1 33
+### 0 degrees
 
-### 10 degrees 1.02 33
+1 33
 
-### 20 degrees 1.06 34
+### 10 degrees
 
-### 30 degrees 1.15 35
+1.02 33
 
-### 40 degrees 1.2 38
+### 20 degrees
+
+1.06 34
+
+### 30 degrees
+
+1.15 35
+
+### 40 degrees
+
+1.2 38
 
 <!-- page: 29-2 -->
 
-50 degrees 1.56 41
+### 50 degrees
 
-60 degrees 2.0 46
+1.56 41
 
-70 degrees 2.92 56
+### 60 degrees
 
-80 degrees 5.75 79
+2.0 46
+
+### 70 degrees
+
+2.92 56
+
+### 80 degrees
+
+5.75 79
 
 - Your instructor will demonstrate a steep turn from a medium turn, after selecting a suitable nose attitude for the required speed. Typically, 70 knots but will be confirmed with the Aircraft Flight Manual.
 - You will notice that as the bank Increases to the required angle (60 degrees) the nose position will be maintained with the elevator.

@@ -175,7 +175,9 @@ Do not demonstrate the stall or spin in this early unit; the student must unders
 
 Atmospheric disturbances or incorrect flying by trainer.
 
-### Over-control Lack of understanding of the stability, small control movements required, and inertia -
+### Over-control
+
+Lack of understanding of the stability, small control movements required, and inertia -
 
 ## THREAT AND ERROR MANAGEMENT
 <!-- content_type: airmanship -->

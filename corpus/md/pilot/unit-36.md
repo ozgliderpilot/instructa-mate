@@ -172,11 +172,15 @@ designated area by the Air Traffic Services personnel. The Area QNH may be obtai
 - It is obvious that gliders are unable to cruise at constant heights, altitudes or flight levels. They are always in climbing or descending flight. Powered aircraft (and Touring Motor Gliders) are however required to adhere to certain procedures when in cruising flight, as follows:
 - Above 5,000ft altitude, up to FL195, aircraft operate in accordance with a principle known as "ICAO Cruising Levels". The International Civil Aviation Organisation (ICAO) has decreed that all aircraft operating under the Visual Flight Rules (VFR) will do so as per the table below.
 
-### Magnetic tracks From 000 Degrees through East to 179 Degrees
+### Magnetic tracks
+
+From 000 Degrees through East to 179 Degrees
 
 From 180 Degrees through West to 359 Degrees
 
-### Cruising altitudes 1,500 2,500
+### Cruising altitudes
+
+1,500 2,500
 
 <!-- page: 36-9 -->
 

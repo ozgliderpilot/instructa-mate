@@ -121,33 +121,61 @@ Numbers are spoken as follows:-
 
 Standard words and phrases should be used as follows:-
 
-### Affirm Yes, or permission granted, or that is correct.
+### Affirm
 
-### Negative No, or permission denied or that is not correct.
+Yes, or permission granted, or that is correct.
 
-### Correction An error has been made, correct message follows.
+### Negative
 
-### Acknowledge Confirm that you have received and understood my message.
+No, or permission denied or that is not correct.
 
-### Roger Message received and understood.
+### Correction
 
-### Wilco Message received, understood and will be complied with.
+An error has been made, correct message follows.
 
-### Go ahead Transmit your message.
+### Acknowledge
 
-### Verify Check that the transmission is correct.
+Confirm that you have received and understood my message.
 
-### Say again Self-explanatory.
+### Roger
 
-### I say again Self-explanatory.
+Message received and understood.
 
-### Speak slower Self-explanatory.
+### Wilco
 
-### Stand by Self-explanatory.
+Message received, understood and will be complied with.
 
-### That is correct Self-explanatory.
+### Go ahead
 
-### How do you read? Used to gauge effectiveness or serviceability of radio and should not be used in normal transmissions. Answered by "Reading you strength...."
+Transmit your message.
+
+### Verify
+
+Check that the transmission is correct.
+
+### Say again
+
+Self-explanatory.
+
+### I say again
+
+Self-explanatory.
+
+### Speak slower
+
+Self-explanatory.
+
+### Stand by
+
+Self-explanatory.
+
+### That is correct
+
+Self-explanatory.
+
+### How do you read?
+
+Used to gauge effectiveness or serviceability of radio and should not be used in normal transmissions. Answered by "Reading you strength...."
 
 One: Your transmissions are unreadable.
 
@@ -177,35 +205,61 @@ Three Fife" and 26,000ft would be broadcast as "Flight Level Two Six Zero".
 
 Units of measurement to be used in airways operations and air-ground communications are as follows:
 
-### Measurement Units
+### Measurement
+
+Units
 
 ### Distances used in navigation (generally in excess of 2NM)
 
 nautical miles and tenths
 
-### Short distances metres
+### Short distances
 
-### Altitudes, elevations and heights Feet
+metres
 
-### Horizontal speed, including wind speed Knots
+### Altitudes, elevations and heights
 
-### Vertical speed Feet per minute
+Feet
 
-### Wind direction for runway operations Degrees Magnetic
+### Horizontal speed, including wind speed
 
-### Wind direction except for runway operations Degrees True
+Knots
 
-### Visibility, including runway visual range kilometres or metres
+### Vertical speed
 
-### Altimeter setting hectopascals
+Feet per minute
 
-### Temperature degrees celsius
+### Wind direction for runway operations
 
-### Weight (Mass) Metric tonnes or kilograms
+Degrees Magnetic
 
-### Time hours and minutes
+### Wind direction except for runway operations
 
-### Time System Coordinated Universal Time (UTC)
+Degrees True
+
+### Visibility, including runway visual range
+
+kilometres or metres
+
+### Altimeter setting
+
+hectopascals
+
+### Temperature
+
+degrees celsius
+
+### Weight (Mass) Metric
+
+tonnes or kilograms
+
+### Time
+
+hours and minutes
+
+### Time System
+
+Coordinated Universal Time (UTC)
 
 *Miles must be read as meaning nautical miles unless otherwise stated. The word “nautical” may be omitted from air-ground communications.
 
@@ -254,15 +308,21 @@ The key words and their uses are as follows:-
 
 ### Circumstance Item (non-towered Pilot’s radio broadcasts aerodromes)
 
-### 1  The pilot intends to take-off. Immediately before, or during, taxiing.
+### 1  The pilot intends to take-off.
 
-### 2  The pilot intends to enter a runway. Immediately before entering a runway.
+Immediately before, or during, taxiing.
+
+### 2  The pilot intends to enter a runway.
+
+Immediately before entering a runway.
 
 ### 3  The pilot is inbound.
 
 10 NM or earlier from the aerodrome, commensurate with aircraft performance and pilot workload, with an estimated time of arrival (ETA) for the aerodrome
 
-### 4  The pilot is ready to join the circuit. Immediately before joining the circuit.
+### 4  The pilot is ready to join the circuit.
+
+Immediately before joining the circuit.
 
 - In addition to making positional broadcasts, pilots should listen to other broadcasts to increase situational awareness. This ‘alerted see-and-avoid’ strategy results in an eight-fold increase in the likelihood of seeing another aircraft.
 - Whenever pilots determine that there is a potential for traffic conflict, they should make radio broadcasts as necessary to avoid the risk of a collision or an Airprox event. Pilots should not be hesitant to call and clarify another aircraft’s position and intentions if there is any uncertainty.

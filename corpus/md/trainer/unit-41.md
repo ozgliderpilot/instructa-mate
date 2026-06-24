@@ -26,17 +26,15 @@ To evaluate the student’s capability to combine the GPC competencies to safely
 ### 1. Plan a cross country flight
 
 - Demonstrate satisfactory flight planning considering at least:
-
-### personal preparation
-
+  - personal preparation
   - meteorology
   - airspace and radio frequencies
   - NOTAM
   - safe outlanding options and trailer/crew arrangements
   - task setting, task declaration and official observer awareness
-  - flight computer programming 2. Demonstrated cross country
+  - flight computer programming
 
-### flight
+### 2. Demonstrated cross country flight
 
 - Demonstrate
   - Effective lookout throughout all stages of the flight

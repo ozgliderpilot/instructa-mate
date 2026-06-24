@@ -107,7 +107,9 @@ The vario technique will be demonstrated and you’ll have an opportunity to pra
 1. Flying using airspeed indicator instead of nose attitude relative to the horizon
 2. Not trimmed correctly
 
-### Not maintaining constant angle of bank Not using visual references for angle of bank. Use visual references such as instrument screws and glare shields.
+### Not maintaining constant angle of bank
+
+Not using visual references for angle of bank. Use visual references such as instrument screws and glare shields.
 
 ## HOW DO YOU DEMONSTRATE COMPETENCE?
 <!-- content_type: competency -->

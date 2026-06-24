@@ -115,12 +115,32 @@ To develop the knowledge and skill to:
 - Varying the speed
 - Exiting the turn pointing to a specific heading
 - Reversing turns
-- The table below gives a guide to the various factors to be considered in making turns.
+
+### The table below gives a guide to the various factors to be considered in making turns.
+
 - The table represents a modern training two-seater of about 600kg All Up Weight (AUW) and 34 to 1 glide angle.
 
 ### To complete a 180 degree turn at 65 knots
 
-Bank angle Time (Secs) Height loss(ft) Turn radius (ft) 10 degrees 60 240 2,100 20 degrees 30 120 1,000 30 degrees 20 75 650 40 degrees 13 55 450
+### Bank angle Time (Secs) Height loss(ft)
+
+Turn radius (ft)
+
+### 10 degrees 60 240
+
+2,100
+
+### 20 degrees 30 120
+
+1,000
+
+### 30 degrees 20 75
+
+650
+
+### 40 degrees 13 55
+
+450
 
 <!-- page: 8-5 -->
 

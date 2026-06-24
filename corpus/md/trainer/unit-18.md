@@ -157,21 +157,33 @@ Spiral Dive Recovery
 
 Aids to Developed Spin/Spiral Dive Identification
 
-### Attribute In Developed Spin In Spiral Dive
+### Attribute In Developed Spin
 
-### Aircraft stalled YES NO
+In Spiral Dive
 
-### G Loading Normal Increasing
+### Aircraft stalled YES
 
-### Load on controls Light (unresponsive) Effective and increasing control loads
+NO
+
+### G Loading Normal
+
+Increasing
+
+### Load on controls Light (unresponsive)
+
+Effective and increasing control loads
 
 ### Yaw string Large deflection, pointing towards rudder for recovery
 
 Generally normal flight position
 
-### ASI Low or unreliable Steady and increasing
+### ASI Low or unreliable
 
-### Air sounds Stable (but may vary on rotation) Increasing
+Steady and increasing
+
+### Air sounds Stable (but may vary on rotation)
+
+Increasing
 
 <!-- page: 18-7 -->
 
@@ -187,7 +199,9 @@ From Spiral Dive
 
 UNLOAD wings, move control column forward.
 
-### Rudder to correct yaw. Aileron neutral. ROLL wings level gently using aileron & rudder.
+### Rudder to correct yaw. Aileron neutral.
+
+ROLL wings level gently using aileron & rudder.
 
 ### Ease control column forward until rotation ceases.
 
@@ -276,7 +290,9 @@ Student may forget or misremember checklist.
 
 Emphasise that spins are an aerobatic manoeuvre and require the pre-aerobatic check to be completed.
 
-### Failure to identify the spin entry. Student is not sensing the stall/yaw/nose drop symptoms.
+### Failure to identify the spin entry.
+
+Student is not sensing the stall/yaw/nose drop symptoms.
 
 Utilise simulators if available to demonstrate the entry, spin and recovery sequence so that the student is aware of the visible attributes of the spin prior to flight exercises.
 

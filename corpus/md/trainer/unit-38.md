@@ -159,13 +159,17 @@ The simple task planner table in the pilot guide for this unit is a tool that ca
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->
 
-### Incorrectly setting task distance Incorrectly predicting the wind and or thermal strengths/heights over the soaring window
+### Incorrectly setting task distance
+
+Incorrectly predicting the wind and or thermal strengths/heights over the soaring window
 
 Incorrectly estimating likely task speed with the student’s experience in the predicted conditions
 
 Not factoring in the time from launch to leaving on task
 
-### Choosing an inappropriate task Unfamiliarity with local conditions, terrain and airspace
+### Choosing an inappropriate task
+
+Unfamiliarity with local conditions, terrain and airspace
 
 ## Flight Exercises
 <!-- content_type: exercise -->

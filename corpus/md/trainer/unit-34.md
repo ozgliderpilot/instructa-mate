@@ -31,7 +31,9 @@ This unit should be read in conjunction with:
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### ELEMENT PERFORMANCE STANDARD
+### ELEMENT
+
+PERFORMANCE STANDARD
 
 ### 1. Select a suitable landing area
 
@@ -61,7 +63,9 @@ Demonstrate
 - Final turn above 300 feet AGL
 <!-- page: 34-2 -->
 
-### 4. Land in field Demonstrate
+### 4. Land in field
+
+Demonstrate
 
 - Adjust touchdown point to optimise safety
 - Ensure clearance from any obstacles
@@ -192,11 +196,15 @@ The student preferably needs to conduct a dual outlanding to complete this unit.
 
 Not learning and not following the W6S
 
-### Circuit too high or too low Possibly using ground features for circuit rather than angles
+### Circuit too high or too low
+
+Possibly using ground features for circuit rather than angles
 
 to the aiming point. Re-training required.
 
-### Poor speed control Possibly overloaded. Instructor support/advice
+### Poor speed control
+
+Possibly overloaded. Instructor support/advice
 
 recommended
 

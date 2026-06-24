@@ -296,13 +296,17 @@ Student fails to recognize out-of-tolerance (steep or shallow) angle to landing 
 
 Student is distracted with managing other aspects of the circuit and has lost situational awareness.
 
-### Steep or shallow Student fails to recognize out-of-tolerance (steep or shallow) angle to landing area.
+### Steep or shallow
+
+Student fails to recognize out-of-tolerance (steep or shallow) angle to landing area.
 
 Possible overload and failure to follow circuit work-cycle.
 
 Student does not apply modification long enough for any meaningful effect.
 
-### Base leg too close / too high. Student turning too early on base leg. Demonstrate required angle to landing area.
+### Base leg too close / too high.
+
+Student turning too early on base leg. Demonstrate required angle to landing area.
 
 Reiterate distance on downwind past runway threshold will equal final approach distance.
 

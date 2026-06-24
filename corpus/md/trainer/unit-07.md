@@ -191,9 +191,10 @@ clues needed to do the thing correctly, and it requires some subtle skills and p
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->
 
-### Problem Probable Cause
+### Attitude not stable.
 
-- Attitude not stable. The student may be watching the ASI rather than horizon – cover ASI.
+The student may be watching the ASI rather than horizon – cover ASI.
+
 <!-- page: 7-7 -->
 
 Student’s grip on stick may be too tense which makes trimming difficult. Ask the student to relax their grip, possibly hold with only 2 fingers and thumb for a period of time.
@@ -206,9 +207,13 @@ Possible confusion with regards to defining nose attitude. Emphasise horizon, qu
 
 Have the student hold the attitude constant to maintain a constant airspeed without worrying too much about the actual airspeed.
 
-### Speed change is very slow. Student is possibly flying with the trim.  Ask the student to make a 20-knot speed change and hold the pressure to maintain attitude. After some time, then allow the student to adjust the trim to remove pressure.
+### Speed change is very slow.
 
-### Glider wanders off track. Possible lack of focus by the student. Direct the student to positively identify the target point and to state when the glider is not tracking. Teach appropriate control movements to change heading.
+Student is possibly flying with the trim.  Ask the student to make a 20-knot speed change and hold the pressure to maintain attitude. After some time, then allow the student to adjust the trim to remove pressure.
+
+### Glider wanders off track.
+
+Possible lack of focus by the student. Direct the student to positively identify the target point and to state when the glider is not tracking. Teach appropriate control movements to change heading.
 
 Possibly unnecessary movement of controls. Ask the student to completely relax their grip, or even remove their hand from the stick. This may demonstrate that they have been making unnecessary movements.
 
@@ -216,10 +221,15 @@ The student may not yet be able to detect the small bank angles involved. This i
 
 Can be caused by a high workload and/or not looking far enough ahead. The student may also be spending far too much time looking at the instruments. Take control and return the glider to the desired heading and remind them of the feature towards which you want them to fly.
 
-### Wandering and sideslipping. Most commonly seen when the student uses aileron to level the wings for a small bank angle correction without using the rudder and the nose swings the wrong way due to adverse yaw. Remind the student about adverse yaw and the need to balance any aileron inputs with rudder.
+### Wandering and sideslipping.
+
+Most commonly seen when the student uses aileron to level the wings for a small bank angle correction without using the rudder and the nose swings the wrong way due to adverse yaw. Remind the student about adverse yaw and the need to balance any aileron inputs with rudder.
 
 <!-- page: 7-8 -->
-- Pedalling the rudder pedals. The student is usually in a futile attempt to return the yaw string to the centre. This suggests that the student has not fully understood the relationship between the rudder and ailerons.
+
+### Pedalling the rudder pedals.
+
+The student is usually in a futile attempt to return the yaw string to the centre. This suggests that the student has not fully understood the relationship between the rudder and ailerons.
 
 ## THREAT AND ERROR MANAGEMENT
 <!-- content_type: airmanship -->

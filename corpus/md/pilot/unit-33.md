@@ -74,9 +74,8 @@ Don’t be frustrated if the thermals aren’t there when you get to a good loca
 
 ### COMMON PROBLEMS
 
-### Problem Probable Cause
+### Confusing sources with triggers
 
-- Confusing sources with triggers
 - Thermal source areas are large
 - Triggers are small
 - Only a small amount of experience with which to judge – take the time to watch and learn.

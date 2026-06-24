@@ -120,21 +120,13 @@ Keep a constant nose attitude as much as possible. Remember to maintain a good l
 
 ### COMMON PROBLEMS
 
-### Problem Probable Cause
-
-- 
-
 ### Turning in a gust
 
 Not waiting for a sustained surge of at least 5 seconds
 
-- 
-
 ### Turning too late
 
 Taking too long to decide which way to turn – pick a direction before reaching the thermal
-
-- 
 
 ### Turning too early
 

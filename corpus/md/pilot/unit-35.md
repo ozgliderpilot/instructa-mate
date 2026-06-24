@@ -85,11 +85,17 @@ Preparation does not begin 30 minutes before flying, or even on the morning of a
 
 Flight Preparation Checklist
 
-### Personal Preparation Trailer and Car Preparation
+### Personal Preparation
 
-###  Hat, Sunscreen  Car insurance
+Trailer and Car Preparation
 
-###  Hydration (including emergency water)  Full fuel tank
+###  Hat, Sunscreen
+
+ Car insurance
+
+###  Hydration (including emergency water)
+
+ Full fuel tank
 
 ###  Nutrition
 
@@ -97,19 +103,37 @@ Flight Preparation Checklist
 
 the car and trailer are and can access the keys
 
-###  Relief  Car and trailer road legal
+###  Relief
 
-###  Weather forecast  Electrics are compatible
+ Car and trailer road legal
 
-###  Flight Planning (task, airspace, frequencies)  Rigging / de-rigging aids
+###  Weather forecast
 
-###  Maps  Trailer fittings working
+ Electrics are compatible
 
-###  Charged mobile phone (with you)  Tyre condition and inflation
+###  Flight Planning (task, airspace, frequencies)
 
-###  SAR arrangements (ELT?)   Flight declaration, logger and official observer 
+ Rigging / de-rigging aids
 
-###  Car and trailer keys not with you! 
+###  Maps
+
+ Trailer fittings working
+
+###  Charged mobile phone (with you)
+
+ Tyre condition and inflation
+
+###  SAR arrangements (ELT?)
+
+
+
+###  Flight declaration, logger and official observer
+
+
+
+###  Car and trailer keys not with you!
+
+
 
 ### 
 
@@ -145,13 +169,17 @@ You’ll spend time looking at and finding faults with various trailers and glid
 
 ### COMMON PROBLEMS
 
-### Not remaining hydrated in flight Not set up for or comfortable peeing in flight
+### Not remaining hydrated in flight
+
+Not set up for or comfortable peeing in flight
 
 ### Rushed preparation on the day of a flight
 
 Lack of preparation prior to the day of the flight
 
-### Missing preparation items Not using a check list
+### Missing preparation items
+
+Not using a check list
 
 ## HOW DO YOU DEMONSTRATE COMPETENCE?
 <!-- content_type: competency -->

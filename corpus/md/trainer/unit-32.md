@@ -143,7 +143,9 @@ Poor lookout and/or spatial awareness
 
 Lack of understanding of potential conflict situations
 
-### Failure to maintain separation Misjudging closing speeds and geometry
+### Failure to maintain separation
+
+Misjudging closing speeds and geometry
 
 Incorrectly predicting behaviours of others
 

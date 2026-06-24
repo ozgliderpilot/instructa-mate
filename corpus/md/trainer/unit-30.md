@@ -147,7 +147,9 @@ attitude relative to the horizon 2. Not trimmed correctly
 
 Not using visual references for angle of bank. Direct the   student to visual references such as instrument screws and glare shields.
 
-### Not feeling surges The student may be distracted by the vario (visually and aurally). For this training exercise, consider turning the sound off and covering the vario.
+### Not feeling surges
+
+The student may be distracted by the vario (visually and aurally). For this training exercise, consider turning the sound off and covering the vario.
 
 ### Debrief
 

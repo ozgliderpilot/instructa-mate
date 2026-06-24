@@ -128,7 +128,9 @@ Not maintaining nose attitude.
 
 Excessive force used on controls. Maintain a relaxed grip.
 
-### Lack of directional control: Incorrect operation of rudder pedals during ground run.
+### Lack of directional control:
+
+Incorrect operation of rudder pedals during ground run.
 
 Look towards the winch to identify track
 

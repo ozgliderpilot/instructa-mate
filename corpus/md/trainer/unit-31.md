@@ -115,11 +115,18 @@ The student practices thermal entry as many times as possible on a cross country
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->
 
-### Problem Probable Cause
+### Turning in a gust
 
-- Turning in a gust Not waiting for a sustained surge of at least 5 seconds
-- Turning too late The student taking too long deciding which way to turn – get the student to pick a direction before reaching the thermal
-- Turning too early Not waiting for at least 5 seconds or until the surge subsides before turning
+Not waiting for a sustained surge of at least 5 seconds
+
+### Turning too late
+
+The student taking too long deciding which way to turn – get the student to pick a direction before reaching the thermal
+
+### Turning too early
+
+Not waiting for at least 5 seconds or until the surge subsides before turning
+
 <!-- page: 31-5 -->
 
 ### Debrief

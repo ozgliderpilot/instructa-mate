@@ -123,34 +123,21 @@ You will need to complete quite a few flights to gain the required experience. Y
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
 
-### Turning final too close to the aiming point which requires immediate and excessive use of airbrake:
-
+- Turning final too close to the aiming point which requires immediate and excessive use of airbrake:
   - Widen out more on base leg so that there is more time on final to assess the situation before having to use airbrakes.
-
-### Using elevator to ‘point at the aiming point’ instead of using airbrake to control descent to the aiming point.
-
+- Using elevator to ‘point at the aiming point’ instead of using airbrake to control descent to the aiming point.
   - Remember that the elevator controls the speed and the airbrake controls the descent rate.
-
-### Incorrect undershoot identification:
-
+- Incorrect undershoot identification:
   - Wait until a definite overshoot before using airbrakes.
-
-### Identification and correction for wind shear:
-
+- Identification and correction for wind shear:
   - Ground proximity wind shear should be compensated for by reducing airbrake as necessary, and if energy reduces, with appropriate forward elevator pressure.
-
-### Failure to judge the flare:
-
+- Failure to judge the flare:
   - Failure to transfer the eyes away from the aiming point is a major contributor to difficulty in judging the glider's height above the ground and is the single biggest factor in late "Flare".
-
-### Glider “balloons” and loses speed:
-
+- Glider “balloons” and loses speed:
   - Too much back movement on the stick:
   - The cure is to stop the back movement and reduce the airbrakes or spoilers to enable the wing to keep the glider flying for long enough to sort the problem out and attempt another landing.
   - It may then be necessary to lower the nose VERY SLIGHTLY before attempting another, very gentle Flare, but beware of excessive forward movement of the stick at this stage.
-
-### “Bounced” landing with excessive speed:
-
+- “Bounced” landing with excessive speed:
   - Not enough back movement on the stick
   - This throws the nose up, increases the angle of attack, resulting in the glider flying away from the ground and gaining height.
   - The cure is to maintain the back movement, reduce the airbrakes or spoilers to enable the wing to keep the glider flying for long enough to sort the problem out and attempt another landing.
