@@ -57,6 +57,12 @@ _BOLD_FLAG = 1 << 4  # PyMuPDF span flag bit for bold
 _BANNER_TEXTS = {"GLIDING AUSTRALIA TRAINING MANUAL", "TRAINER GUIDE", "PILOT GUIDE"}
 _SECTION_MIN_SIZE = 13.0  # section headings are the large bold banner-sized font (~14.3)
 _BANNER_MIN_SIZE = 10.5  # non-bold lines this big are the running header banner (11.2 / 14.3)
+# Top-of-page band where running headers print. Across all four PDFs the header lines
+# (bare-name banners, wrapped second-line fragments like "Computers"/"selection"/
+# "Certificate", dash-less "Unit 1 Lookout Awareness") sit at y0 <= ~116pt; the first
+# banner-sized *body* line anywhere in the corpus (Pilot 25's closing callout) starts at
+# y0 ~379. 140 splits the two with margin on both sides.
+_HEADER_BAND_MAX_Y0 = 140.0
 _FOOTER_MAX_SIZE = 8.5  # the Revision / date / Page footer block prints at ~8.2
 
 # Per-Source header dictionary -> content_type role (the taxonomy in CONTEXT.md).
@@ -515,18 +521,26 @@ _FIGURE_LABELS: dict[tuple[str, str], frozenset[str]] = {
         "Force on an aircraft axis of", "aircraft around an", "that",
         "resulting", "changes", "rotation", "in", "creates", "axis.",
     }),
+    # Solo 9 page 9-3: distance labels on the circuit diagram, printed at 15.8pt.
+    ("pilot", "9"): frozenset({"1.5 Km", "700", "m"}),
+    # GPC 34 page 34-3: the outlanding mnemonic and check-list title inside the figure.
+    ("pilot", "34"): frozenset({"WSSSSSS", "Field Selection Check list"}),
 }
 
 
-def _is_chrome_line(line: Line, source: str = "") -> bool:
+def _is_chrome_line(line: Line, source: str = "", first_page: bool = False) -> bool:
     """Whether a single line is running header/title chrome to strip wherever it sits.
 
     The Solo guides print the manual banner / unit title as their own block, but the GPC
     guides interleave them inside a content block (a running ``Unit NN`` title glued to the
     end of a paragraph). So chrome is judged per line, not per block: the manual banner,
-    a ``Unit NN`` running title, or any other banner-sized non-bold line (the large unit
-    name on a title page). List markers are never chrome — a bullet glyph occasionally
-    prints at banner size and must survive.
+    a ``Unit NN`` running title, or a banner-sized non-bold line *where chrome prints* —
+    the top header band on any page (bare-name banners and their wrapped second-line
+    fragments) or anywhere on the unit's first page (the large unit name, which sits
+    mid-page). A banner-sized non-bold line in the *body* of a later page is genuine
+    content (Pilot 25's closing callout) and survives; in-figure labels that also print
+    that big are suppressed by :data:`_FIGURE_LABELS`, not by font size. List markers are
+    never chrome — a bullet glyph occasionally prints at banner size and must survive.
     """
     if _marker_kind(line) is not None:
         return False
@@ -534,16 +548,19 @@ def _is_chrome_line(line: Line, source: str = "") -> bool:
         return True
     if _UNIT_CHROME_RE.fullmatch(line.text):
         return True
-    # The big unit name on a title page is the only other non-bold chrome; body prose runs
-    # ~10-11pt, so the strip is keyed to section size — never the 11pt running banner (that
-    # is caught by its exact text above) and never an 11pt body line glued mid-block. A
-    # non-bold section-sized line that maps to a known section heading is real content, not
-    # chrome (Trainer Units 8/11 print sections in non-bold 14pt Sylfaen).
+    # Body prose runs ~10-11pt, so the strip is keyed to section size — never the 11pt
+    # running banner (caught by its exact text above) and never an 11pt body line glued
+    # mid-block. A non-bold section-sized line that maps to a known section heading is
+    # real content, not chrome (Trainer Units 8/11 print sections in non-bold 14pt
+    # Sylfaen).
     return (not line.bold and line.size >= _SECTION_MIN_SIZE
-            and _content_type(source, line.text) is None)
+            and _content_type(source, line.text) is None
+            and (first_page or line.bbox[1] < _HEADER_BAND_MAX_Y0))
 
 
-def _classify_block(block: list[Line], source: str, token: str) -> list[Element]:
+def _classify_block(
+    block: list[Line], source: str, token: str, first_page: bool = False
+) -> list[Element]:
     """Segment a page block into its rendered elements (chrome dropped).
 
     The Solo guides give one element per block (one bullet, one heading, one paragraph);
@@ -610,7 +627,7 @@ def _classify_block(block: list[Line], source: str, token: str) -> list[Element]
         heading, heading_kind = None, None
 
     for line in block:
-        if _is_chrome_line(line, source):
+        if _is_chrome_line(line, source, first_page):
             continue
         kind = _marker_kind(line)
         if kind:  # a list item opens here; later wrapped lines are its body
@@ -939,7 +956,11 @@ def _region_for(block_bbox: BBox, regions: list[TableRegion]) -> TableRegion | N
 
 
 def _emit_page(
-    page_blocks: list[tuple[BBox, list[Line]]], regions: list[TableRegion], source: str, token: str
+    page_blocks: list[tuple[BBox, list[Line]]],
+    regions: list[TableRegion],
+    source: str,
+    token: str,
+    first_page: bool = False,
 ) -> list[Element]:
     """Classify a page's blocks into elements in true reading order.
 
@@ -970,7 +991,7 @@ def _emit_page(
         if isinstance(payload, TableRegion):
             elements.extend(payload.elements)
         else:
-            elements.extend(_classify_block(payload, source, token))
+            elements.extend(_classify_block(payload, source, token, first_page))
     return elements
 
 
@@ -994,7 +1015,9 @@ def render_unit_markdown(pdf_path, source: str, unit: int | str) -> str:
             elements.append(("marker", label))
             page_blocks = _page_blocks_with_bbox(doc[idx])
             regions = _table_regions(plumber.pages[idx], page_blocks, source)
-            elements.extend(_emit_page(page_blocks, regions, source, token))
+            elements.extend(
+                _emit_page(page_blocks, regions, source, token, first_page=idx == pages[0][0])
+            )
         return _frontmatter(source, token, meta) + "\n" + _assemble(elements)
     finally:
         plumber.close()
