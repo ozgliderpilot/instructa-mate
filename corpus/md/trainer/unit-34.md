@@ -186,7 +186,8 @@ An outlanding may be required at any time, even when flying locally or approachi
 
 The student preferably needs to conduct a dual outlanding to complete this unit. If you are sending a pilot cross country without having completed an actual outlanding, then you need to be very confident about their skills and performance under pressure. This would require very benign conditions and terrain.
 
-### COMMON PROBLEMS
+## COMMON PROBLEMS
+<!-- content_type: common_problems -->
 
 ### Failure to identify problems with field
 
