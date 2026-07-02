@@ -54,8 +54,6 @@ Looking 20-60km ahead enables you to pick better lines of energy and identify if
 
 Considering height bands is a way to determine when you can fly faster and when you should slow down so
 
-Revision 1.0 February 2022 Page 40- 2
-
 <!-- page: 40-3 -->
 
 as to avoid getting low. It is a way of determining risk and acting accordingly.
@@ -75,8 +73,6 @@ Generally you should maintain suitable speed (typically 60-80 knots without ball
 MacCready theory (developed by Paul MacCready in the 1950s) defines, based on the polar performance curve of the glider, an optimal cruise speed given the strength of the next thermal and the air the glider is cruising through. The theory states that your cruise speed should be faster with strong climbs and should vary based on the sink or lift that you fly through – faster in sink and slower in lift. MacCready theory is explained in many books and online resources – it’s not essential that you understand the theory from first principles.
 
 Based on MacCready theory a curve such as shown in the chart below can be derived to show average cross-country speed versus cruise speed. You can see in this typical case, for an unballasted LS4, that the cross-country speed achieved varies by only a small amount when cruising 10 knots faster or 10 knots slower than the theoretical optimum speed.
-
-Revision 1.0 February 2022 Page 40- 3
 
 <!-- page: 40-4 -->
 
@@ -124,8 +120,6 @@ If you aren’t sure, sample the thermal:
 
 Once centred in a thermal stay with it until you reach cloud base (maintaining VMC), or you expect the bottom of the next climb to be stronger than your current climb rate. It’s rarely appropriate to keep climbing in weak lift near the top.
 
-Revision 1.0 February 2022 Page 40- 4
-
 <!-- page: 40-5 -->
 
 ### Final Glides
@@ -165,8 +159,6 @@ There is a lot to cover, and this is likely to take more than one flight to beco
 
 ## THINGS YOU MIGHT HAVE DIFFICULTY WITH
 <!-- content_type: common_problems -->
-
-Revision 1.0 February 2022 Page 40- 5
 
 <!-- page: 40-6 -->
 
@@ -220,8 +212,6 @@ Not leaving when the next thermal is likely to be better
 
 Use these questions to test your knowledge of the unit.
 
-Revision 1.0 February 2022 Page 40- 6
-
 <!-- page: 40-7 -->
 
 1. What is the maximum track deviation angle you should generally fly?
@@ -239,5 +229,3 @@ expect your next climb to average 5 knots, what would be an appropriate cruise s
 6. If you are 30km from your airfield and want to arrive at 1500 feet, approximately how high would you
 
 expect to need to be without significant wind?
-
-Revision 1.0 February 2022 Page 40- 7

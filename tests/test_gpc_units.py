@@ -109,9 +109,9 @@ def test_pilot_gpc_27_matches_golden(pilot_gpc_pdf, pilot_unit27_golden):
 
 def test_write_corpus_ingests_gpc_and_reports_structural_skips(gpc_sources, tmp_path):
     # Both GPC PDFs run through the one write_corpus pipeline (same Source names, the
-    # 27-44 range). Every Trainer unit emits; the Pilot guide omits Units 38/43/44 and
-    # prints a duplicate Unit 37 footer run, so those four fail loud and are *reported*
-    # as skips with a reason — not emitted silently wrong.
+    # 27-44 range). Every Trainer unit emits; the Pilot guide omits Units 43/44, so those
+    # two fail loud and are *reported* as skips with a reason — not emitted silently
+    # wrong. Units 37/38 emit despite the source's mislabeled Unit 38 footers (below).
     report = write_corpus(gpc_sources, out_root=tmp_path, units=GPC_UNITS)
 
     written = {(o.source, str(o.unit)) for o in report.written}
@@ -120,13 +120,60 @@ def test_write_corpus_ingests_gpc_and_reports_structural_skips(gpc_sources, tmp_
     assert {f"{u}" for s, u in written if s == "trainer"} == {str(u) for u in GPC_UNITS}
     assert ("trainer", "30") in written and ("pilot", "27") in written
 
-    assert {u for s, u in skipped if s == "pilot"} == {37, 38, 43, 44}
+    assert {u for s, u in skipped if s == "pilot"} == {43, 44}
     assert {u for s, u in skipped if s == "trainer"} == set()
     assert all(o.error for o in report.skipped)
 
     assert (tmp_path / "trainer" / "unit-30.md").exists()
     assert (tmp_path / "pilot" / "unit-27.md").exists()
-    assert not (tmp_path / "pilot" / "unit-38.md").exists()
+    assert (tmp_path / "pilot" / "unit-37.md").exists()
+    assert (tmp_path / "pilot" / "unit-38.md").exists()
+
+
+# --- Pilot 37/38: the source prints Unit 38's footers as "Page 37-x" (issues #12/#13) --
+
+
+def test_pilot_gpc_37_and_38_emit_despite_mislabeled_footers(pilot_gpc_pdf):
+    # The Pilot GPC guide prints Unit 38's six footer Citations as `Page 37-1`..`37-6`
+    # while the running header on those pages reads "Unit 38 – Meteorology and Flight
+    # Planning" — a source-document error. The header-corroborated footer correction
+    # reattributes those pages, so Unit 37 renders only Passenger Carrying (its true
+    # 3-page run) and Unit 38 renders with corrected 38-x Citations, not the printed 37-x.
+    md37 = render_unit_markdown(pilot_gpc_pdf, "pilot", 37)
+    assert "unit_name: Passenger Carrying" in md37
+    assert "<!-- page: 37-3 -->" in md37 and "<!-- page: 37-4 -->" not in md37
+
+    md38 = render_unit_markdown(pilot_gpc_pdf, "pilot", 38)
+    assert "unit_name: Meteorology and Flight Planning" in md38
+    for p in range(1, 7):
+        assert f"<!-- page: 38-{p} -->" in md38
+    assert "content_type: None" not in md38
+
+
+def _pdf_with_footer_conflict(path, header: str, footer: str) -> str:
+    """A one-page throwaway PDF whose running header and footer Citation disagree."""
+    doc = fitz.open()
+    page = doc.new_page()
+    page.insert_text((72, 60), header, fontname="helv", fontsize=14)
+    page.insert_text((72, 140), "Body text.", fontname="helv", fontsize=11)
+    page.insert_text((72, 760), footer, fontname="helv", fontsize=8)
+    doc.save(str(path))
+    doc.close()
+    return str(path)
+
+
+def test_footer_correction_requires_header_corroboration(tmp_path):
+    # The correction is narrow: a "Page 37-x" footer moves to Unit 38 ONLY when the same
+    # page's running header names Unit 38. A page footered 37 whose header also says 37
+    # must stay Unit 37 — a blanket header-trumps-footer rule could silently mask future
+    # source defects, so an uncorroborated page is left exactly as printed.
+    pdf = _pdf_with_footer_conflict(
+        tmp_path / "agree.pdf", "Unit 37 - Passenger Carrying", "Page 37 - 1"
+    )
+    md = render_unit_markdown(pdf, "pilot", 37)
+    assert "<!-- page: 37-1 -->" in md
+    with pytest.raises(UnitStructureError):
+        render_unit_markdown(pdf, "pilot", 38)  # nothing reattributed -> 38 absent
 
 
 def test_write_corpus_gpc_rerun_is_byte_identical(gpc_sources, tmp_path):

@@ -50,9 +50,6 @@ This unit should be read in conjunction with:
   - Suitable task distance
   - Suitable task waypoints
   - Review NOTAMS and radio frequencies.
-
-Revision 1.0 February 2022 Page 38-1
-
 <!-- page: 38-2 -->
 
 ## KEY MESSAGES
@@ -94,9 +91,6 @@ Students must be able to interpret and use general weather forecasts and not rel
 A list of basic weather information required is below. This information is used for task planning (discussed later) and assessment of weather hazards:
 
 - Weather events and timing (fronts, wind, rain, thunderstorms, dust/smoke etc)
-
-Revision 1.0 February 2022 Page 38-2
-
 <!-- page: 38-3 -->
 - Wind speed and direction during the day (at surface and selected altitudes)
 - Cloud – cumulus cloud base and high cloud over the day
@@ -129,8 +123,6 @@ At the GPC level the student only needs to be aware that MacCready theory can be
 The pilot guide for this unit includes guidance on typical achievable speeds for an inexperienced pilot flying an unballasted glider such as an LS4. These speeds are intentionally low and hopefully will provide a sense of achievement when exceeded. If there is any significant wind, then cross country speed will be reduced, particularly for inexperienced pilots. A rule of thumb that can be applied is that if predicted winds are above 5 knots at flying heights, reduce the predicted average speed by about 1 kph per knot of wind speed. If possible, it is useful to review cross country speeds actually achieved by the pilot from previous flights under different conditions.
 
 Some considerations for task planning are:
-
-Revision 1.0 February 2022 Page 38-3
 
 <!-- page: 38-4 -->
 
@@ -184,8 +176,6 @@ Ask your student to comment on task progress relative to the progress anticipate
 
 It is useful, regardless of whether or not a task was flown, to demonstrate basic elements of reviewing a flight (detailed flight analysis is in the post-GPC syllabus). It would be best to do this with a
 
-Revision 1.0 February 2022 Page 38-4
-
 <!-- page: 38-5 -->
 
 recorded flight of the student if possible. Alternatively, a flight showing examples of both good and poor climbs would be helpful.
@@ -203,5 +193,3 @@ If possible, show students how applications such as SeeYou can be used to determ
 - Ensure that the student is aware of the dangers of outlanding in difficult conditions such as strong winds or gust fronts. At all times it’s always a good idea for pilots to seek advice from experienced instructors.
 - Other than specifically related to weather events, unlandable terrain may be a major cross country flying threat. Ensure that the student understands areas of unlandable terrain in the local tasking area and how to assess this during task planning – for example through the use of Google Maps.
 - At some sites it is advisable to fly with a database of airfields and always keep at least one within glide at all times (stepping stones).
-
-Revision 1.0 February 2022 Page 38-5

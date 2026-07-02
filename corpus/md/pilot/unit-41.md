@@ -48,8 +48,6 @@ Congratulations on reaching the end of the cross-country training in the GPC syl
 
 Limited multitasking ability – this will improve with time but performance related to safety must not be compromised
 
-Revision 1.0 February 2022 Page 41 - 1
-
 <!-- page: 41-2 -->
 
 ## HOW DO YOU DEMONSTRATE COMPETENCE?
@@ -71,5 +69,3 @@ Revision 1.0 February 2022 Page 41 - 1
   - Safe entry to thermals and centring within 2-3 turns
   - An appropriate cruise speed relative to anticipated climb rate and height
   - Competent use of a flight computer
-
-Revision 1.0 February 2022 Page 41 - 2
