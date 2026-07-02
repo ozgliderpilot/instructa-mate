@@ -31,10 +31,6 @@ This unit should be read in conjunction with:
 ## COMPETENCY ELEMENTS AND PERFORMANCE STANDARDS
 <!-- content_type: competency -->
 
-### ELEMENT
-
-PERFORMANCE STANDARD
-
 ### 1. Select a suitable landing area
 
 Demonstrate

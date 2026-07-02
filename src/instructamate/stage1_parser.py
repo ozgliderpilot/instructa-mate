@@ -677,6 +677,7 @@ _WRAP_GAP_MAX = 5.0
 # required) where the Trainer uses Probable Cause.
 _TABLE_HEADER_TEXTS = {
     "ELEMENT PERFORMANCE STANDARDS",
+    "ELEMENT PERFORMANCE STANDARD",  # GPC Trainer 34/36 print the singular form
     "PROBLEM PROBABLE CAUSE",
     "PROBLEM SOLUTION",
     "PROBLEM SOLUTIONS",
