@@ -200,7 +200,8 @@ Advice on the ease of learning and traps that may be encountered:
 - Don’t practice low level engine failure exercises in busy circuit traffic sequences.
 - Remember to brief any ground crew fully prior to practicing emergencies.
 
-### COMMON PROBLEMS
+## COMMON PROBLEMS
+<!-- content_type: common_problems -->
 
 ### Student does not monitor speed, rate of climb, abort point, engine parameters on take-off
 

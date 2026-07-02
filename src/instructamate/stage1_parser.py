@@ -777,10 +777,21 @@ class TableRegion:
     elements: tuple[Element, ...]
 
 
-def _two_column_region(page_blocks: list[tuple[BBox, list[Line]]], bbox: BBox) -> TableRegion | None:
+def _two_column_region(
+    page_blocks: list[tuple[BBox, list[Line]]], bbox: BBox, source: str
+) -> TableRegion | None:
     """Render a ruled region as left-column sub-headings + right-column bullets.
 
     Returns ``None`` when the region is really one column (a mis-detected bullet list).
+    A block that is entirely a *sub-section-sized* section heading (the curated 12pt
+    vocabulary, not the 14pt banner font) is evicted first and the region top is trimmed
+    below it: in Trainer 34 / 20S the ruled box extends up over the 12pt bold "COMMON
+    PROBLEMS" heading, which would otherwise render as a left-column ``###`` row label
+    with no ``content_type`` — trimmed out, the block falls outside the region and takes
+    :func:`_classify_block`'s normal section path. A banner-sized heading inside the box
+    is *not* evicted: that is the Pilot 14S box title (14pt bold "COMMON PROBLEMS"
+    printed inside the ruled COMMON PROBLEMS table, under its real "THINGS YOU MIGHT
+    HAVE DIFFICULTY WITH" section), which deliberately stays a ``###`` label.
     Consecutive left-column blocks merge into one heading only when the next one *abuts*
     the previous — a true wrap, where a label spills onto a second block on the very next
     text line ("1. Effects of controls –" + "general"; or the Trainer 13A label whose
@@ -800,7 +811,14 @@ def _two_column_region(page_blocks: list[tuple[BBox, list[Line]]], bbox: BBox) -
     then each remaining block is re-segmented by column so a merged row splits back into its
     label and its body.
     """
-    blocks = _page_blocks_in(page_blocks, bbox)
+    blocks = [
+        (bb, lines) for bb, lines in _page_blocks_in(page_blocks, bbox)
+        if not all(line.size < _SECTION_MIN_SIZE and _is_section_header(line, source)
+                   for line in lines)
+    ]
+    if not blocks:
+        return None
+    bbox = (bbox[0], min(bb[1] for bb, _lines in blocks), bbox[2], bbox[3])
     xs = sorted({round(line.bbox[0]) for _bb, lines in blocks for line in lines})
     gap, at = max(((xs[i + 1] - xs[i], i) for i in range(len(xs) - 1)), default=(0, 0))
     if gap < _COLUMN_GAP_MIN:
@@ -849,11 +867,13 @@ def _contains(outer: BBox, inner: BBox) -> bool:
             and outer[2] >= inner[2] - 1 and outer[3] >= inner[3] - 1)
 
 
-def _table_regions(plumber_page, page_blocks: list[tuple[BBox, list[Line]]]) -> list[TableRegion]:
+def _table_regions(
+    plumber_page, page_blocks: list[tuple[BBox, list[Line]]], source: str
+) -> list[TableRegion]:
     """Two-column table regions on a page (overlapping ruled boxes deduped to the outer)."""
     boxes = [tuple(t.bbox) for t in plumber_page.find_tables()]
     outer = [b for b in boxes if not any(o != b and _contains(o, b) for o in boxes)]
-    return [r for b in outer if (r := _two_column_region(page_blocks, b))]
+    return [r for b in outer if (r := _two_column_region(page_blocks, b, source))]
 
 
 def _region_for(block_bbox: BBox, regions: list[TableRegion]) -> TableRegion | None:
@@ -920,7 +940,7 @@ def render_unit_markdown(pdf_path, source: str, unit: int | str) -> str:
         for idx, label in pages:
             elements.append(("marker", label))
             page_blocks = _page_blocks_with_bbox(doc[idx])
-            regions = _table_regions(plumber.pages[idx], page_blocks)
+            regions = _table_regions(plumber.pages[idx], page_blocks, source)
             elements.extend(_emit_page(page_blocks, regions, source, token))
         return _frontmatter(source, token, meta) + "\n" + _assemble(elements)
     finally:
