@@ -19,8 +19,34 @@ Chunk and Citation: the same (Unit, page) exists in both documents with differen
 citation without Source is ambiguous. Reference Patter has Source = Trainer Guide only.
 
 **Chunk**:
-A retrievable unit of the Corpus — a passage of source text plus its metadata. The thing that
-gets embedded and indexed.
+A retrievable unit of the Corpus — a passage of source text plus its metadata. Comes in two
+kinds: Parent Chunk and Child Chunk.
+
+**Parent Chunk**:
+The read unit — the full text under one leaf heading of a Unit (the deepest heading with its own
+body text, including a section's preamble before its first sub-heading). Stored for context
+expansion, never embedded. Reference Patter is always its own Parent Chunk, excluded from the
+text of the exercise that encloses it.
+
+**Child Chunk**:
+The search unit — one prose paragraph or one whole bullet list (with its intro line) within a
+Parent Chunk. The thing that gets embedded and indexed. Every Child, including secondary
+content_types, is embedded; secondaries are excluded by a query-time filter, not at ingest.
+
+**Chunk ID**:
+A Chunk's stable identity: the structural path `source:unit:section-slug[:sub-slug][:cN]`,
+deterministic from the Markdown alone. Survives wording edits (only the Content Hash changes)
+and re-parses. Distinct from the Content Hash, which says what the chunk currently says.
+
+**Content Hash**:
+Hash of a Child Chunk's full embedding input (context prefix + verbatim text). A changed hash
+under an unchanged Chunk ID is the signal to re-embed that one chunk.
+
+**Sync Plan**:
+The reconciliation of freshly generated Chunk records against what the Index currently holds,
+keyed by Chunk ID: new ID → insert, same ID with changed Content Hash → re-embed and update,
+ID no longer generated → delete. How "updating the corpus from my machine" decides what work
+to do.
 
 **Index**:
 The Atlas-side structures that make Chunks searchable — the vector index over embeddings and the
