@@ -140,6 +140,12 @@ GPC Unit 24 Human Factors and Pilot limitations
   - What are my threats today?
   - How will I manage and mitigate these?
 
+It is safer to be on the ground wishing you were in the air
+
+than in the air wishing you were on the ground.
+
+Have fun out there – but be safe!
+
 ## FLIGHT EXERCISES FOR THIS UNIT
 <!-- content_type: exercise -->
 

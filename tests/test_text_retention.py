@@ -9,8 +9,8 @@ unit's pages) and the footer date band — and a small stoplist covers the token
 drops *by design* (two-column table column headers).
 
 Whatever survives is a real omission. The handful of units that legitimately drop text
-embedded in **figures/diagrams** (stage-1 has no figure handling) — plus the one known,
-deliberately-unfixed callout — are pinned in ``KNOWN_LOSSES`` with their reason. The test
+embedded in **figures/diagrams** (stage-1 has no figure handling) are pinned in
+``KNOWN_LOSSES`` with their reason. The test
 fails if any *other* unit loses a token, or if a pinned unit loses a *new* one: that is the
 signal that a parser change started shedding prose.
 """
@@ -62,15 +62,8 @@ _EXPECTED_DROPPED = {
 # Units that legitimately shed text the stage-1 parser can't render. Pinned with their exact
 # token set so a *new* loss in the same unit still trips the test. Grouped by cause:
 #   • figure/diagram/legend labels embedded in raster or vector art (no figure handling yet)
-#   • one deliberately-unfixed body callout (Pilot 25) — see note below
 #   • title-page banner residue on a 2-page unit (below the auto-detect's ≥3-page threshold)
 KNOWN_LOSSES: dict[str, frozenset[str]] = {
-    # Pilot 25's 14pt closing callout ("It is safer to be on the ground wishing you were in
-    # the air …") prints at banner size, so the same rule that strips wrapped running-header
-    # fragments and large figure labels across the corpus also drops it; separating them
-    # cleanly is not a low-risk change, so it stays dropped for now.
-    "pilot/unit-25": frozenset({"air", "but", "fun", "ground", "have", "out", "safe",
-                                "safer", "than", "the", "there", "were", "wishing", "you"}),
     # Primary-effects-of-controls diagram labels on 5-3 (Control/Movement/axis of rotation …).
     "pilot/unit-05": frozenset({"aircraft", "around", "axis", "changes", "control", "creates",
                                 "force", "movement", "position", "resulting", "rotation",
