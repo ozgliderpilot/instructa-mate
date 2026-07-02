@@ -84,6 +84,7 @@ HEADER_DICTIONARY: dict[str, dict[str, str]] = {
         "PERSONAL PREPARATION": "briefing",  # GPC 35 ground-ops prep
         "GLIDER PREPARATION": "briefing",
         "TRAILER AND RETRIEVE PREPARATION": "briefing",
+        "TASK PLANNER": "exercise",  # GPC 38 flight-planning worksheet
     },
     "trainer": {
         "AIM": "aim",
@@ -190,18 +191,46 @@ def _page_lines(page) -> list[Line]:
     return [line for block in _page_blocks(page) for line in block]
 
 
-def _scan_footers(doc) -> dict[int, tuple[int, str, int]]:
+# Known source-document footer errors, per Source: {printed unit -> actual unit}.
+# The Pilot GPC guide prints Unit 38's footer Citations as ``Page 37-1``..``37-6``
+# (physical pages 75-80) while every running header on those pages reads ``Unit 38 -
+# Meteorology and Flight Planning`` — the source is authoritatively wrong (issues
+# #12/#13). The correction is deliberately narrow: a footer is reattributed ONLY when
+# its printed unit is listed here AND the same page's running header names the actual
+# unit. A blanket header-trumps-footer rule would silently mask future defects; an
+# unlisted conflict still fails loud through the non-consecutive-run guard.
+_FOOTER_CORRECTIONS: dict[str, dict[int, int]] = {"pilot": {37: 38}}
+# The running-header title line — ``Unit 38 – Meteorology and Flight Planning`` — used
+# only to corroborate a listed footer correction. Anchored to the line start and
+# requiring the dash so body prose that merely mentions a unit number doesn't match.
+_HEADER_UNIT_RE = re.compile(r"^Unit\s+(\d{1,2})\s*[-–]", re.MULTILINE)
+
+
+def _scan_footers(doc, source: str = "") -> dict[int, tuple[int, str, int]]:
     """Every page with a readable footer, as ``page_index -> (unit, variant, page)``.
 
     ``variant`` is ``""`` for a plain numeric unit and the letter for a variant sub-unit
     (``"A"`` for the 13A footer ``Page 13A - 1``), so variant pages are recognised here
     rather than looking footer-less. One scan serves every structure decision below.
+
+    A footer listed in :data:`_FOOTER_CORRECTIONS` for *source* is reattributed to its
+    actual unit when the page's running header corroborates it (see the table's comment);
+    pages whose header agrees with the printed footer are untouched.
     """
+    corrections = _FOOTER_CORRECTIONS.get(source, {})
     footers: dict[int, tuple[int, str, int]] = {}
     for i in range(doc.page_count):
-        m = FOOTER_RE.search(doc[i].get_text("text"))
-        if m:
-            footers[i] = (int(m.group(1)), m.group(2) or "", int(m.group(3)))
+        text = doc[i].get_text("text")
+        m = FOOTER_RE.search(text)
+        if not m:
+            continue
+        unit, variant, page = int(m.group(1)), m.group(2) or "", int(m.group(3))
+        actual = corrections.get(unit)
+        if actual is not None and not variant:
+            h = _HEADER_UNIT_RE.search(text)
+            if h and int(h.group(1)) == actual:
+                unit = actual
+        footers[i] = (unit, variant, page)
     return footers
 
 
@@ -225,7 +254,7 @@ def _resolve_unit_pages(doc, source: str, number: int, variant: str) -> list[tup
     non-consecutive — so a missing Citation is caught at parse time, not at answer time.
     """
     token = f"{number}{variant}"
-    footers = _scan_footers(doc)
+    footers = _scan_footers(doc, source)
     matched = sorted(i for i, (u, v, _p) in footers.items() if u == number and v == variant)
     if not matched:
         if variant:
@@ -441,6 +470,29 @@ def _marker_body(block: list[Line]) -> str:
     return " ".join(part for part in (head, *(line.text for line in block[1:])) if part)
 
 
+# One line of the footer band: "Revision 1.0" (Trainer: "Revision: 1.0"), the bare
+# month-year date, or the "Page 37-1" Citation.
+_FOOTER_LINE_RE = re.compile(
+    r"Revision:?\s+[0-9.]+"
+    r"|(January|February|March|April|May|June|July|August|September|October|November"
+    r"|December)\s+\d{4}"
+    r"|Page\s*\d+\s*[A-Z]?\s*-\s*\d+"
+)
+
+
+def _is_footer_block(block: list[Line]) -> bool:
+    """Whether a block is the page-footer band (Revision / date / Page Citation).
+
+    Normally recognised by its ~8pt size, but the Pilot GPC Unit 38 pages — the same
+    pasted-in pages whose printed footers mislabel the unit (see
+    :data:`_FOOTER_CORRECTIONS`) — print the footer at 9pt, inside the body-size range,
+    so the band is also recognised by its text: a block whose *every* line is footer
+    text. Body prose never forms such a block, so real content is untouched.
+    """
+    return (all(line.size <= _FOOTER_MAX_SIZE for line in block)
+            or all(_FOOTER_LINE_RE.fullmatch(line.text) for line in block))
+
+
 # Element = (kind, text). Kinds: h1, marker, section (text="## H\n<!-- ... -->"),
 # subheading, paragraph, bullet, subbullet.
 Element = tuple[str, str]
@@ -512,7 +564,7 @@ def _classify_block(block: list[Line], source: str, token: str) -> list[Element]
     On a Solo block (a single item/heading/paragraph) this yields exactly the one element
     the old head-based classifier did, so the committed Solo Markdown is unchanged.
     """
-    if all(line.size <= _FOOTER_MAX_SIZE for line in block):
+    if _is_footer_block(block):
         return []  # footer chrome (Revision / date / Page) — already parsed
     # A scattered in-diagram label is its own block whose lines join to a curated, unit-
     # scoped phrase ("Control" + "Movement" -> "Control Movement"); drop the whole block.
@@ -991,7 +1043,7 @@ def write_corpus(
     for source, pdf_path in sources.items():
         doc = fitz.open(pdf_path)
         try:
-            footers = _scan_footers(doc)
+            footers = _scan_footers(doc, source)
         finally:
             doc.close()
         for unit in units:

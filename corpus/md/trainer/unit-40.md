@@ -51,9 +51,6 @@ To develop the student’s skills and ingrained habits in selecting a path throu
   - Sufficient height for final glide
 - Demonstrate
   - Monitoring glide and taking appropriate actions
-
-Revision 1.0 February 2022 Page 40 - 1
-
 <!-- page: 40-2 -->
 
 ## KEY MESSAGES
@@ -90,9 +87,6 @@ Review the set task:
 - Nominate height bands and expected cruise speeds.
 - Consider potential thermal sources on track, and areas with potentially weaker thermals.
 - Identify where the last thermal for final glide is likely to be.
-
-Revision 1.0 February 2022 Page 40 - 2
-
 <!-- page: 40-3 -->
 
 ## Flight Exercises
@@ -139,8 +133,6 @@ Not selecting thermals in accordance with the selection criteria (is the next th
 
 Not leaving when the next thermal is likely to be better
 
-Revision 1.0 February 2022 Page 40 - 3
-
 <!-- page: 40-4 -->
 
 ## THREAT AND ERROR MANAGEMENT
@@ -156,5 +148,3 @@ Revision 1.0 February 2022 Page 40 - 3
 
 - G Dale. ‘The Soaring Engine – volume 1’, Chapter: Flatland soaring
 - G Dale. ‘The Soaring Engine – volume 3’, Chapter: Flying
-
-Revision 1.0 February 2022 Page 40 - 4
