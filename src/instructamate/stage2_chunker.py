@@ -121,21 +121,29 @@ class _Node:
     id_path: str
     heading_path: list[str]
     content_type: str | None
-    body: list[str] = field(default_factory=list)
-    pages: list[str] = field(default_factory=list)
+    body: list[tuple[str, str | None]] = field(default_factory=list)  # (line, page)
     child_slug_counts: dict[str, int] = field(default_factory=dict)
 
     def add_body_line(self, line: str, current_page: str | None) -> None:
         if not self.body and not line.strip():
             return  # leading blank before first content
-        if current_page is not None and (not self.pages or self.pages[-1] != current_page):
-            if line.strip():
-                self.pages.append(current_page)
-        self.body.append(line)
+        self.body.append((line, current_page))
 
     @property
     def text(self) -> str:
-        return "\n".join(self.body).strip("\n")
+        return "\n".join(line for line, _ in self.body).strip("\n")
+
+    @property
+    def pages(self) -> list[str]:
+        return _pages_of(self.body)
+
+
+def _pages_of(body: list[tuple[str, str | None]]) -> list[str]:
+    pages: list[str] = []
+    for line, page in body:
+        if line.strip() and page is not None and (not pages or pages[-1] != page):
+            pages.append(page)
+    return pages
 
 
 def chunk_unit_markdown(md_text: str) -> list[ChunkRecord]:
@@ -224,19 +232,135 @@ def chunk_unit_markdown(md_text: str) -> list[ChunkRecord]:
         text = node.text
         if not text:
             continue  # pure container heading — its leaves carry the content
+        common = dict(
+            source=source,
+            unit=unit,
+            unit_name=unit_name,
+            revision=revision,
+            content_type=node.content_type,
+            heading_path=node.heading_path,
+        )
         records.append(
             ChunkRecord(
                 id=node.id_path,
                 kind="parent",
-                source=source,
-                unit=unit,
-                unit_name=unit_name,
-                revision=revision,
-                content_type=node.content_type,
-                heading_path=node.heading_path,
                 pages=list(node.pages),
                 text=text,
                 content_hash=hashlib.sha256(text.encode("utf-8")).hexdigest(),
+                **common,
             )
         )
+        prefix = (
+            f"{source.capitalize()} Guide, Unit {unit} — {unit_name} > "
+            f"{' > '.join(node.heading_path)} [{node.content_type}]"
+        )
+        for ordinal, (child_text, child_pages) in enumerate(_child_blocks(node), start=1):
+            embedding_text = f"{prefix}\n\n{child_text}"
+            records.append(
+                ChunkRecord(
+                    id=f"{node.id_path}:c{ordinal}",
+                    kind="child",
+                    pages=child_pages,
+                    text=child_text,
+                    embedding_text=embedding_text,
+                    content_hash=hashlib.sha256(embedding_text.encode("utf-8")).hexdigest(),
+                    parent_id=node.id_path,
+                    **common,
+                )
+            )
     return records
+
+
+_BULLET_LINE = re.compile(r"^\s*(?:-|\d+\.)\s")
+_TOP_BULLET = re.compile(r"^(?:-|\d+\.)\s")
+
+#: Approximate embedding-size ceiling for one Child (whitespace tokens).
+_CHILD_TOKEN_LIMIT = 500
+
+
+def _child_blocks(node: _Node) -> list[tuple[str, list[str]]]:
+    """Split a Parent's body into Child texts with the pages each spans.
+
+    One prose paragraph, or one whole bullet list with its intro line (a
+    preceding paragraph ending in ":"), per Child; nested sub-bullets stay
+    with their list. Oversized lists split only at top-level bullets.
+    """
+    Block = tuple[str, list[tuple[str, str | None]]]  # (kind, lines)
+    blocks: list[Block] = []
+    current: list[tuple[str, str | None]] = []
+    kind: str | None = None
+
+    def flush() -> None:
+        nonlocal current, kind
+        if current:
+            blocks.append((kind or "para", current))
+        current, kind = [], None
+
+    for line, page in node.body:
+        if not line.strip():
+            flush()
+            continue
+        line_kind = "list" if _BULLET_LINE.match(line) else "para"
+        if kind is not None and line_kind != kind:
+            flush()
+        kind = line_kind
+        current.append((line, page))
+    flush()
+
+    children: list[tuple[str, list[str]]] = []
+    pending_intro: list[tuple[str, str | None]] | None = None
+    for block_kind, lines in blocks:
+        if block_kind == "para":
+            if pending_intro is not None:
+                children.append(_render_child(pending_intro))
+            if lines[-1][0].rstrip().endswith(":"):
+                pending_intro = lines  # may introduce a following bullet list
+            else:
+                pending_intro = None
+                children.append(_render_child(lines))
+            continue
+        # A bullet list: attach the pending intro line, split if oversized.
+        intro = pending_intro or []
+        pending_intro = None
+        for segment in _split_list(lines):
+            children.append(_render_child(intro, segment))
+            intro = []
+    if pending_intro is not None:
+        children.append(_render_child(pending_intro))
+    return children
+
+
+def _split_list(
+    lines: list[tuple[str, str | None]],
+) -> list[list[tuple[str, str | None]]]:
+    """Split an oversized bullet list at top-level-bullet boundaries only."""
+    if sum(len(line.split()) for line, _ in lines) <= _CHILD_TOKEN_LIMIT:
+        return [lines]
+    # A group = one top-level bullet with everything nested under it.
+    groups: list[list[tuple[str, str | None]]] = []
+    for line, page in lines:
+        if _TOP_BULLET.match(line) or not groups:
+            groups.append([])
+        groups[-1].append((line, page))
+    segments: list[list[tuple[str, str | None]]] = []
+    segment: list[tuple[str, str | None]] = []
+    size = 0
+    for group in groups:
+        tokens = sum(len(line.split()) for line, _ in group)
+        if segment and size + tokens > _CHILD_TOKEN_LIMIT:
+            segments.append(segment)
+            segment, size = [], 0
+        segment.extend(group)
+        size += tokens
+    if segment:
+        segments.append(segment)
+    return segments
+
+
+def _render_child(
+    *line_groups: list[tuple[str, str | None]],
+) -> tuple[str, list[str]]:
+    groups = [g for g in line_groups if g]
+    text = "\n\n".join("\n".join(line for line, _ in group) for group in groups)
+    pages = _pages_of([entry for group in groups for entry in group])
+    return text, pages

@@ -97,7 +97,11 @@ def test_container_heading_without_direct_body_emits_no_parent(unit5_records):
 def test_each_suggested_patter_block_is_its_own_reference_patter_parent(unit5_records):
     # ADR 0001: Reference Patter is structurally isolated — its own Parent with
     # content_type reference_patter, one per control exercise in Unit 5.
-    patter_parents = [r for r in unit5_records if r.content_type == "reference_patter"]
+    patter_parents = [
+        r
+        for r in unit5_records
+        if r.kind == "parent" and r.content_type == "reference_patter"
+    ]
 
     assert [r.id for r in patter_parents] == [
         "trainer:5:flight-exercises:elevator:suggested-patter",
