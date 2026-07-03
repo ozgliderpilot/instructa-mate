@@ -15,7 +15,7 @@ import hashlib
 import re
 from dataclasses import dataclass, field
 
-__all__ = ["ChunkRecord", "ChunkStructureError", "chunk_unit_markdown"]
+__all__ = ["ChunkRecord", "ChunkStructureError", "SyncPlan", "chunk_unit_markdown", "plan_sync"]
 
 #: The full content_type taxonomy (CONTEXT.md — Content roles).
 VALID_CONTENT_TYPES = frozenset(
@@ -56,6 +56,32 @@ class ChunkRecord:
     content_hash: str
     embedding_text: str | None = None
     parent_id: str | None = None
+
+
+@dataclass
+class SyncPlan:
+    """Minimal Index work implied by freshly generated records (ADR 0004).
+
+    Chunk IDs in record order for ``insert``/``update``; ``delete`` sorted
+    (those IDs no longer exist in the records, so they have no record order).
+    """
+
+    insert: list[str] = field(default_factory=list)
+    update: list[str] = field(default_factory=list)
+    delete: list[str] = field(default_factory=list)
+
+
+def plan_sync(records: list[ChunkRecord], indexed_hashes: dict[str, str]) -> SyncPlan:
+    """Reconcile fresh ChunkRecords against the Index's ``{id: hash}`` state."""
+    plan = SyncPlan()
+    for record in records:
+        if record.id not in indexed_hashes:
+            plan.insert.append(record.id)
+        elif indexed_hashes[record.id] != record.content_hash:
+            plan.update.append(record.id)
+    generated = {record.id for record in records}
+    plan.delete = sorted(chunk_id for chunk_id in indexed_hashes if chunk_id not in generated)
+    return plan
 
 
 _PAGE_MARKER = re.compile(r"^<!-- page: (?P<token>\S+) -->\s*$")
