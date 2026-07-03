@@ -8,6 +8,8 @@ corpus/_extracted*.txt
 # Bake-off dumps are full-page verbatim extractions of the GFA PDFs — same
 # copyright gate as the source guides; keep the harness, not its output.
 bakeoff/out/
+# Stage-2 debug dump of chunk records — verbatim GFA text, same gate
+chunks.jsonl
 
 # --- Secrets -------------------------------------------------------------
 .env

@@ -12,10 +12,20 @@ Public seam: :func:`chunk_unit_markdown` — one verified Markdown string in,
 from __future__ import annotations
 
 import hashlib
+import json
 import re
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
+from pathlib import Path
 
-__all__ = ["ChunkRecord", "ChunkStructureError", "SyncPlan", "chunk_unit_markdown", "plan_sync"]
+__all__ = [
+    "ChunkRecord",
+    "ChunkStructureError",
+    "SyncPlan",
+    "chunk_corpus",
+    "chunk_unit_markdown",
+    "dump_records_jsonl",
+    "plan_sync",
+]
 
 #: The full content_type taxonomy (CONTEXT.md — Content roles).
 VALID_CONTENT_TYPES = frozenset(
@@ -90,10 +100,9 @@ _HEADING = re.compile(r"^(?P<hashes>#{1,6}) (?P<text>.+?)\s*$")
 
 
 def _slugify(heading: str) -> str:
-    slug = re.sub(r"[^a-z0-9]+", "-", heading.lower()).strip("-")
-    if not slug:
-        raise ChunkStructureError(f"heading {heading!r} produces an empty slug")
-    return slug
+    """Slug of a heading — empty when the heading has no alphanumeric text
+    (stage 1's GPC checklist tables emit bare checkbox-glyph headings)."""
+    return re.sub(r"[^a-z0-9]+", "-", heading.lower()).strip("-")
 
 
 def _split_frontmatter(md_text: str) -> tuple[dict[str, str], str]:
@@ -198,7 +207,24 @@ def chunk_unit_markdown(md_text: str) -> list[ChunkRecord]:
                 raise ChunkStructureError(
                     f"sub-heading {text!r} with no enclosing ## section"
                 )
+            if stack and not stack[-1].id_path:
+                raise ChunkStructureError(
+                    f"heading {text!r} nested under a heading with an empty slug"
+                )
             slug = _slugify(text)
+            if not slug:
+                # A bare-glyph heading owns no ID; it may only be empty —
+                # any body under it is caught at emission below.
+                node = _Node(
+                    level=level,
+                    heading=text,
+                    id_path="",
+                    heading_path=(stack[-1].heading_path if stack else []) + [text],
+                    content_type=stack[-1].content_type if stack else None,
+                )
+                nodes.append(node)
+                stack.append(node)
+                continue
             counts = stack[-1].child_slug_counts if stack else root_slug_counts
             counts[slug] = counts.get(slug, 0) + 1
             if counts[slug] > 1:
@@ -230,6 +256,12 @@ def chunk_unit_markdown(md_text: str) -> list[ChunkRecord]:
                 f"section {node.heading!r} has no content_type marker to apply or inherit"
             )
         text = node.text
+        if not node.id_path:
+            if text:
+                raise ChunkStructureError(
+                    f"heading {node.heading!r} has an empty slug but owns body text"
+                )
+            continue  # glyph-only checklist heading with nothing under it
         if not text:
             continue  # pure container heading — its leaves carry the content
         common = dict(
@@ -269,6 +301,21 @@ def chunk_unit_markdown(md_text: str) -> list[ChunkRecord]:
                 )
             )
     return records
+
+
+def chunk_corpus(md_root: str | Path) -> list[ChunkRecord]:
+    """Chunk every ``unit-*.md`` under the Markdown tree, both Sources."""
+    records: list[ChunkRecord] = []
+    for path in sorted(Path(md_root).rglob("unit-*.md")):
+        records.extend(chunk_unit_markdown(path.read_text(encoding="utf-8")))
+    return records
+
+
+def dump_records_jsonl(records: list[ChunkRecord], path: str | Path) -> None:
+    """Human-readable dump for eyeballing chunk boundaries (gitignored)."""
+    with open(path, "w", encoding="utf-8") as handle:
+        for record in records:
+            handle.write(json.dumps(asdict(record), ensure_ascii=False) + "\n")
 
 
 _BULLET_LINE = re.compile(r"^\s*(?:-|\d+\.)\s")

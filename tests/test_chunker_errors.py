@@ -36,6 +36,25 @@ def test_section_without_content_type_marker_raises():
         chunk_unit_markdown(md)
 
 
+def test_glyph_only_heading_without_body_is_skipped():
+    # Stage 1's GPC checklist tables emit headings whose text is a bare
+    # checkbox glyph () — no words, no body. Nothing to anchor: skipped.
+    md = _unit(
+        "## AIM\n<!-- content_type: aim -->\n\nBody.\n\n### \n\n### Real\n\nMore.\n"
+    )
+    records = chunk_unit_markdown(md)
+    assert [r.id for r in records if r.kind == "parent"] == [
+        "trainer:5:aim",
+        "trainer:5:aim:real",
+    ]
+
+
+def test_glyph_only_heading_with_body_raises():
+    md = _unit("## AIM\n<!-- content_type: aim -->\n\n### \n\nOrphaned body.\n")
+    with pytest.raises(ChunkStructureError, match="slug"):
+        chunk_unit_markdown(md)
+
+
 def test_unknown_content_type_raises():
     md = _unit("## AIM\n<!-- content_type: vibes -->\n\nBody text.\n")
     with pytest.raises(ChunkStructureError, match="vibes"):
