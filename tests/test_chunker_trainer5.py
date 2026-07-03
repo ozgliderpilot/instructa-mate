@@ -94,6 +94,51 @@ def test_container_heading_without_direct_body_emits_no_parent(unit5_records):
     assert not any(r.id == "trainer:5:lesson-planning-and-conduct" for r in unit5_records)
 
 
+def test_each_suggested_patter_block_is_its_own_reference_patter_parent(unit5_records):
+    # ADR 0001: Reference Patter is structurally isolated — its own Parent with
+    # content_type reference_patter, one per control exercise in Unit 5.
+    patter_parents = [r for r in unit5_records if r.content_type == "reference_patter"]
+
+    assert [r.id for r in patter_parents] == [
+        "trainer:5:flight-exercises:elevator:suggested-patter",
+        "trainer:5:flight-exercises:aileron:suggested-patter",
+        "trainer:5:flight-exercises:rudder:suggested-patter",
+    ]
+    assert all(r.kind == "parent" for r in patter_parents)
+    assert all(r.heading_path[-1] == "Suggested Patter" for r in patter_parents)
+
+
+def test_exercise_parents_contain_no_patter_wording(unit5_records):
+    # Parent expansion must never hand Generated-Patter prompts authoritative
+    # patter text: no non-patter record contains the patter's wording.
+    patter_lines = [
+        "SEE the position of the nose below the horizon",  # elevator patter
+        "SEE the wing go down as I move the stick to the right.",  # aileron patter
+        "SEE the nose go to the right as I push the right pedal forward.",  # rudder patter
+    ]
+    for record in unit5_records:
+        if record.content_type == "reference_patter":
+            continue
+        for line in patter_lines:
+            assert line not in record.text, f"patter wording leaked into {record.id}"
+
+
+def test_patter_isolation_loses_no_text(unit5_records):
+    # Exercise Parent + patter Parent together retain the section's content.
+    elevator = _by_id(unit5_records, "trainer:5:flight-exercises:elevator")
+    patter = _by_id(unit5_records, "trainer:5:flight-exercises:elevator:suggested-patter")
+
+    assert elevator.content_type == "exercise"
+    assert elevator.text.startswith("- During the teaching of elevator")
+    assert elevator.text.rstrip().endswith(
+        "this demonstrates the positive stability of the aircraft in pitch."
+    )
+    assert patter.text.startswith(
+        "- “Look ahead at the horizon. This is the correct attitude for normal flight"
+    )
+    assert patter.text.rstrip().endswith("- Now it’s your turn... (repeat)")
+
+
 def test_parent_content_hash_is_sha256_of_its_verbatim_text(unit5_records):
     import hashlib
 
