@@ -139,3 +139,60 @@ def test_oversized_list_splits_only_at_top_level_bullet_boundaries():
     # Nothing lost, order kept.
     rejoined = "\n".join(c.text for c in children)
     assert rejoined == "\n".join(lines)
+
+
+@pytest.fixture(scope="module")
+def unit2_records():
+    md = (CORPUS_MD / "trainer" / "unit-02.md").read_text(encoding="utf-8")
+    return chunk_unit_markdown(md)
+
+
+@pytest.fixture(scope="module")
+def unit9_records():
+    md = (CORPUS_MD / "pilot" / "unit-09.md").read_text(encoding="utf-8")
+    return chunk_unit_markdown(md)
+
+
+def test_wrapped_numbered_note_stays_in_one_child(unit5_records):
+    children = _children_of(
+        unit5_records, "trainer:5:flight-exercises:student-practice-and-feedback-2"
+    )
+    assert [c.id for c in children] == [
+        "trainer:5:flight-exercises:student-practice-and-feedback-2:c1",
+        "trainer:5:flight-exercises:student-practice-and-feedback-2:c2",
+        "trainer:5:flight-exercises:student-practice-and-feedback-2:c3",
+    ]
+    note = children[1]
+    assert "Note:" in note.text
+    assert "1. Although controlling" in note.text
+    assert "may result if it is not demonstrated" in note.text
+    assert note.text.index("1. Although") < note.text.index("may result")
+    assert "Demonstrate to the right" not in note.text
+
+
+def test_notes_block_keeps_wrapped_numbered_items_together(unit2_records):
+    [notes] = [
+        c
+        for c in _children_of(
+            unit2_records, "trainer:2:lesson-planning-and-conduct:classroom-briefing"
+        )
+        if "Notes:" in c.text and "Many pilots have been previously" in c.text
+    ]
+    assert "launch. This has proven to be inadequate." in notes.text
+    assert "2. The correct check prior to launch" in notes.text
+    assert "  - demarcation between groundside and operational airside areas;" in notes.text
+
+
+def test_lettered_scan_items_stay_with_targeted_scan(unit9_records):
+    children = _children_of(
+        unit9_records, "pilot:9:pilot-guide-for-this-unit:the-scanning-technique"
+    )
+    [targeted] = [c for c in children if "3. TARGETED SCAN" in c.text]
+    for phrase in (
+        "a Turning the glider.",
+        "b Joining a thermal with other gliders.",
+        "c Thermalling:",
+        "d Leaving a thermal:",
+        "e Joining the circuit for landing:",
+    ):
+        assert phrase in targeted.text

@@ -318,8 +318,50 @@ def dump_records_jsonl(records: list[ChunkRecord], path: str | Path) -> None:
             handle.write(json.dumps(asdict(record), ensure_ascii=False) + "\n")
 
 
-_BULLET_LINE = re.compile(r"^\s*(?:-|\d+\.)\s")
+_LIST_MARKER = re.compile(r"^\s*(?:-|\d+\.)\s")
+_LETTER_ITEM = re.compile(r"^[a-z]\s", re.IGNORECASE)
 _TOP_BULLET = re.compile(r"^(?:-|\d+\.)\s")
+
+
+def _is_list_marker(line: str) -> bool:
+    return bool(_LIST_MARKER.match(line) or _LETTER_ITEM.match(line))
+
+
+def _last_nonblank_line(lines: list[tuple[str, str | None]]) -> str | None:
+    for line, _ in reversed(lines):
+        if line.strip():
+            return line
+    return None
+
+
+def _is_list_continuation(line: str, current: list[tuple[str, str | None]]) -> bool:
+    """True when *line* continues an open list item (stage-1 soft wrap)."""
+    if _starts_new_dash_list_after_numbered(line, current):
+        return False
+    if _is_list_marker(line):
+        return True
+    prev = _last_nonblank_line(current)
+    if prev is None:
+        return False
+    stripped = line.lstrip()
+    if not stripped:
+        return False
+    if not prev.rstrip().endswith((".", "!", "?", ":")):
+        return True
+    return stripped[0].islower()
+
+
+def _starts_new_dash_list_after_numbered(
+    line: str, current: list[tuple[str, str | None]]
+) -> bool:
+    """Top-level dash bullets after a completed numbered note start a new list."""
+    if not line.startswith("- "):
+        return False
+    prev = _last_nonblank_line(current)
+    if prev is None or not prev.rstrip().endswith((".", "!", "?")):
+        return False
+    return any(re.match(r"^\d+\.\s", entry[0]) for entry in current if entry[0].strip())
+
 
 #: Approximate embedding-size ceiling for one Child (whitespace tokens).
 _CHILD_TOKEN_LIMIT = 500
@@ -345,9 +387,17 @@ def _child_blocks(node: _Node) -> list[tuple[str, list[str]]]:
 
     for line, page in node.body:
         if not line.strip():
-            flush()
+            if kind == "list":
+                current.append((line, page))
+            else:
+                flush()
             continue
-        line_kind = "list" if _BULLET_LINE.match(line) else "para"
+        if kind == "list" and _is_list_continuation(line, current):
+            current.append((line, page))
+            continue
+        if kind == "list" and _starts_new_dash_list_after_numbered(line, current):
+            flush()
+        line_kind = "list" if _is_list_marker(line) else "para"
         if kind is not None and line_kind != kind:
             flush()
         kind = line_kind
@@ -408,6 +458,6 @@ def _render_child(
     *line_groups: list[tuple[str, str | None]],
 ) -> tuple[str, list[str]]:
     groups = [g for g in line_groups if g]
-    text = "\n\n".join("\n".join(line for line, _ in group) for group in groups)
+    text = "\n\n".join("\n".join(line for line, _ in group) for group in groups).strip("\n")
     pages = _pages_of([entry for group in groups for entry in group])
     return text, pages
