@@ -143,11 +143,17 @@ def test_patter_isolation_loses_no_text(unit5_records):
     assert patter.text.rstrip().endswith("- Now it’s your turn... (repeat)")
 
 
-def test_parent_content_hash_is_sha256_of_its_verbatim_text(unit5_records):
+def test_parent_content_hash_covers_embedding_context(unit5_records):
     import hashlib
 
     parent = _by_id(unit5_records, "trainer:5:key-messages")
-    assert parent.content_hash == hashlib.sha256(parent.text.encode("utf-8")).hexdigest()
+    prefix = (
+        "Trainer Guide, Unit 5 — Primary Effects of Controls, revision 1.0"
+        " > KEY MESSAGES [key_messages]"
+    )
+    assert parent.content_hash == hashlib.sha256(
+        f"{prefix}\n\n{parent.text}".encode("utf-8")
+    ).hexdigest()
 
 
 def test_slugs_keep_leading_ordinals(unit5_records):

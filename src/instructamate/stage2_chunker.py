@@ -155,6 +155,27 @@ def _pages_of(body: list[tuple[str, str | None]]) -> list[str]:
     return pages
 
 
+def _context_prefix(
+    *,
+    source: str,
+    unit: str,
+    unit_name: str,
+    revision: str,
+    heading_path: list[str],
+    content_type: str,
+) -> str:
+    """Deterministic embedding context (ADR 0004) — shared by Parent hashes and Child embeds."""
+    path = " > ".join(heading_path)
+    return (
+        f"{source.capitalize()} Guide, Unit {unit} — {unit_name}, "
+        f"revision {revision} > {path} [{content_type}]"
+    )
+
+
+def _content_hash(prefix: str, text: str) -> str:
+    return hashlib.sha256(f"{prefix}\n\n{text}".encode("utf-8")).hexdigest()
+
+
 def chunk_unit_markdown(md_text: str) -> list[ChunkRecord]:
     """Chunk one verified unit Markdown string into ChunkRecords."""
     meta, body_text = _split_frontmatter(md_text)
@@ -272,19 +293,23 @@ def chunk_unit_markdown(md_text: str) -> list[ChunkRecord]:
             content_type=node.content_type,
             heading_path=node.heading_path,
         )
+        prefix = _context_prefix(
+            source=source,
+            unit=unit,
+            unit_name=unit_name,
+            revision=revision,
+            heading_path=node.heading_path,
+            content_type=node.content_type,
+        )
         records.append(
             ChunkRecord(
                 id=node.id_path,
                 kind="parent",
                 pages=list(node.pages),
                 text=text,
-                content_hash=hashlib.sha256(text.encode("utf-8")).hexdigest(),
+                content_hash=_content_hash(prefix, text),
                 **common,
             )
-        )
-        prefix = (
-            f"{source.capitalize()} Guide, Unit {unit} — {unit_name} > "
-            f"{' > '.join(node.heading_path)} [{node.content_type}]"
         )
         for ordinal, (child_text, child_pages) in enumerate(_child_blocks(node), start=1):
             embedding_text = f"{prefix}\n\n{child_text}"
@@ -295,7 +320,7 @@ def chunk_unit_markdown(md_text: str) -> list[ChunkRecord]:
                     pages=child_pages,
                     text=child_text,
                     embedding_text=embedding_text,
-                    content_hash=hashlib.sha256(embedding_text.encode("utf-8")).hexdigest(),
+                    content_hash=_content_hash(prefix, child_text),
                     parent_id=node.id_path,
                     **common,
                 )
@@ -319,7 +344,8 @@ def dump_records_jsonl(records: list[ChunkRecord], path: str | Path) -> None:
 
 
 _LIST_MARKER = re.compile(r"^\s*(?:-|\d+\.)\s")
-_LETTER_ITEM = re.compile(r"^[a-z]\s", re.IGNORECASE)
+# Lowercase letter markers only — ``re.I`` would treat prose like "A wing…" as a list item.
+_LETTER_ITEM = re.compile(r"^[a-z]\.\s|^[a-z]\s(?=[A-Z])")
 _TOP_BULLET = re.compile(r"^(?:-|\d+\.)\s")
 
 
@@ -372,7 +398,8 @@ def _child_blocks(node: _Node) -> list[tuple[str, list[str]]]:
 
     One prose paragraph, or one whole bullet list with its intro line (a
     preceding paragraph ending in ":"), per Child; nested sub-bullets stay
-    with their list. Oversized lists split only at top-level bullets.
+    with their list. Oversized lists split at top-level bullets, then at
+    nested sub-bullets when a single top-level group still exceeds the limit.
     """
     Block = tuple[str, list[tuple[str, str | None]]]  # (kind, lines)
     blocks: list[Block] = []
@@ -427,11 +454,99 @@ def _child_blocks(node: _Node) -> list[tuple[str, list[str]]]:
     return children
 
 
+def _line_tokens(entry: tuple[str, str | None]) -> int:
+    return len(entry[0].split())
+
+
+def _group_tokens(group: list[tuple[str, str | None]]) -> int:
+    return sum(_line_tokens(entry) for entry in group)
+
+
+def _is_nested_sub_bullet(line: str) -> bool:
+    return bool(line[:1].isspace() and _is_list_marker(line.lstrip()))
+
+
+def _nested_subgroups_of(
+    group: list[tuple[str, str | None]],
+) -> tuple[tuple[str, str | None], list[list[tuple[str, str | None]]]]:
+    """Top-level bullet line plus nested sub-bullet groups under it."""
+    head = group[0]
+    subgroups: list[list[tuple[str, str | None]]] = []
+    current: list[tuple[str, str | None]] = []
+    for entry in group[1:]:
+        line, _ = entry
+        if _is_nested_sub_bullet(line) and current:
+            subgroups.append(current)
+            current = []
+        current.append(entry)
+    if current:
+        subgroups.append(current)
+    return head, subgroups
+
+
+def _split_group_by_lines(
+    group: list[tuple[str, str | None]],
+    *,
+    repeat_head: bool,
+) -> list[list[tuple[str, str | None]]]:
+    """Last-resort split within one group, optionally repeating the top-level line."""
+    if not group:
+        return []
+    head = group[0]
+    head_tokens = _line_tokens(head)
+    segments: list[list[tuple[str, str | None]]] = []
+    segment: list[tuple[str, str | None]] = [head] if repeat_head else []
+    size = head_tokens if repeat_head else 0
+    for entry in group[1 if repeat_head else 0 :]:
+        tokens = _line_tokens(entry)
+        if segment and size + tokens > _CHILD_TOKEN_LIMIT:
+            segments.append(segment)
+            segment = [head] if repeat_head else []
+            size = head_tokens if repeat_head else 0
+        segment.append(entry)
+        size += tokens
+    if segment:
+        segments.append(segment)
+    return segments
+
+
+def _split_oversized_group(
+    group: list[tuple[str, str | None]],
+) -> list[list[tuple[str, str | None]]]:
+    """Split one top-level group that alone exceeds the token ceiling."""
+    head, subgroups = _nested_subgroups_of(group)
+    head_tokens = _line_tokens(head)
+    if not subgroups:
+        return _split_group_by_lines(group, repeat_head=len(group) > 1)
+
+    pieces: list[list[tuple[str, str | None]]] = []
+    piece = [head]
+    size = head_tokens
+    for subgroup in subgroups:
+        sub_tokens = _group_tokens(subgroup)
+        if sub_tokens + head_tokens > _CHILD_TOKEN_LIMIT:
+            if len(piece) > 1:
+                pieces.append(piece)
+            pieces.extend(_split_group_by_lines([head, *subgroup], repeat_head=True))
+            piece = [head]
+            size = head_tokens
+            continue
+        if size + sub_tokens > _CHILD_TOKEN_LIMIT and len(piece) > 1:
+            pieces.append(piece)
+            piece = [head]
+            size = head_tokens
+        piece.extend(subgroup)
+        size += sub_tokens
+    if len(piece) > 1:
+        pieces.append(piece)
+    return pieces
+
+
 def _split_list(
     lines: list[tuple[str, str | None]],
 ) -> list[list[tuple[str, str | None]]]:
-    """Split an oversized bullet list at top-level-bullet boundaries only."""
-    if sum(len(line.split()) for line, _ in lines) <= _CHILD_TOKEN_LIMIT:
+    """Split an oversized bullet list, preferring top-level-bullet boundaries."""
+    if _group_tokens(lines) <= _CHILD_TOKEN_LIMIT:
         return [lines]
     # A group = one top-level bullet with everything nested under it.
     groups: list[list[tuple[str, str | None]]] = []
@@ -443,12 +558,18 @@ def _split_list(
     segment: list[tuple[str, str | None]] = []
     size = 0
     for group in groups:
-        tokens = sum(len(line.split()) for line, _ in group)
-        if segment and size + tokens > _CHILD_TOKEN_LIMIT:
+        group_tokens = _group_tokens(group)
+        if group_tokens > _CHILD_TOKEN_LIMIT:
+            if segment:
+                segments.append(segment)
+                segment, size = [], 0
+            segments.extend(_split_oversized_group(group))
+            continue
+        if segment and size + group_tokens > _CHILD_TOKEN_LIMIT:
             segments.append(segment)
             segment, size = [], 0
         segment.extend(group)
-        size += tokens
+        size += group_tokens
     if segment:
         segments.append(segment)
     return segments

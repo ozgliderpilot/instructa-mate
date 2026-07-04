@@ -36,7 +36,8 @@ def test_intro_line_and_its_bullet_list_are_one_child(unit5_records):
     assert child.text == parent.text
     assert child.content_type == "aim"
     assert child.embedding_text == (
-        "Trainer Guide, Unit 5 — Primary Effects of Controls > AIM [aim]\n\n" + child.text
+        "Trainer Guide, Unit 5 — Primary Effects of Controls, revision 1.0 > AIM [aim]\n\n"
+        + child.text
     )
     assert child.content_hash == hashlib.sha256(
         child.embedding_text.encode("utf-8")
@@ -109,11 +110,56 @@ def test_content_type_remap_flips_the_hash_even_with_unchanged_text():
     a = chunk_unit_markdown(_unit("## AIM\n<!-- content_type: aim -->\n\nSame text.\n"))
     b = chunk_unit_markdown(_unit("## AIM\n<!-- content_type: admin -->\n\nSame text.\n"))
 
+    parent_a = next(r for r in a if r.kind == "parent")
+    parent_b = next(r for r in b if r.kind == "parent")
     child_a = next(r for r in a if r.kind == "child")
     child_b = next(r for r in b if r.kind == "child")
+    assert parent_a.id == parent_b.id
     assert child_a.id == child_b.id
-    assert child_a.text == child_b.text  # stored text is verbatim either way
-    assert child_a.content_hash != child_b.content_hash  # prefix is in the hash
+    assert parent_a.text == parent_b.text
+    assert child_a.text == child_b.text
+    assert parent_a.content_hash != parent_b.content_hash
+    assert child_a.content_hash != child_b.content_hash
+
+
+def test_revision_bump_flips_parent_and_child_hashes():
+    body = "## AIM\n<!-- content_type: aim -->\n\nSame text.\n"
+    a = chunk_unit_markdown(_unit(body))
+    b = chunk_unit_markdown(_unit(body).replace('revision: "1.0"', 'revision: "2.0"'))
+
+    parent_a = next(r for r in a if r.kind == "parent")
+    parent_b = next(r for r in b if r.kind == "parent")
+    child_a = next(r for r in a if r.kind == "child")
+    child_b = next(r for r in b if r.kind == "child")
+    assert parent_a.id == parent_b.id
+    assert child_a.id == child_b.id
+    assert parent_a.text == parent_b.text
+    assert parent_a.content_hash != parent_b.content_hash
+    assert child_a.content_hash != child_b.content_hash
+
+
+def test_oversized_single_top_level_bullet_splits_at_nested_sub_bullets():
+    # One top-level bullet whose nested sub-bullets alone exceed the ceiling.
+    lines = ["- Parent bullet with introductory text for the whole nested list."]
+    for n in range(80):
+        lines.append(
+            f"  - Nested sub-bullet number {n} with enough words to accumulate tokens."
+        )
+    md = _unit("## AIM\n<!-- content_type: aim -->\n\n" + "\n".join(lines) + "\n")
+
+    children = [r for r in chunk_unit_markdown(md) if r.kind == "child"]
+
+    assert len(children) > 1
+    parent_line = lines[0]
+    for child in children:
+        assert len(child.text.split()) <= 500
+        assert parent_line in child.text
+        for line in child.text.splitlines():
+            if line.startswith("  - Nested sub-bullet number"):
+                assert parent_line in child.text
+    rejoined = "\n".join(c.text for c in children)
+    for line in lines:
+        assert line in rejoined
 
 
 def test_oversized_list_splits_only_at_top_level_bullet_boundaries():
@@ -196,3 +242,24 @@ def test_lettered_scan_items_stay_with_targeted_scan(unit9_records):
         "e Joining the circuit for landing:",
     ):
         assert phrase in targeted.text
+
+
+@pytest.fixture(scope="module")
+def unit4_records():
+    md = (CORPUS_MD / "pilot" / "unit-04.md").read_text(encoding="utf-8")
+    return chunk_unit_markdown(md)
+
+
+def test_capital_a_prose_before_bullets_is_not_a_list_marker(unit4_records):
+    # "A wing produces lift…" must not fold into the following dash bullets.
+    children = _children_of(unit4_records, "pilot:4:pilot-guide-for-this-unit:lift")
+    assert [c.id for c in children] == [
+        "pilot:4:pilot-guide-for-this-unit:lift:c1",
+        "pilot:4:pilot-guide-for-this-unit:lift:c2",
+        "pilot:4:pilot-guide-for-this-unit:lift:c3",
+        "pilot:4:pilot-guide-for-this-unit:lift:c4",
+        "pilot:4:pilot-guide-for-this-unit:lift:c5",
+    ]
+    assert children[1].text == "A wing produces lift in a number of different ways."
+    assert children[2].text.startswith("- The actual shape of the wing")
+    assert "A wing produces lift" not in children[2].text
