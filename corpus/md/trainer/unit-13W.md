@@ -84,9 +84,7 @@ Whilst the precursor for launch emergencies is discussed here (speed out of tole
 
 Notes:
 
-1. Different winches use different types of launch cables such as single wire, multi-strand cable
-
-and Dyneema rope.
+1. Different winches use different types of launch cables such as single wire, multi-strand cable and Dyneema rope.
 
 2. Trainers must ensure that they tailor the training in this unit to the cable in use.
 
@@ -208,15 +206,11 @@ Post Release Actions:
 
 Notes:
 
-1. Once released, the pilot transitions from Launching Pilot to either Soaring or Landing Pilot and
-
-should configure the glider appropriately.
+1. Once released, the pilot transitions from Launching Pilot to either Soaring or Landing Pilot and should configure the glider appropriately.
 
 2. Gliding Australia does not mandate any single post-release action list or checklist.
 
-3. Some clubs choose to apply local checklists, which may vary for particular sailplanes and
-
-prevailing local environmental conditions. e.g. FUST Flaps set as required or fixed, Undercarriage set as required or fixed, Speed as required and Trimmed for speed.
+3. Some clubs choose to apply local checklists, which may vary for particular sailplanes and prevailing local environmental conditions. e.g. FUST Flaps set as required or fixed, Undercarriage set as required or fixed, Speed as required and Trimmed for speed.
 
 Repeat launches and progressively introduce student exercises. Where possible expose the student to launches in varying wind conditions.
 
@@ -273,33 +267,19 @@ Review the student’s ability with relation to their:
 
 Notes:
 
-1. The student must have a relaxed grip on the control column and controls adjusted correctly
+1. The student must have a relaxed grip on the control column and controls adjusted correctly for reach during flight. Ensure that the cable release is reachable, and the student can operate it fully whilst on the ground.
 
-for reach during flight. Ensure that the cable release is reachable, and the student can operate it fully whilst on the ground.
+2. Ensure lookout is maintained by all aircrew. Cover instruments (other than ASI) in the student’s view if necessary, to discourage looking inside the cockpit.
 
-2. Ensure lookout is maintained by all aircrew. Cover instruments (other than ASI) in the
+3. If the student is reacting negatively to G forces do not try to conduct launch training on highly convective days or where known significant turbulence exists.
 
-student’s view if necessary, to discourage looking inside the cockpit.
+4. Be careful with terminology and clarity of language.  Make it clear when discussing control surfaces and control inputs (elevator, aileron, rudder), their effects in terms of motion (pitch, roll and yaw) and their effects in terms of attitude and flight path (attitude, bank angle, yaw angle or slip-skid angle).
 
-3. If the student is reacting negatively to G forces do not try to conduct launch training on highly
+5. Precision with terminology must be synchronised with demonstrations inflight. Patter must be concise and careful.  Feedback from the student must be sought. “What did you see when…?”
 
-convective days or where known significant turbulence exists.
+6. Do not attempt to include all elements of this module in the first few launches. It is better to allow the student time for a good demonstration and opportunity for practice on a single learning outcome. Students are often overloaded when flying their first few winch launches.
 
-4. Be careful with terminology and clarity of language.  Make it clear when discussing control
-
-surfaces and control inputs (elevator, aileron, rudder), their effects in terms of motion (pitch, roll and yaw) and their effects in terms of attitude and flight path (attitude, bank angle, yaw angle or slip-skid angle).
-
-5. Precision with terminology must be synchronised with demonstrations inflight. Patter must be
-
-concise and careful.  Feedback from the student must be sought. “What did you see when…?”
-
-6. Do not attempt to include all elements of this module in the first few launches. It is better to
-
-allow the student time for a good demonstration and opportunity for practice on a single learning outcome. Students are often overloaded when flying their first few winch launches.
-
-7. Ensure that the student has been briefed on the correct hand-over/take-over procedure and
-
-their expected action and verbal response to each. There must be no confusion about terminology for transfer of control.
+7. Ensure that the student has been briefed on the correct hand-over/take-over procedure and their expected action and verbal response to each. There must be no confusion about terminology for transfer of control.
 
 8. Remove all distractions from the exercise, for instance mute audio variometers.
 

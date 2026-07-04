@@ -101,25 +101,15 @@ At the end of the length of wire which is drawn out from the winch, there are ce
 
 <!-- page: 2-6 -->
 
-1. The cable itself. Although traditionally known as "cable", the material commonly used (and
+1. The cable itself. Although traditionally known as "cable", the material commonly used (and recommended by the GFA) is "Range 2 spring steel wire" of either 2.8 mm or 3.15 mm diameter. This is the wire used to make bedsprings and is readily available from spring manufacturers in 300 kg rolls. Exceptionally, wire rope of 3 mm or 4mm diameter may be used, but only where fairly soft grass surfaces are available for launching, as wire rope is both expensive and susceptible to failure by abrasion and ingress of dust.
 
-recommended by the GFA) is "Range 2 spring steel wire" of either 2.8 mm or 3.15 mm diameter. This is the wire used to make bedsprings and is readily available from spring manufacturers in 300 kg rolls. Exceptionally, wire rope of 3 mm or 4mm diameter may be used, but only where fairly soft grass surfaces are available for launching, as wire rope is both expensive and susceptible to failure by abrasion and ingress of dust.
+2. Drogue parachute. Usually about 1.5 metres in diameter, the drogue is used to stabilise the wire after release and keep it under some tension. Some clubs using stranded cable instead of the more usual solid wire do not use a drogue. However, such clubs are in the minority.
 
-2. Drogue parachute. Usually about 1.5 metres in diameter, the drogue is used to stabilise the
+3. Weak link. This vital piece of equipment is fitted to protect the structure of the glider from damage due to overspeeding of the launch or the pilot trying to climb too steeply. The correct weak link must never be omitted.
 
-wire after release and keep it under some tension. Some clubs using stranded cable instead of the more usual solid wire do not use a drogue. However, such clubs are in the minority.
+4. Release rings. This is a linked pair of rings of standard "Tost" design. The smaller ring is inserted into the winch-release hook of all gliders. Two rings are used, rather than just one, in order to ensure that the force exerted on the glider towhook is a straight pull, no matter what the angle is on the cable itself.
 
-3. Weak link. This vital piece of equipment is fitted to protect the structure of the glider from
-
-damage due to overspeeding of the launch or the pilot trying to climb too steeply. The correct weak link must never be omitted.
-
-4. Release rings. This is a linked pair of rings of standard "Tost" design. The smaller ring is
-
-inserted into the winch-release hook of all gliders. Two rings are used, rather than just one, in order to ensure that the force exerted on the glider towhook is a straight pull, no matter what the angle is on the cable itself.
-
-5. Trace. This length of rope or stranded wire acts as a shock absorber for the launch and
-
-serves as a spacer to keep the drogue at a suitable distance from the glider. The minimum length for a trace is 5 metres.
+5. Trace. This length of rope or stranded wire acts as a shock absorber for the launch and serves as a spacer to keep the drogue at a suitable distance from the glider. The minimum length for a trace is 5 metres.
 
 - A cable is never to be attached to a glider unless the pilot specifically requests it. The appropriate ring is inserted into the glider's towhook, the "belly" hook being used for winch launching, the pilot opening the hook to facilitate this. The hook's ability to release under some tension is required to be checked before the first flight of each day.
 - Belly-hooks are required to have an automatic over-ride or "back-release" mechanism fitted. This protects the glider in the event of failure to release when the pilot pulls the yellow handle. It does so by sensing the downward force on the hook and opening a back-releasing "cage" when an angle of just over 75 degrees to the horizontal is achieved. It is checked before the first flight of each day, by pulling VERTICALLY downwards under considerable tension.

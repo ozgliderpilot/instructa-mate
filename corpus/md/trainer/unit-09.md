@@ -79,19 +79,9 @@ This unit may be read in conjunction with:
 
 Notes:
 
-1. Lookout is developed and reinforced throughout pilot training, post-solo and post-GPC
+1. Lookout is developed and reinforced throughout pilot training, post-solo and post-GPC coaching. 2. Shortcomings in pre-solo instructing of lookout are often evident in post-solo training and coaching and in flight reviews. 3. Require a high standard, retraining and correcting poor lookout habits is difficult and time- consuming. 4. Trainers have an absolute responsibility to get this training right. This includes intervening and preventing manoeuvres when student lookout is insufficient or incorrect.
 
-coaching. 2. Shortcomings in pre-solo instructing of lookout are often evident in post-solo training and
-
-coaching and in flight reviews. 3. Require a high standard, retraining and correcting poor lookout habits is difficult and time-
-
-consuming. 4. Trainers have an absolute responsibility to get this training right. This includes intervening and
-
-preventing manoeuvres when student lookout is insufficient or incorrect.
-
-5. It may not be possible to sign this competency unit off as ‘competent’ till much later in the
-
-training.
+5. It may not be possible to sign this competency unit off as ‘competent’ till much later in the training.
 
 ### Briefing
 

@@ -251,21 +251,13 @@ Spinning ceases only if and when opposing forces and moments overcome the aircra
 
 Recovery action is clear-cut and universal however some points need to be considered:
 
-1. It is easy for a pilot to become disorientated in the spin and become confused as to which
+1. It is easy for a pilot to become disorientated in the spin and become confused as to which way the glider is spinning. Referring to the correct internal and external references and practice removes most of this confusion.
 
-way the glider is spinning. Referring to the correct internal and external references and practice removes most of this confusion.
+2. The nose-down attitude in the spin may be very steep in some spins. It is by no means an instinctive reaction to move the stick forward under these circumstances.
 
-2. The nose-down attitude in the spin may be very steep in some spins. It is by no means an
+3. During the recovery phase, the nose attitude typically steepens, and the rate of rotation may momentarily accelerate as well, giving the impression that the spin is actually getting worse. It is not, and the anti-spin control inputs must be maintained until the spin stops.
 
-instinctive reaction to move the stick forward under these circumstances.
-
-3. During the recovery phase, the nose attitude typically steepens, and the rate of rotation
-
-may momentarily accelerate as well, giving the impression that the spin is actually getting worse. It is not, and the anti-spin control inputs must be maintained until the spin stops.
-
-4. Spin recovery is not instantaneous. It may take up to several turns for the anti-spin control
-
-inputs to finally overcome pro-spin forces. The longer an aircraft is in a spin, the more turns it may take to recover. Spins are recoverable only when the cumulative effects of the interacting variables favour recovery and there is enough altitude.
+4. Spin recovery is not instantaneous. It may take up to several turns for the anti-spin control inputs to finally overcome pro-spin forces. The longer an aircraft is in a spin, the more turns it may take to recover. Spins are recoverable only when the cumulative effects of the interacting variables favour recovery and there is enough altitude.
 
 It is therefore necessary to practice spinning to the extent that confusion is eliminated and the recovery action, like that from a stall, becomes a CONDITIONED RESPONSE.
 
@@ -296,9 +288,7 @@ The general recovery sequence from a spiral dive is:
 
 2. ROLL – Gently apply stick and rudder to roll the aircraft to a wings level configuration.
 
-3. PULL (ease) BACK – Gently ease back on the stick to raise the nose attitude back to level
-
-flight.
+3. PULL (ease) BACK – Gently ease back on the stick to raise the nose attitude back to level flight.
 
 These are separate actions. DO NOT combine them as pulling back on the stick whilst still banked in the spiral dive will further increase the aerodynamic forces on the airframe.
 

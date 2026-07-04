@@ -136,9 +136,7 @@ Use these questions to test your knowledge of the unit.
 3. What speed and angle of bank is appropriate?
 <!-- page: 30-6 -->
 
-4. Ideally, is the point of correction and the action the same when using the feel and the vario
-
-technique?
+4. Ideally, is the point of correction and the action the same when using the feel and the vario technique?
 
 5. Why is a skidding thermalling turn dangerous?
 6. Is it OK to change the direction of your turn within a thermal?

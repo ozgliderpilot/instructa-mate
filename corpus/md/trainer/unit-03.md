@@ -127,13 +127,9 @@ There are no complementary units for this GPC unit.
 
 Notes:
 
-1. If the pilot uses English as a Second Language (ESL) then limitations in language skill and
+1. If the pilot uses English as a Second Language (ESL) then limitations in language skill and translation will often become evident, as it requires precise and technical use of language. The Club CFI and Training Panel should be advised of any communication difficulties or impediments to understanding. The student may need to be coached in aviation English and to fly with trainers with second language familiarity. The importance of slow, concise, clear post- flight debriefings with these students is much higher than for English speakers. (We sometimes have the reverse experience when flying overseas – remember those insights.)
 
-translation will often become evident, as it requires precise and technical use of language. The Club CFI and Training Panel should be advised of any communication difficulties or impediments to understanding. The student may need to be coached in aviation English and to fly with trainers with second language familiarity. The importance of slow, concise, clear post- flight debriefings with these students is much higher than for English speakers. (We sometimes have the reverse experience when flying overseas – remember those insights.)
-
-2. Safety is paramount so ensure that the student knows that these set procedures are very
-
-important not only for themself but for others as well.
+2. Safety is paramount so ensure that the student knows that these set procedures are very important not only for themself but for others as well.
 
 ### Classroom Briefing
 

@@ -226,15 +226,11 @@ Note that the air should be reasonably smooth for a student’s first attempts a
 
 ### Notes
 
-1. Once released, the pilot transitions from Launching Pilot to either Soaring or Landing Pilot and
-
-should configure the glider appropriately.
+1. Once released, the pilot transitions from Launching Pilot to either Soaring or Landing Pilot and should configure the glider appropriately.
 
 2. Gliding Australia does not mandate any single post-release action list or checklist.
 
-3. Some clubs choose to apply local checklists, which may vary for particular sailplanes and
-
-prevailing local environmental conditions. e.g., FUST Flaps set as required or fixed, Undercarriage set as required or fixed, Speed as required and Trimmed for speed.  This is a CHECK and should be conducted after the release and established off-tow.
+3. Some clubs choose to apply local checklists, which may vary for particular sailplanes and prevailing local environmental conditions. e.g., FUST Flaps set as required or fixed, Undercarriage set as required or fixed, Speed as required and Trimmed for speed.  This is a CHECK and should be conducted after the release and established off-tow.
 
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->

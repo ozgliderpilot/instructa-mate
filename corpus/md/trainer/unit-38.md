@@ -126,9 +126,7 @@ Some considerations for task planning are:
 
 <!-- page: 38-4 -->
 
-1. Task time. This should be shorter than the soaring window as predicted from the weather
-
-analysis and should take into account time to climb in the first thermal and before leaving on task. Early cross-country pilots should not be too ambitious with task time. Consider landing well before significant weather events.
+1. Task time. This should be shorter than the soaring window as predicted from the weather analysis and should take into account time to climb in the first thermal and before leaving on task. Early cross-country pilots should not be too ambitious with task time. Consider landing well before significant weather events.
 
 2. Task distance. Calculated from the predicted cross-country speed in the task time available.
 

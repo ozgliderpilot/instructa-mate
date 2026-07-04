@@ -213,31 +213,21 @@ Use these questions to test your knowledge of the unit.
 
 1. List the W & 6S for field selection?
 
-2. You are at 7500 feet AGL. How far can you expect to fly from this height and then select a
+2. You are at 7500 feet AGL. How far can you expect to fly from this height and then select a field?
 
-field?
-
-3. On the flight in Q2 above, 30km ahead you see there is an area of forest which looks like it
-
-will be say 10km wide. Can you expect to safely fly across the forest?
+3. On the flight in Q2 above, 30km ahead you see there is an area of forest which looks like it will be say 10km wide. Can you expect to safely fly across the forest?
 
 4. At what height should you have identified suitable landing fields?
 
-5. You are at 1500 feet AGL and have selected a suitable field. Can you search for and use
+5. You are at 1500 feet AGL and have selected a suitable field. Can you search for and use thermals?
 
-thermals?
-
-6. You decide to start the circuit at 800 Feet AGL. What are the benefits and risks with starting
-
-the circuit at 1000 feet or 600 feet?
+6. You decide to start the circuit at 800 Feet AGL. What are the benefits and risks with starting the circuit at 1000 feet or 600 feet?
 
 7. You start downwind leg, what actions do you need to perform to set up for a safe landing
 
 8. At what height do you expect to turn final?
 
-9. As you turn final you note that there is a fence across the middle of the paddock previously
-
-hidden by long grass. The field is 800-1000m long. What do you do?
+9. As you turn final you note that there is a fence across the middle of the paddock previously hidden by long grass. The field is 800-1000m long. What do you do?
 
 10. What are the benefits of touching down in a field as slow as possible?
 

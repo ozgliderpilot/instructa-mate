@@ -98,13 +98,9 @@ This unit can be read in conjunction with:
 
 Notes:
 
-1. The glider going too low in the low-tow position results in the tug pilot needing more and more
+1. The glider going too low in the low-tow position results in the tug pilot needing more and more forward stick to compensate. Although this could get to the stage of running out of elevator power to keep the tug under control, it is rather unlikely to become this serious and in any case such a situation usually develops slowly enough for the tug pilot to release the glider before control is lost.
 
-forward stick to compensate. Although this could get to the stage of running out of elevator power to keep the tug under control, it is rather unlikely to become this serious and in any case such a situation usually develops slowly enough for the tug pilot to release the glider before control is lost.
-
-2. In contrast, it is dangerous to go too high behind the tug in high tow, because this
-
-situation can get out of control very quickly and the tug pilot may not have enough time to pull his release before a “tug upset” occurs. See GPC Unit 20 on “implications of glider going too high behind tug”. If the glider goes so high that the pilot loses sight of the tug, the glider’s release should be pulled WITHOUT DELAY.
+2. In contrast, it is dangerous to go too high behind the tug in high tow, because this situation can get out of control very quickly and the tug pilot may not have enough time to pull his release before a “tug upset” occurs. See GPC Unit 20 on “implications of glider going too high behind tug”. If the glider goes so high that the pilot loses sight of the tug, the glider’s release should be pulled WITHOUT DELAY.
 
 ## PRE-FLIGHT BRIEFING
 <!-- content_type: briefing -->

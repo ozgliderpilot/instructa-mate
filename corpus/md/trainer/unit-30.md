@@ -137,9 +137,7 @@ Don’t introduce thermal centring when there are other gliders in the thermal a
 
 ### Not maintaining constant nose attitude
 
-1. Flying using airspeed indicator instead of nose
-
-attitude relative to the horizon 2. Not trimmed correctly
+1. Flying using airspeed indicator instead of nose attitude relative to the horizon 2. Not trimmed correctly
 
 - Note: Tail ballast may be required to allow sufficient back trim for heavier pilots
 

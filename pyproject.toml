@@ -6,7 +6,7 @@ requires-python = ">=3.12"
 license = "MIT"
 license-files = ["LICENSE"]
 dependencies = [
-    "pymupdf>=1.24",   # primary text layer (settled by the extractor bake-off)
+    "pymupdf>=1.28",   # primary text layer (settled by the extractor bake-off)
     "pdfplumber>=0.11", # table sidekick (not used yet in slice 1)
 ]
 

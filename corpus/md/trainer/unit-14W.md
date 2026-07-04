@@ -74,13 +74,9 @@ If radio calls are to be introduced for launching, training in GPC Unit 21 may b
 
 Notes:
 
-1. Whilst the precursor for launch emergencies is discussed here (speed out of tolerance) the
+1. Whilst the precursor for launch emergencies is discussed here (speed out of tolerance) the actual briefing and handling of the emergency is covered in GPC Unit 20.
 
-actual briefing and handling of the emergency is covered in GPC Unit 20.
-
-2. Different winches use different types of launch cables such as single wire, multi-strand cable
-
-and Dyneema rope.
+2. Different winches use different types of launch cables such as single wire, multi-strand cable and Dyneema rope.
 
 3. Trainers must ensure that they tailor the instruction in this unit to the cable type in use.
 
@@ -202,33 +198,19 @@ Separation
 
 Notes:
 
-1. The student must have a relaxed grip on the control column and controls adjusted correctly for
+1. The student must have a relaxed grip on the control column and controls adjusted correctly for reach during flight. Ensure that the cable release is reachable, and student can operate it whilst on the ground.
 
-reach during flight. Ensure that the cable release is reachable, and student can operate it whilst on the ground.
+2. Where radio calls are taught in parallel and the student has capacity to perform it, the pre- launch radio broadcast can be made.
 
-2. Where radio calls are taught in parallel and the student has capacity to perform it, the pre-
+3. Ensure lookout is maintained by all aircrew. Cover instruments (other than ASI) in the student's view if necessary, to discourage looking inside the cockpit.
 
-launch radio broadcast can be made.
+4. Be careful with terminology and clarity of language.  Make it clear when discussing control surfaces and control inputs (elevator, aileron, rudder), their effects in terms of motion (pitch, roll and yaw) and their effects in terms of attitude and flight path (attitude, bank angle, yaw angle or slip-skid angle).
 
-3. Ensure lookout is maintained by all aircrew. Cover instruments (other than ASI) in the student's
+5. Precision with terminology must be synchronised with demonstrations inflight. Patter must be concise and careful.  Feedback from the student must be sought. “What did you see when…?”
 
-view if necessary, to discourage looking inside the cockpit.
+6. Do not attempt to include all elements of this module in the first few launches. It is better to allow the student time for a good demonstration and opportunity for practice on a single learning outcome. Students are often overloaded when flying their first few winch launches.
 
-4. Be careful with terminology and clarity of language.  Make it clear when discussing control
-
-surfaces and control inputs (elevator, aileron, rudder), their effects in terms of motion (pitch, roll and yaw) and their effects in terms of attitude and flight path (attitude, bank angle, yaw angle or slip-skid angle).
-
-5. Precision with terminology must be synchronised with demonstrations inflight. Patter must be
-
-concise and careful.  Feedback from the student must be sought. “What did you see when…?”
-
-6. Do not attempt to include all elements of this module in the first few launches. It is better to
-
-allow the student time for a good demonstration and opportunity for practice on a single learning outcome. Students are often overloaded when flying their first few winch launches.
-
-7. Ensure that the student has been briefed on the correct hand-over/take-over procedure and
-
-their expected action and verbal response to each. There must be no confusion about terminology for transfer of control.
+7. Ensure that the student has been briefed on the correct hand-over/take-over procedure and their expected action and verbal response to each. There must be no confusion about terminology for transfer of control.
 
 8. Remove all distractions from the exercise, for instance mute audio variometers.
 

@@ -114,13 +114,9 @@ There are no complementary units for this GPC Unit.
 
 1. Immediately lower the nose ATTITUDE to below the horizon.
 
-2. Wait to regain and maintain safe AIRSPEED near the ground (1.5 VS), operate the cable
+2. Wait to regain and maintain safe AIRSPEED near the ground (1.5 VS), operate the cable release mechanism TWICE.
 
-release mechanism TWICE.
-
-3. ASSESS the situation, confirm airspeed ≥ 1.5VS and LAND AHEAD unless it is not safe
-
-to do so.
+3. ASSESS the situation, confirm airspeed ≥ 1.5VS and LAND AHEAD unless it is not safe to do so.
 
 - If the student decides not to land ahead then they should proceed as per the pre-take-off launch failure briefing.
 - List the post-launch failure immediate actions and decisions, describing how to carry out the action plan.

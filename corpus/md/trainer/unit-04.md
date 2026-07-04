@@ -114,13 +114,9 @@ Theory course 1 is required for this unit. A brief overview of the Gliders compo
 
 Notes:
 
-1. Trainers should add nothing to the above procedure except informal conversation. They will
+1. Trainers should add nothing to the above procedure except informal conversation. They will check throughout the flight on orientation, relaxation and enjoyment, and will make their initial assessment of the student.
 
-check throughout the flight on orientation, relaxation and enjoyment, and will make their initial assessment of the student.
-
-2. During the flight, as in the air-experience flight, make all manoeuvres gently. Check on
-
-orientation several times by having the student point to the landing area and chosen landmarks.
+2. During the flight, as in the air-experience flight, make all manoeuvres gently. Check on orientation several times by having the student point to the landing area and chosen landmarks.
 
 ### Stability:
 
@@ -144,23 +140,15 @@ orientation several times by having the student point to the landing area and ch
 
 ### Notes:
 
-1. Post-flight debriefing and reference to the glider should be used to reinforce learning of these
+1. Post-flight debriefing and reference to the glider should be used to reinforce learning of these new terms.
 
-new terms.
-
-2. Do not overload the student; demonstrate the motions and stability in-flight and then reinforce
-
-on the ground.
+2. Do not overload the student; demonstrate the motions and stability in-flight and then reinforce on the ground.
 
 3. Further reinforcement should be done in later flights.
 
-4. It is self-evident that if shorter winch flights are undertaken, this unit will need to be covered in
+4. It is self-evident that if shorter winch flights are undertaken, this unit will need to be covered in several flights.
 
-several flights.
-
-5. Even with an aerotow launch and longer flight times, it may take multiple launches for the
-
-student to absorb the concepts of stability.
+5. Even with an aerotow launch and longer flight times, it may take multiple launches for the student to absorb the concepts of stability.
 
 Caution:
 

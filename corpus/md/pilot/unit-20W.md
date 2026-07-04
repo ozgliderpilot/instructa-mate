@@ -200,7 +200,7 @@ Use these questions to test your knowledge of the unit.
 
 - At what stage of the launch can a launch failure occur?
 - What are the things you should do if a launch failure occurs on the ground?
-- What are the immediate actions you should do if  a launch failure occurs in the air?
+- What are the immediate actions you should do if a launch failure occurs in the air?
 - What is the NMA?
 - What circumstances could occur to place an aircraft in the NMA?
 - Why is the Options check of the pre-take-off check important for launch failures?

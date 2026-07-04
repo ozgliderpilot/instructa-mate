@@ -118,9 +118,7 @@ What is important is to gain an understanding of what average cross-country spee
 
 Some considerations for task planning are:
 
-1. Task time. This should be shorter than the soaring window as predicted from the weather
-
-analysis and should take into account time to climb in the first thermal and before leaving on task. You should not be too ambitious with task time. Consider landing well before significant weather events.
+1. Task time. This should be shorter than the soaring window as predicted from the weather analysis and should take into account time to climb in the first thermal and before leaving on task. You should not be too ambitious with task time. Consider landing well before significant weather events.
 
 2. Task distance. Calculated from the predicted cross-country speed in the task time available.
 
@@ -271,18 +269,8 @@ Plan suitable task distance and suitable waypoints
 
 Use these questions to test your knowledge of the unit.
 
-1. Why is it important to compare observed conditions with predictions? 2. If the observed ground temperature is 27 degrees and the observed dew point is 11 degrees,
-
-at what approximate height above the ground is cloud base (assuming clouds will form)?
-
-3. What is a soaring window? 4. What average cross-country speed would you expect to achieve in an LS4 with 4
-
-knot average climbs with 15 knots of wind? 5. If the soaring window is from 11am to 4pm, what would be a reasonable task distance in an
-
-LS4 with the above conditions? 6. What average cross-country speed would you expect to achieve with the above conditions
-
-in the glider you normally fly?
-
+1. Why is it important to compare observed conditions with predictions? 2. If the observed ground temperature is 27 degrees and the observed dew point is 11 degrees, at what approximate height above the ground is cloud base (assuming clouds will form)?
+3. What is a soaring window? 4. What average cross-country speed would you expect to achieve in an LS4 with 4 knot average climbs with 15 knots of wind? 5. If the soaring window is from 11am to 4pm, what would be a reasonable task distance in an LS4 with the above conditions? 6. What average cross-country speed would you expect to achieve with the above conditions in the glider you normally fly?
 <!-- page: 38-6 -->
 
 ## TASK PLANNER

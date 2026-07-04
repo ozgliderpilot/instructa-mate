@@ -61,12 +61,14 @@ This unit may be read in conjunction with:
 - The following picture gives you some idea of the problem. Note that closing speed is the sum of the speed of the two aircraft if flying directly towards each other.
 - If one glider is circling then the time to impact is double what is shown here. Given that a single circle in a thermalling glider takes 15-20 seconds, you need to be aware of the other aircraft and increase your targeted scan as you circle because 1 turn later it will be too close.
 
+700 m
+
 ### The Scanning Technique:
 
 1. FULL SCAN: A Systematic scan along the horizon from behind our left- wing tip, directly ahead through to behind our right- wing tip, Including the area above and below the horizon, and directly overhead our glider and below the glider. This will take a few minutes to do correctly and should be repeated regularly depending on traffic density.
 <!-- page: 9-4 -->
 
-We may also have aircraft coming from the side, across out flight path, or overtaking us on either side, so we also need to monitor these areas. The technique is to focusing  on a spot for a few seconds, then moving our view 20-30 degrees ahead and repeating the process.
+We may also have aircraft coming from the side, across out flight path, or overtaking us on either side, so we also need to monitor these areas. The technique is to focusing on a spot for a few seconds, then moving our view 20-30 degrees ahead and repeating the process.
 
 This FULL SCAN can be completed in stages, interrupted by a CRUISING scan or TARGETED scan as required.
 

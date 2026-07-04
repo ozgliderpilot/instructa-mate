@@ -218,14 +218,10 @@ Use these questions to test your knowledge of the unit.
 
 2. Why should you not closely follow the theoretical best cruise speed from MacCready theory?
 
-3. If you are flying an LS4 at 3500 feet on a day when the top of the thermals is 6000 feet and you
-
-expect your next climb to average 5 knots, what would be an appropriate cruise speed?
+3. If you are flying an LS4 at 3500 feet on a day when the top of the thermals is 6000 feet and you expect your next climb to average 5 knots, what would be an appropriate cruise speed?
 
 4. What are the three key decisions when encountering a thermal? (Refer to GPC Unit 31)
 
 5. When should you leave a thermal?
 
-6. If you are 30km from your airfield and want to arrive at 1500 feet, approximately how high would you
-
-expect to need to be without significant wind?
+6. If you are 30km from your airfield and want to arrive at 1500 feet, approximately how high would you expect to need to be without significant wind?
