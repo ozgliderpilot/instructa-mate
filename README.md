@@ -60,7 +60,7 @@ truth** that every downstream citation is audited against.
                │  corpus/md/<source>/unit-NN.md   ← the source of truth
                ▼
 ┌─────────────────────────────┐
-│ Stage 2 · Chunking       ◻  │  Markdown → chunk records
+│ Stage 2 · Chunking       ✅ │  Markdown → chunk records
 │   parent/child + metadata   │  (content_type, page citation, stable IDs + hashes)
 └──────────────┬──────────────┘
                │
