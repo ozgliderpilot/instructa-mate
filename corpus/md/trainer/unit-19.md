@@ -185,13 +185,9 @@ Notes:
 
 1. Skilled demonstrations by the trainer are essential.
 
-2. Don’t let the student be too enthusiastic with keeping the into-wind wing down on take-off and
+2. Don’t let the student be too enthusiastic with keeping the into-wind wing down on take-off and landing thereby touching the wingtip and causing a ground loop.
 
-landing thereby touching the wingtip and causing a ground loop.
-
-3. Watch for the tendency to be too early or too late in aligning the aircraft with the landing track
-
-when using the crabbing approach.
+3. Watch for the tendency to be too early or too late in aligning the aircraft with the landing track when using the crabbing approach.
 
 4. Be vigilant, ready to take over on first signs of mishandling in the student’s first attempts.
 

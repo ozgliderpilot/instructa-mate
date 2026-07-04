@@ -95,7 +95,7 @@ relate this to the vario indication when it happens. Ask the student to tell you
 
   - Verbalise the decision if/when to turn
 - Demonstrate the first turn
-  - If turning in the correct direction, verbalise the choice of angle of bank – tight turn (40º) if acceleration feel is building on turn entry; shallower turn if  searching
+  - If turning in the correct direction, verbalise the choice of angle of bank – tight turn (40º) if acceleration feel is building on turn entry; shallower turn if searching
   - If turning in the incorrect direction, demonstrate the process of turning through 270º, straightening for 3 to 10 seconds, then recommencing a tight turn.
 - Repeat as necessary.
 

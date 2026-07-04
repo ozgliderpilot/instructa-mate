@@ -213,9 +213,7 @@ Notes:
 
 1. Ensure lookout is maintained throughout.
 
-2. Ensure the student verbally identifies (Locate-Identify-Operate) each control before
-
-movement.
+2. Ensure the student verbally identifies (Locate-Identify-Operate) each control before movement.
 
 3. Make sure the correct handover of control is maintained.
 

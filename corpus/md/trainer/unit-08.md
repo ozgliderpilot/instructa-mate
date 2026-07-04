@@ -242,49 +242,29 @@ As student becomes more proficient:
 
 Notes:
 
-1. The student must have a relaxed grip on the control column and controls adjusted correctly for
+1. The student must have a relaxed grip on the control column and controls adjusted correctly for reach during flight.
 
-reach during flight.
+2. Ensure lookout is maintained by all aircrew. Cover instruments in the student's view if necessary to discourage looking inside the cockpit.
 
-2. Ensure lookout is maintained by all aircrew. Cover instruments in the student's view if necessary
+3. If the student is reacting negatively to G forces do not try to ‘inoculate’ them by continuing to expose them to it. Rather continue with reduced movement or if turbulence is too great for this, land. Encourage the student by noting that this is a common issue for humans as we evolved in a 1G environment where rapid changes in G force was often associated with falling.
 
-to discourage looking inside the cockpit.
-
-3. If the student is reacting negatively to G forces do not try to ‘inoculate’ them by continuing to
-
-expose them to it. Rather continue with reduced movement or if turbulence is too great for this, land. Encourage the student by noting that this is a common issue for humans as we evolved in a 1G environment where rapid changes in G force was often associated with falling.
-
-4. Depending on trim and CofG to maintain attitude at lower speeds may require back pressure on
-
-the stick.
+4. Depending on trim and CofG to maintain attitude at lower speeds may require back pressure on the stick.
 
 <!-- page: 8-9 -->
 
-5. Be very careful with terminology and clarity of language.  Make it clear when discussing control
+5. Be very careful with terminology and clarity of language.  Make it clear when discussing control surfaces and control inputs (elevator, aileron, rudder), their effects in terms of motion (pitch, roll and yaw) and their effects in terms of attitude and flight path (attitude, bank angle, yaw angle or slip-skid angle).
 
-surfaces and control inputs (elevator, aileron, rudder), their effects in terms of motion (pitch, roll and yaw) and their effects in terms of attitude and flight path (attitude, bank angle, yaw angle or slip-skid angle).
+6. Precision with terminology must be synchronised with demonstrations inflight. Patter must be concise and careful.  Feedback from the student must be sought. “What did you see when…?”
 
-6. Precision with terminology must be synchronised with demonstrations inflight. Patter must be
+7. If the student is still prone to airsickness, ensure that the flight exercise does not continue if they have indicated onset of illness, or fail to respond to communication.
 
-concise and careful.  Feedback from the student must be sought. “What did you see when…?”
-
-7. If the student is still prone to airsickness, ensure that the flight exercise does not continue if they
-
-have indicated onset of illness, or fail to respond to communication.
-
-8. Ensure that the student has been briefed on the correct hand-over/take-over procedure and their
-
-expected action and verbal response to each. There must be no confusion about terminology for transfer of control.
+8. Ensure that the student has been briefed on the correct hand-over/take-over procedure and their expected action and verbal response to each. There must be no confusion about terminology for transfer of control.
 
 9. Remove all distractions from the exercise, for instance mute audio variometers.
 
-10. Do not reference changes to flight instruments – at this stage of learning the student must learn
+10. Do not reference changes to flight instruments – at this stage of learning the student must learn with reference to external cues.
 
-with reference to external cues.
-
-11. Do not reference compass headings for these exercises, due to compass lag and inertia it will be
-
-difficult for low experience pilots to come out of a turn to a compass heading, instead use a point on the horizon.
+11. Do not reference compass headings for these exercises, due to compass lag and inertia it will be difficult for low experience pilots to come out of a turn to a compass heading, instead use a point on the horizon.
 
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->

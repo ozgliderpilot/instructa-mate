@@ -240,21 +240,15 @@ Although some people argue that this may result in a high airspeed on downwind, 
 
 Notes:
 
-1. Ensure lookout is maintained by all aircrew. Cover instruments in the student’s view if
+1. Ensure lookout is maintained by all aircrew. Cover instruments in the student’s view if necessary, to discourage looking inside the cockpit.
 
-necessary, to discourage looking inside the cockpit.
-
-2. Remove all distractions from the exercise, for instance mute audio variometer once transition
-
-to landing pilot mode has occurred.
+2. Remove all distractions from the exercise, for instance mute audio variometer once transition to landing pilot mode has occurred.
 
 3. Ensure the pre-landing check is called that - it is NOT a ‘FUST’ check.
 
 4. Students may need to build skills in individual competency elements on separate flights.
 
-5. Students must be competent at basic flying skills (coordinated turns, straight & level flight and
-
-use of trim) at this stage to avoid overloading the student.
+5. Students must be competent at basic flying skills (coordinated turns, straight & level flight and use of trim) at this stage to avoid overloading the student.
 
 <!-- page: 15-10 -->
 

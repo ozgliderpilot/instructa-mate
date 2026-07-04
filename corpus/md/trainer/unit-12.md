@@ -194,31 +194,19 @@ The important competence is recognition of the feel of loss of lateral damping a
 
 Notes:
 
-1. The student may be overanxious undertaking this unit. A calm and matter-of-fact approach to
-
-instructing the stall is required.
+1. The student may be overanxious undertaking this unit. A calm and matter-of-fact approach to instructing the stall is required.
 
 <!-- page: 12-7 -->
 
-2. Introduce the flight exercises with gentle slow flying and straight-ahead stalls demonstrating
+2. Introduce the flight exercises with gentle slow flying and straight-ahead stalls demonstrating ease of recovery, gradually developing to more aggressive stalls in differing configurations with growing student confidence over a number of flights.
 
-ease of recovery, gradually developing to more aggressive stalls in differing configurations with growing student confidence over a number of flights.
+3. Direct the student’s attention outside the cockpit towards the horizon to counter any discomfort felt during the stall and recovery.
 
-3. Direct the student’s attention outside the cockpit towards the horizon to counter any
+4. Stalls should be demonstrated by the instructor with the stick right back followed by the student trying in the same configuration. This is to demonstrate that accidents occur when the stick is held back in the stall due to visual interference of dropping towards the ground instead of easing it forward to recover by reducing the angle of attack to get the wing flying again.
 
-discomfort felt during the stall and recovery.
+5. In no or poor lift conditions it is wise to pre-flight brief the pilot on the sequence of activities to be conducted and to confirm most of the HAS(E)LL checks during launch to enable more height and time for the exercises after the release.
 
-4. Stalls should be demonstrated by the instructor with the stick right back followed by the
-
-student trying in the same configuration. This is to demonstrate that accidents occur when the stick is held back in the stall due to visual interference of dropping towards the ground instead of easing it forward to recover by reducing the angle of attack to get the wing flying again.
-
-5. In no or poor lift conditions it is wise to pre-flight brief the pilot on the sequence of activities to
-
-be conducted and to confirm most of the HAS(E)LL checks during launch to enable more height and time for the exercises after the release.
-
-6. Ensure that the student differentiates between the nose drop at the stall and the sensations
-
-associated with reduced “G”.
+6. Ensure that the student differentiates between the nose drop at the stall and the sensations associated with reduced “G”.
 
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->

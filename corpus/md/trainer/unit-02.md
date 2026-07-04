@@ -100,19 +100,13 @@ and trust, with positive motivational effects. Negative effects can also arise f
 
 Notes:
 
-1. Many pilots have been previously trained to check “all clear above and behind” prior to
+1. Many pilots have been previously trained to check “all clear above and behind” prior to launch. This has proven to be inadequate. Many hazards that might pose a risk to a safe launch might emerge from a forward or lateral direction.
 
-launch. This has proven to be inadequate. Many hazards that might pose a risk to a safe launch might emerge from a forward or lateral direction.
-
-2. The correct check prior to launch is “airspace clear for launch”. This check must be
-
-thorough. The PIC (Pilot In Command) must be advised of any hazards so that they can make a decision on their readiness to proceed with or delay the launch.
+2. The correct check prior to launch is “airspace clear for launch”. This check must be thorough. The PIC (Pilot In Command) must be advised of any hazards so that they can make a decision on their readiness to proceed with or delay the launch.
 
 3. The PIC remains in command – the check is to inform the PIC of the hazard environment.
 
-4. This unit provides opportunities to introduce and reinforce some important concepts,
-
-including:
+4. This unit provides opportunities to introduce and reinforce some important concepts, including:
 
   - demarcation between groundside and operational airside areas;
   - diligent lookout and airspace clear for launch checks;

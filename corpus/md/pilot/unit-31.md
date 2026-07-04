@@ -70,29 +70,17 @@ The diagram below shows a single glider with an exemplar approach to a thermal, 
 
 <!-- page: 31-4 -->
 
-2. As you approach a thermal you may fly through turbulence that feels like driving over
+2. As you approach a thermal you may fly through turbulence that feels like driving over cobblestones. At this point or when you know you are close to the thermal using visual cues (other gliders or cumulus cloud) raise the nose to reduce speed and keep that constant attitude as you enter the thermal. Entry speed for optimal feel and manoeuvrability should be 10-20 knots below cruise speed. Re-trim for your new cruise speed.
 
-cobblestones. At this point or when you know you are close to the thermal using visual cues (other gliders or cumulus cloud) raise the nose to reduce speed and keep that constant attitude as you enter the thermal. Entry speed for optimal feel and manoeuvrability should be 10-20 knots below cruise speed. Re-trim for your new cruise speed.
+3. It is normal to fly through an area of sinking air (but this isn’t always the case) followed by turbulence just before the rising air. As you fly into the rising air you should feel a surge (vertical acceleration) – do NOT turn when you feel this or you will turn before the core.
 
-3. It is normal to fly through an area of sinking air (but this isn’t always the case) followed by
+4. Before turning you must complete a thorough TARGETED SCAN. This takes time so anticipate and do this before you expect to turn.
 
-turbulence just before the rising air. As you fly into the rising air you should feel a surge (vertical acceleration) – do NOT turn when you feel this or you will turn before the core.
+5. Wait until you feel a sustained surge for at least five seconds or have a sustained vario indication for at least five seconds. Another cue is that at the peak of the lifting air the feel of the vertical acceleration will cease – that is the time to turn. If this doesn’t happen or you just get short gusts then resume cruising.
 
-4. Before turning you must complete a thorough TARGETED SCAN. This takes time so anticipate
+6. If you’ve turned the ‘right’ way you should feel a wonderful surge as you fly into the stronger lifting air near the core. This is shown on the diagram in white.
 
-and do this before you expect to turn.
-
-5. Wait until you feel a sustained surge for at least five seconds or have a sustained vario indication
-
-for at least five seconds. Another cue is that at the peak of the lifting air the feel of the vertical acceleration will cease – that is the time to turn. If this doesn’t happen or you just get short gusts then resume cruising.
-
-6. If you’ve turned the ‘right’ way you should feel a wonderful surge as you fly into the stronger lifting
-
-air near the core. This is shown on the diagram in white.
-
-7. If you’ve turned the ‘wrong’ way you’ll get that horrible sinking feeling. Continue the turn through
-
-¾ of a turn (270o ) relative to your original heading and then straighten out. This is shown on the diagram in pink. Depending on how far away from the core you were when you turned you will need to fly straight for between 3 and at most 10 seconds to move the circle significantly across the thermal. If you feel a sustained surge for at least three seconds then resume your turn, or if you don’t feel a surge then resume the turn after 10 seconds.
+7. If you’ve turned the ‘wrong’ way you’ll get that horrible sinking feeling. Continue the turn through ¾ of a turn (270o ) relative to your original heading and then straighten out. This is shown on the diagram in pink. Depending on how far away from the core you were when you turned you will need to fly straight for between 3 and at most 10 seconds to move the circle significantly across the thermal. If you feel a sustained surge for at least three seconds then resume your turn, or if you don’t feel a surge then resume the turn after 10 seconds.
 
 8. Re-trim to thermalling speed.
 
@@ -155,6 +143,4 @@ Use these questions to test your knowledge of the unit.
 
 4. How do you know when to turn?
 
-5. If you’ve turned away from the core, what angle should you turn through before flying straight
-
-and how do you know when to resume the turn?
+5. If you’ve turned away from the core, what angle should you turn through before flying straight and how do you know when to resume the turn?

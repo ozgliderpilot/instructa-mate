@@ -139,13 +139,9 @@ Trainer demonstrates:
 
 Notes:
 
-1. Trainer is responsible for maintaining safe flight. The student will lose concentration
+1. Trainer is responsible for maintaining safe flight. The student will lose concentration on lookout so the trainer needs to be responsible for effective lookout. As the glider settles at each new speed the trainer should comment that we need to look out for others when we are flying and direct the student to look in the appropriate direction
 
-on lookout so the trainer needs to be responsible for effective lookout. As the glider settles at each new speed the trainer should comment that we need to look out for others when we are flying and direct the student to look in the appropriate direction
-
-2. Some students don’t feel the pressure on the stick very well, so encourage them to
-
-relax their grip and identify which way the stick is trying to move. The more they relax the easier it is to trim the glider.
+2. Some students don’t feel the pressure on the stick very well, so encourage them to relax their grip and identify which way the stick is trying to move. The more they relax the easier it is to trim the glider.
 
 ### Flying straight
 
@@ -172,21 +168,13 @@ Notes:
 
 1. Always start and finish at the stable platform.
 
-2. If the ability to fly straight is not properly developed early on, other problems may arise later
+2. If the ability to fly straight is not properly developed early on, other problems may arise later on. For example, the trainee will fly towards a ground feature, but in a gentle sideslip.
 
-on. For example, the trainee will fly towards a ground feature, but in a gentle sideslip.
+3. Later exercises, such as learning to aerotow and the approach and landing, cannot be taught or learnt successfully if the trainee cannot maintain a reasonably consistent, wings level heading.
 
-3. Later exercises, such as learning to aerotow and the approach and landing, cannot be taught
+4. Encourage trainees to hold the stick lightly between thumb and fingers rather than with a strong, white-knuckled grip. A tense trainee won’t learn very much, while a relaxed one is more likely to feel and be sensitive to what the glider is doing. Being relaxed (relatively speaking), trainees are also more likely to respond to your advice.
 
-or learnt successfully if the trainee cannot maintain a reasonably consistent, wings level heading.
-
-4. Encourage trainees to hold the stick lightly between thumb and fingers rather than with a
-
-strong, white-knuckled grip. A tense trainee won’t learn very much, while a relaxed one is more likely to feel and be sensitive to what the glider is doing. Being relaxed (relatively speaking), trainees are also more likely to respond to your advice.
-
-5. Anyone learning a new and unusual skill will be unaware of most, if not all of the important
-
-clues needed to do the thing correctly, and it requires some subtle skills and perceptions to be able to fly well. They take time to develop. Their lack is characterised by the trainee making corrections long after the trainer has noticed things are going awry. Initially, you can only help by prompting. As the trainee’s flying improves, you can help the trainee develop and hone their skills further by requiring greater degrees of accuracy.
+5. Anyone learning a new and unusual skill will be unaware of most, if not all of the important clues needed to do the thing correctly, and it requires some subtle skills and perceptions to be able to fly well. They take time to develop. Their lack is characterised by the trainee making corrections long after the trainer has noticed things are going awry. Initially, you can only help by prompting. As the trainee’s flying improves, you can help the trainee develop and hone their skills further by requiring greater degrees of accuracy.
 
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->

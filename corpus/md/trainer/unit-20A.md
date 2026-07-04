@@ -233,13 +233,9 @@ There are no complementary units for this GPC Unit
 
 Notes:
 
-1. Don’t dramatise exercises; adopt a matter of fact approach to reassure the student and to instil
+1. Don’t dramatise exercises; adopt a matter of fact approach to reassure the student and to instil confidence.
 
-confidence.
-
-2. Students can practice calling out actions sitting in a parked glider responding to trainer calls
-
-locating, identifying and operating controls.
+2. Students can practice calling out actions sitting in a parked glider responding to trainer calls locating, identifying and operating controls.
 
 3. Don’t practice low level rope break exercises in busy circuit traffic sequences.
 
@@ -247,9 +243,7 @@ locating, identifying and operating controls.
 
 5. Remember to brief tug pilot and ground crew fully prior to practicing emergencies.
 
-6. Don’t organize practice rudder waggles below circuit height as student may misread the signal
-
-and release the rope.
+6. Don’t organize practice rudder waggles below circuit height as student may misread the signal and release the rope.
 
 ## COMMON PROBLEMS
 <!-- content_type: common_problems -->

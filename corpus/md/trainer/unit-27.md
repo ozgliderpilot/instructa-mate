@@ -179,7 +179,7 @@ Ensure that the student is competent in performing the high and low tow position
 
 Brief the Tug Pilot prior to take-off and advise by radio prior to commencing the manoeuvre.
 
-- A suggested phraseology is: ‘Tango Uniform Golf, Glider Xray Yankee Zulu boxing  the slipstream’.
+- A suggested phraseology is: ‘Tango Uniform Golf, Glider Xray Yankee Zulu boxing the slipstream’.
 - Ensure you get an acknowledgement from the tug pilot.
 
 Instructor demonstrates the procedure, with emphasis on pace of the different legs of the box, and smooth use of controls.

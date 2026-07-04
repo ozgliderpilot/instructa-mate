@@ -224,9 +224,7 @@ Specific training advice for this unit is:
 
 Note:
 
-1. Although controlling the glider laterally by using the ailerons is not difficult, confusion
-
-may result if it is not demonstrated to the student that the glider will stay at any bank angle it is taken to if the stick is centralised after the desired bank is obtained. Do not over-complicate matters - simply teach the truth.
+1. Although controlling the glider laterally by using the ailerons is not difficult, confusion may result if it is not demonstrated to the student that the glider will stay at any bank angle it is taken to if the stick is centralised after the desired bank is obtained. Do not over-complicate matters - simply teach the truth.
 
 - Demonstrate to the right and left as many times as needed for the student.
 - Demonstrate a fast roll rate and slow roll rate by larger and small control movement.

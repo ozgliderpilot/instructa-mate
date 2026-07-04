@@ -159,21 +159,15 @@ Student practices (under supervision):
 
 ### Notes:
 
-1. Ensure that the student has been given a thorough brief on the key messages prior to
+1. Ensure that the student has been given a thorough brief on the key messages prior to attempting to operate the VHF radio.
 
-attempting to operate the VHF radio.
-
-2. Ensure that the student is competent to set-up and operate all the radio controls prior to their
-
-first operation especially:
+2. Ensure that the student is competent to set-up and operate all the radio controls prior to their first operation especially:
 
 a. Correctly setting the volume and squelch levels.
 
 b. Correctly setting and changing the desired active frequency.
 
-3. Ensure that all parts of this unit are fulfilled, and the logbook endorsement has been entered
-
-before approving a first solo.
+3. Ensure that all parts of this unit are fulfilled, and the logbook endorsement has been entered before approving a first solo.
 
 <!-- page: 21-7 -->
 

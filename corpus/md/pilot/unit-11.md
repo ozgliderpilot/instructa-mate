@@ -78,9 +78,7 @@ Review the flight. What did you enjoy most about it? What else do you want to do
 
 ### Speed varying in turns
 
-1. Flying using airspeed indicator instead of nose
-
-attitude relative to the horizon
+1. Flying using airspeed indicator instead of nose attitude relative to the horizon
 
 2. Not trimmed correctly
 
