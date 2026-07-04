@@ -3,7 +3,7 @@
 > A grounded, citation-safe AI co-pilot for gliding instructors.
 
 ![Python](https://img.shields.io/badge/python-3.12+-blue)
-![Status](https://img.shields.io/badge/status-stage%201%20of%204%20built-orange)
+![Status](https://img.shields.io/badge/status-stage%202%20of%204%20built-orange)
 ![Scope](https://img.shields.io/badge/scope-proof%20of%20concept-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
