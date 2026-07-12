@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import os
 import time
+from collections.abc import Callable
 from pathlib import Path
 from typing import Literal
 
@@ -38,7 +39,7 @@ class _FixedQueryEmbedder:
         self._vector = vector
 
     def embed_query(self, text: str) -> list[float]:
-        _ = text
+        del text
         return self._vector
 
 
@@ -80,59 +81,32 @@ def _wait_until_search_indexes_ready(
     raise AssertionError(f"search indexes not ready: {sorted(pending)}")
 
 
-def _poll_retrieve(
+def _wait_until_hits(
     query: str,
     collection,
     embedder,
     *,
     fusion: Literal["vector", "hybrid"],
+    predicate: Callable[[list[ParentHit]], bool],
     attempts: int = 30,
 ) -> list[ParentHit]:
-    """Call retrieve_parents, retrying while a search index is still syncing."""
+    """Poll retrieve_parents until predicate matches (flat retry budget)."""
     hits: list[ParentHit] = []
     for _ in range(attempts):
         try:
-            return retrieve_parents(query, collection, embedder, fusion=fusion)
+            hits = retrieve_parents(query, collection, embedder, fusion=fusion)
         except OperationFailure as exc:
             message = str(exc)
             if "INITIAL_SYNC" not in message and "BUILDING" not in message:
                 raise
             time.sleep(2)
-    return hits
-
-
-def _wait_until_parent(
-    query: str,
-    collection,
-    embedder,
-    *,
-    fusion: Literal["vector", "hybrid"],
-    parent_id: str,
-) -> list[ParentHit]:
-    hits: list[ParentHit] = []
-    for _ in range(30):
-        hits = _poll_retrieve(query, collection, embedder, fusion=fusion)
-        if any(hit.id == parent_id for hit in hits):
+            continue
+        if predicate(hits):
             return hits
         time.sleep(2)
-    return hits
-
-
-def _wait_until_text_match(
-    query: str,
-    collection,
-    embedder,
-    *,
-    fusion: Literal["vector", "hybrid"],
-    needle: str,
-) -> list[ParentHit]:
-    hits: list[ParentHit] = []
-    for _ in range(30):
-        hits = _poll_retrieve(query, collection, embedder, fusion=fusion)
-        if any(needle in hit.text for hit in hits):
-            return hits
-        time.sleep(2)
-    return hits
+    raise AssertionError(
+        f"retrieve_parents({fusion!r}) never satisfied predicate; last={[h.id for h in hits]}"
+    )
 
 
 def test_vector_retrieve_expands_to_sensible_unit5_parent():
@@ -143,19 +117,15 @@ def test_vector_retrieve_expands_to_sensible_unit5_parent():
     _ensure_corpus(collection, voyage)
 
     embedder = _FixedQueryEmbedder(voyage.embed_query(SMOKE_QUERY))
-    hits = _wait_until_parent(
+    hits = _wait_until_hits(
         SMOKE_QUERY,
         collection,
         embedder,
         fusion="vector",
-        parent_id=SMOKE_PARENT_ID,
+        predicate=lambda hs: any(hit.id == SMOKE_PARENT_ID for hit in hs),
     )
 
-    assert hits, "retrieve_parents returned no parents"
     assert len(hits) <= 5
-    assert any(hit.id == SMOKE_PARENT_ID for hit in hits), (
-        f"{SMOKE_PARENT_ID} not in parent hits: {[h.id for h in hits]}"
-    )
     key_messages = next(hit for hit in hits if hit.id == SMOKE_PARENT_ID)
     assert key_messages.source == "trainer"
     assert key_messages.unit == "5"
@@ -173,30 +143,23 @@ def test_hybrid_jargon_query_surfaces_fust_parent():
     _ensure_corpus(collection, voyage)
 
     embedder = _FixedQueryEmbedder(voyage.embed_query(JARGON_QUERY))
-    hybrid_hits = _wait_until_text_match(
-        JARGON_QUERY, collection, embedder, fusion="hybrid", needle="FUST"
+    hybrid_hits = _wait_until_hits(
+        JARGON_QUERY,
+        collection,
+        embedder,
+        fusion="hybrid",
+        predicate=lambda hs: any("FUST" in hit.text for hit in hs),
     )
-    vector_hits = _poll_retrieve(
+    vector_hits = retrieve_parents(
         JARGON_QUERY, collection, embedder, fusion="vector"
     )
 
-    assert hybrid_hits, "hybrid retrieve_parents returned no parents"
     assert len(hybrid_hits) <= 5
     fust_hits = [hit for hit in hybrid_hits if "FUST" in hit.text]
-    assert fust_hits, (
-        "hybrid path should return a parent mentioning FUST; "
-        f"got {[h.id for h in hybrid_hits]}"
-    )
+    assert fust_hits, f"got {[h.id for h in hybrid_hits]}"
+
     vector_fust = [hit for hit in vector_hits if "FUST" in hit.text]
-    # Prefer hybrid when vector-only misses the jargon token entirely.
-    if not vector_fust:
-        assert fust_hits
-    else:
-        # Both channels hit: hybrid should not bury FUST below vector's best rank.
-        hybrid_rank = next(
-            i for i, hit in enumerate(hybrid_hits) if "FUST" in hit.text
-        )
-        vector_rank = next(
-            i for i, hit in enumerate(vector_hits) if "FUST" in hit.text
-        )
+    if vector_fust:
+        hybrid_rank = next(i for i, hit in enumerate(hybrid_hits) if "FUST" in hit.text)
+        vector_rank = next(i for i, hit in enumerate(vector_hits) if "FUST" in hit.text)
         assert hybrid_rank <= vector_rank

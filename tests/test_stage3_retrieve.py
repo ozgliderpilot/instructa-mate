@@ -34,7 +34,7 @@ def test_expand_to_unique_parents_preserves_best_child_order_and_dedupes():
 
 class FakeQueryEmbedder:
     def embed_query(self, text: str) -> list[float]:
-        _ = text
+        del text
         return [0.1, 0.2, 0.3]
 
 

@@ -44,6 +44,8 @@ _PARENT_PROJECTION = {
     "content_type": 1,
 }
 
+_CHILD_HIT_PROJECT = {"$project": {"_id": 1, "parent_id": 1}}
+
 
 class QueryEmbedder(Protocol):
     """Thin port over Voyage (or a fake) — embed a retrieval query."""
@@ -91,7 +93,7 @@ def retrieve_parents(
     if fusion == "hybrid":
         pipeline = _hybrid_child_pipeline(query, query_vector, n)
     else:
-        pipeline = _vector_child_pipeline(query_vector, n)
+        pipeline = [_vector_search_stage(query_vector, n), _CHILD_HIT_PROJECT]
 
     child_hits = list(collection.aggregate(pipeline))
     parent_ids = expand_to_unique_parents(child_hits)
@@ -122,13 +124,6 @@ def retrieve_parents(
             )
         )
     return hits
-
-
-def _vector_child_pipeline(query_vector: list[float], n: int) -> list[dict[str, Any]]:
-    return [
-        _vector_search_stage(query_vector, n),
-        {"$project": {"_id": 1, "parent_id": 1}},
-    ]
 
 
 def _hybrid_child_pipeline(
@@ -179,7 +174,7 @@ def _hybrid_child_pipeline(
             }
         },
         {"$limit": n},
-        {"$project": {"_id": 1, "parent_id": 1}},
+        _CHILD_HIT_PROJECT,
     ]
 
 

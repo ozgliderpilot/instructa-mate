@@ -205,66 +205,80 @@ def apply_sync(
 
 
 def load_vector_index_definition() -> dict[str, Any]:
-    """Load the committed ``chunks_vector`` field definition (not the wrapper)."""
-    package = resources.files("instructamate") / "data" / "chunks_vector.json"
-    payload = json.loads(package.read_text(encoding="utf-8"))
-    return payload["definition"]
+    """Load the committed ``chunks_vector`` definition body."""
+    return _load_index_definition("chunks_vector.json")
 
 
 def load_search_index_definition() -> dict[str, Any]:
-    """Load the committed ``chunks_search`` definition (not the wrapper)."""
-    package = resources.files("instructamate") / "data" / "chunks_search.json"
-    payload = json.loads(package.read_text(encoding="utf-8"))
-    return payload["definition"]
+    """Load the committed ``chunks_search`` definition body."""
+    return _load_index_definition("chunks_search.json")
 
 
 def ensure_vector_index(collection: Any) -> None:
     """Create ``chunks_vector`` if missing; fail loud if an existing index differs."""
-    from pymongo.operations import SearchIndexModel
-
-    _ensure_collection_exists(collection)
-    expected = load_vector_index_definition()
-    existing = _find_search_index(collection, VECTOR_INDEX_NAME)
-
-    if existing is None:
-        model = SearchIndexModel(
-            definition=expected,
-            name=VECTOR_INDEX_NAME,
-            type="vectorSearch",
-        )
-        collection.create_search_index(model=model)
-        return
-
-    actual = existing.get("latestDefinition") or existing.get("definition") or {}
-    if not _vector_definitions_compatible(expected, actual):
-        raise ValueError(
-            f"vector search index {VECTOR_INDEX_NAME!r} exists but is incompatible "
-            f"with the committed definition"
-        )
+    _ensure_index(
+        collection,
+        name=VECTOR_INDEX_NAME,
+        index_type="vectorSearch",
+        expected=load_vector_index_definition(),
+        compatible=_vector_definitions_compatible,
+        label="vector search index",
+    )
 
 
 def ensure_search_index(collection: Any) -> None:
     """Create ``chunks_search`` if missing; fail loud if an existing index differs."""
+    _ensure_index(
+        collection,
+        name=SEARCH_INDEX_NAME,
+        index_type="search",
+        expected=load_search_index_definition(),
+        compatible=_search_definitions_compatible,
+        label="search index",
+    )
+
+
+def _load_index_definition(filename: str) -> dict[str, Any]:
+    package = resources.files("instructamate") / "data" / filename
+    payload = json.loads(package.read_text(encoding="utf-8"))
+    return payload["definition"]
+
+
+def _ensure_index(
+    collection: Any,
+    *,
+    name: str,
+    index_type: str,
+    expected: dict[str, Any],
+    compatible: Any,
+    label: str,
+) -> None:
     from pymongo.operations import SearchIndexModel
 
     _ensure_collection_exists(collection)
-    expected = load_search_index_definition()
-    existing = _find_search_index(collection, SEARCH_INDEX_NAME)
+    existing = _find_search_index(collection, name)
 
     if existing is None:
-        model = SearchIndexModel(
-            definition=expected,
-            name=SEARCH_INDEX_NAME,
-            type="search",
+        collection.create_search_index(
+            model=SearchIndexModel(
+                definition=expected,
+                name=name,
+                type=index_type,
+            )
         )
-        collection.create_search_index(model=model)
         return
 
-    actual = existing.get("latestDefinition") or existing.get("definition") or {}
-    if not _search_definitions_compatible(expected, actual):
+    if "latestDefinition" in existing:
+        actual = existing["latestDefinition"]
+    elif "definition" in existing:
+        actual = existing["definition"]
+    else:
         raise ValueError(
-            f"search index {SEARCH_INDEX_NAME!r} exists but is incompatible "
-            f"with the committed definition"
+            f"{label} {name!r} exists but has no definition to compare"
+        )
+    if not compatible(expected, actual):
+        raise ValueError(
+            f"{label} {name!r} exists but is incompatible with the committed definition"
         )
 
 
