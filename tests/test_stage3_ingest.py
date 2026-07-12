@@ -386,3 +386,26 @@ revision: "1.0"
     assert "trainer:5:key-messages:c1" in coll.docs
     assert "embedding" in coll.docs["trainer:5:key-messages:c1"]
     assert "embedding" not in coll.docs["trainer:5:key-messages"]
+
+
+def test_ingest_corpus_refuses_empty_tree_instead_of_deleting_index(tmp_path):
+    from instructamate.stage3_ingest import ingest_corpus
+
+    parent = _parent()
+    coll = IndexAwareCollection(
+        docs={parent.id: chunk_record_to_document(parent)},
+        indexes=[
+            {
+                "name": VECTOR_INDEX_NAME,
+                "type": "vectorSearch",
+                "latestDefinition": load_vector_index_definition(),
+            }
+        ],
+    )
+    empty_root = tmp_path / "missing-md"
+    empty_root.mkdir()
+
+    with pytest.raises(ValueError, match="empty corpus|no unit-"):
+        ingest_corpus(empty_root, collection=coll, embedder=FakeEmbedder())
+
+    assert parent.id in coll.docs

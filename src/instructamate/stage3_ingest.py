@@ -277,10 +277,19 @@ def ingest_corpus(
     collection: Any,
     embedder: Embedder,
 ) -> SyncReport:
-    """Chunk ``corpus/md``, reconcile via Sync Plan, embed children, write Atlas."""
+    """Chunk ``corpus/md``, reconcile via Sync Plan, embed children, write Atlas.
+
+    Refuses when the Markdown tree yields no chunks: an empty corpus would make
+    Sync Plan classify every indexed id as deleted and wipe the collection.
+    """
     from instructamate.stage2_chunker import chunk_corpus, plan_sync
 
     ensure_vector_index(collection)
     records = chunk_corpus(md_root)
+    if not records:
+        raise ValueError(
+            f"refusing to sync: empty corpus under {Path(md_root)} "
+            f"(no unit-*.md); would delete every indexed chunk"
+        )
     plan = plan_sync(records, fetch_indexed_hashes(collection))
     return apply_sync(records, plan, collection=collection, embedder=embedder)
