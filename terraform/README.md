@@ -9,17 +9,20 @@ from `src/instructamate/data/chunks_vector.json`.
 ## Prerequisites
 
 - Existing Atlas project (org/project are out of scope)
-- Atlas API keys as env vars: `MONGODB_ATLAS_PUBLIC_KEY` / `MONGODB_ATLAS_PRIVATE_KEY`
+- Repo `.env` with:
+  - `MONGODB_ATLAS_PUBLIC_KEY` / `MONGODB_ATLAS_PRIVATE_KEY`
+  - `MONGODB_PROJECT_ID` (existing Atlas project id)
 - Terraform >= 1.5
+
+No `terraform.tfvars` — `./tf.sh` maps `MONGODB_PROJECT_ID` → `TF_VAR_project_id`.
 
 ## Usage
 
 ```bash
 cd terraform
-cp terraform.tfvars.example terraform.tfvars   # set project_id
-terraform init
-terraform apply
-terraform output -raw mongodb_uri   # → MONGODB_URI
+./tf.sh init
+./tf.sh apply
+./tf.sh output -raw mongodb_uri   # → MONGODB_URI in .env
 ```
 
 Also set `VOYAGE_API_KEY` for explicit `voyage-4-lite` embeddings.

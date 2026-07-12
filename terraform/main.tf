@@ -23,7 +23,7 @@ provider "mongodbatlas" {
 
 variable "project_id" {
   type        = string
-  description = "Existing Atlas project ID (not created by this module)."
+  description = "Existing Atlas project ID. Set via TF_VAR_project_id (./tf.sh maps MONGODB_PROJECT_ID from repo .env)."
 }
 
 variable "cluster_name" {
