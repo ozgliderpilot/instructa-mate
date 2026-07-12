@@ -66,8 +66,8 @@ truth** that every downstream citation is audited against.
                │
                ▼
 ┌─────────────────────────────┐
-│ Stage 3 · Retrieval      ◻  │  hybrid vector + full-text → RRF → rerank
-│   over MongoDB Atlas        │
+│ Stage 3 · Retrieval      ◻  │  $rankFusion on children → expand parents
+│   over MongoDB Atlas        │  → rerank parents (ADR 0005)
 └──────────────┬──────────────┘
                │
                ▼
@@ -126,10 +126,11 @@ Markdown actually changed.
 
 ### Stage 3 · Retrieval — **designed**
 
-Hybrid search over **MongoDB Atlas** (Vector Search + Atlas Search full-text), fused with
-reciprocal-rank fusion, then reranked. The plan is to build it incrementally and measure
-the ablation curve (vector-only → +full-text → +rerank → +contextual-retrieval) so each
-component has to earn its place.
+Hybrid search over **MongoDB Atlas** (Vector Search + Atlas Search full-text): fuse
+**children** with server-side `$rankFusion` (MongoDB 8.0+), expand to unique **parents**,
+then rerank parents (`rerank-2.5`) and pass top **P=5** to the LLM (ADR 0005). Build
+incrementally and measure the ablation curve (vector-only → +full-text fusion → +parent
+rerank → +contextual-retrieval) so each component earns its place.
 
 ### Stage 4 · Generation — **designed**
 
@@ -160,6 +161,11 @@ The reasoning behind the load-bearing choices lives in short ADRs:
   **pdfplumber** for table ruling, **no LLM table-fallback**. Settled by a head-to-head
   bake-off on the corpus's worst pages (PyMuPDF read them with zero replacement glyphs and
   zero split words, so the planned de-ligature pass became unnecessary).
+- **[ADR 0004](docs/adr/0004-structural-chunk-identity.md)** — Structural **Chunk IDs** +
+  content-hash change detection; Sync Plan reconciles against the index (no git-diff parsing).
+- **[ADR 0005](docs/adr/0005-hybrid-retrieval-fuse-children-rerank-parents.md)** — Stage 3
+  hybrid retrieval: server-side `$rankFusion` on children, expand to parents, then rerank
+  parents (`rerank-2.5`).
 
 ---
 
@@ -220,7 +226,8 @@ defered-grill.md                     designed-but-unbuilt decisions (stages 2–
       structural ambiguity; generalises across Trainer/Pilot, variant-split Units, and GPC.
 - [ ] **Stage 2 — Chunking**: chunk schema, stable IDs + content hashes, MD-diff-driven
       re-embedding.
-- [ ] **Stage 3 — Retrieval**: Atlas hybrid search, RRF, rerank; measured ablation curve.
+- [ ] **Stage 3 — Retrieval**: `$rankFusion` on children → expand parents → rerank
+      parents (ADR 0005); measured ablation curve.
 - [ ] **Stage 4 — Generation**: refuse-or-cite Q&A and Generated Patter, with a
       claim-grounding check.
 - [ ] **Eval harness**: two-tier (automated `recall@k`/refusal + LLM-as-judge faithfulness,

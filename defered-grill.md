@@ -15,21 +15,21 @@ for Unit 5; Generated Patter = grounded restyling option B, no new facts (ADR 00
 deterministic verbatim parser → Markdown intermediate (ADR 0002) → paragraph-child / leaf-section-
 parent chunks, reference_patter isolated; content_type = 11-value taxonomy; embedding text = (b)
 deterministic context-prefix, with (c) LLM contextual-retrieval as an eval-gated upgrade.
+Chunk identity = structural Chunk IDs + content-hash change detection via Sync Plan (ADR 0004;
+stage 2 built). Stage 3 hybrid retrieval (ADR 0005): server-side `$rankFusion` on Atlas MongoDB
+8.0+; fuse **children** then expand/dedupe **parents** then rerank parents (`rerank-2.5`);
+starting top-k **N=20 / keep 20 / P=5** (eval-tunable); embed with `voyage-4-lite` (escalate to
+`voyage-4-large` only on recall gaps). Ablation curve still measured
+(vector-only → +full-text `$rankFusion` → +parent rerank → +contextual-retrieval).
 
 ## Deferred items
 
-### 1. Chunk identity & change-detection — *settle FIRST, before the chunker*
-Stable chunk IDs + content hashes so "re-ingest from my machine" re-embeds only what changed. Has a
-chunk-**schema** implication (id + hash fields). Does not touch the parser. **Open:** ID scheme
-(stable across re-parses?), hashing granularity (child vs parent), how MD-diff drives re-embedding.
+### 1. Chunk identity & change-detection — ✅ settled (ADR 0004)
+Stable chunk IDs + content hashes; Sync Plan reconciles against the index. Built in stage 2.
 
-### 2. Retrieval pipeline (stage 3)
-**Leaning:** build **incrementally and measure the ablation curve** (vector-only → +full-text RRF →
-+rerank → +contextual-retrieval), because aspect #1's value is seeing each component earn its keep.
-**Open:** `$rankFusion` server-side vs app-side RRF (**verify Atlas/MongoDB 8.1 `$rankFusion`
-availability**); top-k at each stage (retrieve N, fuse, rerank to M, expand to parents, pass P to
-LLM); reranker = Voyage rerank (**verify model id** — handover says "Voyage reranker"; known lineup
-`rerank-2.5`). Depends on eval harness (#5) existing.
+### 2. Retrieval pipeline (stage 3) — ✅ settled (ADR 0005)
+Build incrementally and measure the ablation curve. Open work is **implementation + eval**, not
+design. Depends on eval harness (#5) existing to score each ablation step.
 
 ### 3. Grounded generation + citation verification (Q&A path, stage 3)
 Refuse-or-cite contract. **Must emit a structured refusal signal** (e.g. `grounded:false` / canonical
@@ -78,11 +78,12 @@ concrete (e.g. "would brief a student with minor edits" vs "wrong/dangerous"). *
 dimensions (coverage, ordering/pedagogy, style match, factual grounding), scoring scale.
 
 ### 7. Atlas setup specifics
-Cluster tier in **ap-southeast-2 (Sydney)**; Vector Search index (dims/similarity; filter fields
-`source`,`unit`,`content_type`); Atlas Search (full-text) analyzer tuned to keep jargon tokens
-(`FUST`, `CHAOTIC`, exercise names/numbers) intact. **Verify Voyage embedding model id** — handover
-says `voyage-4-lite`/`voyage-4-large`; known lineup is `voyage-3.5`/`voyage-3-large`. Doesn't change
-design, only config.
+Cluster in **ap-southeast-2 (Sydney)**, MongoDB **8.0+** (required for `$rankFusion`). Vector
+Search index (dims/similarity; filter fields `source`,`unit`,`content_type`); Atlas Search
+(full-text) analyzer tuned to keep jargon tokens (`FUST`, `CHAOTIC`, exercise names/numbers)
+intact. **Voyage IDs locked:** embed `voyage-4-lite` (default) / `voyage-4-large` (escalation);
+rerank `rerank-2.5`. Remaining open is ops config only (cluster tier, exact index JSON, analyzer
+name) — not model choice.
 
 ### 8. Update-from-machine workflow
 Re-parse → `git diff` the MD → re-embed only changed chunks. Depends on #1 (chunk identity).
