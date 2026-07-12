@@ -84,9 +84,10 @@ Terraform provisions Flex cluster + DB user against an **existing** Atlas projec
 `instructamate.chunks` (`_id` = Chunk ID, `kind` discriminator). Explicit `voyage-4-lite` embeds
 (`input_type=document`, `VOYAGE_API_KEY`) — not Atlas Automated Embedding. Vector Search index
 `chunks_vector`: path `embedding`, 1024-d cosine, filter fields `source`,`unit`,`content_type`,`kind`;
-**code-ensure** from committed index JSON (not Terraform). **Still open for #36:** Atlas Search
-(full-text) analyzer name/tuning so jargon tokens (`FUST`, `CHAOTIC`, exercise names/numbers) stay
-intact. Rerank remains `rerank-2.5`.
+**code-ensure** from committed index JSON (not Terraform). Atlas Search index `chunks_search`:
+child `text` via custom `jargon_text` analyzer (standard tokenizer + lowercase only — no stemming,
+so jargon tokens like `FUST` / `CHAOTIC` stay intact); `kind` / `content_type` as `token` for
+filters; **code-ensure** from committed JSON. Rerank remains `rerank-2.5`.
 
 ### 8. Update-from-machine workflow
 Sync Plan (ADR 0004) is the reconciliation; git diff of Markdown is human audit only.

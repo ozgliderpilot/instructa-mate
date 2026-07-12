@@ -12,11 +12,13 @@ import pytest
 from instructamate.stage2_chunker import ChunkRecord, SyncPlan, plan_sync
 from instructamate.stage3_ingest import (
     EMBEDDING_DIMS,
+    SEARCH_INDEX_NAME,
     SyncReport,
     VECTOR_INDEX_NAME,
     apply_sync,
     chunk_record_to_document,
     fetch_indexed_hashes,
+    load_search_index_definition,
     load_vector_index_definition,
 )
 
@@ -318,6 +320,58 @@ def test_ensure_vector_index_fails_loud_on_incompatible_existing():
         )
 
 
+def test_ensure_search_index_creates_when_missing():
+    from instructamate.stage3_ingest import ensure_search_index
+
+    coll = IndexAwareCollection()
+    definition = load_search_index_definition()
+
+    ensure_search_index(coll)
+
+    assert len(coll.created) == 1
+    assert coll.created[0]["name"] == SEARCH_INDEX_NAME
+    assert coll.created[0]["type"] == "search"
+    assert coll.created[0]["definition"] == definition
+    assert definition["mappings"]["fields"]["text"]["analyzer"] == "jargon_text"
+
+
+def test_ensure_search_index_is_noop_when_compatible():
+    from instructamate.stage3_ingest import ensure_search_index
+
+    definition = load_search_index_definition()
+    ensure_search_index(
+        IndexAwareCollection(
+            indexes=[
+                {
+                    "name": SEARCH_INDEX_NAME,
+                    "type": "search",
+                    "latestDefinition": definition,
+                }
+            ],
+            forbid_create=True,
+        )
+    )
+
+
+def test_ensure_search_index_fails_loud_on_incompatible_existing():
+    from instructamate.stage3_ingest import ensure_search_index
+
+    with pytest.raises(ValueError, match="incompatible"):
+        ensure_search_index(
+            IndexAwareCollection(
+                indexes=[
+                    {
+                        "name": SEARCH_INDEX_NAME,
+                        "type": "search",
+                        "latestDefinition": {
+                            "mappings": {"dynamic": True},
+                        },
+                    }
+                ]
+            )
+        )
+
+
 def test_voyage_embedder_batches_and_sets_document_input_type():
     from instructamate.stage3_ingest import VoyageEmbedder
 
@@ -386,6 +440,7 @@ revision: "1.0"
     assert "trainer:5:key-messages:c1" in coll.docs
     assert "embedding" in coll.docs["trainer:5:key-messages:c1"]
     assert "embedding" not in coll.docs["trainer:5:key-messages"]
+    assert any(doc["name"] == SEARCH_INDEX_NAME for doc in coll.created)
 
 
 def test_ingest_corpus_refuses_empty_tree_instead_of_deleting_index(tmp_path):
