@@ -66,8 +66,8 @@ truth** that every downstream citation is audited against.
                │
                ▼
 ┌─────────────────────────────┐
-│ Stage 3 · Retrieval      ◻  │  $rankFusion on children → expand parents
-│   over MongoDB Atlas        │  → rerank parents (ADR 0005)
+│ Stage 3 · Retrieval      ◻  │  Ingest ✅ · $rankFusion / rerank still ◻
+│   over MongoDB Atlas        │  (ADR 0005)
 └──────────────┬──────────────┘
                │
                ▼
@@ -116,21 +116,24 @@ rule holds throughout: the parser adds structure and repairs extraction artefact
 (ligatures, stray bullets), but never changes the source words. *"Verbatim" means faithful
 to what the page says — not byte-identical to a broken extraction.*
 
-### Stage 2 · Chunking — **designed**
+### Stage 2 · Chunking — **built**
 
 Derives chunk records from the verified Markdown (never from the PDF directly):
 leaf-section *parent* chunks with paragraph *child* chunks, `reference_patter` isolated as
-its own chunk so it's never blended into generated text. Open design work: stable chunk
-IDs + content hashes so "re-ingest from my machine" re-embeds only what a `git diff` of the
-Markdown actually changed.
+its own chunk. Structural Chunk IDs + content hashes drive a Sync Plan so re-ingest
+re-embeds only what changed (ADR 0004).
 
-### Stage 3 · Retrieval — **designed**
+### Stage 3 · Retrieval — **ingest built; query path designed**
 
-Hybrid search over **MongoDB Atlas** (Vector Search + Atlas Search full-text): fuse
-**children** with server-side `$rankFusion` (MongoDB 8.0+), expand to unique **parents**,
-then rerank parents (`rerank-2.5`) and pass top **P=5** to the LLM (ADR 0005). Build
-incrementally and measure the ablation curve (vector-only → +full-text fusion → +parent
-rerank → +contextual-retrieval) so each component earns its place.
+**Ingest (#34):** Terraform provisions Atlas Flex (`AP_SOUTHEAST_2`); runtime Sync Plan
+embeds children with explicit `voyage-4-lite` (`input_type=document`) into
+`instructamate.chunks` and code-ensures Vector Search index `chunks_vector`. See
+[`terraform/README.md`](terraform/README.md).
+
+**Query path (still designed):** hybrid search fuse **children** with server-side
+`$rankFusion` (MongoDB 8.0+), expand to unique **parents**, then rerank parents
+(`rerank-2.5`) and pass top **P=5** to the LLM (ADR 0005). Build incrementally and
+measure the ablation curve.
 
 ### Stage 4 · Generation — **designed**
 
@@ -169,7 +172,7 @@ The reasoning behind the load-bearing choices lives in short ADRs:
 
 ---
 
-## Running stage 1
+## Running stage 1–3 (library)
 
 Requires Python 3.12+.
 
@@ -180,7 +183,8 @@ pytest
 
 The real GFA PDFs are **not committed** (third-party copyright — see below), so they live
 in a gitignored `corpus/`. Tests that need them auto-skip, so a fresh checkout runs green
-without them.
+without them. Atlas/Voyage live smoke also skips unless `MONGODB_URI` and
+`VOYAGE_API_KEY` are set.
 
 With the PDFs present, the parser's public API is three functions in
 `instructamate.stage1_parser`:
@@ -200,6 +204,18 @@ report = write_corpus({
 print(len(report.written), "written;", len(report.skipped), "skipped")
 ```
 
+```python
+import os
+from instructamate.stage3_ingest import VoyageEmbedder, chunks_collection, ingest_corpus
+
+report = ingest_corpus(
+    "corpus/md",
+    collection=chunks_collection(os.environ["MONGODB_URI"]),
+    embedder=VoyageEmbedder(),  # uses VOYAGE_API_KEY
+)
+print(report)
+```
+
 `render_unit_markdown` is the single seam; `write_unit_markdown` and `write_corpus` are
 thin batch wrappers. There is no CLI yet.
 
@@ -208,7 +224,11 @@ thin batch wrappers. There is no CLI yet.
 ## Repository layout
 
 ```
-src/instructamate/stage1_parser.py   the parser (the only built code)
+src/instructamate/stage1_parser.py   PDF → verified Markdown
+src/instructamate/stage2_chunker.py  Markdown → ChunkRecords + Sync Plan
+src/instructamate/stage3_ingest.py   Sync Plan → Voyage embed → Atlas chunks
+src/instructamate/data/chunks_vector.json  Vector Search index definition
+terraform/                           Atlas Flex cluster (existing project)
 corpus/                              GFA PDFs — gitignored (copyright)
 corpus/md/<source>/unit-NN.md        verified Markdown — the source of truth
 docs/adr/                            architecture decision records
@@ -224,10 +244,9 @@ defered-grill.md                     designed-but-unbuilt decisions (stages 2–
 
 - [x] **Stage 1 — Ingestion**: deterministic verbatim PDF → Markdown parser; fail-loud on
       structural ambiguity; generalises across Trainer/Pilot, variant-split Units, and GPC.
-- [ ] **Stage 2 — Chunking**: chunk schema, stable IDs + content hashes, MD-diff-driven
-      re-embedding.
-- [ ] **Stage 3 — Retrieval**: `$rankFusion` on children → expand parents → rerank
-      parents (ADR 0005); measured ablation curve.
+- [x] **Stage 2 — Chunking**: chunk schema, stable IDs + content hashes, Sync Plan.
+- [ ] **Stage 3 — Retrieval**: Atlas ingest ✅ (`voyage-4-lite` + `chunks_vector`); query
+      path still open — `$rankFusion` → expand parents → rerank (ADR 0005).
 - [ ] **Stage 4 — Generation**: refuse-or-cite Q&A and Generated Patter, with a
       claim-grounding check.
 - [ ] **Eval harness**: two-tier (automated `recall@k`/refusal + LLM-as-judge faithfulness,

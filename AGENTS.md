@@ -2,10 +2,11 @@
 
 ## Cursor Cloud specific instructions
 
-InstructaMate is a **single Python 3.12+ library** — a deterministic stage-1 parser that
-turns GFA guide PDFs into verified Markdown. There is **no server, daemon, CLI, or
-database**; the "application" is invoked as a Python function and validated with `pytest`.
-Standard build/test commands live in `README.md` (section "Running stage 1").
+InstructaMate is a **Python 3.12+ library** — a deterministic stage-1 parser that
+turns GFA guide PDFs into verified Markdown, a stage-2 chunker, and stage-3 Atlas
+ingest (explicit Voyage embeddings + Sync Plan). There is **no server, daemon, or
+CLI**; the library is invoked as Python functions and validated with `pytest`.
+Standard build/test commands live in `README.md` (section "Running stage 1–3").
 
 ### Environment
 - Dependencies are installed into a virtualenv at `.venv/` by the startup update script

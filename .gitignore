@@ -16,9 +16,18 @@ chunks.jsonl
 .env.*
 *.key
 
+# --- Terraform -----------------------------------------------------------
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/terraform.tfvars
+terraform/crash.log
+terraform/*.tfplan
+
 # --- Python --------------------------------------------------------------
 __pycache__/
 *.py[cod]
+*.egg-info/
 .venv/
 venv/
 .mypy_cache/

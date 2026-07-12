@@ -77,17 +77,22 @@ grounded content, score generated-vs-real (semantic similarity + SME). **SME rub
 concrete (e.g. "would brief a student with minor edits" vs "wrong/dangerous"). **Open:** rubric
 dimensions (coverage, ordering/pedagogy, style match, factual grounding), scoring scale.
 
-### 7. Atlas setup specifics
-Cluster in **ap-southeast-2 (Sydney)**, MongoDB **8.0+** (required for `$rankFusion`). Vector
-Search index (dims/similarity; filter fields `source`,`unit`,`content_type`); Atlas Search
-(full-text) analyzer tuned to keep jargon tokens (`FUST`, `CHAOTIC`, exercise names/numbers)
-intact. **Voyage IDs locked:** embed `voyage-4-lite` (default) / `voyage-4-large` (escalation);
-rerank `rerank-2.5`. Remaining open is ops config only (cluster tier, exact index JSON, analyzer
-name) — not model choice.
+### 7. Atlas setup specifics — ✅ settled for ingest (#34)
+Cluster: **Atlas Flex** in **ap-southeast-2 (Sydney)** (MongoDB ≥8.0; required for `$rankFusion`).
+Terraform provisions Flex cluster + DB user against an **existing** Atlas project; PoC IP access
+`0.0.0.0/0`; connection string via output → `MONGODB_URI`. Single DB/collection
+`instructamate.chunks` (`_id` = Chunk ID, `kind` discriminator). Explicit `voyage-4-lite` embeds
+(`input_type=document`, `VOYAGE_API_KEY`) — not Atlas Automated Embedding. Vector Search index
+`chunks_vector`: path `embedding`, 1024-d cosine, filter fields `source`,`unit`,`content_type`,`kind`;
+**code-ensure** from committed index JSON (not Terraform). **Still open for #36:** Atlas Search
+(full-text) analyzer name/tuning so jargon tokens (`FUST`, `CHAOTIC`, exercise names/numbers) stay
+intact. Rerank remains `rerank-2.5`.
 
 ### 8. Update-from-machine workflow
-Re-parse → `git diff` the MD → re-embed only changed chunks. Depends on #1 (chunk identity).
-**Open:** orchestration, idempotency, index/version tagging.
+Sync Plan (ADR 0004) is the reconciliation; git diff of Markdown is human audit only.
+**#34 implements:** `fetch_indexed_hashes` → `plan_sync` → `apply_sync` over the full committed
+`corpus/md/` tree (insert/update embed+upsert; delete by id). **Open beyond #34:** higher-level
+orchestration wrappers, index/version tagging for eval ablations.
 
 ## Suggested skills for the next agent
 - **`grilling`** — resume the relentless one-question-at-a-time interview on the above.
