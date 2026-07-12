@@ -59,7 +59,8 @@ _Avoid_: "updating the RAG"
 
 **Retrieval**:
 Finding the Chunks most relevant to a query (hybrid vector + full-text, fused, then reranked).
-Lives in the serving backend, not in Atlas.
+A query-time process orchestrated by the serving backend — not a stored artifact. Child Chunks
+are the search/fusion unit; Parent Chunks are what get reranked and passed to generation.
 
 **RAG**:
 The *technique* of grounding LLM generation in retrieved Chunks. Not a stored artifact — nothing
