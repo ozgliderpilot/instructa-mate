@@ -82,7 +82,7 @@ class VoyageEmbedder:
         if client is None:
             import voyageai
 
-            client = voyageai.Client(api_key=api_key) if api_key else voyageai.Client()
+            client = voyageai.Client(api_key=api_key)
         self._client = client
         self.model = model
         self.output_dimension = output_dimension
@@ -93,7 +93,7 @@ class VoyageEmbedder:
             return []
         embeddings: list[list[float]] = []
         for start in range(0, len(texts), self.batch_size):
-            batch = list(texts[start : start + self.batch_size])
+            batch = texts[start : start + self.batch_size]
             result = self._client.embed(
                 batch,
                 model=self.model,
@@ -167,17 +167,17 @@ def apply_sync(
 ) -> SyncReport:
     """Apply a Sync Plan: embed children on insert/update, upsert, delete."""
     by_id = {record.id: record for record in records}
-    write_ids = list(plan.insert) + list(plan.update)
-    write_records = [by_id[chunk_id] for chunk_id in write_ids]
+    write_records = [by_id[chunk_id] for chunk_id in plan.insert + plan.update]
 
     children = [r for r in write_records if r.kind == "child"]
     embeddings: dict[str, list[float]] = {}
     if children:
-        texts = [c.embedding_text for c in children]
-        if any(t is None for t in texts):
-            missing = next(c.id for c in children if c.embedding_text is None)
-            raise ValueError(f"child chunk {missing!r} requires embedding_text")
-        vectors = embedder.embed_documents(texts)  # type: ignore[arg-type]
+        texts: list[str] = []
+        for child in children:
+            if child.embedding_text is None:
+                raise ValueError(f"child chunk {child.id!r} requires embedding_text")
+            texts.append(child.embedding_text)
+        vectors = embedder.embed_documents(texts)
         if len(vectors) != len(children):
             raise RuntimeError(
                 f"embedder returned {len(vectors)} vectors for {len(children)} children"
@@ -185,8 +185,7 @@ def apply_sync(
         embeddings = {child.id: vector for child, vector in zip(children, vectors, strict=True)}
 
     for record in write_records:
-        embedding = embeddings.get(record.id) if record.kind == "child" else None
-        doc = chunk_record_to_document(record, embedding=embedding)
+        doc = chunk_record_to_document(record, embedding=embeddings.get(record.id))
         collection.replace_one({"_id": record.id}, doc, upsert=True)
 
     for chunk_id in plan.delete:
@@ -207,12 +206,12 @@ def load_vector_index_definition() -> dict[str, Any]:
     return payload["definition"]
 
 
-def ensure_vector_index(collection: Any, definition: dict[str, Any] | None = None) -> None:
+def ensure_vector_index(collection: Any) -> None:
     """Create ``chunks_vector`` if missing; fail loud if an existing index differs."""
     from pymongo.operations import SearchIndexModel
 
     _ensure_collection_exists(collection)
-    expected = definition if definition is not None else load_vector_index_definition()
+    expected = load_vector_index_definition()
     existing = None
     for index in collection.list_search_indexes():
         if index.get("name") == VECTOR_INDEX_NAME:
@@ -238,14 +237,12 @@ def ensure_vector_index(collection: Any, definition: dict[str, Any] | None = Non
 
 def _ensure_collection_exists(collection: Any) -> None:
     """Create the collection if the handle is a real pymongo Collection."""
-    database = getattr(collection, "database", None)
-    name = getattr(collection, "name", None)
-    if database is None or name is None:
+    from pymongo.collection import Collection
+
+    if not isinstance(collection, Collection):
         return
-    if not hasattr(database, "list_collection_names"):
-        return
-    if name not in database.list_collection_names():
-        database.create_collection(name)
+    if collection.name not in collection.database.list_collection_names():
+        collection.database.create_collection(collection.name)
 
 
 def _definitions_compatible(expected: dict[str, Any], actual: dict[str, Any]) -> bool:
@@ -279,13 +276,11 @@ def ingest_corpus(
     *,
     collection: Any,
     embedder: Embedder,
-    ensure_index: bool = True,
 ) -> SyncReport:
     """Chunk ``corpus/md``, reconcile via Sync Plan, embed children, write Atlas."""
     from instructamate.stage2_chunker import chunk_corpus, plan_sync
 
-    if ensure_index:
-        ensure_vector_index(collection)
+    ensure_vector_index(collection)
     records = chunk_corpus(md_root)
     plan = plan_sync(records, fetch_indexed_hashes(collection))
     return apply_sync(records, plan, collection=collection, embedder=embedder)

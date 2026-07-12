@@ -11,10 +11,13 @@ import pytest
 
 from instructamate.stage2_chunker import ChunkRecord, SyncPlan, plan_sync
 from instructamate.stage3_ingest import (
+    EMBEDDING_DIMS,
     SyncReport,
+    VECTOR_INDEX_NAME,
     apply_sync,
     chunk_record_to_document,
     fetch_indexed_hashes,
+    load_vector_index_definition,
 )
 
 
@@ -47,6 +50,40 @@ class FakeCollection:
 
     def delete_one(self, filter: dict[str, Any]):
         self.docs.pop(filter["_id"], None)
+
+
+class IndexAwareCollection(FakeCollection):
+    """FakeCollection plus vector-search index list/create stubs."""
+
+    def __init__(
+        self,
+        docs: dict[str, dict[str, Any]] | None = None,
+        *,
+        indexes: list[dict[str, Any]] | None = None,
+        forbid_create: bool = False,
+    ) -> None:
+        super().__init__(docs)
+        self.created: list[Any] = []
+        self._indexes: list[dict[str, Any]] = list(indexes or [])
+        self._forbid_create = forbid_create
+
+    def list_search_indexes(self):
+        return list(self._indexes)
+
+    def create_search_index(self, model: Any = None, **kwargs):
+        if self._forbid_create:
+            raise AssertionError("must not recreate a compatible index")
+        model = model if model is not None else kwargs.get("model")
+        doc = model.document if hasattr(model, "document") else dict(model)
+        self.created.append(doc)
+        self._indexes.append(
+            {
+                "name": doc["name"],
+                "type": doc.get("type", "vectorSearch"),
+                "latestDefinition": doc["definition"],
+            }
+        )
+        return doc["name"]
 
 
 class FakeEmbedder:
@@ -224,29 +261,7 @@ def test_apply_sync_fails_loud_when_embedder_raises():
 
 
 def test_ensure_vector_index_creates_when_missing():
-    from instructamate.stage3_ingest import VECTOR_INDEX_NAME, ensure_vector_index, load_vector_index_definition
-
-    class IndexAwareCollection(FakeCollection):
-        def __init__(self) -> None:
-            super().__init__()
-            self.created: list[Any] = []
-            self._indexes: list[dict[str, Any]] = []
-
-        def list_search_indexes(self):
-            return list(self._indexes)
-
-        def create_search_index(self, model: Any = None, **kwargs):
-            model = model if model is not None else kwargs.get("model")
-            doc = model.document if hasattr(model, "document") else dict(model)
-            self.created.append(doc)
-            self._indexes.append(
-                {
-                    "name": doc["name"],
-                    "type": doc.get("type", "vectorSearch"),
-                    "latestDefinition": doc["definition"],
-                }
-            )
-            return doc["name"]
+    from instructamate.stage3_ingest import ensure_vector_index
 
     coll = IndexAwareCollection()
     definition = load_vector_index_definition()
@@ -256,48 +271,51 @@ def test_ensure_vector_index_creates_when_missing():
     assert len(coll.created) == 1
     assert coll.created[0]["name"] == VECTOR_INDEX_NAME
     assert coll.created[0]["definition"] == definition
-    assert definition["fields"][0]["numDimensions"] == 1024
+    assert definition["fields"][0]["numDimensions"] == EMBEDDING_DIMS
 
 
 def test_ensure_vector_index_is_noop_when_compatible():
-    from instructamate.stage3_ingest import VECTOR_INDEX_NAME, ensure_vector_index, load_vector_index_definition
+    from instructamate.stage3_ingest import ensure_vector_index
 
     definition = load_vector_index_definition()
-
-    class IndexAwareCollection(FakeCollection):
-        def list_search_indexes(self):
-            return [{"name": VECTOR_INDEX_NAME, "type": "vectorSearch", "latestDefinition": definition}]
-
-        def create_search_index(self, model: Any):
-            raise AssertionError("must not recreate a compatible index")
-
-    ensure_vector_index(IndexAwareCollection())
-
-
-def test_ensure_vector_index_fails_loud_on_incompatible_existing():
-    from instructamate.stage3_ingest import VECTOR_INDEX_NAME, ensure_vector_index
-
-    class IndexAwareCollection(FakeCollection):
-        def list_search_indexes(self):
-            return [
+    ensure_vector_index(
+        IndexAwareCollection(
+            indexes=[
                 {
                     "name": VECTOR_INDEX_NAME,
                     "type": "vectorSearch",
-                    "latestDefinition": {
-                        "fields": [
-                            {
-                                "type": "vector",
-                                "path": "embedding",
-                                "numDimensions": 768,
-                                "similarity": "cosine",
-                            }
-                        ]
-                    },
+                    "latestDefinition": definition,
                 }
-            ]
+            ],
+            forbid_create=True,
+        )
+    )
+
+
+def test_ensure_vector_index_fails_loud_on_incompatible_existing():
+    from instructamate.stage3_ingest import ensure_vector_index
 
     with pytest.raises(ValueError, match="incompatible"):
-        ensure_vector_index(IndexAwareCollection())
+        ensure_vector_index(
+            IndexAwareCollection(
+                indexes=[
+                    {
+                        "name": VECTOR_INDEX_NAME,
+                        "type": "vectorSearch",
+                        "latestDefinition": {
+                            "fields": [
+                                {
+                                    "type": "vector",
+                                    "path": "embedding",
+                                    "numDimensions": 768,
+                                    "similarity": "cosine",
+                                }
+                            ]
+                        },
+                    }
+                ]
+            )
+        )
 
 
 def test_voyage_embedder_batches_and_sets_document_input_type():
@@ -352,30 +370,15 @@ revision: "1.0"
         encoding="utf-8",
     )
 
-    class IndexAwareCollection(FakeCollection):
-        def list_search_indexes(self):
-            return [
-                {
-                    "name": "chunks_vector",
-                    "type": "vectorSearch",
-                    "latestDefinition": {
-                        "fields": [
-                            {
-                                "type": "vector",
-                                "path": "embedding",
-                                "numDimensions": 1024,
-                                "similarity": "cosine",
-                            },
-                            {"type": "filter", "path": "source"},
-                            {"type": "filter", "path": "unit"},
-                            {"type": "filter", "path": "content_type"},
-                            {"type": "filter", "path": "kind"},
-                        ]
-                    },
-                }
-            ]
-
-    coll = IndexAwareCollection()
+    coll = IndexAwareCollection(
+        indexes=[
+            {
+                "name": VECTOR_INDEX_NAME,
+                "type": "vectorSearch",
+                "latestDefinition": load_vector_index_definition(),
+            }
+        ]
+    )
     report = ingest_corpus(tmp_path / "md", collection=coll, embedder=FakeEmbedder())
 
     assert report.inserted >= 2

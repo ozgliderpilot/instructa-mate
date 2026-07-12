@@ -12,6 +12,8 @@ from pathlib import Path
 
 import pytest
 
+from instructamate.stage3_ingest import EMBEDDING_DIMS
+
 _ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -53,7 +55,7 @@ def test_full_corpus_ingest_and_vector_smoke():
     )
 
     collection = chunks_collection(os.environ["MONGODB_URI"])
-    embedder = VoyageEmbedder(api_key=os.environ["VOYAGE_API_KEY"])
+    embedder = VoyageEmbedder()
 
     report = ingest_corpus(MD_ROOT, collection=collection, embedder=embedder)
     # Fresh cluster: large insert; re-run: mostly no-ops. Either way the smoke
@@ -66,7 +68,7 @@ def test_full_corpus_ingest_and_vector_smoke():
     assert doc is not None
     assert doc["kind"] == "child"
     assert doc["parent_id"] == "trainer:5:key-messages"
-    assert len(doc["embedding"]) == 1024
+    assert len(doc["embedding"]) == EMBEDDING_DIMS
     assert "stable platform" in doc["text"]
 
     query_vector = embedder.embed_query(SMOKE_QUERY)
