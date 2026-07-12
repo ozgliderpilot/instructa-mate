@@ -6,12 +6,29 @@ runs green.
 """
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 import pytest
 
 ROOT = Path(__file__).resolve().parent.parent
 CORPUS = ROOT / "corpus"
+
+
+def load_dotenv() -> None:
+    """Pull local ``.env`` into ``os.environ`` without printing values."""
+    path = ROOT / ".env"
+    if not path.is_file():
+        return
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        os.environ.setdefault(key.strip(), value.strip().strip("'").strip('"'))
+
+
+load_dotenv()
 
 PILOT_PDF = CORPUS / "00-Combined Pilot Guides 1-26 Solo.pdf"
 TRAINER_PDF = CORPUS / "00 Combined Trainer Guides units 1-26 Solo  BBB.pdf"

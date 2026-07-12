@@ -14,26 +14,7 @@ import pytest
 
 from instructamate.stage3_ingest import EMBEDDING_DIMS
 
-_ROOT = Path(__file__).resolve().parents[1]
-
-
-def _load_dotenv() -> None:
-    """Pull local ``.env`` into ``os.environ`` without printing values."""
-    path = _ROOT / ".env"
-    if not path.is_file():
-        return
-    for raw in path.read_text(encoding="utf-8").splitlines():
-        line = raw.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, _, value = line.partition("=")
-        key = key.strip()
-        value = value.strip().strip("'").strip('"')
-        os.environ.setdefault(key, value)
-
-
-_load_dotenv()
-
+# conftest.load_dotenv() runs at import; credentials may come from .env.
 pytestmark = pytest.mark.skipif(
     not (os.environ.get("MONGODB_URI") and os.environ.get("VOYAGE_API_KEY")),
     reason="requires MONGODB_URI and VOYAGE_API_KEY",
@@ -43,7 +24,7 @@ SMOKE_CHUNK_ID = "trainer:5:key-messages:c1"
 SMOKE_QUERY = (
     "aircraft as a stable platform with three axes around the centre of gravity"
 )
-MD_ROOT = _ROOT / "corpus" / "md"
+MD_ROOT = Path(__file__).resolve().parents[1] / "corpus" / "md"
 
 
 def test_full_corpus_ingest_and_vector_smoke():

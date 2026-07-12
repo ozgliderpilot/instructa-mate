@@ -20,7 +20,10 @@ from pathlib import Path
 __all__ = [
     "ChunkRecord",
     "ChunkStructureError",
+    "PRIMARY_CONTENT_TYPES",
+    "SECONDARY_CONTENT_TYPES",
     "SyncPlan",
+    "VALID_CONTENT_TYPES",
     "chunk_corpus",
     "chunk_unit_markdown",
     "dump_records_jsonl",
@@ -43,6 +46,12 @@ VALID_CONTENT_TYPES = frozenset(
         "admin",
     }
 )
+
+#: Secondary roles — stored/embedded but excluded from default retrieval.
+SECONDARY_CONTENT_TYPES = frozenset({"aim", "competency", "self_check", "admin"})
+
+#: Primary roles — retrievable by the default query-time filter.
+PRIMARY_CONTENT_TYPES = VALID_CONTENT_TYPES - SECONDARY_CONTENT_TYPES
 
 
 class ChunkStructureError(ValueError):
