@@ -13,6 +13,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Protocol, Sequence
 
+from instructamate.stage2_chunker import PRIMARY_CONTENT_TYPES
 from instructamate.stage3_ingest import VECTOR_INDEX_NAME
 
 __all__ = [
@@ -28,17 +29,8 @@ __all__ = [
 DEFAULT_N = 20
 DEFAULT_P = 5
 
-PRIMARY_CONTENT_TYPES: frozenset[str] = frozenset(
-    {
-        "key_messages",
-        "theory",
-        "briefing",
-        "exercise",
-        "reference_patter",
-        "common_problems",
-        "airmanship",
-    }
-)
+#: Stable ``$in`` list for the vector-search content_type filter.
+_PRIMARY_CONTENT_TYPE_FILTER = sorted(PRIMARY_CONTENT_TYPES)
 
 #: Citation fields loaded when expanding child hits to parents.
 _PARENT_PROJECTION = {
@@ -74,15 +66,7 @@ class ParentHit:
 
 def expand_to_unique_parents(child_hits: Sequence[dict[str, Any]]) -> list[str]:
     """Return unique ``parent_id`` values in best-child-hit order."""
-    seen: set[str] = set()
-    parents: list[str] = []
-    for hit in child_hits:
-        parent_id = hit["parent_id"]
-        if parent_id in seen:
-            continue
-        seen.add(parent_id)
-        parents.append(parent_id)
-    return parents
+    return list(dict.fromkeys(hit["parent_id"] for hit in child_hits))
 
 
 def retrieve_parents(
@@ -112,7 +96,7 @@ def retrieve_parents(
                         "limit": n,
                         "filter": {
                             "kind": {"$eq": "child"},
-                            "content_type": {"$in": sorted(PRIMARY_CONTENT_TYPES)},
+                            "content_type": {"$in": _PRIMARY_CONTENT_TYPE_FILTER},
                         },
                     }
                 },
@@ -124,9 +108,10 @@ def retrieve_parents(
     if not parent_ids:
         return []
 
-    by_id: dict[str, dict[str, Any]] = {}
-    for doc in collection.find({"_id": {"$in": parent_ids}}, _PARENT_PROJECTION):
-        by_id[doc["_id"]] = doc
+    by_id = {
+        doc["_id"]: doc
+        for doc in collection.find({"_id": {"$in": parent_ids}}, _PARENT_PROJECTION)
+    }
 
     hits: list[ParentHit] = []
     for parent_id in parent_ids:

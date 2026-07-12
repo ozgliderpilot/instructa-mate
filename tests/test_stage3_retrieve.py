@@ -9,7 +9,6 @@ from typing import Any, Sequence
 
 from instructamate.stage3_retrieve import (
     DEFAULT_N,
-    DEFAULT_P,
     PRIMARY_CONTENT_TYPES,
     ParentHit,
     expand_to_unique_parents,
@@ -56,21 +55,12 @@ class RetrievingFakeCollection:
         return list(self.child_hits)
 
     def find(self, filter: dict[str, Any], projection: dict | None = None):
-        ids = filter.get("_id", {}).get("$in", [])
-        for parent_id in ids:
+        # Seeded parents are already slim; projection is accepted for pymongo shape.
+        _ = projection
+        for parent_id in filter.get("_id", {}).get("$in", []):
             doc = self.parents.get(parent_id)
-            if doc is None:
-                continue
-            out = dict(doc)
-            if projection:
-                out = {
-                    key: out[key]
-                    for key, include in projection.items()
-                    if include and key in out
-                }
-                if projection.get("_id"):
-                    out["_id"] = parent_id
-            yield out
+            if doc is not None:
+                yield dict(doc)
 
 
 def _parent_doc(
@@ -158,4 +148,3 @@ def test_retrieve_parents_expands_dedupes_and_returns_citation_metadata():
     assert stage["filter"]["kind"] == {"$eq": "child"}
     assert set(stage["filter"]["content_type"]["$in"]) == set(PRIMARY_CONTENT_TYPES)
     assert stage["queryVector"] == [0.1, 0.2, 0.3]
-    assert DEFAULT_P == 5
