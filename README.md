@@ -66,7 +66,7 @@ truth** that every downstream citation is audited against.
                │
                ▼
 ┌─────────────────────────────┐
-│ Stage 3 · Retrieval      ◐  │  Ingest+hybrid ✅ · parent rerank still ◻
+│ Stage 3 · Retrieval      ✅ │  Ingest + hybrid children + parent rerank
 │   over MongoDB Atlas        │  (ADR 0005)
 └──────────────┬──────────────┘
                │
@@ -123,7 +123,7 @@ leaf-section *parent* chunks with paragraph *child* chunks, `reference_patter` i
 its own chunk. Structural Chunk IDs + content hashes drive a Sync Plan so re-ingest
 re-embeds only what changed (ADR 0004).
 
-### Stage 3 · Retrieval — **ingest + hybrid children built; parent rerank open**
+### Stage 3 · Retrieval — **built** (ADR 0005)
 
 **Ingest (#34):** Terraform provisions Atlas Flex (`AP_SOUTHEAST_2`); runtime Sync Plan
 embeds children with explicit `voyage-4-large` (`input_type=document`) into
@@ -131,9 +131,9 @@ embeds children with explicit `voyage-4-large` (`input_type=document`) into
 Atlas Search index `chunks_search` (jargon-preserving `jargon_text` analyzer). See
 [`terraform/README.md`](terraform/README.md).
 
-**Query path (#35–#36):** embed query → vector-only or server-side `$rankFusion`
-(vector + full-text on children, keep 70) → expand to unique **parents** → top
-**P=10**. Parent `rerank-2.5` remains open (ADR 0005).
+**Query path (#35–#37):** embed query → vector-only or server-side `$rankFusion`
+(vector + full-text on children, keep 70) → expand to unique **parents** → Voyage
+`rerank-2.5` on parent texts → top **P=10**.
 
 ### Stage 4 · Generation — **designed**
 
@@ -245,8 +245,8 @@ defered-grill.md                     designed-but-unbuilt decisions (stages 2–
 - [x] **Stage 1 — Ingestion**: deterministic verbatim PDF → Markdown parser; fail-loud on
       structural ambiguity; generalises across Trainer/Pilot, variant-split Units, and GPC.
 - [x] **Stage 2 — Chunking**: chunk schema, stable IDs + content hashes, Sync Plan.
-- [ ] **Stage 3 — Retrieval**: Atlas ingest ✅; vector→expand ✅; `$rankFusion` hybrid ✅;
-      parent `rerank-2.5` still open (ADR 0005).
+- [x] **Stage 3 — Retrieval**: Atlas ingest; vector→expand; `$rankFusion` hybrid;
+      parent `rerank-2.5` (ADR 0005).
 - [ ] **Stage 4 — Generation**: refuse-or-cite Q&A and Generated Patter, with a
       claim-grounding check.
 - [ ] **Eval harness**: two-tier (automated `recall@k`/refusal + LLM-as-judge faithfulness,
