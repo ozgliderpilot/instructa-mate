@@ -1,20 +1,21 @@
-"""Stage-3 retrieval: vector-only children → expand parents (issue #35).
+"""Stage-3 retrieval: vector / hybrid children → expand parents (issues #35–#36).
 
-Public seams (ADR 0005 ablation step 1):
+Public seams (ADR 0005 ablation steps 1–2):
 
 - :func:`expand_to_unique_parents` — child hits → parent ids (best-child order)
-- :func:`retrieve_parents` — embed query → ``$vectorSearch`` → expand → top P
+- :func:`retrieve_parents` — embed query → children (vector or ``$rankFusion``)
+  → expand → top P
 - :class:`ParentHit` — parent chunk with citation metadata
 - :data:`PRIMARY_CONTENT_TYPES` — CONTEXT.md primary roles (query-time filter)
-- :data:`DEFAULT_N` / :data:`DEFAULT_P` — ADR 0005 starting widths (N=20, P=5)
+- :data:`DEFAULT_N` / :data:`DEFAULT_P` — ADR 0005 starting widths (N=70, P=10)
 """
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any, Protocol, Sequence
+from typing import Any, Literal, Protocol, Sequence
 
 from instructamate.stage2_chunker import PRIMARY_CONTENT_TYPES
-from instructamate.stage3_ingest import VECTOR_INDEX_NAME
+from instructamate.stage3_ingest import SEARCH_INDEX_NAME, VECTOR_INDEX_NAME
 
 __all__ = [
     "DEFAULT_N",
@@ -26,8 +27,8 @@ __all__ = [
     "retrieve_parents",
 ]
 
-DEFAULT_N = 20
-DEFAULT_P = 5
+DEFAULT_N = 70
+DEFAULT_P = 10
 
 #: Stable ``$in`` list for the vector-search content_type filter.
 _PRIMARY_CONTENT_TYPE_FILTER = sorted(PRIMARY_CONTENT_TYPES)
@@ -42,6 +43,8 @@ _PARENT_PROJECTION = {
     "text": 1,
     "content_type": 1,
 }
+
+_CHILD_HIT_PROJECT = {"$project": {"_id": 1, "parent_id": 1}}
 
 
 class QueryEmbedder(Protocol):
@@ -76,34 +79,23 @@ def retrieve_parents(
     *,
     n: int = DEFAULT_N,
     p: int = DEFAULT_P,
+    fusion: Literal["vector", "hybrid"] = "vector",
 ) -> list[ParentHit]:
-    """Vector-search primary children, expand/dedupe parents, return top ``p``.
+    """Search primary children, expand/dedupe parents, return top ``p``.
 
-    Flow (ADR 0005 ablation step 1): embed query → ``$vectorSearch`` children
-    (limit ``n``, primary ``content_type`` filter) → unique parents in best-child
-    order → load citation metadata → keep first ``p``.
+    ``fusion="vector"`` (ablation step 1): embed → ``$vectorSearch`` (limit ``n``).
+
+    ``fusion="hybrid"`` (ablation step 2): embed → server-side ``$rankFusion`` of
+    vector + full-text child rankings (each channel ``n``, keep ``n`` fused) →
+    same expand + P delivery.
     """
     query_vector = embedder.embed_query(query)
-    child_hits = list(
-        collection.aggregate(
-            [
-                {
-                    "$vectorSearch": {
-                        "index": VECTOR_INDEX_NAME,
-                        "path": "embedding",
-                        "queryVector": query_vector,
-                        "numCandidates": max(n * 10, 50),
-                        "limit": n,
-                        "filter": {
-                            "kind": {"$eq": "child"},
-                            "content_type": {"$in": _PRIMARY_CONTENT_TYPE_FILTER},
-                        },
-                    }
-                },
-                {"$project": {"_id": 1, "parent_id": 1}},
-            ]
-        )
-    )
+    if fusion == "hybrid":
+        pipeline = _hybrid_child_pipeline(query, query_vector, n)
+    else:
+        pipeline = [_vector_search_stage(query_vector, n), _CHILD_HIT_PROJECT]
+
+    child_hits = list(collection.aggregate(pipeline))
     parent_ids = expand_to_unique_parents(child_hits)
     if not parent_ids:
         return []
@@ -132,3 +124,71 @@ def retrieve_parents(
             )
         )
     return hits
+
+
+def _hybrid_child_pipeline(
+    query: str,
+    query_vector: list[float],
+    n: int,
+) -> list[dict[str, Any]]:
+    return [
+        {
+            "$rankFusion": {
+                "input": {
+                    "pipelines": {
+                        "vector": [_vector_search_stage(query_vector, n)],
+                        "fullText": [
+                            {
+                                "$search": {
+                                    "index": SEARCH_INDEX_NAME,
+                                    "compound": {
+                                        "must": [
+                                            {
+                                                "text": {
+                                                    "query": query,
+                                                    "path": "text",
+                                                }
+                                            }
+                                        ],
+                                        "filter": [
+                                            {
+                                                "equals": {
+                                                    "path": "kind",
+                                                    "value": "child",
+                                                }
+                                            },
+                                            {
+                                                "in": {
+                                                    "path": "content_type",
+                                                    "value": _PRIMARY_CONTENT_TYPE_FILTER,
+                                                }
+                                            },
+                                        ],
+                                    },
+                                }
+                            },
+                            {"$limit": n},
+                        ],
+                    }
+                }
+            }
+        },
+        {"$limit": n},
+        _CHILD_HIT_PROJECT,
+    ]
+
+
+def _vector_search_stage(query_vector: list[float], n: int) -> dict[str, Any]:
+    return {
+        "$vectorSearch": {
+            "index": VECTOR_INDEX_NAME,
+            "path": "embedding",
+            "queryVector": query_vector,
+            "numCandidates": max(n * 10, 50),
+            "limit": n,
+            "filter": {
+                "kind": {"$eq": "child"},
+                "content_type": {"$in": _PRIMARY_CONTENT_TYPE_FILTER},
+            },
+        }
+    }

@@ -25,4 +25,4 @@ cd terraform
 ./tf.sh output -raw mongodb_uri   # → MONGODB_URI in .env
 ```
 
-Also set `VOYAGE_API_KEY` for explicit `voyage-4-lite` embeddings.
+Also set `VOYAGE_API_KEY` for explicit `voyage-4-large` embeddings.

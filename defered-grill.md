@@ -18,8 +18,8 @@ deterministic context-prefix, with (c) LLM contextual-retrieval as an eval-gated
 Chunk identity = structural Chunk IDs + content-hash change detection via Sync Plan (ADR 0004;
 stage 2 built). Stage 3 hybrid retrieval (ADR 0005): server-side `$rankFusion` on Atlas MongoDB
 8.0+; fuse **children** then expand/dedupe **parents** then rerank parents (`rerank-2.5`);
-starting top-k **N=20 / keep 20 / P=5** (eval-tunable); embed with `voyage-4-lite` (escalate to
-`voyage-4-large` only on recall gaps). Ablation curve still measured
+starting top-k **N=70 / keep 70 / P=10** (eval-tunable); embed with `voyage-4-large`.
+Ablation curve still measured
 (vector-only → +full-text `$rankFusion` → +parent rerank → +contextual-retrieval).
 
 ## Deferred items
@@ -81,12 +81,13 @@ dimensions (coverage, ordering/pedagogy, style match, factual grounding), scorin
 Cluster: **Atlas Flex** in **ap-southeast-2 (Sydney)** (MongoDB ≥8.0; required for `$rankFusion`).
 Terraform provisions Flex cluster + DB user against an **existing** Atlas project; PoC IP access
 `0.0.0.0/0`; connection string via output → `MONGODB_URI`. Single DB/collection
-`instructamate.chunks` (`_id` = Chunk ID, `kind` discriminator). Explicit `voyage-4-lite` embeds
+`instructamate.chunks` (`_id` = Chunk ID, `kind` discriminator). Explicit `voyage-4-large` embeds
 (`input_type=document`, `VOYAGE_API_KEY`) — not Atlas Automated Embedding. Vector Search index
 `chunks_vector`: path `embedding`, 1024-d cosine, filter fields `source`,`unit`,`content_type`,`kind`;
-**code-ensure** from committed index JSON (not Terraform). **Still open for #36:** Atlas Search
-(full-text) analyzer name/tuning so jargon tokens (`FUST`, `CHAOTIC`, exercise names/numbers) stay
-intact. Rerank remains `rerank-2.5`.
+**code-ensure** from committed index JSON (not Terraform). Atlas Search index `chunks_search`:
+child `text` via custom `jargon_text` analyzer (standard tokenizer + lowercase only — no stemming,
+so jargon tokens like `FUST` / `CHAOTIC` stay intact); `kind` / `content_type` as `token` for
+filters; **code-ensure** from committed JSON. Rerank remains `rerank-2.5`.
 
 ### 8. Update-from-machine workflow
 Sync Plan (ADR 0004) is the reconciliation; git diff of Markdown is human audit only.

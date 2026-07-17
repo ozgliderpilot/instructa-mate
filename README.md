@@ -66,7 +66,7 @@ truth** that every downstream citation is audited against.
                │
                ▼
 ┌─────────────────────────────┐
-│ Stage 3 · Retrieval      ◻  │  Ingest ✅ · $rankFusion / rerank still ◻
+│ Stage 3 · Retrieval      ◐  │  Ingest+hybrid ✅ · parent rerank still ◻
 │   over MongoDB Atlas        │  (ADR 0005)
 └──────────────┬──────────────┘
                │
@@ -123,17 +123,17 @@ leaf-section *parent* chunks with paragraph *child* chunks, `reference_patter` i
 its own chunk. Structural Chunk IDs + content hashes drive a Sync Plan so re-ingest
 re-embeds only what changed (ADR 0004).
 
-### Stage 3 · Retrieval — **ingest built; query path designed**
+### Stage 3 · Retrieval — **ingest + hybrid children built; parent rerank open**
 
 **Ingest (#34):** Terraform provisions Atlas Flex (`AP_SOUTHEAST_2`); runtime Sync Plan
-embeds children with explicit `voyage-4-lite` (`input_type=document`) into
-`instructamate.chunks` and code-ensures Vector Search index `chunks_vector`. See
+embeds children with explicit `voyage-4-large` (`input_type=document`) into
+`instructamate.chunks` and code-ensures Vector Search index `chunks_vector` plus
+Atlas Search index `chunks_search` (jargon-preserving `jargon_text` analyzer). See
 [`terraform/README.md`](terraform/README.md).
 
-**Query path (still designed):** hybrid search fuse **children** with server-side
-`$rankFusion` (MongoDB 8.0+), expand to unique **parents**, then rerank parents
-(`rerank-2.5`) and pass top **P=5** to the LLM (ADR 0005). Build incrementally and
-measure the ablation curve.
+**Query path (#35–#36):** embed query → vector-only or server-side `$rankFusion`
+(vector + full-text on children, keep 70) → expand to unique **parents** → top
+**P=10**. Parent `rerank-2.5` remains open (ADR 0005).
 
 ### Stage 4 · Generation — **designed**
 
@@ -245,8 +245,8 @@ defered-grill.md                     designed-but-unbuilt decisions (stages 2–
 - [x] **Stage 1 — Ingestion**: deterministic verbatim PDF → Markdown parser; fail-loud on
       structural ambiguity; generalises across Trainer/Pilot, variant-split Units, and GPC.
 - [x] **Stage 2 — Chunking**: chunk schema, stable IDs + content hashes, Sync Plan.
-- [ ] **Stage 3 — Retrieval**: Atlas ingest ✅ (`voyage-4-lite` + `chunks_vector`); query
-      path still open — `$rankFusion` → expand parents → rerank (ADR 0005).
+- [ ] **Stage 3 — Retrieval**: Atlas ingest ✅; vector→expand ✅; `$rankFusion` hybrid ✅;
+      parent `rerank-2.5` still open (ADR 0005).
 - [ ] **Stage 4 — Generation**: refuse-or-cite Q&A and Generated Patter, with a
       claim-grounding check.
 - [ ] **Eval harness**: two-tier (automated `recall@k`/refusal + LLM-as-judge faithfulness,

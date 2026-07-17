@@ -27,7 +27,7 @@ Separate batch work from the serving backend from the offline in-flight layer.
 
 ## RAG / data layer (Atlas)
 - **Hybrid retrieval** via `$rankFusion` (RRF) combining vector + full-text. Full-text matters — the corpus is full of exact-match jargon (HASELL, FUST, SWAFTS, exercise numbers).
-- **Voyage via Atlas API:** `voyage-4-lite` for embeddings; **Voyage reranker** after fusion. The reranker is the single highest-leverage component for citation accuracy (cited page actually contains the claim). Reserve `voyage-4-large` only if evals show recall gaps.
+- **Voyage via Atlas API:** `voyage-4-large` for embeddings; **Voyage reranker** after fusion. The reranker is the single highest-leverage component for citation accuracy (cited page actually contains the claim).
 - Prefer **explicit embedding** over Atlas Automated Embedding — for chunking control and index versioning.
 - **Chunking — preserve GFA structure.** Per-chunk metadata:
   `{ doc, version, unit, exercise_no, exercise_name, page, section, content_type }`

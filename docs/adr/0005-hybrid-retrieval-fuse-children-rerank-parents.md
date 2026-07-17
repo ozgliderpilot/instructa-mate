@@ -3,8 +3,9 @@
 Stage 3 retrieves Child Chunks (the embedded search unit), fuses the vector and
 full-text rankings with Atlas **`$rankFusion` on MongoDB 8.0+**, expands the fused
 children to unique Parent Chunks, then **reranks those parents** (`rerank-2.5`)
-before passing the top parents to the LLM. Starting widths: **N=20** per channel,
-keep **20** fused children, **P=5** parents after expand+rerank — eval-tunable.
+before passing the top parents to the LLM. Starting widths: **N=70** per channel,
+keep **70** fused children, **P=10** parents after expand+rerank — eval-tunable
+(raised from 20/5 after paraphrase smoke: e.g. “minimal height above town” → Unit 23).
 
 ## Considered Options
 
@@ -22,7 +23,7 @@ keep **20** fused children, **P=5** parents after expand+rerank — eval-tunable
 ## Consequences
 
 - Atlas cluster must run MongoDB **8.0+** (Sydney / `ap-southeast-2`).
-- Embeddings: **`voyage-4-lite`** by default; escalate to **`voyage-4-large`** only if
-  evals show recall gaps (shared Voyage-4 embedding space).
+- Embeddings: **`voyage-4-large`** by default (1024-d; shared Voyage-4 embedding space).
+  PoC smoke showed clearer paraphrase recall than ``voyage-4-lite`` on hybrid widths.
 - Ablation curve still starts vector-only, then adds `$search`+`$rankFusion`, then parent
   rerank — each step measured on the golden set.

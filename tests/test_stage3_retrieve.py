@@ -1,4 +1,4 @@
-"""Stage-3 vector-only retrieval → expand parents (issue #35).
+"""Stage-3 retrieval: vector-only (#35) and hybrid $rankFusion (#36).
 
 Unit tests use in-memory fakes only — no network. Live smoke lives in
 ``test_stage3_retrieve_live.py`` and skips without credentials.
@@ -7,6 +7,7 @@ from __future__ import annotations
 
 from typing import Any, Sequence
 
+from instructamate.stage3_ingest import SEARCH_INDEX_NAME, VECTOR_INDEX_NAME
 from instructamate.stage3_retrieve import (
     DEFAULT_N,
     PRIMARY_CONTENT_TYPES,
@@ -33,7 +34,7 @@ def test_expand_to_unique_parents_preserves_best_child_order_and_dedupes():
 
 class FakeQueryEmbedder:
     def embed_query(self, text: str) -> list[float]:
-        assert text == "stable platform three axes"
+        del text
         return [0.1, 0.2, 0.3]
 
 
@@ -148,3 +149,66 @@ def test_retrieve_parents_expands_dedupes_and_returns_citation_metadata():
     assert stage["filter"]["kind"] == {"$eq": "child"}
     assert set(stage["filter"]["content_type"]["$in"]) == set(PRIMARY_CONTENT_TYPES)
     assert stage["queryVector"] == [0.1, 0.2, 0.3]
+
+
+def test_retrieve_parents_hybrid_uses_rank_fusion_then_expand():
+    parents = {
+        "trainer:16:briefing": _parent_doc(
+            "trainer:16:briefing",
+            unit="16",
+            content_type="briefing",
+            heading_path=["PRE-FLIGHT BRIEFING"],
+            text="Perform pre landing check (FUST).",
+            pages=["16-3"],
+        ),
+        "trainer:5:key-messages": _parent_doc(
+            "trainer:5:key-messages",
+            text="stable platform key messages",
+            pages=["5-3"],
+        ),
+    }
+    child_hits = [
+        {"_id": "trainer:16:briefing:c1", "parent_id": "trainer:16:briefing"},
+        {"_id": "trainer:5:key-messages:c1", "parent_id": "trainer:5:key-messages"},
+        {"_id": "trainer:16:briefing:c2", "parent_id": "trainer:16:briefing"},
+    ]
+    collection = RetrievingFakeCollection(child_hits=child_hits, parents=parents)
+
+    hits = retrieve_parents(
+        "FUST pre-landing check",
+        collection,
+        FakeQueryEmbedder(),
+        fusion="hybrid",
+        p=2,
+    )
+
+    assert [hit.id for hit in hits] == [
+        "trainer:16:briefing",
+        "trainer:5:key-messages",
+    ]
+    assert hits[0].pages == ("16-3",)
+    assert "FUST" in hits[0].text
+
+    fusion = collection.last_pipeline[0]["$rankFusion"]
+    pipelines = fusion["input"]["pipelines"]
+    assert set(pipelines) == {"vector", "fullText"}
+
+    vector_stage = pipelines["vector"][0]["$vectorSearch"]
+    assert vector_stage["index"] == VECTOR_INDEX_NAME
+    assert vector_stage["limit"] == DEFAULT_N
+    assert vector_stage["filter"]["kind"] == {"$eq": "child"}
+    assert set(vector_stage["filter"]["content_type"]["$in"]) == set(PRIMARY_CONTENT_TYPES)
+    assert vector_stage["queryVector"] == [0.1, 0.2, 0.3]
+
+    search_stage = pipelines["fullText"][0]["$search"]
+    assert search_stage["index"] == SEARCH_INDEX_NAME
+    assert search_stage["compound"]["must"][0]["text"]["query"] == "FUST pre-landing check"
+    assert search_stage["compound"]["must"][0]["text"]["path"] == "text"
+    filters = search_stage["compound"]["filter"]
+    assert {"equals": {"path": "kind", "value": "child"}} in filters
+    content_type_filter = next(f for f in filters if "in" in f)
+    assert set(content_type_filter["in"]["value"]) == set(PRIMARY_CONTENT_TYPES)
+    assert pipelines["fullText"][1] == {"$limit": DEFAULT_N}
+
+    assert collection.last_pipeline[1] == {"$limit": DEFAULT_N}
+    assert collection.last_pipeline[2] == {"$project": {"_id": 1, "parent_id": 1}}

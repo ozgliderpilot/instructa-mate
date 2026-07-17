@@ -6,7 +6,8 @@ Public seams (issue #34 / ADR 0004–0005):
 - :func:`apply_sync` — embed insert/update children, upsert docs, delete by id
 - :func:`chunk_record_to_document` — ChunkRecord → Atlas document shape
 - :func:`ensure_vector_index` — code-ensure ``chunks_vector`` from committed JSON
-- :class:`VoyageEmbedder` — explicit ``voyage-4-lite`` (``input_type=document``)
+- :func:`ensure_search_index` — code-ensure ``chunks_search`` (jargon-preserving analyzer)
+- :class:`VoyageEmbedder` — explicit ``voyage-4-large`` (``input_type=document``)
 
 Embeddings are explicit Voyage calls, not Atlas Automated Embedding. Parents are
 stored without vectors for expand payload.
@@ -27,22 +28,26 @@ __all__ = [
     "EMBEDDING_DIMS",
     "EMBEDDING_MODEL",
     "Embedder",
+    "SEARCH_INDEX_NAME",
     "SyncReport",
     "VECTOR_INDEX_NAME",
     "VoyageEmbedder",
     "apply_sync",
     "chunk_record_to_document",
     "chunks_collection",
+    "ensure_search_index",
     "ensure_vector_index",
     "fetch_indexed_hashes",
     "ingest_corpus",
+    "load_search_index_definition",
     "load_vector_index_definition",
 ]
 
 DB_NAME = "instructamate"
 COLLECTION_NAME = "chunks"
 VECTOR_INDEX_NAME = "chunks_vector"
-EMBEDDING_MODEL = "voyage-4-lite"
+SEARCH_INDEX_NAME = "chunks_search"
+EMBEDDING_MODEL = "voyage-4-large"
 EMBEDDING_DIMS = 1024
 
 
@@ -200,39 +205,88 @@ def apply_sync(
 
 
 def load_vector_index_definition() -> dict[str, Any]:
-    """Load the committed ``chunks_vector`` field definition (not the wrapper)."""
-    package = resources.files("instructamate") / "data" / "chunks_vector.json"
-    payload = json.loads(package.read_text(encoding="utf-8"))
-    return payload["definition"]
+    """Load the committed ``chunks_vector`` definition body."""
+    return _load_index_definition("chunks_vector.json")
+
+
+def load_search_index_definition() -> dict[str, Any]:
+    """Load the committed ``chunks_search`` definition body."""
+    return _load_index_definition("chunks_search.json")
 
 
 def ensure_vector_index(collection: Any) -> None:
     """Create ``chunks_vector`` if missing; fail loud if an existing index differs."""
+    _ensure_index(
+        collection,
+        name=VECTOR_INDEX_NAME,
+        index_type="vectorSearch",
+        expected=load_vector_index_definition(),
+        compatible=_vector_definitions_compatible,
+        label="vector search index",
+    )
+
+
+def ensure_search_index(collection: Any) -> None:
+    """Create ``chunks_search`` if missing; fail loud if an existing index differs."""
+    _ensure_index(
+        collection,
+        name=SEARCH_INDEX_NAME,
+        index_type="search",
+        expected=load_search_index_definition(),
+        compatible=_search_definitions_compatible,
+        label="search index",
+    )
+
+
+def _load_index_definition(filename: str) -> dict[str, Any]:
+    package = resources.files("instructamate") / "data" / filename
+    payload = json.loads(package.read_text(encoding="utf-8"))
+    return payload["definition"]
+
+
+def _ensure_index(
+    collection: Any,
+    *,
+    name: str,
+    index_type: str,
+    expected: dict[str, Any],
+    compatible: Any,
+    label: str,
+) -> None:
     from pymongo.operations import SearchIndexModel
 
     _ensure_collection_exists(collection)
-    expected = load_vector_index_definition()
-    existing = None
-    for index in collection.list_search_indexes():
-        if index.get("name") == VECTOR_INDEX_NAME:
-            existing = index
-            break
+    existing = _find_search_index(collection, name)
 
     if existing is None:
-        model = SearchIndexModel(
-            definition=expected,
-            name=VECTOR_INDEX_NAME,
-            type="vectorSearch",
+        collection.create_search_index(
+            model=SearchIndexModel(
+                definition=expected,
+                name=name,
+                type=index_type,
+            )
         )
-        collection.create_search_index(model=model)
         return
 
-    actual = existing.get("latestDefinition") or existing.get("definition") or {}
-    if not _definitions_compatible(expected, actual):
+    if "latestDefinition" in existing:
+        actual = existing["latestDefinition"]
+    elif "definition" in existing:
+        actual = existing["definition"]
+    else:
         raise ValueError(
-            f"vector search index {VECTOR_INDEX_NAME!r} exists but is incompatible "
-            f"with the committed definition"
+            f"{label} {name!r} exists but has no definition to compare"
         )
+    if not compatible(expected, actual):
+        raise ValueError(
+            f"{label} {name!r} exists but is incompatible with the committed definition"
+        )
+
+
+def _find_search_index(collection: Any, name: str) -> dict[str, Any] | None:
+    for index in collection.list_search_indexes():
+        if index.get("name") == name:
+            return index
+    return None
 
 
 def _ensure_collection_exists(collection: Any) -> None:
@@ -245,14 +299,14 @@ def _ensure_collection_exists(collection: Any) -> None:
         collection.database.create_collection(collection.name)
 
 
-def _definitions_compatible(expected: dict[str, Any], actual: dict[str, Any]) -> bool:
+def _vector_definitions_compatible(expected: dict[str, Any], actual: dict[str, Any]) -> bool:
     """Compare vector-index field lists ignoring Atlas-added bookkeeping keys."""
-    return _normalize_fields(expected.get("fields", [])) == _normalize_fields(
+    return _normalize_vector_fields(expected.get("fields", [])) == _normalize_vector_fields(
         actual.get("fields", [])
     )
 
 
-def _normalize_fields(fields: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def _normalize_vector_fields(fields: list[dict[str, Any]]) -> list[dict[str, Any]]:
     normalized: list[dict[str, Any]] = []
     for field in fields:
         item = {"type": field.get("type"), "path": field.get("path")}
@@ -261,6 +315,25 @@ def _normalize_fields(fields: list[dict[str, Any]]) -> list[dict[str, Any]]:
             item["similarity"] = field.get("similarity")
         normalized.append(item)
     return sorted(normalized, key=lambda f: (f.get("type") or "", f.get("path") or ""))
+
+
+def _search_definitions_compatible(expected: dict[str, Any], actual: dict[str, Any]) -> bool:
+    """Compare search-index analyzers + mappings (committed shape only)."""
+    return _canonicalize(expected) == _canonicalize(
+        {
+            "analyzers": actual.get("analyzers", []),
+            "mappings": actual.get("mappings", {}),
+        }
+    )
+
+
+def _canonicalize(value: Any) -> Any:
+    """Stable JSON-comparable form for nested index definitions."""
+    if isinstance(value, dict):
+        return {key: _canonicalize(value[key]) for key in sorted(value)}
+    if isinstance(value, list):
+        return [_canonicalize(item) for item in value]
+    return value
 
 
 def chunks_collection(uri: str) -> Any:
@@ -285,6 +358,7 @@ def ingest_corpus(
     from instructamate.stage2_chunker import chunk_corpus, plan_sync
 
     ensure_vector_index(collection)
+    ensure_search_index(collection)
     records = chunk_corpus(md_root)
     if not records:
         raise ValueError(

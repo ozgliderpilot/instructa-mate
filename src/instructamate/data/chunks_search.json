@@ -1,0 +1,31 @@
+{
+  "name": "chunks_search",
+  "type": "search",
+  "definition": {
+    "analyzers": [
+      {
+        "name": "jargon_text",
+        "tokenizer": { "type": "standard" },
+        "tokenFilters": [{ "type": "lowercase" }]
+      }
+    ],
+    "mappings": {
+      "dynamic": false,
+      "fields": {
+        "text": {
+          "type": "string",
+          "analyzer": "jargon_text",
+          "searchAnalyzer": "jargon_text"
+        },
+        "kind": {
+          "type": "token",
+          "normalizer": "lowercase"
+        },
+        "content_type": {
+          "type": "token",
+          "normalizer": "lowercase"
+        }
+      }
+    }
+  }
+}
