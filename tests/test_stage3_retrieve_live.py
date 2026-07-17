@@ -1,4 +1,4 @@
-"""Live Atlas + Voyage smoke for issues #35–#36 retrieval.
+"""Live Atlas + Voyage smoke for issues #35–#37 retrieval.
 
 Skipped unless both ``MONGODB_URI`` and ``VOYAGE_API_KEY`` are set. Expects
 the Unit 5 key-messages chunk from issue #34 ingest (ingests ``corpus/md``
@@ -15,7 +15,12 @@ from typing import Literal
 import pytest
 from pymongo.errors import OperationFailure
 
-from instructamate.stage3_retrieve import ParentHit, retrieve_parents, DEFAULT_P
+from instructamate.stage3_retrieve import (
+    DEFAULT_P,
+    ParentHit,
+    VoyageReranker,
+    retrieve_parents,
+)
 
 # conftest.load_dotenv() runs at import; credentials may come from .env.
 pytestmark = pytest.mark.skipif(
@@ -89,12 +94,15 @@ def _wait_until_hits(
     fusion: Literal["vector", "hybrid"],
     predicate: Callable[[list[ParentHit]], bool],
     attempts: int = 30,
+    reranker: VoyageReranker | None = None,
 ) -> list[ParentHit]:
     """Poll retrieve_parents until predicate matches (flat retry budget)."""
     hits: list[ParentHit] = []
     for _ in range(attempts):
         try:
-            hits = retrieve_parents(query, collection, embedder, fusion=fusion)
+            hits = retrieve_parents(
+                query, collection, embedder, fusion=fusion, reranker=reranker
+            )
         except OperationFailure as exc:
             message = str(exc)
             if "INITIAL_SYNC" not in message and "BUILDING" not in message:
@@ -163,3 +171,29 @@ def test_hybrid_jargon_query_surfaces_fust_parent():
         hybrid_rank = next(i for i, hit in enumerate(hybrid_hits) if "FUST" in hit.text)
         vector_rank = next(i for i, hit in enumerate(vector_hits) if "FUST" in hit.text)
         assert hybrid_rank <= vector_rank
+
+
+def test_parent_rerank_delivers_at_most_p_unique_parents():
+    """Ablation step 3: expand unique parents, then Voyage rerank-2.5 to P."""
+    from instructamate.stage3_ingest import VoyageEmbedder, chunks_collection
+
+    collection = chunks_collection(os.environ["MONGODB_URI"])
+    voyage = VoyageEmbedder()
+    _ensure_corpus(collection, voyage)
+
+    embedder = _FixedQueryEmbedder(voyage.embed_query(SMOKE_QUERY))
+    reranker = VoyageReranker()
+    hits = _wait_until_hits(
+        SMOKE_QUERY,
+        collection,
+        embedder,
+        fusion="hybrid",
+        predicate=lambda hs: any(hit.id == SMOKE_PARENT_ID for hit in hs),
+        reranker=reranker,
+    )
+
+    assert 1 <= len(hits) <= DEFAULT_P
+    assert len({hit.id for hit in hits}) == len(hits)
+    key_messages = next(hit for hit in hits if hit.id == SMOKE_PARENT_ID)
+    assert key_messages.unit == "5"
+    assert "stable platform" in key_messages.text

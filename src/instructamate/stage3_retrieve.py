@@ -1,13 +1,15 @@
-"""Stage-3 retrieval: vector / hybrid children → expand parents (issues #35–#36).
+"""Stage-3 retrieval: vector / hybrid children → expand → parent rerank (#35–#37).
 
-Public seams (ADR 0005 ablation steps 1–2):
+Public seams (ADR 0005 ablation steps 1–3):
 
 - :func:`expand_to_unique_parents` — child hits → parent ids (best-child order)
 - :func:`retrieve_parents` — embed query → children (vector or ``$rankFusion``)
-  → expand → top P
+  → expand → optional parent ``rerank-2.5`` → top P
 - :class:`ParentHit` — parent chunk with citation metadata
+- :class:`ParentReranker` / :class:`VoyageReranker` — rerank parent texts
 - :data:`PRIMARY_CONTENT_TYPES` — CONTEXT.md primary roles (query-time filter)
 - :data:`DEFAULT_N` / :data:`DEFAULT_P` — ADR 0005 starting widths (N=70, P=10)
+- :data:`RERANK_MODEL` — Voyage ``rerank-2.5``
 """
 from __future__ import annotations
 
@@ -22,13 +24,17 @@ __all__ = [
     "DEFAULT_P",
     "PRIMARY_CONTENT_TYPES",
     "ParentHit",
+    "ParentReranker",
     "QueryEmbedder",
+    "RERANK_MODEL",
+    "VoyageReranker",
     "expand_to_unique_parents",
     "retrieve_parents",
 ]
 
 DEFAULT_N = 70
 DEFAULT_P = 10
+RERANK_MODEL = "rerank-2.5"
 
 #: Stable ``$in`` list for the vector-search content_type filter.
 _PRIMARY_CONTENT_TYPE_FILTER = sorted(PRIMARY_CONTENT_TYPES)
@@ -54,6 +60,19 @@ class QueryEmbedder(Protocol):
         """Return one embedding vector (``input_type=query``)."""
 
 
+class ParentReranker(Protocol):
+    """Thin port over Voyage rerank (or a fake) — order parent texts by relevance."""
+
+    def rerank(
+        self,
+        query: str,
+        documents: Sequence[str],
+        *,
+        top_k: int | None = None,
+    ) -> list[int]:
+        """Return document indices in descending relevance order (length ``top_k``)."""
+
+
 @dataclass(frozen=True)
 class ParentHit:
     """A Parent Chunk returned by retrieval, with citation metadata intact."""
@@ -65,6 +84,41 @@ class ParentHit:
     heading_path: tuple[str, ...]
     text: str
     content_type: str
+
+
+class VoyageReranker:
+    """Explicit Voyage parent rerank (``rerank-2.5``)."""
+
+    def __init__(
+        self,
+        api_key: str | None = None,
+        *,
+        model: str = RERANK_MODEL,
+        client: Any | None = None,
+    ) -> None:
+        if client is None:
+            import voyageai
+
+            client = voyageai.Client(api_key=api_key)
+        self._client = client
+        self.model = model
+
+    def rerank(
+        self,
+        query: str,
+        documents: Sequence[str],
+        *,
+        top_k: int | None = None,
+    ) -> list[int]:
+        if not documents:
+            return []
+        result = self._client.rerank(
+            query,
+            list(documents),
+            model=self.model,
+            top_k=top_k,
+        )
+        return [item.index for item in result.results]
 
 
 def expand_to_unique_parents(child_hits: Sequence[dict[str, Any]]) -> list[str]:
@@ -80,14 +134,19 @@ def retrieve_parents(
     n: int = DEFAULT_N,
     p: int = DEFAULT_P,
     fusion: Literal["vector", "hybrid"] = "vector",
+    reranker: ParentReranker | None = None,
 ) -> list[ParentHit]:
-    """Search primary children, expand/dedupe parents, return top ``p``.
+    """Search primary children, expand/dedupe parents, optionally rerank, top ``p``.
 
     ``fusion="vector"`` (ablation step 1): embed → ``$vectorSearch`` (limit ``n``).
 
     ``fusion="hybrid"`` (ablation step 2): embed → server-side ``$rankFusion`` of
     vector + full-text child rankings (each channel ``n``, keep ``n`` fused) →
-    same expand + P delivery.
+    same expand path.
+
+    ``reranker`` (ablation step 3): after expand, rerank unique parent texts with
+    Voyage ``rerank-2.5``, then keep top ``p``. Without a reranker, parents stay in
+    best-child order (truncated to ``p``).
     """
     query_vector = embedder.embed_query(query)
     if fusion == "hybrid":
@@ -105,14 +164,12 @@ def retrieve_parents(
         for doc in collection.find({"_id": {"$in": parent_ids}}, _PARENT_PROJECTION)
     }
 
-    hits: list[ParentHit] = []
+    candidates: list[ParentHit] = []
     for parent_id in parent_ids:
-        if len(hits) >= p:
-            break
         doc = by_id.get(parent_id)
         if doc is None:
             continue
-        hits.append(
+        candidates.append(
             ParentHit(
                 id=doc["_id"],
                 source=doc["source"],
@@ -123,7 +180,19 @@ def retrieve_parents(
                 content_type=doc["content_type"],
             )
         )
-    return hits
+
+    if not candidates:
+        return []
+
+    if reranker is None:
+        return candidates[:p]
+
+    ranked_indices = reranker.rerank(
+        query,
+        [hit.text for hit in candidates],
+        top_k=p,
+    )
+    return [candidates[i] for i in ranked_indices if i < len(candidates)]
 
 
 def _hybrid_child_pipeline(

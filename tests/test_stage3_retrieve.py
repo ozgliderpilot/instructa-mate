@@ -1,4 +1,4 @@
-"""Stage-3 retrieval: vector-only (#35) and hybrid $rankFusion (#36).
+"""Stage-3 retrieval: vector / hybrid / parent rerank (#35–#37).
 
 Unit tests use in-memory fakes only — no network. Live smoke lives in
 ``test_stage3_retrieve_live.py`` and skips without credentials.
@@ -10,8 +10,11 @@ from typing import Any, Sequence
 from instructamate.stage3_ingest import SEARCH_INDEX_NAME, VECTOR_INDEX_NAME
 from instructamate.stage3_retrieve import (
     DEFAULT_N,
+    DEFAULT_P,
     PRIMARY_CONTENT_TYPES,
+    RERANK_MODEL,
     ParentHit,
+    VoyageReranker,
     expand_to_unique_parents,
     retrieve_parents,
 )
@@ -212,3 +215,145 @@ def test_retrieve_parents_hybrid_uses_rank_fusion_then_expand():
 
     assert collection.last_pipeline[1] == {"$limit": DEFAULT_N}
     assert collection.last_pipeline[2] == {"$project": {"_id": 1, "parent_id": 1}}
+
+
+class RecordingReranker:
+    """Fake ParentReranker: records parent texts; returns a fixed index order."""
+
+    def __init__(self, order: list[int]) -> None:
+        self.order = order
+        self.calls: list[dict[str, Any]] = []
+
+    def rerank(
+        self,
+        query: str,
+        documents: Sequence[str],
+        *,
+        top_k: int | None = None,
+    ) -> list[int]:
+        self.calls.append(
+            {"query": query, "documents": list(documents), "top_k": top_k}
+        )
+        ranked = [i for i in self.order if i < len(documents)]
+        if top_k is not None:
+            ranked = ranked[:top_k]
+        return ranked
+
+
+def test_retrieve_parents_reranks_unique_parents_not_children():
+    """Expand then rerank: multi-child same parent is one rerank slot (#37)."""
+    parents = {
+        "trainer:5:key-messages": _parent_doc(
+            "trainer:5:key-messages",
+            text="stable platform key messages",
+            pages=["5-3"],
+        ),
+        "trainer:5:briefing": _parent_doc(
+            "trainer:5:briefing",
+            content_type="briefing",
+            heading_path=["PRE-FLIGHT BRIEFING"],
+            text="briefing body",
+            pages=["5-5"],
+        ),
+        "trainer:16:briefing": _parent_doc(
+            "trainer:16:briefing",
+            unit="16",
+            content_type="briefing",
+            heading_path=["PRE-FLIGHT BRIEFING"],
+            text="Perform pre landing check (FUST).",
+            pages=["16-3"],
+        ),
+        "trainer:4:theory": _parent_doc(
+            "trainer:4:theory",
+            unit="4",
+            content_type="theory",
+            heading_path=["THEORY"],
+            text="theory body",
+            pages=["4-2"],
+        ),
+    }
+    # Three children from key-messages would waste top slots if we reranked
+    # children then expanded; expand-first collapses them to one parent.
+    child_hits = [
+        {"_id": "trainer:5:key-messages:c1", "parent_id": "trainer:5:key-messages"},
+        {"_id": "trainer:5:key-messages:c2", "parent_id": "trainer:5:key-messages"},
+        {"_id": "trainer:5:key-messages:c3", "parent_id": "trainer:5:key-messages"},
+        {"_id": "trainer:5:briefing:c1", "parent_id": "trainer:5:briefing"},
+        {"_id": "trainer:16:briefing:c1", "parent_id": "trainer:16:briefing"},
+        {"_id": "trainer:4:theory:c1", "parent_id": "trainer:4:theory"},
+    ]
+    collection = RetrievingFakeCollection(child_hits=child_hits, parents=parents)
+    # Prefer FUST briefing over the expand-order leader (key-messages).
+    reranker = RecordingReranker(order=[2, 0, 1, 3])
+
+    hits = retrieve_parents(
+        "FUST pre-landing check",
+        collection,
+        FakeQueryEmbedder(),
+        reranker=reranker,
+        p=3,
+    )
+
+    assert len(reranker.calls) == 1
+    call = reranker.calls[0]
+    assert call["query"] == "FUST pre-landing check"
+    assert call["top_k"] == 3
+    assert call["documents"] == [
+        "stable platform key messages",
+        "briefing body",
+        "Perform pre landing check (FUST).",
+        "theory body",
+    ]
+    assert [hit.id for hit in hits] == [
+        "trainer:16:briefing",
+        "trainer:5:key-messages",
+        "trainer:5:briefing",
+    ]
+    assert hits[0].pages == ("16-3",)
+
+
+def test_voyage_reranker_uses_rerank_2_5_and_returns_index_order():
+    class FakeVoyageClient:
+        def __init__(self) -> None:
+            self.calls: list[dict[str, Any]] = []
+
+        def rerank(self, query, documents, *, model, top_k=None):
+            self.calls.append(
+                {
+                    "query": query,
+                    "documents": list(documents),
+                    "model": model,
+                    "top_k": top_k,
+                }
+            )
+
+            class Result:
+                def __init__(self, index: int, score: float) -> None:
+                    self.index = index
+                    self.relevance_score = score
+                    self.document = documents[index]
+
+            ranked = [Result(2, 0.9), Result(0, 0.5), Result(1, 0.1)]
+            if top_k is not None:
+                ranked = ranked[:top_k]
+
+            class Reranking:
+                results = ranked
+
+            return Reranking()
+
+    client = FakeVoyageClient()
+    reranker = VoyageReranker(client=client)
+    docs = ["alpha", "beta", "gamma"]
+
+    assert reranker.rerank("q", docs, top_k=2) == [2, 0]
+    assert client.calls == [
+        {
+            "query": "q",
+            "documents": docs,
+            "model": RERANK_MODEL,
+            "top_k": 2,
+        }
+    ]
+    assert RERANK_MODEL == "rerank-2.5"
+    assert DEFAULT_P == 10
