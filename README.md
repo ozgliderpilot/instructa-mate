@@ -126,14 +126,14 @@ re-embeds only what changed (ADR 0004).
 ### Stage 3 · Retrieval — **ingest + hybrid children built; parent rerank open**
 
 **Ingest (#34):** Terraform provisions Atlas Flex (`AP_SOUTHEAST_2`); runtime Sync Plan
-embeds children with explicit `voyage-4-lite` (`input_type=document`) into
+embeds children with explicit `voyage-4-large` (`input_type=document`) into
 `instructamate.chunks` and code-ensures Vector Search index `chunks_vector` plus
 Atlas Search index `chunks_search` (jargon-preserving `jargon_text` analyzer). See
 [`terraform/README.md`](terraform/README.md).
 
 **Query path (#35–#36):** embed query → vector-only or server-side `$rankFusion`
-(vector + full-text on children, keep 20) → expand to unique **parents** → top
-**P=5**. Parent `rerank-2.5` remains open (ADR 0005).
+(vector + full-text on children, keep 70) → expand to unique **parents** → top
+**P=10**. Parent `rerank-2.5` remains open (ADR 0005).
 
 ### Stage 4 · Generation — **designed**
 

@@ -7,7 +7,7 @@ Public seams (issue #34 / ADR 0004–0005):
 - :func:`chunk_record_to_document` — ChunkRecord → Atlas document shape
 - :func:`ensure_vector_index` — code-ensure ``chunks_vector`` from committed JSON
 - :func:`ensure_search_index` — code-ensure ``chunks_search`` (jargon-preserving analyzer)
-- :class:`VoyageEmbedder` — explicit ``voyage-4-lite`` (``input_type=document``)
+- :class:`VoyageEmbedder` — explicit ``voyage-4-large`` (``input_type=document``)
 
 Embeddings are explicit Voyage calls, not Atlas Automated Embedding. Parents are
 stored without vectors for expand payload.
@@ -47,7 +47,7 @@ DB_NAME = "instructamate"
 COLLECTION_NAME = "chunks"
 VECTOR_INDEX_NAME = "chunks_vector"
 SEARCH_INDEX_NAME = "chunks_search"
-EMBEDDING_MODEL = "voyage-4-lite"
+EMBEDDING_MODEL = "voyage-4-large"
 EMBEDDING_DIMS = 1024
 
 

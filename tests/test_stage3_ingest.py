@@ -396,7 +396,7 @@ def test_voyage_embedder_batches_and_sets_document_input_type():
     assert client.calls[0]["texts"] == ["a", "b"]
     assert client.calls[1]["texts"] == ["c"]
     assert client.calls[0]["input_type"] == "document"
-    assert client.calls[0]["model"] == "voyage-4-lite"
+    assert client.calls[0]["model"] == "voyage-4-large"
     assert client.calls[0]["output_dimension"] == 4
 
 

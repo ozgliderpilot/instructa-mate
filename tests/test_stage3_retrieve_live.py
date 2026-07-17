@@ -15,7 +15,7 @@ from typing import Literal
 import pytest
 from pymongo.errors import OperationFailure
 
-from instructamate.stage3_retrieve import ParentHit, retrieve_parents
+from instructamate.stage3_retrieve import ParentHit, retrieve_parents, DEFAULT_P
 
 # conftest.load_dotenv() runs at import; credentials may come from .env.
 pytestmark = pytest.mark.skipif(
@@ -125,7 +125,7 @@ def test_vector_retrieve_expands_to_sensible_unit5_parent():
         predicate=lambda hs: any(hit.id == SMOKE_PARENT_ID for hit in hs),
     )
 
-    assert len(hits) <= 5
+    assert len(hits) <= DEFAULT_P
     key_messages = next(hit for hit in hits if hit.id == SMOKE_PARENT_ID)
     assert key_messages.source == "trainer"
     assert key_messages.unit == "5"
@@ -154,7 +154,7 @@ def test_hybrid_jargon_query_surfaces_fust_parent():
         JARGON_QUERY, collection, embedder, fusion="vector"
     )
 
-    assert len(hybrid_hits) <= 5
+    assert len(hybrid_hits) <= DEFAULT_P
     fust_hits = [hit for hit in hybrid_hits if "FUST" in hit.text]
     assert fust_hits, f"got {[h.id for h in hybrid_hits]}"
 

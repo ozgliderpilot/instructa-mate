@@ -7,7 +7,7 @@ Public seams (ADR 0005 ablation steps 1–2):
   → expand → top P
 - :class:`ParentHit` — parent chunk with citation metadata
 - :data:`PRIMARY_CONTENT_TYPES` — CONTEXT.md primary roles (query-time filter)
-- :data:`DEFAULT_N` / :data:`DEFAULT_P` — ADR 0005 starting widths (N=20, P=5)
+- :data:`DEFAULT_N` / :data:`DEFAULT_P` — ADR 0005 starting widths (N=70, P=10)
 """
 from __future__ import annotations
 
@@ -27,8 +27,8 @@ __all__ = [
     "retrieve_parents",
 ]
 
-DEFAULT_N = 20
-DEFAULT_P = 5
+DEFAULT_N = 70
+DEFAULT_P = 10
 
 #: Stable ``$in`` list for the vector-search content_type filter.
 _PRIMARY_CONTENT_TYPE_FILTER = sorted(PRIMARY_CONTENT_TYPES)
