@@ -72,8 +72,8 @@ truth** that every downstream citation is audited against.
                │
                ▼
 ┌─────────────────────────────┐
-│ Stage 4 · Generation     ◻  │  grounded answer + citations, OR refuse;
-│   refuse-or-cite contract   │  Generated Patter as grounded restyling
+│ Stage 4 · Generation     ◐  │  Q&A: grounded answer + citations, OR refuse;
+│   refuse-or-cite contract   │  Generated Patter (grounded restyling) still open
 └─────────────────────────────┘
 ```
 
@@ -172,7 +172,7 @@ The reasoning behind the load-bearing choices lives in short ADRs:
 
 ---
 
-## Running stage 1–3 (library)
+## Running stage 1–4 (library)
 
 Requires Python 3.12+.
 
@@ -183,8 +183,8 @@ pytest
 
 The real GFA PDFs are **not committed** (third-party copyright — see below), so they live
 in a gitignored `corpus/`. Tests that need them auto-skip, so a fresh checkout runs green
-without them. Atlas/Voyage live smoke also skips unless `MONGODB_URI` and
-`VOYAGE_API_KEY` are set.
+without them. Atlas/Voyage/Anthropic live smoke also skips unless `MONGODB_URI`,
+`VOYAGE_API_KEY`, and (for Q&A) `ANTHROPIC_API_KEY` are set.
 
 With the PDFs present, the parser's public API is three functions in
 `instructamate.stage1_parser`:
@@ -216,6 +216,23 @@ report = ingest_corpus(
 print(report)
 ```
 
+```python
+import os
+from instructamate.stage3_ingest import VoyageEmbedder, chunks_collection
+from instructamate.stage3_retrieve import VoyageReranker
+from instructamate.stage4_qa import AnthropicCompleter, answer_question
+
+# Paste a club GPC question — grounded answer + citations, or structured refusal
+result = answer_question(
+    "What is your primary attitude reference for controlling pitch?",
+    chunks_collection(os.environ["MONGODB_URI"]),
+    embedder=VoyageEmbedder(),
+    completer=AnthropicCompleter(),  # uses ANTHROPIC_API_KEY
+    reranker=VoyageReranker(),
+)
+print(result.grounded, result.answer, result.citations)
+```
+
 `render_unit_markdown` is the single seam; `write_unit_markdown` and `write_corpus` are
 thin batch wrappers. There is no CLI yet.
 
@@ -227,6 +244,8 @@ thin batch wrappers. There is no CLI yet.
 src/instructamate/stage1_parser.py   PDF → verified Markdown
 src/instructamate/stage2_chunker.py  Markdown → ChunkRecords + Sync Plan
 src/instructamate/stage3_ingest.py   Sync Plan → Voyage embed → Atlas chunks
+src/instructamate/stage3_retrieve.py Child search → expand → parent rerank
+src/instructamate/stage4_qa.py       Refuse-or-cite Q&A over retrieved parents
 src/instructamate/data/chunks_vector.json  Vector Search index definition
 terraform/                           Atlas Flex cluster (existing project)
 corpus/                              GFA PDFs — gitignored (copyright)
@@ -236,6 +255,7 @@ tests/                               TDD suite against hand-verified goldens
 CONTEXT.md                           domain glossary (ubiquitous language)
 parser-build.md                      stage-1 build handover
 defered-grill.md                     designed-but-unbuilt decisions (stages 2–4)
+evals/                               GPC unit-test fixtures for refuse-or-cite evals
 ```
 
 ---
@@ -247,8 +267,7 @@ defered-grill.md                     designed-but-unbuilt decisions (stages 2–
 - [x] **Stage 2 — Chunking**: chunk schema, stable IDs + content hashes, Sync Plan.
 - [x] **Stage 3 — Retrieval**: Atlas ingest; vector→expand; `$rankFusion` hybrid;
       parent `rerank-2.5` (ADR 0005).
-- [ ] **Stage 4 — Generation**: refuse-or-cite Q&A and Generated Patter, with a
-      claim-grounding check.
+- [~] **Stage 4 — Generation**: refuse-or-cite Q&A (#38); Generated Patter still open.
 - [ ] **Eval harness**: two-tier (automated `recall@k`/refusal + LLM-as-judge faithfulness,
       then an SME milestone) validating citation accuracy and an instructor-approved
       Unit Guide.
