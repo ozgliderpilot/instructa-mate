@@ -1632,27 +1632,27 @@
       "id": "self_check-pilot-13S-03",
       "question": "State the parameters that would require you to abort the takeoff.",
       "expected_behavior": "answer",
-      "expected_answer": "Parameters requiring takeoff abort include: (1) Unsafe speed - either excessively fast or slow; (2) Wing drop to the ground; (3) Aircraft unable to maintain speed above absolute minimum winch airspeed of 1.3VS when in climb attitude; (4) Mechanical failure or power loss at winch/autotow; (5) Cable or weak-link failures; (6) Cable release maladjustment or failure; (7) Loss of control on ground run; (8) Aircraft overrunning the winch cable; (9) Receipt of STOP signal from ground crew or radio; (10) Any other situation that could jeopardize the flight.",
+      "expected_answer": "Abort the self-launch takeoff if expected performance is not achieved. Preselect an abort point on the takeoff run for non-performance of the aircraft, and abort if you are not airborne by that point or if engine instruments do not show expected values as power develops. Also abort if climb performance minima are not met (for example due to heavy sink, incorrect aircraft settings, or a tailwind), if anyone signals STOP STOP STOP (including by radio), or if you lose control on the takeoff (for example failing to compensate for swing/crosswind so rudder authority is lost).",
       "citations": [
         {
           "source": "pilot",
-          "unit": "14W",
-          "page": 1
-        },
-        {
-          "source": "trainer",
-          "unit": "14W",
-          "page": 3
-        },
-        {
-          "source": "pilot",
-          "unit": "20W",
+          "unit": "14S",
           "page": 2
         },
         {
           "source": "trainer",
-          "unit": "14A",
+          "unit": "14S",
           "page": 6
+        },
+        {
+          "source": "pilot",
+          "unit": "13S",
+          "page": 3
+        },
+        {
+          "source": "pilot",
+          "unit": "20S",
+          "page": 1
         }
       ],
       "category": "self_check",
@@ -2127,7 +2127,7 @@
       "id": "self_check-pilot-14S-05",
       "question": "What is meant by Vx?",
       "expected_behavior": "answer",
-      "expected_answer": "Vx is the best angle of climb speed. It is used during the initial climb phase after takeoff to ensure obstacle clearance, as it provides the steepest climb angle compared to Vy (best rate of climb speed).",
+      "expected_answer": "Vx is the best angle of climb speed. After reaching Takeoff Safety Speed (TOSS), the aircraft is pitched to either Vx or Vy (best rate of climb speed). For obstacle clearance once established in the climb (above about 300 ft AGL), transition to Vy rather than Vx.",
       "citations": [
         {
           "source": "pilot",
@@ -2561,7 +2561,7 @@
       "id": "self_check-pilot-17-01",
       "question": "What is the final approach speed of a glider which stalls at 34 knots, approaching to land in a 10 knot headwind?",
       "expected_behavior": "answer",
-      "expected_answer": "51 knots. The approach speed is calculated using the formula: 1.5Vs + ½ wind speed. With a stall speed of 34 knots, the safe speed near the ground (1.5Vs) is 51 knots. In a 10 knot headwind, add half the windspeed (5 knots) to get a final approach speed of 51 knots.",
+      "expected_answer": "56 knots. The approach speed is calculated using the formula: 1.5Vs + ½ wind speed. With a stall speed of 34 knots, the safe speed near the ground (1.5Vs) is 51 knots. In a 10 knot headwind, add half the windspeed (5 knots) to get a final approach speed of 56 knots.",
       "citations": [
         {
           "source": "pilot",
@@ -3244,21 +3244,31 @@
       "id": "self_check-pilot-20A-01",
       "question": "Describe potential launch failures on Ground roll, early climb and full climb",
       "expected_behavior": "answer",
-      "expected_answer": "Launch failures can occur at three stages with distinct characteristics:\n\n**Ground Roll:** If a wing drops to the ground, release twice and steer away using rudder to prevent the wing catching, yawing the aircraft, and potentially rolling it over. If directional control is lost, also release immediately and steer away using rudder.\n\n**Early Climb:** During this stage (lower third of launch), the climb angle should not be very steep. If a launch failure occurs, the relatively low altitude and shallow climb angle mean the nose lowering is not extreme, speed decay is minimal, and there is no great inertial problem. The glider should not be allowed to climb steeply during early stages precisely to avoid this danger.\n\n**Full Climb:** This stage is characterized by very high climb rates (typically exceeding 2,000 ft/min). If a cable-break occurs, you must take immediate and prompt action to change the nose attitude from the steep climb attitude to the approach-to-land attitude. The critical dangers are inertia and time: the glider will stall within seconds if held in climb attitude, and there is a minimum 5-second delay before speed builds to safe speed (1.5 VS) even with nose pointing downward. Attempting turns before speed stabilizes risks a spin.",
+      "expected_answer": "Aerotow launch failures differ by stage:\n\nGround roll: STOP signals require immediate rope release. Wing drop — brief aileron recovery only; if not recovered in a few seconds, release and use airbrake and wheel brake. Tug engine failure on the ground — steer away (typically right), use airbrake and wheel brake. Other risks include loss of directional control, conflicting traffic, ballooning/incorrect separation, and Pilot Induced Oscillation (PIO) from large elevator inputs.\n\nEarly / initial climb (to about 500 ft AGL): rope break or tug engine failure — lower the nose to safe speed, release, then land ahead on remaining runway or outland/turnback/modified circuit depending on height and options. Also watch for tug upset, conflicting traffic, and tug emergency signals (wing rock = release immediately; rudder waggle = check configuration, do not release).\n\nFull climb (above about 500 ft AGL): similar rope-break/tug-failure actions with more height for a modified circuit; also release failure / hook-up and double-release-failure procedures.",
       "citations": [
         {
-          "source": "trainer",
-          "unit": "20W",
-          "page": 4
+          "source": "pilot",
+          "unit": "20A",
+          "page": 2
         },
         {
           "source": "pilot",
-          "unit": "20W",
+          "unit": "20A",
           "page": 3
         },
         {
           "source": "pilot",
-          "unit": "13W",
+          "unit": "20A",
+          "page": 4
+        },
+        {
+          "source": "trainer",
+          "unit": "20A",
+          "page": 2
+        },
+        {
+          "source": "trainer",
+          "unit": "20A",
           "page": 3
         }
       ],
@@ -3403,22 +3413,22 @@
       "id": "self_check-pilot-20S-01",
       "question": "Under what circumstances would you abort a Self Launch Take-off?",
       "expected_behavior": "answer",
-      "expected_answer": "You should abort a Self Launch Take-off under the following circumstances: (1) if you hear a STOP STOP STOP signal from ground crew or radio, (2) if your aircraft overruns the winch cable, (3) if a wingtip drops to the ground, (4) if the speed is unsafe (either too fast or too slow), (5) if you lose directional control of the aircraft on the ground, or (6) any other situation that could jeopardise the flight. To abort, pull the cable release handle twice, apply full airbrake, move the stick full forward, and steer the aircraft away from the cable using rudder.",
+      "expected_answer": "Abort a self-launch takeoff if anyone signals STOP STOP STOP (or a radio STOP call); if you have an engine problem on the ground roll or are not airborne by the preselected abort point; if expected takeoff/climb performance is not achieved; or if you lose control (for example a wing drop). Abort actions: close the throttle, maintain directional control, and apply full dive and wheel brakes (not a winch cable-release abort).",
       "citations": [
         {
           "source": "pilot",
-          "unit": "20W",
+          "unit": "20S",
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": "20S",
           "page": 2
         },
         {
           "source": "pilot",
-          "unit": "14W",
-          "page": 1
-        },
-        {
-          "source": "trainer",
-          "unit": "14W",
-          "page": 3
+          "unit": "14S",
+          "page": 2
         }
       ],
       "category": "self_check",
@@ -4867,7 +4877,7 @@
       "id": "self_check-pilot-34-02",
       "question": "You are at 7500 feet AGL. How far can you expect to fly from this height and then select a field?",
       "expected_behavior": "answer",
-      "expected_answer": "At 7500 feet AGL, you can expect to fly approximately 52.5km before selecting a field. This is calculated using the rule: plan on achieving 7km for each 1000 feet of height AGL plus 1500 feet for circuit planning and landing. At 7500 feet, this gives you 7 × 7.5 = 52.5km of gliding distance (assuming no excessive sink).",
+      "expected_answer": "Approximately 42 km. Plan on achieving 7 km for each 1000 feet of height AGL plus 1500 feet for circuit planning and landing. At 7500 feet AGL that leaves 6000 feet usable for the glide (7500 − 1500), so 6 × 7 = 42 km (assuming no excessive sink). The guides give the worked example that at 4500 feet AGL you can fly 21 km before having to land.",
       "citations": [
         {
           "source": "pilot",
