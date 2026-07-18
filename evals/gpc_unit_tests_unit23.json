@@ -1,0 +1,550 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 23 Rules of the Air (YBSS) Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit23-rules-of-the-air-ybss",
+      "title": "GPC Unit 23 - Rules of the Air (YBSS)",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSfPE_vUysU0l3TlBheJAEPHR1kK3Qn3P4V7-MlFpGS3XnOHDg/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u23-01",
+      "question": "A glider shall not operate lower than, except for take-off or landing?",
+      "expected_behavior": "answer",
+      "expected_answer": "1,000 feet over a built-up area and 500 feet above the ground",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 1
+        }
+      ],
+      "category": "minimum_height",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 1,
+      "choices": [
+        "2,000 feet over a built-up area and 1,500 feet above the ground.",
+        "1,500 feet over a built-up area and 1,000 feet above the ground.",
+        "1,000 feet over a built-up area and 500 feet above the ground",
+        "500 feet over a built-up area and 500 feet above the ground"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-02",
+      "question": "Where two aircraft are approaching head-on, or approximately so, and there is a danger of collision, each shall alter its heading?",
+      "expected_behavior": "answer",
+      "expected_answer": "To the right.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 2
+        }
+      ],
+      "category": "collision_avoidance",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 2,
+      "choices": [
+        "To the left.",
+        "To the right.",
+        "The glider in the front climbs.",
+        "The glider in the front descends."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-03",
+      "question": "A glider being overtaken has right of way over the overtaking glider, but the glider in the process of overtaking another glider shall pass?",
+      "expected_behavior": "answer",
+      "expected_answer": "To its right.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 2
+        }
+      ],
+      "category": "overtaking",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 3,
+      "choices": [
+        "Over the top of the glider.",
+        "Under the glider.",
+        "To its left.",
+        "To its right."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-04",
+      "question": "When two aircraft are on converging headings at approximately the same height, the aircraft which has the other on its right shall give way, except that?",
+      "expected_behavior": "answer",
+      "expected_answer": "All of the above.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 1
+        }
+      ],
+      "category": "converging",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 4,
+      "choices": [
+        "Powered aircraft shall give way to airships, sailplanes and balloons.",
+        "Airships shall give way to sailplanes and balloons.",
+        "Sailplanes shall give way to balloons.",
+        "Powered aircraft shall give way to aircraft that are seen to be towing sailplanes.",
+        "All of the above."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-05",
+      "question": "Where two sailplanes are at approximately the same height and both are approaching to land?",
+      "expected_behavior": "answer",
+      "expected_answer": "The higher-performance glider shall give way to the lower-performance glider.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 2
+        }
+      ],
+      "category": "landing_priority",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 5,
+      "choices": [
+        "The smaller glider allows the bigger glider to land first.",
+        "The bigger glider allows the smaller glider to land first.",
+        "The glider with an Instructor on board has right of way to land first.",
+        "The higher-performance glider shall give way to the lower-performance glider."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-06",
+      "question": "Referring to the diagram below, what is the radius distance of the sphere that should be the separation distance from other gliders for the 'blue' glider?",
+      "expected_behavior": "answer",
+      "expected_answer": "200 feet.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 2
+        }
+      ],
+      "category": "thermal_separation",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 6,
+      "choices": [
+        "100 feet.",
+        "200 feet.",
+        "500 feet.",
+        "1,000 feet"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-07",
+      "question": "Which glider in a thermal establishes the direction of turn?",
+      "expected_behavior": "answer",
+      "expected_answer": "The first glider.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 2
+        }
+      ],
+      "category": "thermalling",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 7,
+      "choices": [
+        "The first glider.",
+        "The biggest glider.",
+        "The single seat glider.",
+        "The glider that has a student under instruction."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-08",
+      "question": "The Civil Aviation Regulations require the flight crew of an aircraft to maintain vigilance so as to see, and avoid, other aircraft. For this reason, there are \"Rules\" so that the regulations can be maintained. Which of the following are the rules by which gliders fly?",
+      "expected_behavior": "answer",
+      "expected_answer": "Visual Flight Rules (VFR).",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 2
+        }
+      ],
+      "category": "vfr",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 8,
+      "choices": [
+        "Instrument Flight Rules (IFR).",
+        "Visual Flight Rules (VFR).",
+        "Instrument and Visual Flight Rules (IVR).",
+        "Best of Luck Rules (BLR)"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-09",
+      "question": "Gliders are only permitted to fly in Visual Meteorological Conditions (VMC). What is the requirement for VMC for gliders in uncontrolled airspace at or below 3,000 feet AMSL or 1,000 AGL, whichever is the higher?",
+      "expected_behavior": "answer",
+      "expected_answer": "Required flight visibility 5 km and Clear of cloud and in sight of the ground or water.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 2
+        }
+      ],
+      "category": "vmc",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 9,
+      "choices": [
+        "Required flight visibility 8 km and 1.5 km horizontal 1,000 ft vertical.",
+        "Required flight visibility 5 km and 1.5 km horizontal 1,000 ft vertical.",
+        "Required flight visibility 2 km and 1.0 km horizontal 250 ft vertical.",
+        "Required flight visibility 5 km and Clear of cloud and in sight of the ground or water."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-10",
+      "question": "To control aircraft of all different types and capacity in a safe manner the Civil Aviation Safety Authority have divided sections of Australian airspace into different classifications. Of the following, which class of airspace is uncontrolled?",
+      "expected_behavior": "answer",
+      "expected_answer": "G.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 3
+        }
+      ],
+      "category": "airspace",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 10,
+      "choices": [
+        "A.",
+        "C.",
+        "D.",
+        "E.",
+        "G."
+      ],
+      "question_type": "multiple_choice",
+      "note": "Class E is uncontrolled for gliders with conditions; the form asks which is uncontrolled — G is unambiguously uncontrolled."
+    },
+    {
+      "id": "gpc-u23-11",
+      "question": "A solo or command pilot must be qualified and endorsed to operate the radio and must maintain a listening watch and make radio calls whenever it is reasonably necessary to do so to avoid a collision, or risk of a collision with another aircraft. When making a radio call, which of the following must the radio call include?",
+      "expected_behavior": "answer",
+      "expected_answer": "The name of the aerodrome.; The aircraft’s type and call sign.; The position and intentions.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 5
+        }
+      ],
+      "category": "radio",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 11,
+      "choices": [
+        "Your name (i.e. who you are).",
+        "The name of the aerodrome.",
+        "Your Marital Status.",
+        "Your Age.",
+        "The aircraft’s type and call sign.",
+        "Your star sign.",
+        "Your flying nickname.",
+        "The position and intentions.",
+        "The aircraft you wish you were flying."
+      ],
+      "question_type": "checkboxes",
+      "correct_choices": [
+        "The name of the aerodrome.",
+        "The aircraft’s type and call sign.",
+        "The position and intentions."
+      ]
+    },
+    {
+      "id": "gpc-u23-12",
+      "question": "A NOTAM is the method of notification that D399 is open to allow gliders an air space ceiling increase to 5,500 ft. What does NOTAM stand for (in Australia)?",
+      "expected_behavior": "answer",
+      "expected_answer": "Notice to Airmen.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 6
+        }
+      ],
+      "category": "notam",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 12,
+      "choices": [
+        "Notice to Airmen.",
+        "Notice to Aviator Management.",
+        "Notice to Air Mission.",
+        "Notification of Aviation Maps.",
+        "Notification of Technical Aircraft Maintenance."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-13",
+      "question": "Looking at the section of the Visual Terminal Chart (VTC) below You are flying a glider at position 'A' at an altitude of 4,100 feet. Scanning the skies you notice a group of gliders at position 'B' circling in what seems to be a good climbing thermal. You make the decision to fly and join them. As you are crossing the airspace boundary, at what altitude are you permitted to fly?",
+      "expected_behavior": "answer",
+      "expected_answer": "Equal to or less than 3,500 feet.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 3
+        }
+      ],
+      "category": "airspace_boundary",
+      "content_type": "theory",
+      "difficulty": "hard",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 13,
+      "choices": [
+        "4,100 feet, cross the boundary and descend to the airspace limit.",
+        "Descend from 4,100 feet until you achieve airspace limit.",
+        "Equal to or less than 3,500 feet.",
+        "It does not matter as long as you are flying safely."
+      ],
+      "question_type": "multiple_choice",
+      "note": "Must be at or below the lower airspace limit when crossing the boundary (diagram shows 3,500 ft step)."
+    },
+    {
+      "id": "gpc-u23-14",
+      "question": "A circle with a radius of 2 nautical miles is indicated, below in yellow, on the area map of YBSS. Glider operations are being conducted from Runway 27 with a standard left-hand circuit, therefore, directionally, which semicircle is designated as the 'Live Side' of the circuit?",
+      "expected_behavior": "answer",
+      "expected_answer": "Southern Semicircle.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 1
+        }
+      ],
+      "category": "ybss_local",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 14,
+      "choices": [
+        "Northern Semicircle.",
+        "Eastern Semicircle.",
+        "Western Semicircle.",
+        "Southern Semicircle."
+      ],
+      "question_type": "multiple_choice",
+      "note": "RWY 27 left-hand circuit places downwind south of the strip — southern semicircle is live side. YBSS local."
+    },
+    {
+      "id": "gpc-u23-15",
+      "question": "In accordance with YBSS local procedures, glider pilots are to remain clear of the live side of the circuit at or below what indicated altitude, unless flying the circuit to land?",
+      "expected_behavior": "answer",
+      "expected_answer": "2,000 feet.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 1
+        }
+      ],
+      "category": "ybss_local",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 15,
+      "choices": [
+        "2,500 feet.",
+        "2,000 feet.",
+        "1,500 feet.",
+        "At any altitude providing I am clear of any and all other aircraft."
+      ],
+      "question_type": "multiple_choice",
+      "note": "YBSS Aerodrome Operations Manual: no thermalling on live side below 2,000 ft AMSL within 2 NM."
+    },
+    {
+      "id": "gpc-u23-16",
+      "question": "In a Non-Manoeuvring Area (NMA) after winch-launch failure a glider is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Too low for circuit and too high to land ahead.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "20W",
+          "page": 4
+        }
+      ],
+      "category": "nma",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 16,
+      "choices": [
+        "High enough for circuit.",
+        "Too low to land ahead safely.",
+        "Too low for circuit and too high to land ahead.",
+        "Allowed to climb."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-17",
+      "question": "For operations at or above 10 000 ft AMSL VMC visibility must be at least:",
+      "expected_behavior": "answer",
+      "expected_answer": "8 km.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 2
+        }
+      ],
+      "category": "vmc",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 17,
+      "choices": [
+        "3 km.",
+        "5 km.",
+        "8 km.",
+        "10 km."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-18",
+      "question": "Flight inside a Prohibited Area is permitted:",
+      "expected_behavior": "answer",
+      "expected_answer": "Never, under any circumstance",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 5
+        }
+      ],
+      "category": "prd",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 18,
+      "choices": [
+        "On weekends",
+        "Below 500 ft",
+        "If on 121.5 MHz",
+        "Never, under any circumstance"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-19",
+      "question": "Entry to Class C airspace by a glider requires:",
+      "expected_behavior": "answer",
+      "expected_answer": "ATC clearance and a serviceable VHF radio.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 3
+        }
+      ],
+      "category": "class_c",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 19,
+      "choices": [
+        "FLARM.",
+        "ATC clearance and a serviceable VHF radio.",
+        "ADS-B Out.",
+        "A transponder code 7000 only."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u23-20",
+      "question": "The primary pilot responsibility that underpins all rules of the air is to ___",
+      "expected_behavior": "answer",
+      "expected_answer": "see and avoid other aircraft.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 2
+        }
+      ],
+      "category": "see_and_avoid",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit23-rules-of-the-air-ybss",
+      "source_item": 20,
+      "choices": [
+        "obey ATC instructions.",
+        "maintain minimum sink.",
+        "see and avoid other aircraft.",
+        "follow the GPS course."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

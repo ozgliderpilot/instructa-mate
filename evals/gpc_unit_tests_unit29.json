@@ -1,0 +1,534 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 29 Steep Turns Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit29-steep-turns",
+      "title": "GPC Unit 29 - Steep Turns",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSckbVsZ06SE3O6sCjlmcYoMBG4j7QGwau-dwA210WsbuPvw3Q/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u29-01",
+      "question": "The principal reason for applying back-elevator in a 60° bank is to …........",
+      "expected_behavior": "answer",
+      "expected_answer": "maintain the original nose attitude against the 2 g load.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "elevator",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 1,
+      "choices": [
+        "reduce yaw string deflection.",
+        "keep the slip ball centred.",
+        "maintain the original nose attitude against the 2 g load.",
+        "counter adverse yaw."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-02",
+      "question": "At 60° of bank the load factor is closest to …........",
+      "expected_behavior": "answer",
+      "expected_answer": "2.0 g",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "g_loading",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 2,
+      "choices": [
+        "1.5 g",
+        "1.7 g",
+        "2.0 g",
+        "2.5 g"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-03",
+      "question": "If the straight-and-level stall speed of your glider is 33 kt, the approximate stall speed at 60° bank is …..........",
+      "expected_behavior": "answer",
+      "expected_answer": "46 kt",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "stall_speed",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 3,
+      "choices": [
+        "38 kt",
+        "42 kt",
+        "46 kt",
+        "60 kt"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-04",
+      "question": "Failure to hold the nose attitude in a steep turn most commonly leads first to ….......",
+      "expected_behavior": "answer",
+      "expected_answer": "a spiral dive with rapidly increasing speed.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "spiral_dive",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 4,
+      "choices": [
+        "a spin.",
+        "an immediate stall warning.",
+        "insufficient rudder authority.",
+        "a spiral dive with rapidly increasing speed."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-05",
+      "question": "When rolling from 45° to 60° bank the correct control coordination is …........",
+      "expected_behavior": "answer",
+      "expected_answer": "progressive aileron with increasing rudder.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "coordination",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 5,
+      "choices": [
+        "more aileron, rudder neutral.",
+        "aileron only.",
+        "rudder then opposite aileron.",
+        "progressive aileron with increasing rudder."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-06",
+      "question": "Compared with medium turns, lookout in steep turns is harder because …........",
+      "expected_behavior": "answer",
+      "expected_answer": "high g makes head movement difficult.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "lookout",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 6,
+      "choices": [
+        "aileron loads are lighter.",
+        "wing bends upward.",
+        "cockpit reflections increase.",
+        "high g makes head movement difficult."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-07",
+      "question": "During a steep turn the attitude reference you rely on most is …......",
+      "expected_behavior": "answer",
+      "expected_answer": "the fixed position of the nose on the horizon.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "attitude",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 7,
+      "choices": [
+        "the fixed position of the nose on the horizon.",
+        "the ASI needle.",
+        "the turn-and-bank indicator.",
+        "the yaw string."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-08",
+      "question": "To recover from an incipient spiral dive entered from a steep turn you should first ............",
+      "expected_behavior": "answer",
+      "expected_answer": "release some back-stick to lower g and ease bank with coordinated aileron.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "spiral_dive",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 8,
+      "choices": [
+        "apply full opposite rudder.",
+        "open airbrakes.",
+        "release some back-stick to lower g and ease bank with coordinated aileron.",
+        "pull harder to tighten the turn."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-09",
+      "question": "Stalling in a steep turn is more dangerous because ….......",
+      "expected_behavior": "answer",
+      "expected_answer": "the stall break may be masked by high noise and g-loading.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "stall",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 9,
+      "choices": [
+        "wings level automatically.",
+        "the stall break may be masked by high noise and g-loading.",
+        "stall speed is lower.",
+        "the glider auto-yaws into the wind."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-10",
+      "question": "Immediately after rolling wings level from 60° bank you must expect to ….........",
+      "expected_behavior": "answer",
+      "expected_answer": "relax elevator back-pressure to avoid ballooning",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "rollout",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 10,
+      "choices": [
+        "pitch up sharply",
+        "re-trim nose-down.",
+        "add opposite rudder.",
+        "relax elevator back-pressure to avoid ballooning"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-11",
+      "question": "Neglecting rudder in the entry will make the glider ….....",
+      "expected_behavior": "answer",
+      "expected_answer": "skid to the outside of the turn.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "coordination",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 11,
+      "choices": [
+        "skid to the outside of the turn.",
+        "slip to high side.",
+        "immediately spin.",
+        "ball centred but nose drop."
+      ],
+      "question_type": "multiple_choice",
+      "note": "Adverse yaw without rudder yaws nose opposite the turn (outside skid)."
+    },
+    {
+      "id": "gpc-u29-12",
+      "question": "Which bank-angle progression is recommended for students before attempting 60° turns?",
+      "expected_behavior": "answer",
+      "expected_answer": "35° → 45° → 50° → 60°",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "training",
+      "content_type": "exercise",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 12,
+      "choices": [
+        "20° → 30° → directly 60°",
+        "30° → 45° → 55° → 60°",
+        "35° → 45° → 50° → 60°",
+        "45° only then 60°"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-13",
+      "question": "The lowest safe entry speed the Pilot Guide suggests for most trainers is roughly …......",
+      "expected_behavior": "answer",
+      "expected_answer": "≈ 70 kt (check AFM)",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "entry_speed",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 13,
+      "choices": [
+        "55 kt",
+        "60 kt",
+        "≈ 70 kt (check AFM)",
+        "80 kt"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-14",
+      "question": "During a 60° bank the glider’s radius of turn (for the same TAS) is …........",
+      "expected_behavior": "answer",
+      "expected_answer": "smaller than in a 30° turn.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 1
+        }
+      ],
+      "category": "turn_radius",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 14,
+      "choices": [
+        "unchanged.",
+        "smaller than in a 30° turn.",
+        "larger than in a 30° turn.",
+        "dependent only on weight."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-15",
+      "question": "A steep turn performed with insufficient back-pressure will initially show …........",
+      "expected_behavior": "answer",
+      "expected_answer": "nose dropping below horizon.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "attitude",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 15,
+      "choices": [
+        "ball left.",
+        "yaw string aft.",
+        "nose dropping below horizon.",
+        "sudden buffeting."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-16",
+      "question": "Maintaining co-ordinated controls in steep turns primarily prevents ….........",
+      "expected_behavior": "answer",
+      "expected_answer": "drag-induced speed decay and skid-type stalls.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "coordination",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 16,
+      "choices": [
+        "wing bending.",
+        "drag-induced speed decay and skid-type stalls.",
+        "pitot blockage.",
+        "aileron flutter."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-17",
+      "question": "If you experience grey-out during prolonged 2 g loading the immediate action is to ….......",
+      "expected_behavior": "answer",
+      "expected_answer": "reduce back-pressure and roll level.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 1
+        }
+      ],
+      "category": "g_loading",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 17,
+      "choices": [
+        "tighten shoulder harness more.",
+        "increase bank.",
+        "reduce back-pressure and roll level.",
+        "hold breath and continue."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-18",
+      "question": "After practising one direction, the Pilot Guide requires practising the opposite direction because ….......",
+      "expected_behavior": "answer",
+      "expected_answer": "some pilots favour one side and must stay symmetrical.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "practice",
+      "content_type": "exercise",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 18,
+      "choices": [
+        "some pilots favour one side and must stay symmetrical.",
+        "visibility differs.",
+        "wing loading changes.",
+        "thermals always drift left."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-19",
+      "question": "Which common student error lengthens recovery to level flight?",
+      "expected_behavior": "answer",
+      "expected_answer": "Relaxing aileron before reducing elevator back-pressure.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 2
+        }
+      ],
+      "category": "rollout",
+      "content_type": "common_problems",
+      "difficulty": "hard",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 19,
+      "choices": [
+        "Over-rudder on roll-out.",
+        "Lowering nose too early.",
+        "Using aileron and rudder together.",
+        "Relaxing aileron before reducing elevator back-pressure."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u29-20",
+      "question": "GPC Unit 29 competence is demonstrated when the pilot can ….........",
+      "expected_behavior": "answer",
+      "expected_answer": "enter, maintain and recover from a 60° turn smoothly while keeping lookout.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 29,
+          "page": 3
+        }
+      ],
+      "category": "competency",
+      "content_type": "competency",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit29-steep-turns",
+      "source_item": 20,
+      "choices": [
+        "perform a 45° turn solo.",
+        "recover from spins.",
+        "enter, maintain and recover from a 60° turn smoothly while keeping lookout.",
+        "fly at Vne for 10 s."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

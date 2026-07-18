@@ -1,0 +1,539 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 11 Introduction to Soaring Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit11-introduction-to-soaring",
+      "title": "GPC Unit 11 - Introduction to Soaring",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSdUru77JqwyL34Qgz6ysVC9AYDBypJKtxva41OCvDK3RmmiiQ/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u11-01",
+      "question": "The Key Messages state that a skill “essential for longer-duration flights and cross-country flying” is",
+      "expected_behavior": "answer",
+      "expected_answer": "Soaring in thermals.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 1
+        }
+      ],
+      "category": "thermalling",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 1,
+      "choices": [
+        "Precise side-slip landings.",
+        "Winch-launch energy management.",
+        "Wave-flying in mountain lee waves.",
+        "Soaring in thermals."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-02",
+      "question": "The primary aim of Unit 11 is to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Introduce soaring and inspire you to continue training beyond solo.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 1
+        }
+      ],
+      "category": "aim",
+      "content_type": "aim",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 2,
+      "choices": [
+        "Teach cloud-street navigation.",
+        "Practise spins at altitude.",
+        "Introduce soaring and inspire you to continue training beyond solo.",
+        "Train instrument approaches."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-03",
+      "question": "Which activity is NOT listed in the Pilot Guide as a future gliding pathway?",
+      "expected_behavior": "answer",
+      "expected_answer": "Instrument-rating under IFR.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 1
+        }
+      ],
+      "category": "pathways",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 3,
+      "choices": [
+        "Mountain flying.",
+        "Competition soaring.",
+        "Aerobatics.",
+        "Instrument-rating under IFR."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-04",
+      "question": "Unit 11 lists the following pre-requisite units:",
+      "expected_behavior": "answer",
+      "expected_answer": "7, 8 and 9.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 4,
+      "choices": [
+        "6 & 7 only.",
+        "7 & 9 only.",
+        "7, 8 and 9.",
+        "10, 11 and 12."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-05",
+      "question": "A thermal is best described as a column of:",
+      "expected_behavior": "answer",
+      "expected_answer": "Rising warm air.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 1
+        }
+      ],
+      "category": "thermalling",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 5,
+      "choices": [
+        "Descending cold air.",
+        "Rising warm air.",
+        "Laminar ridge lift.",
+        "Static, motionless air."
+      ],
+      "question_type": "multiple_choice",
+      "note": "Pilot Guide: 'Thermals are columns of rising air.'"
+    },
+    {
+      "id": "gpc-u11-06",
+      "question": "To climb in a thermal a pilot must normally:",
+      "expected_behavior": "answer",
+      "expected_answer": "Circle inside the rising air.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 1
+        }
+      ],
+      "category": "thermalling",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 6,
+      "choices": [
+        "Fly straight through the column.",
+        "Side-slip with airbrakes out.",
+        "Circle inside the rising air.",
+        "Open negative flap settings."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-07",
+      "question": "The Pilot Guide introduces two thermal-centring methods: using feel and using the:",
+      "expected_behavior": "answer",
+      "expected_answer": "Variometer indications.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 2
+        }
+      ],
+      "category": "thermalling",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 7,
+      "choices": [
+        "Variometer indications.",
+        "GPS track line.",
+        "Compass heading.",
+        "Angle-of-attack probe."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-08",
+      "question": "Gliders cover long cross-country distances primarily by:",
+      "expected_behavior": "answer",
+      "expected_answer": "Climbing in thermals then gliding to the next thermal.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 1
+        }
+      ],
+      "category": "cross_country",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 8,
+      "choices": [
+        "Dynamic soaring behind clouds.",
+        "Climbing in thermals then gliding to the next thermal.",
+        "Using motor-glider self-launch.",
+        "Hovering in ridge lift alone."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-09",
+      "question": "Essential handling skills refreshed in this unit DO NOT include:",
+      "expected_behavior": "answer",
+      "expected_answer": "Executing full-aerobatic loops.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 1
+        }
+      ],
+      "category": "handling",
+      "content_type": "aim",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 9,
+      "choices": [
+        "Cruising at a constant attitude.",
+        "Maintaining constant bank in a turn.",
+        "Flying towards a point.",
+        "Executing full-aerobatic loops."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-10",
+      "question": "A common problem listed is speed varying in turns. One cited cause is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Flying by ASI instead of nose attitude.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 2
+        }
+      ],
+      "category": "common_problems",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 10,
+      "choices": [
+        "Trim too far forward.",
+        "Excess ballast.",
+        "Flying by ASI instead of nose attitude.",
+        "Variometer lag."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-11",
+      "question": "The second probable cause of speed variation in turns is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Incorrect trim setting.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 2
+        }
+      ],
+      "category": "common_problems",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 11,
+      "choices": [
+        "Weak vario battery.",
+        "Incorrect trim setting.",
+        "Dirty pitot tube.",
+        "Canopy reflections."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-12",
+      "question": "Key Messages emphasise that soaring is a sport in which you:",
+      "expected_behavior": "answer",
+      "expected_answer": "Never stop learning.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 1
+        }
+      ],
+      "category": "pathways",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 12,
+      "choices": [
+        "Master everything after licence.",
+        "Never stop learning.",
+        "Need only one endorsed pathway.",
+        "Avoid further formal training."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-13",
+      "question": "If bad weather prevents a cross-country flight during this lesson, you should:",
+      "expected_behavior": "answer",
+      "expected_answer": "Schedule a cross-country flight with an instructor as soon as conditions allow.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 2
+        }
+      ],
+      "category": "exercise",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 13,
+      "choices": [
+        "Skip the exercise permanently.",
+        "Practise stalls instead.",
+        "Schedule a cross-country flight with an instructor as soon as conditions allow.",
+        "Attempt a 50 km solo task."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-14",
+      "question": "During the soaring flight exercise, what should the student be introduced to if conditions are suitable?",
+      "expected_behavior": "answer",
+      "expected_answer": "Identifying a thermal, centring it, and flying a simple task with instructor guidance.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 2
+        }
+      ],
+      "category": "exercise",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 14,
+      "choices": [
+        "Identifying a thermal, centring it, and flying a simple task with instructor guidance.",
+        "Flying an independent cross-country task without instructor assistance.",
+        "Practising advanced thermal entry and centring techniques.",
+        "Using ballast and speed-to-fly techniques for competition soaring."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-15",
+      "question": "When centring by variometer, the pilot should adjust the circle to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Move toward the strongest climb reading.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 2
+        },
+        {
+          "source": "trainer",
+          "unit": 11,
+          "page": 2
+        }
+      ],
+      "category": "thermalling",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 15,
+      "choices": [
+        "Move toward the strongest climb reading.",
+        "Keep the yaw string centred.",
+        "Maintain 45° bank always.",
+        "Match the previous cruise heading."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-16",
+      "question": "What should this soaring unit help you do?",
+      "expected_behavior": "answer",
+      "expected_answer": "Understand possible future pathways in gliding and set goals beyond solo.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 2
+        }
+      ],
+      "category": "competency",
+      "content_type": "competency",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 16,
+      "choices": [
+        "Understand possible future pathways in gliding and set goals beyond solo.",
+        "Qualify for advanced cross-country flying.",
+        "Complete competition and badge-flying requirements.",
+        "Replace further instruction with self-directed soaring practice."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-17",
+      "question": "The Resources & References section points you to Unit 30 for thermal centring and Unit 31 for:",
+      "expected_behavior": "answer",
+      "expected_answer": "Thermal entry.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 2
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 17,
+      "choices": [
+        "Wave entry.",
+        "Ridge soaring.",
+        "Thermal entry.",
+        "Cloud-base estimation."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-18",
+      "question": "One competence item for this unit is to describe gliding pathways and set goals; which of the following IS NOT required at this stage?",
+      "expected_behavior": "answer",
+      "expected_answer": "Solo Gold-distance badge flight.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 2
+        }
+      ],
+      "category": "competency",
+      "content_type": "competency",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 18,
+      "choices": [
+        "Basic thermalling with guidance.",
+        "Constant-attitude cruising.",
+        "Solo Gold-distance badge flight.",
+        "Sustained-turn stability."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-19",
+      "question": "After the soaring flight, the post-flight debrief should include:",
+      "expected_behavior": "answer",
+      "expected_answer": "Reviewing what you enjoyed, what you want to do next, and planning future goals with your instructor.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 2
+        }
+      ],
+      "category": "exercise",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 19,
+      "choices": [
+        "Reviewing what you enjoyed, what you want to do next, and planning future goals with your instructor.",
+        "Focusing mainly on launch and landing technique rather than the soaring experience.",
+        "Assessing whether the flight met all requirements for independent cross-country flying.",
+        "Reviewing only the aircraft handling errors made during the flight."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u11-20",
+      "question": "If your speed oscillates in a turn, the first corrective action suggested is to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Re-establish constant nose attitude on the horizon and re-trim.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 11,
+          "page": 2
+        }
+      ],
+      "category": "common_problems",
+      "content_type": "common_problems",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit11-introduction-to-soaring",
+      "source_item": 20,
+      "choices": [
+        "Pull full airbrake.",
+        "Look at the GPS.",
+        "Re-establish constant nose attitude on the horizon and re-trim.",
+        "Switch to negative flap."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

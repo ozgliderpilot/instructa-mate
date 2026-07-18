@@ -1,0 +1,549 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 9 Lookout Scan Procedures Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit9-lookout-scan-procedures",
+      "title": "GPC Unit 9 - Lookout Scan Procedures",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSc5NnySYVJiP4ZdBjbOVmJI1IHpkoF5efJQIZ_wBdD-1qvepg/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u9-01",
+      "question": "According to the Key Messages, what must always remain a pilot's top priority in flight?",
+      "expected_behavior": "answer",
+      "expected_answer": "Lookout and situational awareness.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 1
+        }
+      ],
+      "category": "lookout_priority",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 1,
+      "choices": [
+        "Radio discipline.",
+        "Instrument cross-check.",
+        "Flight-computer programming.",
+        "Lookout and situational awareness."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-02",
+      "question": "When another aircraft calls \"10 o'clock, 1 kilometre, same level,\" which scan type should you adopt first?",
+      "expected_behavior": "answer",
+      "expected_answer": "Targeted scan.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 4
+        }
+      ],
+      "category": "targeted_scan",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 2,
+      "choices": [
+        "Full scan.",
+        "Cruising scan.",
+        "Targeted scan.",
+        "Instrument scan."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-03",
+      "question": "While cruising straight between thermals you should focus your Cruising Scan on a cone of roughly what size?",
+      "expected_behavior": "answer",
+      "expected_answer": "≈ 30 ° each side of track (expand to ≈ 60 ° if traffic is random).",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 4
+        },
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 6
+        }
+      ],
+      "category": "cruising_scan",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 3,
+      "choices": [
+        "180 ° (wing-tip to wing-tip).",
+        "10 ° each side of track.",
+        "≈ 30 ° each side of track (expand to ≈ 60 ° if traffic is random).",
+        "Only the area directly overhead."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-04",
+      "question": "A correct Full Scan systematically sweeps which area?",
+      "expected_behavior": "answer",
+      "expected_answer": "From behind the left wing-tip, across the horizon, to behind the right wing-tip, incl. above & below",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 3
+        }
+      ],
+      "category": "full_scan",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 4,
+      "choices": [
+        "Only the horizon ahead.",
+        "Inside the cockpit first, then outside.",
+        "From behind the left wing-tip, across the horizon, to behind the right wing-tip, incl. above & below",
+        "90 ° sector centred on the nose."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-05",
+      "question": "The Pilot Guide states a Full Scan \"will take a few minutes\" and should be repeated how often?",
+      "expected_behavior": "answer",
+      "expected_answer": "As often as traffic density demands",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 3
+        }
+      ],
+      "category": "full_scan",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 5,
+      "choices": [
+        "Exactly every 10 min.",
+        "Only when ATC asks.",
+        "After each checklist item.",
+        "As often as traffic density demands"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-06",
+      "question": "What is the principal risk managed by diligent lookout and scan techniques?",
+      "expected_behavior": "answer",
+      "expected_answer": "Mid-air collision.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 2
+        }
+      ],
+      "category": "lookout_priority",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 6,
+      "choices": [
+        "Mid-air collision.",
+        "Wing drop in stall.",
+        "Navigation error.",
+        "Radio interference."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-07",
+      "question": "Before rolling into a turn, the Targeted Scan sequence starts by looking where?",
+      "expected_behavior": "answer",
+      "expected_answer": "Opposite the intended turn to clear the blind side first.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 4
+        }
+      ],
+      "category": "targeted_scan",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 7,
+      "choices": [
+        "Opposite the intended turn to clear the blind side first.",
+        "At the yaw string.",
+        "Straight ahead only.",
+        "Down at the variometer."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-08",
+      "question": "Why is a quick glance ineffective for detecting traffic?",
+      "expected_behavior": "answer",
+      "expected_answer": "The eye must focus for a few seconds on each sector.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 3
+        }
+      ],
+      "category": "vision",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 8,
+      "choices": [
+        "It blurs the compass.",
+        "The eye must focus for a few seconds on each sector.",
+        "Peripheral vision is sharper.",
+        "It fatigues neck muscles."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-09",
+      "question": "When passing traffic information to another pilot you should use what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Clock-code (e.g., “2 o’clock low”)",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 1
+        }
+      ],
+      "category": "clock_code",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 9,
+      "choices": [
+        "GPS bearing.",
+        "Thermal index.",
+        "Runway QDM.",
+        "Clock-code (e.g., “2 o’clock low”)"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-10",
+      "question": "Why is \"Alerted see-and-avoid\" more effective than unalerted see-and-avoid?",
+      "expected_behavior": "answer",
+      "expected_answer": "Radio calls cue pilots where to look.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 1
+        }
+      ],
+      "category": "alerted_see_and_avoid",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 10,
+      "choices": [
+        "It uses ADS-B only.",
+        "It eliminates blind spots.",
+        "Radio calls cue pilots where to look.",
+        "It relies on autopilot scans."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-11",
+      "question": "At 60 kt your glider covers 1.5 km a minute; two gliders head-on close at 120 kt, so a speck 3 km away can collide in roughly how long?",
+      "expected_behavior": "answer",
+      "expected_answer": "1 minute 30 seconds",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 3
+        },
+        {
+          "source": "trainer",
+          "unit": 9,
+          "page": 3
+        }
+      ],
+      "category": "closing_speed",
+      "content_type": "theory",
+      "difficulty": "hard",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 11,
+      "choices": [
+        "6 minutes.",
+        "4 minutes.",
+        "2 minutes 30 seconds.",
+        "1 minute 30 seconds"
+      ],
+      "question_type": "multiple_choice",
+      "note": "Question math implies ~1 min at 3 km/min closing; nearest MC option is 1:30."
+    },
+    {
+      "id": "gpc-u9-12",
+      "question": "To expand the visible area blocked by wings and canopy frames you should do what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Move head/neck and bank the glider slightly.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 2
+        }
+      ],
+      "category": "vision",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 12,
+      "choices": [
+        "Descend 200 ft.",
+        "Reduce speed.",
+        "Move head/neck and bank the glider slightly.",
+        "Turn on cockpit lights."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-13",
+      "question": "Why may a glider pulling-up into lift be in a double-blind situation?",
+      "expected_behavior": "answer",
+      "expected_answer": "Neither pilot can see the other due to nose-high attitude & relative position.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 6
+        }
+      ],
+      "category": "blind_spots",
+      "content_type": "exercise",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 13,
+      "choices": [
+        "GPS screens reflect sunlight.",
+        "Neither pilot can see the other due to nose-high attitude & relative position.",
+        "The sun is directly ahead.",
+        "The variometer audio masks calls."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-14",
+      "question": "You should avoid flying directly above or below another glider unless you can maintain at least what separation?",
+      "expected_behavior": "answer",
+      "expected_answer": "500 ft vertical separation.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 6
+        }
+      ],
+      "category": "separation",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 14,
+      "choices": [
+        "200 ft vertical separation.",
+        "500 ft vertical separation.",
+        "50 kt over-take margin.",
+        "A radio-agreed heading."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-15",
+      "question": "Which physiological factors listed require extra concentration on lookout?",
+      "expected_behavior": "answer",
+      "expected_answer": "Age, fatigue, dehydration, mild anoxia.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 5
+        }
+      ],
+      "category": "physiology",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 15,
+      "choices": [
+        "High coffee intake only.",
+        "Rain on the canopy.",
+        "Age, fatigue, dehydration, mild anoxia.",
+        "Cold cockpit temperature alone."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-16",
+      "question": "When joining a thermal already containing gliders, what is the recommended scan technique?",
+      "expected_behavior": "answer",
+      "expected_answer": "Targeted scan to identify all aircraft in and approaching the thermal.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 5
+        }
+      ],
+      "category": "targeted_scan",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 16,
+      "choices": [
+        "Cruising scan.",
+        "Full scan only.",
+        "Instrument scan.",
+        "Targeted scan to identify all aircraft in and approaching the thermal."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-17",
+      "question": "During straight flight at high speed, how should the Cruising Scan change?",
+      "expected_behavior": "answer",
+      "expected_answer": "Narrow toward the nose and ahead.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 6
+        }
+      ],
+      "category": "cruising_scan",
+      "content_type": "exercise",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 17,
+      "choices": [
+        "Widen to 120 °.",
+        "Stop completely.",
+        "Narrow toward the nose and ahead.",
+        "Shift to inside-cockpit instruments"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-18",
+      "question": "Immediately before joining circuit at a busy site you are advised to make what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Targeted scan and monitor radio for position reports.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 5
+        }
+      ],
+      "category": "targeted_scan",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 18,
+      "choices": [
+        "Full scan only.",
+        "Clock-code call.",
+        "Targeted scan and monitor radio for position reports.",
+        "Rapid descent without scanning."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-19",
+      "question": "Prior to entering identified lift that already contains traffic you should first do what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Slow down.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 5
+        }
+      ],
+      "category": "thermal_entry",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 19,
+      "choices": [
+        "Bank steeply in.",
+        "Slow down.",
+        "Close the brakes.",
+        "Transmit “Landing”."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u9-20",
+      "question": "When following another glider directly astern and higher, with whom does separation responsibility lie?",
+      "expected_behavior": "answer",
+      "expected_answer": "Trailing glider that can see the aircraft ahead.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 6
+        }
+      ],
+      "category": "blind_spots",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit9-lookout-scan-procedures",
+      "source_item": 20,
+      "choices": [
+        "Lead glider.",
+        "Tow plane.",
+        "Trailing glider that can see the aircraft ahead.",
+        "Duty instructor."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

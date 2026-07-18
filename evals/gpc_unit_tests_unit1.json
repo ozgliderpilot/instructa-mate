@@ -1,0 +1,538 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from club GPC Unit 1 Lookout Awareness (form-tests/). Answers derived from Pilot/Trainer guides — form export has no quiz answer key.",
+  "source_forms": [
+    {
+      "id": "gpc-unit1-lookout-awareness",
+      "title": "GPC Unit 1 - Lookout Awareness",
+      "path": "form-tests/GPC Unit 1 - Lookout Awareness.html"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u1-01",
+      "question": "The pilot guide lists the single most important element of airmanship as what?",
+      "expected_behavior": "answer",
+      "expected_answer": "An effective lookout.",
+      "choices": [
+        "Precise instrument flying.",
+        "Radio discipline.",
+        "Detailed flight planning.",
+        "An effective lookout."
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 1
+        }
+      ],
+      "category": "lookout_priority",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 1
+    },
+    {
+      "id": "gpc-u1-02",
+      "question": "While you track straight ahead, you notice another glider whose position in the canopy remains fixed. What does this most likely indicate?",
+      "expected_behavior": "answer",
+      "expected_answer": "On a collision course.",
+      "choices": [
+        "Overtaking you.",
+        "Orbiting a thermal.",
+        "Descending rapidly.",
+        "On a collision course."
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 1
+        }
+      ],
+      "category": "collision_geometry",
+      "content_type": "key_messages",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 2
+    },
+    {
+      "id": "gpc-u1-03",
+      "question": "A call \"glider 3 o'clock high\" tells you that the threat is where?",
+      "expected_behavior": "answer",
+      "expected_answer": "Right of the nose and above your level.",
+      "choices": [
+        "Directly ahead.",
+        "Directly left.",
+        "Right of the nose and above your level.",
+        "Behind and below."
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 2
+        }
+      ],
+      "category": "clock_code",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 3
+    },
+    {
+      "id": "gpc-u1-04",
+      "question": "Which of the following is NOT listed in the pilot guide as a factor that restricts vision?",
+      "expected_behavior": "answer",
+      "expected_answer": "Ventilation air-flow noise.",
+      "choices": [
+        "Dirty canopy.",
+        "Haze or low sun.",
+        "The gliders canopy frame",
+        "Ventilation air-flow noise."
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 2
+        }
+      ],
+      "category": "vision_limits",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 4
+    },
+    {
+      "id": "gpc-u1-05",
+      "question": "Positive transfer of control between two pilots must always include which verbal pair?",
+      "expected_behavior": "answer",
+      "expected_answer": "\"You have control\" - \"I have control\".",
+      "choices": [
+        "\"Take control\" - \"Okay\".",
+        "\"My aircraft\" - 'Copy\"",
+        "\"You have control\" - \"I have control\".",
+        "\"Clear\" - \"Roger\""
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 3
+        }
+      ],
+      "category": "control_transfer",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 5
+    },
+    {
+      "id": "gpc-u1-06",
+      "question": "Alerted see-and-avoid relies on a combination of effective lookout and what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Listening to radio position reports.",
+      "choices": [
+        "Listening to radio position reports.",
+        "Compass cross checks.",
+        "ADS-B displays.",
+        "Turn-coordinator cues"
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 1
+        }
+      ],
+      "category": "alerted_see_and_avoid",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 6
+    },
+    {
+      "id": "gpc-u1-07",
+      "question": "Situational awareness is defined in the guide as knowing what has happened, what is happening, and what else?",
+      "expected_behavior": "answer",
+      "expected_answer": "What might happen next.",
+      "choices": [
+        "The glide ratio remaining.",
+        "What might happen next.",
+        "The last QNH broadcast.",
+        "Who is on frequency."
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 1
+        }
+      ],
+      "category": "situational_awareness",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 7
+    },
+    {
+      "id": "gpc-u1-08",
+      "question": "To clear the blind area directly below your glider, what should you primarily do?",
+      "expected_behavior": "answer",
+      "expected_answer": "Banks the glider and move your head.",
+      "choices": [
+        "Lean forward without moving head.",
+        "Open air-brakes briefly.",
+        "Banks the glider and move your head.",
+        "Transmit a \"blind below\" call."
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 2
+        }
+      ],
+      "category": "vision_limits",
+      "content_type": "exercise",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 8
+    },
+    {
+      "id": "gpc-u1-09",
+      "question": "When two aircraft approach head-on, the basic Rule of the Air requires each aircraft to do what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Alter course right.",
+      "choices": [
+        "Climb 100ft.",
+        "Alter course left.",
+        "Alter course right.",
+        "Maintain heading and flash lights"
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 3
+        }
+      ],
+      "category": "rules_of_the_air",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 9
+    },
+    {
+      "id": "gpc-u1-10",
+      "question": "When overtaking another glider travelling in the same direction, on which side should you pass?",
+      "expected_behavior": "answer",
+      "expected_answer": "On the right-hand side.",
+      "choices": [
+        "Above and left.",
+        "On the right-hand side.",
+        "Beneath and behind.",
+        "Whichever side the sun is behind you"
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 23,
+          "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 3
+        }
+      ],
+      "category": "rules_of_the_air",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 10
+    },
+    {
+      "id": "gpc-u1-11",
+      "question": "The pilot guide stresses that the likeliest collision threat is detected in which part of your scan?",
+      "expected_behavior": "answer",
+      "expected_answer": "Along the horizon.",
+      "choices": [
+        "45° below the nose.",
+        "Directly overhead.",
+        "Along the horizon.",
+        "Inside cockpit refections"
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 3
+        }
+      ],
+      "category": "scan_priority",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 11
+    },
+    {
+      "id": "gpc-u1-12",
+      "question": "Excessive focus on instruments is hazardous largely because of what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Reduces time spent scanning outside.",
+      "choices": [
+        "Drains the batteries.",
+        "Reduces time spent scanning outside.",
+        "Causes vertigo.",
+        "Blocks radio reception."
+      ],
+      "citations": [
+        {
+          "source": "trainer",
+          "unit": 1,
+          "page": 6
+        },
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 3
+        }
+      ],
+      "category": "instrument_fixation",
+      "content_type": "airmanship",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 12
+    },
+    {
+      "id": "gpc-u1-13",
+      "question": "Before starting a steep turn, what is the first action?",
+      "expected_behavior": "answer",
+      "expected_answer": "Check the intended airspace is clear.",
+      "choices": [
+        "Tighten harness.",
+        "Brief the ballast stats.",
+        "Set the altimeter.",
+        "Check the intended airspace is clear."
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 3
+        }
+      ],
+      "category": "manoeuvre_lookout",
+      "content_type": "competency",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 13
+    },
+    {
+      "id": "gpc-u1-14",
+      "question": "Maintaining a continuous listening watch on the radio chiefly helps you do what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Interpret traffic location and intentions.",
+      "choices": [
+        "Save battery life.",
+        "Interpret traffic location and intentions.",
+        "Track wind shifts.",
+        "Record flight time accurately."
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 3
+        }
+      ],
+      "category": "alerted_see_and_avoid",
+      "content_type": "competency",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 14
+    },
+    {
+      "id": "gpc-u1-15",
+      "question": "The pilot guide advises that during scan your head and eyes should move mainly how?",
+      "expected_behavior": "answer",
+      "expected_answer": "Horizontally along the horizon, then up-and-down.",
+      "choices": [
+        "Inside -> Instruments -> Outside.",
+        "Horizontally along the horizon, then up-and-down.",
+        "Only to the left wing.",
+        "In small rapid jerks with no pause."
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 9,
+          "page": 3
+        },
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 3
+        }
+      ],
+      "category": "scan_technique",
+      "content_type": "theory",
+      "difficulty": "hard",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 15
+    },
+    {
+      "id": "gpc-u1-16",
+      "question": "Sitting in the front seat, you cannot see another aircraft that is where?",
+      "expected_behavior": "answer",
+      "expected_answer": "Directly behind either wing-tip.",
+      "choices": [
+        "Directly behind either wing-tip.",
+        "Ahead at 12 o'clock.",
+        "30° right and low.",
+        "60° above your canopy"
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 2
+        }
+      ],
+      "category": "vision_limits",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 16
+    },
+    {
+      "id": "gpc-u1-17",
+      "question": "You hear \"Tow plane rolling, runway 22.\" What is a correct response under alerted see-and-avoid?",
+      "expected_behavior": "answer",
+      "expected_answer": "Predict where the tow-plane will be and include it in your scan.",
+      "choices": [
+        "Descend below circuit height.",
+        "Predict where the tow-plane will be and include it in your scan.",
+        "Turn away immediately.",
+        "Dial 126.7 MHz"
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 1
+        }
+      ],
+      "category": "situational_awareness",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 17
+    },
+    {
+      "id": "gpc-u1-18",
+      "question": "Reporting \"town silos at 9 o'clock low\" uses the clock code to identify what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Left-side below glider altitude.",
+      "choices": [
+        "Right-side landmark.",
+        "Directly ahead.",
+        "Behind and above.",
+        "Left-side below glider altitude."
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 2
+        }
+      ],
+      "category": "clock_code",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 18
+    },
+    {
+      "id": "gpc-u1-19",
+      "question": "If canopy glare and smears reduce vision, what should you do first?",
+      "expected_behavior": "answer",
+      "expected_answer": "Clean the canopy or change seating angle.",
+      "choices": [
+        "Increase speed.",
+        "Clean the canopy or change seating angle.",
+        "Dim the vario audio.",
+        "Close the vent to stop dust."
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 2
+        }
+      ],
+      "category": "vision_limits",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 19
+    },
+    {
+      "id": "gpc-u1-20",
+      "question": "The pilot guide summarises that collision risk becomes critical when situational awareness is lost and what else happens?",
+      "expected_behavior": "answer",
+      "expected_answer": "Effective lookout ceases.",
+      "choices": [
+        "GPS signal is weakens.",
+        "Cloud base drops.",
+        "The flight computer alarms.",
+        "Effective lookout ceases."
+      ],
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 1,
+          "page": 1
+        }
+      ],
+      "category": "lookout_priority",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit1-lookout-awareness",
+      "source_item": 20
+    }
+  ]
+}

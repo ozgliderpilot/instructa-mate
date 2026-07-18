@@ -1,0 +1,533 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 14A Takeoff (Aerotow) Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit14a-takeoff-aerotow",
+      "title": "GPC Unit 14A - Takeoff (Aerotow)",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSd9jMmbM1bikYQ-egT48QYwGgCyWkV5OQFiXtvlkUpmwy1puQ/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u14a-01",
+      "question": "The stated aim of Unit 14A is to teach you to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Fly the ground-run, separation, initial climb and transition to normal aerotow position safely.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 1
+        }
+      ],
+      "category": "aim",
+      "content_type": "aim",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 1,
+      "choices": [
+        "Taxi a glider without wing-runner assistance.",
+        "Perform cross-wind landings.",
+        "Calculate best glide from tow height.",
+        "Fly the ground-run, separation, initial climb and transition to normal aerotow position safely."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-02",
+      "question": "A Key Message says the Pilot-in-Command (PIC) must always confirm:",
+      "expected_behavior": "answer",
+      "expected_answer": "“Airspace clear for launch” and “pilot ready – launch approved.”",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 1
+        }
+      ],
+      "category": "launch_clearance",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 2,
+      "choices": [
+        "Tug fuel on board.",
+        "“Airspace clear for launch” and “pilot ready – launch approved.”",
+        "Tow-rope diameter.",
+        "Runway friction coefficient."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-03",
+      "question": "Which GPC unit is NOT listed as a pre-requisite for Unit 14A?",
+      "expected_behavior": "answer",
+      "expected_answer": "Unit 12 – Slow Flight & Stalling.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 3,
+      "choices": [
+        "Unit 8 – Sustained Turns.",
+        "Unit 10 – Ancillary Controls.",
+        "Unit 12 – Slow Flight & Stalling.",
+        "Unit 13A – Aerotow Launch & Release."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-04",
+      "question": "During the ground-run the control used to keep the wings level (or banked slightly into cross-wind) is the:",
+      "expected_behavior": "answer",
+      "expected_answer": "Aileron.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 2
+        }
+      ],
+      "category": "ground_run",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 4,
+      "choices": [
+        "Rudder.",
+        "Elevator.",
+        "Trim lever.",
+        "Aileron."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-05",
+      "question": "While still on the ground the control that keeps the glider straight behind the tug is the:",
+      "expected_behavior": "answer",
+      "expected_answer": "Rudder.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 2
+        }
+      ],
+      "category": "ground_run",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 5,
+      "choices": [
+        "Aileron.",
+        "Rudder.",
+        "Elevator.",
+        "Flap Lever."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-06",
+      "question": "The control used to place the glider on its main-wheel in the correct take-off attitude is the:",
+      "expected_behavior": "answer",
+      "expected_answer": "Elevator.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 2
+        }
+      ],
+      "category": "ground_run",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 6,
+      "choices": [
+        "Rudder.",
+        "Aileron.",
+        "Elevator.",
+        "Air-brake."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-07",
+      "question": "Before roll-off the trim should normally be set:",
+      "expected_behavior": "answer",
+      "expected_answer": "Slightly nose-down/forward.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 2
+        }
+      ],
+      "category": "trim",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 7,
+      "choices": [
+        "Slightly nose-down/forward.",
+        "Full nose-up.",
+        "Neutral.",
+        "Full nose-down."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-08",
+      "question": "The launch sequence begins when you:",
+      "expected_behavior": "answer",
+      "expected_answer": "Give a “thumbs-up” and the wing-runner raises the wing.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 2
+        }
+      ],
+      "category": "signals",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 8,
+      "choices": [
+        "Flash the landing-light twice.",
+        "Give a “thumbs-up” and the wing-runner raises the wing.",
+        "Rock the wings once.",
+        "Press the radio push-to-talk."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-09",
+      "question": "Immediately after the glider lifts off it must be held no higher than about:",
+      "expected_behavior": "answer",
+      "expected_answer": "2 m (≈ 6 ft) or the height of the tug’s fin.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 3
+        }
+      ],
+      "category": "separation",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 9,
+      "choices": [
+        "One wingspan above the tug.",
+        "12 m (40 ft).",
+        "10 m (30 ft).",
+        "2 m (≈ 6 ft) or the height of the tug’s fin."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-10",
+      "question": "In both high-tow and low-tow, the primary reference for position is the tug’s:",
+      "expected_behavior": "answer",
+      "expected_answer": "Slipstream (turbulence).",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 3
+        }
+      ],
+      "category": "tow_position",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 10,
+      "choices": [
+        "Tail-plane incidence.",
+        "Fin pipe-antenna.",
+        "Engine cowling louvre.",
+        "Slipstream (turbulence)."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-11",
+      "question": "Going too high behind the tug in high-tow is dangerous because it can:",
+      "expected_behavior": "answer",
+      "expected_answer": "Upset the tug before the pilot can release.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 3
+        }
+      ],
+      "category": "high_tow",
+      "content_type": "exercise",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 11,
+      "choices": [
+        "Reduce rope drag.",
+        "Upset the tug before the pilot can release.",
+        "Shorten the ground-run.",
+        "Cool the tug’s engine too quickly"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-12",
+      "question": "If you rise so high that you lose sight of the tug, the correct immediate action is to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Pull the release without delay.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 3
+        }
+      ],
+      "category": "high_tow",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 12,
+      "choices": [
+        "Call “Too high” on the radio.",
+        "Ease back-stick further.",
+        "Pull the release without delay.",
+        "Open one notch of air-brake."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-13",
+      "question": "While on the runway all three primary controls should be moved independently, but once airborne they should be used:",
+      "expected_behavior": "answer",
+      "expected_answer": "Co-ordinated in normal flight.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 4
+        }
+      ],
+      "category": "controls",
+      "content_type": "competency",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 13,
+      "choices": [
+        "Independently throughout.",
+        "Only in rapid jerks.",
+        "Not at all until 300 ft.",
+        "Co-ordinated in normal flight."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-14",
+      "question": "Transition from above-slipstream to low-tow should occur only when the tug is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Positively established in climb (≈ 100–300 ft AGL).",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 2
+        }
+      ],
+      "category": "transition",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 14,
+      "choices": [
+        "Turning cross-wind.",
+        "Below 50 ft AGL.",
+        "Positively established in climb (≈ 100–300 ft AGL).",
+        "Heading changes by 10°."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-15",
+      "question": "Throughout the ground-run your left hand should remain:",
+      "expected_behavior": "answer",
+      "expected_answer": "Close to the yellow release handle.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 4
+        }
+      ],
+      "category": "release",
+      "content_type": "competency",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 15,
+      "choices": [
+        "On the air-brake lever.",
+        "On the trim lever.",
+        "Close to the yellow release handle.",
+        "Folded on your lap."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-16",
+      "question": "A common student error is insufficient control movement at very low speed. The recommended cure is to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Use coarse aileron, rudder and elevator inputs until speed builds.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 2
+        }
+      ],
+      "category": "common_problems",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 16,
+      "choices": [
+        "Trim full nose-up.",
+        "Apply differential brakes.",
+        "Use coarse aileron, rudder and elevator inputs until speed builds.",
+        "Hold the stick perfectly still."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-17",
+      "question": "Emergency landing options in case of rope break should be discussed and visualised:",
+      "expected_behavior": "answer",
+      "expected_answer": "During pre-boarding and pre-take-off checks.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 1
+        }
+      ],
+      "category": "emergencies",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 17,
+      "choices": [
+        "Only after take-off.",
+        "While climbing through 500 ft.",
+        "When the tug lifts off.",
+        "During pre-boarding and pre-take-off checks."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-18",
+      "question": "Two complementary units the Guide suggests you read with 14A are Unit 19 (Cross-wind Take-off & Landing) and:",
+      "expected_behavior": "answer",
+      "expected_answer": "Unit 20 Launch Emergencies.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 18,
+      "choices": [
+        "Unit 17 Thermalling.",
+        "Unit 20 Launch Emergencies.",
+        "Unit 21 Wave.",
+        "Unit 23 Rules of the Air."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-19",
+      "question": "If a cross-wind tries to lift the up-wind wing you should:",
+      "expected_behavior": "answer",
+      "expected_answer": "Hold the wing down with aileron and keep the nose straight with rudder.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 2
+        }
+      ],
+      "category": "crosswind",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 19,
+      "choices": [
+        "Add full rudder against the wind.",
+        "Reduce tow speed.",
+        "Hold the wing down with aileron and keep the nose straight with rudder.",
+        "Signal the tug to stop."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u14a-20",
+      "question": "After glider ground separation some students continue climbing unintentionally. To prevent this you must:",
+      "expected_behavior": "answer",
+      "expected_answer": "Apply gentle forward pressure, holding just above the slipstream until the tug climbs.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "14A",
+          "page": 2
+        }
+      ],
+      "category": "separation",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit14a-takeoff-aerotow",
+      "source_item": 20,
+      "choices": [
+        "Retract the undercarriage.",
+        "Open ¼ air-brake.",
+        "Apply gentle forward pressure, holding just above the slipstream until the tug climbs.",
+        "Shift to high-tow at once."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

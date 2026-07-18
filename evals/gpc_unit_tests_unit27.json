@@ -1,0 +1,535 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 27 Advanced Aerotowing Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit27-advanced-aerotowing",
+      "title": "GPC Unit 27 - Advanced Aerotowing",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSeZaRpt3YqLgBsNl4M1gTjyfpf8oiHukVIoPz5SQDhEIFDHvw/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u27-01",
+      "question": "In Australia, the routine aerotow position used for training and local soaring is ___.",
+      "expected_behavior": "answer",
+      "expected_answer": "Low-tow.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 1
+        }
+      ],
+      "category": "tow_position",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 1,
+      "choices": [
+        "High-tow.",
+        "Low-tow.",
+        "Offset-tow.",
+        "Slipstream-tow."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-02",
+      "question": "Compared with low-tow, high-tow is preferred when ___.",
+      "expected_behavior": "answer",
+      "expected_answer": "ferrying long distance in smooth air.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 1
+        }
+      ],
+      "category": "high_tow",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 2,
+      "choices": [
+        "ferrying long distance in smooth air.",
+        "rope is short.",
+        "turbulence is severe.",
+        "flying flapless gliders."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-03",
+      "question": "When moving up through the slipstream you should apply _________________ until clear of the turbulent core.",
+      "expected_behavior": "answer",
+      "expected_answer": "steady back-stick pressure",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 1
+        }
+      ],
+      "category": "transition",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 3,
+      "choices": [
+        "abrupt forward-stick then neutral",
+        "full rudder",
+        "no stick pressure",
+        "steady back-stick pressure"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-04",
+      "question": "If you pause too long inside the slipstream while transitioning upward, the glider will most likely ________.",
+      "expected_behavior": "answer",
+      "expected_answer": "get “stuck” in turbulence and stop climbing",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 1
+        }
+      ],
+      "category": "transition",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 4,
+      "choices": [
+        "overtake the tug.",
+        "get “stuck” in turbulence and stop climbing",
+        "lose sight of the tug.",
+        "break the weak link instantly."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-05",
+      "question": "During the downward transition from high-tow to low-tow, the pilot must __________ throughout the slipstream.",
+      "expected_behavior": "answer",
+      "expected_answer": "maintain gentle forward-stick pressure",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 2
+        }
+      ],
+      "category": "transition",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 5,
+      "choices": [
+        "increase bank",
+        "open air-brake",
+        "yaw left and right",
+        "maintain gentle forward-stick pressure"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-06",
+      "question": "Boxing the slipstream begins by displacing the glider to which corner first (per GFA procedure)?",
+      "expected_behavior": "answer",
+      "expected_answer": "Bottom-right.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 2
+        }
+      ],
+      "category": "boxing",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 6,
+      "choices": [
+        "Bottom-left.",
+        "Top-left.",
+        "Top-right.",
+        "Bottom-right."
+      ],
+      "question_type": "multiple_choice",
+      "note": "GFA: commence by going RIGHT first from low-tow (bottom-right corner)."
+    },
+    {
+      "id": "gpc-u27-07",
+      "question": "In the top-right to top-left leg of the box, the correct technique is to:",
+      "expected_behavior": "answer",
+      "expected_answer": "reduce right bank, drift to centre, then apply left bank.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 2
+        }
+      ],
+      "category": "boxing",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 7,
+      "choices": [
+        "reverse bank immediately at centreline.",
+        "dive under the tug.",
+        "reduce right bank, drift to centre, then apply left bank.",
+        "pull full spoilers for drag."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-08",
+      "question": "A developing bow in the tow-rope while boxing is best corrected by:",
+      "expected_behavior": "answer",
+      "expected_answer": "adding slight bank away to tighten tension slowly.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 2
+        }
+      ],
+      "category": "boxing",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 8,
+      "choices": [
+        "adding slight bank away to tighten tension slowly.",
+        "releasing immediately.",
+        "pushing full forward-stick.",
+        "closing eyes and waiting."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-09",
+      "question": "In level cruising tow, the most common trim change is:",
+      "expected_behavior": "answer",
+      "expected_answer": "considerably more nose-down trim.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 3
+        }
+      ],
+      "category": "cruising",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 9,
+      "choices": [
+        "more nose-up trim required.",
+        "considerably more nose-down trim.",
+        "trim unchanged.",
+        "full aft trim stop."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-10",
+      "question": "Slack rope forms easily during level cruise because:",
+      "expected_behavior": "answer",
+      "expected_answer": "drag on tug equals glider drag—very low tension.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 3
+        }
+      ],
+      "category": "cruising",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 10,
+      "choices": [
+        "tugs speed up.",
+        "drag on tug equals glider drag—very low tension.",
+        "weak link lengthens.",
+        "propeller wash weakens."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-11",
+      "question": "Descending on tow often needs air-brake because:",
+      "expected_behavior": "answer",
+      "expected_answer": "power reduction in tug removes rope tension.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 3
+        }
+      ],
+      "category": "descent",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 11,
+      "choices": [
+        "tug’s RPM rises.",
+        "glider’s CG shifts aft.",
+        "VNE decreases.",
+        "power reduction in tug removes rope tension."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-12",
+      "question": "If the rope begins to snatch tight during descent you should be ready to:",
+      "expected_behavior": "answer",
+      "expected_answer": "release just before it pulls tight.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 2
+        }
+      ],
+      "category": "rope",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 12,
+      "choices": [
+        "signal “too fast.\"",
+        "push rudder pedal fully.",
+        "dive below the tug.",
+        "release just before it pulls tight."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-13",
+      "question": "Which glider configuration increases the risk of rope rubbing on the nose in low-tow?",
+      "expected_behavior": "answer",
+      "expected_answer": "Belly-mounted release hook.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 3
+        }
+      ],
+      "category": "belly_hook",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 13,
+      "choices": [
+        "Wing tip wheels.",
+        "Belly-mounted release hook.",
+        "Nose-mounted hook.",
+        "T-tail."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-14",
+      "question": "While boxing, the glider’s nose reference for lateral displacement is:",
+      "expected_behavior": "answer",
+      "expected_answer": "slightly outside the tug’s wingtip.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 2
+        }
+      ],
+      "category": "boxing",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 14,
+      "choices": [
+        "exactly on the towrope.",
+        "level with tug’s cockpit.",
+        "slightly outside the tug’s wingtip.",
+        "just behind tug fin."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-15",
+      "question": "During all advanced aerotow exercises, loss of visual contact with the tug under the nose demands:",
+      "expected_behavior": "answer",
+      "expected_answer": "immediate release.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 4
+        }
+      ],
+      "category": "safety",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 15,
+      "choices": [
+        "continue climbing.",
+        "immediate release.",
+        "signal by radio.",
+        "open spoilers."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-16",
+      "question": "A powerful tug makes boxing harder mainly because:",
+      "expected_behavior": "answer",
+      "expected_answer": "its slipstream core is larger and more turbulent.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 4
+        }
+      ],
+      "category": "boxing",
+      "content_type": "exercise",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 16,
+      "choices": [
+        "towline is shorter.",
+        "its slipstream core is larger and more turbulent.",
+        "glider flaps become ineffective.",
+        "weak link rating drops."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-17",
+      "question": "When cruising on tow in smooth air, which position offers the best forward visibility for the glider pilot?",
+      "expected_behavior": "answer",
+      "expected_answer": "High-tow.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 3
+        }
+      ],
+      "category": "cruising",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 17,
+      "choices": [
+        "Low-tow.",
+        "Slipstream-centre.",
+        "Offset-right.",
+        "High-tow."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-18",
+      "question": "Radio contact is especially recommended with the tug when:",
+      "expected_behavior": "answer",
+      "expected_answer": "descending on tow through airspace steps.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 3
+        }
+      ],
+      "category": "descent",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 18,
+      "choices": [
+        "thermalling on tow.",
+        "boxing the slipstream.",
+        "descending on tow through airspace steps.",
+        "initial climb in low-tow."
+      ],
+      "question_type": "multiple_choice",
+      "note": "Radio also used for boxing, but guide ties radio specifically to descending on tow / airspace steps."
+    },
+    {
+      "id": "gpc-u27-19",
+      "question": "Rapidly slamming full air-brake during descent can:",
+      "expected_behavior": "answer",
+      "expected_answer": "snap the rope or weak link.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 4
+        }
+      ],
+      "category": "airbrake",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 19,
+      "choices": [
+        "snap the rope or weak link.",
+        "steepen climb angle.",
+        "improve rope tension.",
+        "cool the tug engine"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u27-20",
+      "question": "Competence for GPC Unit 27 requires the student to demonstrate:",
+      "expected_behavior": "answer",
+      "expected_answer": "all of the above (high/low transitions, boxing, level & descending tow).",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 27,
+          "page": 4
+        }
+      ],
+      "category": "competency",
+      "content_type": "competency",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit27-advanced-aerotowing",
+      "source_item": 20,
+      "choices": [
+        "high-tow only.",
+        "boxing only.",
+        "descent on tow only.",
+        "all of the above (high/low transitions, boxing, level & descending tow)."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

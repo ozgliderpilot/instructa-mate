@@ -1,0 +1,558 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 6 Aileron Drag & Rudder Coordination Google Form. Answers derived from Pilot/Trainer guides.",
+  "source_forms": [
+    {
+      "id": "gpc-unit6-aileron-drag-rudder-coordination",
+      "title": "GPC Unit 6 - Aileron Drag & Rudder Coordination",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSdQXGcxbtthbeE8684e9Q2vcFp9UIAtPMjh3xcC7GX4BTtzPA/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u6-01",
+      "question": "In a sailplane, what is the primary indication of coordinated flight?",
+      "expected_behavior": "answer",
+      "expected_answer": "Yaw string is centred.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 1
+        }
+      ],
+      "category": "coordination",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 1,
+      "choices": [
+        "Slip/turn-indicator ball is centred.",
+        "Rate-of-turn needle is neutral.",
+        "Yaw string is centred.",
+        "Bank angle is less than 30°."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-02",
+      "question": "What is the sideways motion opposite to the intended roll when ailerons are applied called?",
+      "expected_behavior": "answer",
+      "expected_answer": "Adverse yaw.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 2
+        }
+      ],
+      "category": "adverse_yaw",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 2,
+      "choices": [
+        "Gyroscopic pre-cession.",
+        "Adverse yaw.",
+        "Dutch roll.",
+        "Spiral divergence."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-03",
+      "question": "In gliders, which principal control is used to cancel the yaw produced by aileron drag?",
+      "expected_behavior": "answer",
+      "expected_answer": "Rudder applied with the roll.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 2
+        }
+      ],
+      "category": "coordination",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 3,
+      "choices": [
+        "Elevator.",
+        "Aileron opposite the roll.",
+        "Rudder applied with the roll.",
+        "Spoiler."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-04",
+      "question": "When does adverse yaw become most pronounced?",
+      "expected_behavior": "answer",
+      "expected_answer": "Flying at low airspeed.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 2
+        }
+      ],
+      "category": "adverse_yaw",
+      "content_type": "exercise",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 4,
+      "choices": [
+        "Flying at high speed.",
+        "Using flaps for landing.",
+        "In smooth air.",
+        "Flying at low airspeed."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-05",
+      "question": "When the control column is moved to the left, which wing develops greater induced drag, causing adverse yaw?",
+      "expected_behavior": "answer",
+      "expected_answer": "Right wingtip.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 2
+        }
+      ],
+      "category": "aileron_drag",
+      "content_type": "theory",
+      "difficulty": "hard",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 5,
+      "choices": [
+        "Left wingtip.",
+        "Right wingtip.",
+        "Both wingtips equally.",
+        "Neither wingtip."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-06",
+      "question": "How do designers mainly reduce (but not eliminate) adverse yaw?",
+      "expected_behavior": "answer",
+      "expected_answer": "Differential ailerons.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 2
+        }
+      ],
+      "category": "aileron_drag",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 6,
+      "choices": [
+        "Winglets.",
+        "Mass-balanced ailerons.",
+        "Servo tabs.",
+        "Differential ailerons."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-07",
+      "question": "What is simultaneous use of aileron and rudder in the same direction known as?",
+      "expected_behavior": "answer",
+      "expected_answer": "Co-ordination.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 2
+        }
+      ],
+      "category": "coordination",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 7,
+      "choices": [
+        "Co-ordination.",
+        "Balanced flight.",
+        "Load alleviation.",
+        "Stall prevention"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-08",
+      "question": "When the yaw string flicks left of centre, what is the immediate corrective action?",
+      "expected_behavior": "answer",
+      "expected_answer": "Apply right rudder to “pull the string straight”.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 1
+        }
+      ],
+      "category": "yaw_string",
+      "content_type": "key_messages",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 8,
+      "choices": [
+        "Apply left rudder.",
+        "Apply opposite aileron.",
+        "Apply right rudder to “pull the string straight”.",
+        "Reduce bank angle."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-09",
+      "question": "What is the secondary effect of rudder?",
+      "expected_behavior": "answer",
+      "expected_answer": "Roll about the longitudinal axis.",
+      "citations": [
+        {
+          "source": "trainer",
+          "unit": 6,
+          "page": 5
+        }
+      ],
+      "category": "rudder",
+      "content_type": "briefing",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 9,
+      "choices": [
+        "Pitch change.",
+        "Roll about the longitudinal axis.",
+        "Change in airspeed.",
+        "Change in flap deflection."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-10",
+      "question": "When is aileron drag generated?",
+      "expected_behavior": "answer",
+      "expected_answer": "Are deflected from neutral.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 1
+        },
+        {
+          "source": "trainer",
+          "unit": 6,
+          "page": 4
+        }
+      ],
+      "category": "aileron_drag",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 10,
+      "choices": [
+        "Are rigged with slack cables.",
+        "Reach their mechanical limit.",
+        "Are mass-balanced.",
+        "Are deflected from neutral."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-11",
+      "question": "During the aileron drag demonstration, toward which wing is the glider observed to slip?",
+      "expected_behavior": "answer",
+      "expected_answer": "Lower (down-going) wing.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 2
+        }
+      ],
+      "category": "aileron_drag",
+      "content_type": "exercise",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 11,
+      "choices": [
+        "Lower (down-going) wing.",
+        "Up-going wing.",
+        "Nose.",
+        "Tail."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-12",
+      "question": "What is the training task titled “Rolling on a Point” primarily used to practise?",
+      "expected_behavior": "answer",
+      "expected_answer": "Precise aileron–rudder co-ordination.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 3
+        },
+        {
+          "source": "trainer",
+          "unit": 6,
+          "page": 5
+        }
+      ],
+      "category": "coordination",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 12,
+      "choices": [
+        "Cross-wind corrections.",
+        "Precise aileron–rudder co-ordination.",
+        "Variometer centring.",
+        "Thermalling etiquette."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-13",
+      "question": "Which statement about adverse yaw is correct?",
+      "expected_behavior": "answer",
+      "expected_answer": "It can never be eliminated entirely, only managed.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 2
+        }
+      ],
+      "category": "adverse_yaw",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 13,
+      "choices": [
+        "It disappears at bank angles below 10°.",
+        "It can be eliminated by perfect rigging.",
+        "It can never be eliminated entirely, only managed.",
+        "It originates from fuselage side-area."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-14",
+      "question": "Good technique requires the rudder force to be applied how relative to the aileron?",
+      "expected_behavior": "answer",
+      "expected_answer": "Applied and removed at the same time as the aileron.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 3
+        }
+      ],
+      "category": "coordination",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 14,
+      "choices": [
+        "Applied after the aileron.",
+        "Applied and removed at the same time as the aileron.",
+        "Held in for two seconds longer than the aileron.",
+        "Applied opposite to stick movement."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-15",
+      "question": "After the ailerons are centralised, what will continuing to hold rudder most likely cause?",
+      "expected_behavior": "answer",
+      "expected_answer": "Yaw or skid because rudder is still being applied",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 3
+        }
+      ],
+      "category": "coordination",
+      "content_type": "common_problems",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 15,
+      "choices": [
+        "Pitch sharply up.",
+        "Yaw or skid because rudder is still being applied",
+        "Remain perfectly steady.",
+        "Drop below the horizon."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-16",
+      "question": "Compared with the force on the control column, how much rudder force is usually needed to counter-act aileron drag?",
+      "expected_behavior": "answer",
+      "expected_answer": "More rudder force.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 3
+        }
+      ],
+      "category": "coordination",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 16,
+      "choices": [
+        "Much less rudder force.",
+        "The same rudder force.",
+        "More rudder force.",
+        "No rudder force at all."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-17",
+      "question": "What results from failure to use enough rudder when rolling into a turn?",
+      "expected_behavior": "answer",
+      "expected_answer": "Slipping / skidding and becoming un-coordinated.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 3
+        }
+      ],
+      "category": "coordination",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 17,
+      "choices": [
+        "Slipping / skidding and becoming un-coordinated.",
+        "Over-banking automatically.",
+        "Stalling at a higher speed.",
+        "Accelerating unexpectedly."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-18",
+      "question": "Which earlier unit is listed as a pre-requisite for GPC Unit 6?",
+      "expected_behavior": "answer",
+      "expected_answer": "Unit 5 – Primary Effects of Controls.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 18,
+      "choices": [
+        "Unit 2 – Ground Handling.",
+        "Unit 3 – Pre-flight Preparation.",
+        "Unit 4 – Orientation & Stability.",
+        "Unit 5 – Primary Effects of Controls."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-19",
+      "question": "Adverse yaw occurs because increased lift at one wingtip is always accompanied by what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Increased induced drag on that wingtip.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 2
+        }
+      ],
+      "category": "aileron_drag",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 19,
+      "choices": [
+        "Lower angle of attack.",
+        "Increased induced drag on that wingtip.",
+        "Reduced camber.",
+        "Decreased parasite drag"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u6-20",
+      "question": "During co-ordination practice, what is the pilot's primary reference for detecting yaw?",
+      "expected_behavior": "answer",
+      "expected_answer": "Yaw string on the canopy.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 6,
+          "page": 2
+        }
+      ],
+      "category": "yaw_string",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit6-aileron-drag-rudder-coordination",
+      "source_item": 20,
+      "choices": [
+        "Turn coordinator.",
+        "Slip/skid ball.",
+        "Outside horizon.",
+        "Yaw string on the canopy."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

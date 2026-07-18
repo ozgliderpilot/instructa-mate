@@ -1,0 +1,549 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from club GPC Unit 2 Ground Handling and Signals (form-tests/). Answers derived from Pilot Guide — form export has no quiz answer key.",
+  "source_forms": [
+    {
+      "id": "gpc-unit2-ground-handling-and-signals",
+      "title": "GPC Unit 2 - Ground Handling and Signals",
+      "path": "form-tests/GPC Unit 2 - Ground Handling and Signals.html"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u2-01",
+      "question": "During a launch, who has the authority to give the STOP! signal?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 1
+        }
+      ],
+      "category": "stop_authority",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 1,
+      "choices": [
+        "Only the duty instructor.",
+        "Only the wing runner.",
+        "Only the tug pilot.",
+        "Any person nearby."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Any person nearby."
+    },
+    {
+      "id": "gpc-u2-02",
+      "question": "The Pilot Guide's \"golden rule\" for rope towing states that the tow-rope must be at least how long?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 2
+        }
+      ],
+      "category": "ground_towing",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 2,
+      "choices": [
+        "Half the wingspan long.",
+        "Two-thirds of the wingspan long.",
+        "20 metres long.",
+        "Equal to the gliders length."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Two-thirds of the wingspan long."
+    },
+    {
+      "id": "gpc-u2-03",
+      "question": "While vehicle-towing a glider, what should the maximum speed be?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 2
+        }
+      ],
+      "category": "ground_towing",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 3,
+      "choices": [
+        "A moderate walking pace.",
+        "Jogging pace.",
+        "40 kmh.",
+        "Whatever speed the driver chooses."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "A moderate walking pace."
+    },
+    {
+      "id": "gpc-u2-04",
+      "question": "When moving a glider by hand, how many people should hold the same wingtip?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 2
+        }
+      ],
+      "category": "wingtip_handling",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 4,
+      "choices": [
+        "Two.",
+        "Three.",
+        "One.",
+        "None - hold the nose only."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "One."
+    },
+    {
+      "id": "gpc-u2-05",
+      "question": "In strong winds, which wingtip should the wing-runner hold?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 2
+        }
+      ],
+      "category": "wingtip_handling",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 5,
+      "choices": [
+        "The down-wind wingtip.",
+        "The tailplane.",
+        "The up-wing wingtip.",
+        "Both wingtips."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "The up-wing wingtip."
+    },
+    {
+      "id": "gpc-u2-06",
+      "question": "Which practice is correct for canopy care on the ground?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 2
+        }
+      ],
+      "category": "canopy_care",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 6,
+      "choices": [
+        "Lift by the clear-view panel.",
+        "Leave open if you stay \"close-by.\"",
+        "Close and lock it whenever you walk away.",
+        "Prop it up with a cushion on windy days."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Close and lock it whenever you walk away."
+    },
+    {
+      "id": "gpc-u2-07",
+      "question": "Before a tow-rope is attached, ground crew must check for knots, rope condition and what else?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 1
+        }
+      ],
+      "category": "hook_on",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 7,
+      "choices": [
+        "Ring colour.",
+        "Correct weak link.",
+        "Tow-car tyre pressure.",
+        "Trace length."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Correct weak link."
+    },
+    {
+      "id": "gpc-u2-08",
+      "question": "What three things must a wing-runner confirm before signalling launch?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 4
+        }
+      ],
+      "category": "wing_runner",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 8,
+      "choices": [
+        "Airbrakes closed and locked.",
+        "Canopy closed/locked.",
+        "Flaps set to landing.",
+        "Airspace is clear to launch.",
+        "Undercarriage retracted and locked."
+      ],
+      "question_type": "checkboxes",
+      "correct_choices": [
+        "Airbrakes closed and locked.",
+        "Canopy closed/locked.",
+        "Airspace is clear to launch."
+      ],
+      "expected_answer": "Airbrakes closed and locked.; Canopy closed/locked.; Airspace is clear to launch."
+    },
+    {
+      "id": "gpc-u2-09",
+      "question": "Which of the following is not one of the three standard launch commands?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 4
+        },
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 5
+        }
+      ],
+      "category": "launch_signals",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 9,
+      "choices": [
+        "\"Ready to roll.\"",
+        "\"Take-up slack.\"",
+        "\"All-out/Full power.\"",
+        "\"Stop! Stop! Stop!\""
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "\"Ready to roll.\""
+    },
+    {
+      "id": "gpc-u2-10",
+      "question": "During the STOP! signal, what must the wing-runner do?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 5
+        }
+      ],
+      "category": "launch_signals",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 10,
+      "choices": [
+        "Wave one arm above the head.",
+        "Lower the wing and raise both arms overhead.",
+        "Cross arms in front of chest.",
+        "Point at the tug pilot."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Lower the wing and raise both arms overhead."
+    },
+    {
+      "id": "gpc-u2-11",
+      "question": "While the launch accelerates, how should the wing-runner hold the wing?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 4
+        }
+      ],
+      "category": "wing_runner",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 11,
+      "choices": [
+        "Support the wing but let it slide through the fingers.",
+        "Hold the wing firmly to resist forward motion.",
+        "Push the wingtip upwards.",
+        "Pull the wingtip backwards slightly."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Support the wing but let it slide through the fingers."
+    },
+    {
+      "id": "gpc-u2-12",
+      "question": "To prevent the wings developing lift when parking outside, what should you do?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 3
+        }
+      ],
+      "category": "parking",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 12,
+      "choices": [
+        "Park nose into the wind.",
+        "Chock the main wheel only.",
+        "Tie the rudder to the tail dolly.",
+        "Park tail-into-wind and leave airbrakes open."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Park tail-into-wind and leave airbrakes open."
+    },
+    {
+      "id": "gpc-u2-13",
+      "question": "When must tail dollies be removed?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 2
+        }
+      ],
+      "category": "tail_dolly",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 13,
+      "choices": [
+        "Only before the last flight of the day.",
+        "Before every flight and when parking.",
+        "Only in cross-winds.",
+        "Only for winch launces."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Before every flight and when parking."
+    },
+    {
+      "id": "gpc-u2-14",
+      "question": "If, during tail-first towing with a wing-walker, a wing suddenly lifts, what must you do?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 3
+        }
+      ],
+      "category": "ground_towing",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 14,
+      "choices": [
+        "Accelerate to straighten the glider.",
+        "Stop immediately to avoid aileron damage.",
+        "Turn into wind.",
+        "Apply wheel brake and continue."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Stop immediately to avoid aileron damage."
+    },
+    {
+      "id": "gpc-u2-15",
+      "question": "If a launch is delayed and the pilot is unhappy, what is the recommended action?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 4
+        }
+      ],
+      "category": "launch_abort",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 15,
+      "choices": [
+        "Keep waiting with airbrakes open.",
+        "Request \"take-up slack\" again.",
+        "Call radio \"standby\" and stay on tow.",
+        "Release and unhook the rope."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Release and unhook the rope."
+    },
+    {
+      "id": "gpc-u2-16",
+      "question": "On an aerotow rope, where is the weak link normally fitted?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 7
+        }
+      ],
+      "category": "aerotow",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 16,
+      "choices": [
+        "Tug (tow plane) end.",
+        "Glider end.",
+        "Mid-point.",
+        "Both ends."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Tug (tow plane) end."
+    },
+    {
+      "id": "gpc-u2-17",
+      "question": "What is the minimum trace length between drogue and rings on a winch cable?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 6
+        }
+      ],
+      "category": "winch",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 17,
+      "choices": [
+        "0 metres - traces are optional.",
+        "2 metres.",
+        "5 metres.",
+        "10 metres."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "5 metres."
+    },
+    {
+      "id": "gpc-u2-18",
+      "question": "When may a launch cable be attached to the glider?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 6
+        }
+      ],
+      "category": "hook_on",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 18,
+      "choices": [
+        "As soon as the glider reaches the grid.",
+        "After \"take-up slack\" is called.",
+        "Only when the pilot specifically requests it.",
+        "Immediately after the tug lines up."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Only when the pilot specifically requests it."
+    },
+    {
+      "id": "gpc-u2-19",
+      "question": "How must the belly hook's back-release be tested each day?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 6
+        }
+      ],
+      "category": "back_release",
+      "content_type": "theory",
+      "difficulty": "hard",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 19,
+      "choices": [
+        "Pulling the cable aft toward the tail.",
+        "Applying a strong vertical downward pull.",
+        "Cycling the release lever twice,",
+        "No test - modern hooks are self checking."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Applying a strong vertical downward pull."
+    },
+    {
+      "id": "gpc-u2-20",
+      "question": "Which item is part of the wing-runner's mandatory airspace check?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 2,
+          "page": 4
+        }
+      ],
+      "category": "airspace_clear",
+      "content_type": "key_messages",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit2-ground-handling-and-signals",
+      "source_item": 20,
+      "choices": [
+        "Traffic ahead along the entire launch flight-path.",
+        "Traffic on the cross-runway.",
+        "Tug fuel quantity.",
+        "Winch cable drum temperature."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Traffic ahead along the entire launch flight-path."
+    }
+  ]
+}

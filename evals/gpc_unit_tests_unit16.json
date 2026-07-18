@@ -1,0 +1,544 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 16 Circuit Joining & Execution Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit16-circuit-joining-execution",
+      "title": "GPC Unit 16 - Circuit Joining & Execution",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLScZVb5UX0JVFyeYox_6U0C8LVSowKWP6b98ObYx6SHVqfLIfQ/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u16-01",
+      "question": "Why should a glider circuit be planned and flown using a recognised circuit pattern?",
+      "expected_behavior": "answer",
+      "expected_answer": "To support orderly traffic flow while preserving safe landing options.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 1
+        }
+      ],
+      "category": "circuit_purpose",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 1,
+      "choices": [
+        "To ensure all pilots fly the same ground track regardless of wind or traffic.",
+        "To provide a predictable sequence while removing the need to adjust the circuit.",
+        "To support orderly traffic flow while preserving safe landing options.",
+        "To keep the glider close enough to the runway that normal lookout becomes less critical."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-02",
+      "question": "The formula given for setting approach speed at break-off from a soaring flight is:",
+      "expected_behavior": "answer",
+      "expected_answer": "1.5 Vs + ½ wind speed.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 2
+        }
+      ],
+      "category": "approach_speed",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 2,
+      "choices": [
+        "Best-glide + 10 kt.",
+        "1.3 Vs + wind gust factor.",
+        "1.5 Vs + ½ wind speed.",
+        "Vne – 40 kt."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-03",
+      "question": "Below 1 000 ft AGL you must fly at or above:",
+      "expected_behavior": "answer",
+      "expected_answer": "1.5 Vs (“safe speed near the ground”).",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 2
+        }
+      ],
+      "category": "safe_speed",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 3,
+      "choices": [
+        "Minimum sink.",
+        "Best-L/D.",
+        "1.3 Vs (“safe maneuvering speed”).",
+        "1.5 Vs (“safe speed near the ground”)."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-04",
+      "question": "By the completion of the turn onto final, the glider should ideally be:",
+      "expected_behavior": "answer",
+      "expected_answer": "Correctly configured, at the correct height and airspeed, ready to continue a stabilised approach.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 1
+        }
+      ],
+      "category": "final_turn",
+      "content_type": "key_messages",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 4,
+      "choices": [
+        "Correctly configured and at the correct airspeed, but slightly high so the approach can be adjusted later.",
+        "Correctly configured and at the correct height, with final approach speed selected once established on final.",
+        "Correctly configured, at the correct height and airspeed, but relying on significant airbrake use to achieve the desired approach.",
+        "Correctly configured, at the correct height and airspeed, ready to continue a stabilised approach."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-05",
+      "question": "Which GPC unit is listed as the only prerequisite for Unit 16?",
+      "expected_behavior": "answer",
+      "expected_answer": "Unit 15 — Break-off & Circuit Planning.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 5,
+      "choices": [
+        "Unit 12 - Slow Flying ands Stalling.",
+        "Unit 13 W — Winch Launch.",
+        "Unit 14 A — Take-off (Aerotow).",
+        "Unit 15 — Break-off & Circuit Planning."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-06",
+      "question": "Two complementary units the Guide recommends studying with Unit 16 are:",
+      "expected_behavior": "answer",
+      "expected_answer": "Unit 17 & Unit 21.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 6,
+      "choices": [
+        "Unit 17 & Unit 21.",
+        "Unit 17 & Unit 22.",
+        "Unit 18 & Unit 21.",
+        "Unit 19 & Unit 23."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-07",
+      "question": "The pre-landing checks should be completed:",
+      "expected_behavior": "answer",
+      "expected_answer": "By mid-downwind leg.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 3
+        }
+      ],
+      "category": "pre_landing",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 7,
+      "choices": [
+        "Immediately after joining the circuit.",
+        "As the glider passes abeam the intended landing area.",
+        "By mid-downwind leg.",
+        "Immediately before turning onto base."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-08",
+      "question": "If the runway angle seen out the side window looks too steep while down-wind, the recommended correction is to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Turn 20–30° away from the strip briefly, then parallel again.; Open airbrakes for a few seconds.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 2
+        },
+        {
+          "source": "trainer",
+          "unit": 16,
+          "page": 7
+        }
+      ],
+      "category": "downwind_angle",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 8,
+      "choices": [
+        "Turn toward the strip for a few seconds.",
+        "Turn 20–30° away from the strip briefly, then parallel again.",
+        "Lower the nose and speed up.",
+        "Open airbrakes for a few seconds."
+      ],
+      "question_type": "checkboxes",
+      "correct_choices": [
+        "Turn 20–30° away from the strip briefly, then parallel again.",
+        "Open airbrakes for a few seconds."
+      ],
+      "note": "Pilot Guide: turn 20–30° away when angle too steep. Trainer also lists airbrake use among steep/shallow circuit corrections."
+    },
+    {
+      "id": "gpc-u16-09",
+      "question": "Conversely, if the angle appears too shallow you should:",
+      "expected_behavior": "answer",
+      "expected_answer": "Turn toward the strip for a few seconds, then parallel again.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 2
+        }
+      ],
+      "category": "downwind_angle",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 9,
+      "choices": [
+        "Extend down-wind further.",
+        "Raise the nose and slow.",
+        "Turn toward the strip for a few seconds, then parallel again.",
+        "Select negative flap."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-10",
+      "question": "In strong winds the base-leg turn should be made:",
+      "expected_behavior": "answer",
+      "expected_answer": "Earlier than usual to avoid drifting too far away.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 4
+        }
+      ],
+      "category": "strong_wind",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 10,
+      "choices": [
+        "Earlier than usual to avoid drifting too far away.",
+        "At exactly the same point as calm days.",
+        "Later than usual.",
+        "After the 300 ft call."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-11",
+      "question": "Where the circuit direction is not prescribed, which circuit side is generally preferred in crosswind conditions?",
+      "expected_behavior": "answer",
+      "expected_answer": "The side where the wind blows the glider away from the strip on downwind.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 5
+        }
+      ],
+      "category": "crosswind",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 11,
+      "choices": [
+        "The side where the wind blows the glider toward the strip on downwind.",
+        "The side that provides the shortest possible base leg.",
+        "The side where the wind blows the glider away from the strip on downwind.",
+        "The side that requires the greatest drift correction on the base leg."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-12",
+      "question": "If unexpected heavy sink means you cannot reach the planned final path, you must:",
+      "expected_behavior": "answer",
+      "expected_answer": "Turn in early, select a safe landing area down-field and fly a modified circuit.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 5
+        }
+      ],
+      "category": "modified_circuit",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 12,
+      "choices": [
+        "Increase speed and dive for it.",
+        "Turn in early, select a safe landing area down-field and fly a modified circuit.",
+        "Extend base down-wind.",
+        "Restart thermalling."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-13",
+      "question": "Overshooting the turn onto final is most likely to result in:",
+      "expected_behavior": "answer",
+      "expected_answer": "A steep correcting turn and poor alignment with the landing area centreline.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 4
+        }
+      ],
+      "category": "final_turn",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 13,
+      "choices": [
+        "A longer final approach with more time to stabilise.",
+        "A higher-than-planned final approach.",
+        "A steep correcting turn and poor alignment with the landing area centreline.",
+        "Reduced workload on final."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-14",
+      "question": "During the circuit your primary attitude reference for holding approach speed is the:",
+      "expected_behavior": "answer",
+      "expected_answer": "Nose attitude relative to the horizon.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 2
+        }
+      ],
+      "category": "attitude",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 14,
+      "choices": [
+        "ASI needle.",
+        "Turn-and-slip ball.",
+        "Yaw string.",
+        "Nose attitude relative to the horizon."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-15",
+      "question": "While flying the circuit, making a radio call must never take priority over:",
+      "expected_behavior": "answer",
+      "expected_answer": "Maintaining control of the glider.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 4
+        }
+      ],
+      "category": "radio",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 15,
+      "choices": [
+        "Keeping other aircraft informed of your intentions.",
+        "Completing the pre-landing checks.",
+        "Maintaining control of the glider.",
+        "Selecting the correct landing area."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-16",
+      "question": "A targeted scan in the circuit should include a particular lookout for:",
+      "expected_behavior": "answer",
+      "expected_answer": "Traffic approaching from an opposite circuit or on long final.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 3
+        }
+      ],
+      "category": "lookout",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 16,
+      "choices": [
+        "Traffic approaching from an opposite circuit or on long final.",
+        "Vehicles entering the manoeuvring area.",
+        "Aircraft joining downwind behind you.",
+        "Traffic taxiing near the launch point."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-17",
+      "question": "If the landing area is seen to become obstructed while on base leg, you should first:",
+      "expected_behavior": "answer",
+      "expected_answer": "Modify the circuit or choose another safe area on the aerodrome.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 4
+        }
+      ],
+      "category": "obstructions",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 17,
+      "choices": [
+        "Continue and hope it clears.",
+        "Retract the undercarriage.",
+        "Climb back to 1 500 ft.",
+        "Modify the circuit or choose another safe area on the aerodrome."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-18",
+      "question": "If a crosswind on the final approach produces a tailwind component on the base leg (i.e. the wind is from behind during the base leg), the turn onto final should normally be commenced:",
+      "expected_behavior": "answer",
+      "expected_answer": "Earlier than normal.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 3
+        }
+      ],
+      "category": "base_leg",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 18,
+      "choices": [
+        "Only after reducing airspeed.",
+        "Later than normal.",
+        "At the normal turn point.",
+        "Earlier than normal."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-19",
+      "question": "Competence for this unit requires arriving on final no lower than:",
+      "expected_behavior": "answer",
+      "expected_answer": "300 ft AGL.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 16,
+          "page": 7
+        }
+      ],
+      "category": "competency",
+      "content_type": "competency",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 19,
+      "choices": [
+        "200 ft AGL.",
+        "250 ft AGL.",
+        "300 ft AGL.",
+        "400 ft AGL."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u16-20",
+      "question": "A common student error is flying the same joining point every flight. The root cause is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Using a rote pattern instead of assessing wind, traffic and obstacles each time.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 5
+        }
+      ],
+      "category": "common_problems",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit16-circuit-joining-execution",
+      "source_item": 20,
+      "choices": [
+        "Poor radio phraseology.",
+        "Using a rote pattern instead of assessing wind, traffic and obstacles each time.",
+        "Incorrect speed setting.",
+        "Failure to complete FUST."
+      ],
+      "question_type": "multiple_choice",
+      "note": "Rote joining pattern is discussed in Unit 15 common problems; Unit 16 reinforces reassessment."
+    }
+  ]
+}

@@ -1,0 +1,549 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 4 Orientation and Sailplane Stability Google Form. Answers derived from Pilot Guide — form has no published quiz answer key.",
+  "source_forms": [
+    {
+      "id": "gpc-unit4-orientation-and-sailplane-stability",
+      "title": "GPC Unit 4 - Orientation and Sailplane Stability",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLScbAU26I5dxbCpWE2ZYGmWtecU4qeZvuRsaNQdZe_eIX8Io1Q/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u4-01",
+      "question": "What does the Pilot Guide name as a glider pilot's primary attitude reference?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 1
+        }
+      ],
+      "category": "attitude",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 1,
+      "choices": [
+        "Compass heading.",
+        "The horizon.",
+        "Variometer reading.",
+        "Artificial horizon."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "The horizon."
+    },
+    {
+      "id": "gpc-u4-02",
+      "question": "If a trimmed glider is disturbed by light turbulence while the pilot is hands-off, it will usually do what?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 1
+        }
+      ],
+      "category": "stability",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 2,
+      "choices": [
+        "Enter a spiral dive.",
+        "Pitch steadily nose-up.",
+        "Return toward its original attitude.",
+        "Stall immediately."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Return toward its original attitude."
+    },
+    {
+      "id": "gpc-u4-03",
+      "question": "Rolling motion takes place about which of the glider's axes?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 2
+        }
+      ],
+      "category": "axes",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 3,
+      "choices": [
+        "Vertical.",
+        "Lateral.",
+        "Longitudinal.",
+        "Diagonal."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Longitudinal."
+    },
+    {
+      "id": "gpc-u4-04",
+      "question": "Which control surface produces movement in the yawing plane?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 2
+        }
+      ],
+      "category": "controls",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 4,
+      "choices": [
+        "Elevator.",
+        "Ailerons.",
+        "Flaps.",
+        "Rudder."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Rudder."
+    },
+    {
+      "id": "gpc-u4-05",
+      "question": "According to the Pilot Guide, which primary control directly varies airspeed in a glider?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 2
+        }
+      ],
+      "category": "controls",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 5,
+      "choices": [
+        "Aileron.",
+        "Rudder.",
+        "Elevator.",
+        "Air-brake."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Elevator."
+    },
+    {
+      "id": "gpc-u4-06",
+      "question": "When the nose is pitched higher above the horizon, what will the airspeed generally do?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 2
+        }
+      ],
+      "category": "attitude",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 6,
+      "choices": [
+        "Increase.",
+        "Decrease.",
+        "Remain exactly the same.",
+        "Become unpredictable."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Decrease."
+    },
+    {
+      "id": "gpc-u4-07",
+      "question": "In this unit, \"attitude\" is defined as the angle between the glider's fuselage and what?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 3
+        }
+      ],
+      "category": "attitude",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 7,
+      "choices": [
+        "Wing chord.",
+        "Relative airflow.",
+        "Visible horizon.",
+        "Vertical axis."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Visible horizon."
+    },
+    {
+      "id": "gpc-u4-08",
+      "question": "Which action increases wing lift (all else unchanged)?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 4
+        }
+      ],
+      "category": "lift",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 8,
+      "choices": [
+        "Reducing speed.",
+        "Lowering angle-of-attack.",
+        "Increasing speed.",
+        "Thinning the aerofoil camber."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Increasing speed."
+    },
+    {
+      "id": "gpc-u4-09",
+      "question": "The angle of attack is the angle between which two things?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 4
+        }
+      ],
+      "category": "lift",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 9,
+      "choices": [
+        "Fuselage and horizon.",
+        "Chord line and relative airflow.",
+        "Wingtip and vertical axis.",
+        "Elevator and stabiliser."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Chord line and relative airflow."
+    },
+    {
+      "id": "gpc-u4-10",
+      "question": "The Pilot Guide states the glider exhibits strong positive stability in which axis?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 2
+        }
+      ],
+      "category": "stability",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 10,
+      "choices": [
+        "Pitch.",
+        "Roll.",
+        "Yaw.",
+        "None."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Yaw."
+    },
+    {
+      "id": "gpc-u4-11",
+      "question": "If you start to lose orientation during a turn, what should you do immediately?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 5
+        }
+      ],
+      "category": "orientation",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 11,
+      "choices": [
+        "Check the GPS.",
+        "Focus on the compass.",
+        "Look outside and fix on a prominent ground feature.",
+        "Descend to circuit height."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Look outside and fix on a prominent ground feature."
+    },
+    {
+      "id": "gpc-u4-12",
+      "question": "Demonstrating the glide angle relative to the airfield helps a student understand what?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 4
+        }
+      ],
+      "category": "orientation",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 12,
+      "choices": [
+        "Maximum cross-wind limits.",
+        "How far the glider can fly and still return safely.",
+        "Radio range.",
+        "Optimum thermalling speed."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "How far the glider can fly and still return safely."
+    },
+    {
+      "id": "gpc-u4-13",
+      "question": "With neutral/positive roll stability, what will a glider do?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 2
+        }
+      ],
+      "category": "stability",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 13,
+      "choices": [
+        "Automatically level its wings.",
+        "Hold whatever bank angle it is placed in until disturbed.",
+        "Yaw opposite the bank.",
+        "Steepen its bank progressively."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Hold whatever bank angle it is placed in until disturbed."
+    },
+    {
+      "id": "gpc-u4-14",
+      "question": "A symmetrical aerofoil produces zero lift when the angle of attack is what?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 4
+        }
+      ],
+      "category": "lift",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 14,
+      "choices": [
+        "Positive 4°",
+        "Negative 2°",
+        "Zero degrees.",
+        "Any positive value."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Zero degrees."
+    },
+    {
+      "id": "gpc-u4-15",
+      "question": "For small changes within the normal range, increasing angle-of-attack on a symmetrical aerofoil causes lift to do what?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 4
+        }
+      ],
+      "category": "lift",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 15,
+      "choices": [
+        "Decrease linearly.",
+        "Increase roughly in proportion.",
+        "Remain constant.",
+        "Drop to zero then rise."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Increase roughly in proportion."
+    },
+    {
+      "id": "gpc-u4-16",
+      "question": "In straight-and-level flight, releasing all controls causes the glider to do what?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 1
+        }
+      ],
+      "category": "stability",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 16,
+      "choices": [
+        "Pitch sharply down.",
+        "Roll into a spiral.",
+        "Continue on its trimmed flight path.",
+        "Yaw continuously right."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Continue on its trimmed flight path."
+    },
+    {
+      "id": "gpc-u4-17",
+      "question": "Which of the following are listed under this unit's Key Messages?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 1
+        }
+      ],
+      "category": "key_messages",
+      "content_type": "key_messages",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 17,
+      "choices": [
+        "The horizon is our primary attitude reference.",
+        "Don't panic.",
+        "Always \"check airspace clear to launch\"",
+        "Lookout and visual orientation are essential.",
+        "The glider is a stable platform"
+      ],
+      "question_type": "checkboxes",
+      "correct_choices": [
+        "The horizon is our primary attitude reference.",
+        "Lookout and visual orientation are essential.",
+        "The glider is a stable platform"
+      ],
+      "expected_answer": "The horizon is our primary attitude reference.; Lookout and visual orientation are essential.; The glider is a stable platform"
+    },
+    {
+      "id": "gpc-u4-18",
+      "question": "What is the primary surface for producing roll?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 2
+        }
+      ],
+      "category": "controls",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 18,
+      "choices": [
+        "Aileron.",
+        "Elevator.",
+        "Spoiler.",
+        "Rudder."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Aileron."
+    },
+    {
+      "id": "gpc-u4-19",
+      "question": "Because of strong yaw stability, after a disturbance the glider's nose will do what?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 2
+        }
+      ],
+      "category": "stability",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 19,
+      "choices": [
+        "Keep yawing away.",
+        "Wander slowly.",
+        "Swing back quickly toward the original direction",
+        "Pitch upward."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Swing back quickly toward the original direction"
+    },
+    {
+      "id": "gpc-u4-20",
+      "question": "One objective of identifying local landmarks and boundaries on maps is to ensure the trainee/student can do what?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 4,
+          "page": 4
+        }
+      ],
+      "category": "orientation",
+      "content_type": "aim",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit4-orientation-and-sailplane-stability",
+      "source_item": 20,
+      "choices": [
+        "Prepare for cross-country badges.",
+        "Practise radio procedures.",
+        "Compute glide-ratio polars.",
+        "Orient confidently within the local 3-D flight area."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Orient confidently within the local 3-D flight area."
+    }
+  ]
+}
