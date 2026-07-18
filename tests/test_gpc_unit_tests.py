@@ -15,6 +15,11 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 EVALS = ROOT / "evals"
 GPC_UNIT_TEST_PATHS = sorted(EVALS.glob("gpc_unit_tests_unit*.json"))
+REFUSAL_PROBE_PATH = EVALS / "refusal_probes.json"
+GOLDEN_SET_PATH = EVALS / "golden_set.json"
+EVAL_FIXTURE_PATHS = GPC_UNIT_TEST_PATHS + [
+    p for p in (REFUSAL_PROBE_PATH, GOLDEN_SET_PATH) if p.is_file()
+]
 
 BEHAVIORS = frozenset({"answer", "refuse", "correct", "decline"})
 REQUIRED_ITEM_KEYS = frozenset(
@@ -154,7 +159,7 @@ def _load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-@pytest.fixture(scope="module", params=GPC_UNIT_TEST_PATHS, ids=lambda p: p.name)
+@pytest.fixture(scope="module", params=EVAL_FIXTURE_PATHS, ids=lambda p: p.name)
 def fixture_path(request: pytest.FixtureRequest) -> Path:
     path: Path = request.param
     assert path.is_file(), f"missing {path}"
@@ -168,6 +173,30 @@ def fixture(fixture_path: Path) -> dict:
 
 def test_at_least_one_gpc_unit_test_exists() -> None:
     assert GPC_UNIT_TEST_PATHS, "no evals/gpc_unit_tests_unit*.json files found"
+
+
+def test_refusal_probes_exist_and_are_all_refuse() -> None:
+    assert REFUSAL_PROBE_PATH.is_file(), "missing evals/refusal_probes.json"
+    data = _load(REFUSAL_PROBE_PATH)
+    assert data["items"], "refusal_probes.json has no items"
+    assert all(item["expected_behavior"] == "refuse" for item in data["items"])
+    assert {item["category"] for item in data["items"]} <= {
+        "type_specific",
+        "site_local",
+        "absent_topic",
+        "out_of_domain",
+    }
+
+
+def test_golden_set_combines_self_check_answers_and_refusals() -> None:
+    assert GOLDEN_SET_PATH.is_file(), "missing evals/golden_set.json"
+    data = _load(GOLDEN_SET_PATH)
+    answers = [i for i in data["items"] if i["expected_behavior"] == "answer"]
+    refuses = [i for i in data["items"] if i["expected_behavior"] == "refuse"]
+    assert len(answers) == 217
+    assert len(refuses) == 17
+    assert all(i["category"] == "self_check" for i in answers)
+    assert {i["expected_behavior"] for i in data["items"]} <= {"answer", "refuse"}
 
 
 def test_gpc_unit_tests_top_level_shape(fixture: dict) -> None:

@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite refusal probes for eval (#39). PoC uses one behaviour refuse (grounded:false); slice by category. Includes (1) type_specific/site_local from Pilot self_check Q&A, (2) deferred-grill probes re-validated against corpus/md 2026-07-18.",
+  "sources": [
+    "evals/self_check_pilot_qa_runs.json (maintainer-selected type/site)",
+    "defered-grill.md drafted list (re-grepped; stale items dropped)"
+  ],
+  "validation_dropped": [
+    {
+      "id": "deferred-A2-HASELL",
+      "reason": "PRESENT — Pilot U18 spells out full HASELL pre-aerobatic check items"
+    },
+    {
+      "id": "deferred-E-correction",
+      "reason": "Correction probe — dropped for PoC (no good source)"
+    }
+  ],
+  "items": [
+    {
+      "id": "refuse-type-13S-02",
+      "question": "State the engine parameter limits for your glider.",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "type_specific",
+      "content_type": "self_check",
+      "difficulty": "medium",
+      "verified_absent_terms": [
+        "engine parameter limits for your glider",
+        "maximum CHT for your",
+        "RPM limit for your glider"
+      ],
+      "source_self_check": "self_check-pilot-13S-02",
+      "notes": "Guides require Aircraft Flight Manual study; no type-specific engine limits stated as the answer."
+    },
+    {
+      "id": "refuse-type-14W-01",
+      "question": "What is the minimum and maximum winch speed for your glider?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "type_specific",
+      "content_type": "self_check",
+      "difficulty": "medium",
+      "verified_absent_terms": [
+        "minimum winch speed for your glider",
+        "maximum winch speed for your glider",
+        "Vw for your glider"
+      ],
+      "source_self_check": "self_check-pilot-14W-01",
+      "notes": "Guide says confirm Min (1.3 Vs) and Max (Vw) from aircraft placard / AFM — values not given."
+    },
+    {
+      "id": "refuse-type-14W-03",
+      "question": "What is the correct weak link strength for your glider?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "type_specific",
+      "content_type": "self_check",
+      "difficulty": "medium",
+      "verified_absent_terms": [
+        "weak link strength for your glider",
+        "correct weak link for your"
+      ],
+      "source_self_check": "self_check-pilot-14W-03",
+      "notes": "Guide says confirm correct weak link from cockpit placards — strength not stated."
+    },
+    {
+      "id": "refuse-type-14S-04",
+      "question": "What is the cross wind limitation on the powered sailplane you use?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "type_specific",
+      "content_type": "self_check",
+      "difficulty": "medium",
+      "verified_absent_terms": [
+        "cross wind limitation on the powered sailplane you use",
+        "crosswind limit for your powered sailplane"
+      ],
+      "source_self_check": "self_check-pilot-14S-04",
+      "notes": "Guide gives example type limits (e.g. G109 11 kt) but asks for the aircraft you use → AFM."
+    },
+    {
+      "id": "refuse-type-29-02",
+      "question": "What is the normal stall speed of your glider? So what would you expect the stall speed to be at 60 degrees bank?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "type_specific",
+      "content_type": "self_check",
+      "difficulty": "medium",
+      "verified_absent_terms": [
+        "normal stall speed of your glider",
+        "stall speed of your glider at 60"
+      ],
+      "source_self_check": "self_check-pilot-29-02",
+      "notes": "U29 gives ~1.4× / table of typical speeds, but 'your glider' Vs0 is AFM/placard."
+    },
+    {
+      "id": "refuse-site-20A-06",
+      "question": "Describe outlanding options for each runway if you experience a low level cable break.",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "site_local",
+      "content_type": "self_check",
+      "difficulty": "hard",
+      "verified_absent_terms": [
+        "outlanding options for each runway",
+        "low level cable break runway"
+      ],
+      "source_self_check": "self_check-pilot-20A-06",
+      "notes": "Requires club/site runway layout — not in national GFA guides."
+    },
+    {
+      "id": "refuse-site-36-01",
+      "question": "Review a WAC and VNC for your local flying area, up to 200km radius. Identify P, R, D areas, and areas with E,C,A airspace. For each area, identify the heights that you can fly in these areas.",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "site_local",
+      "content_type": "self_check",
+      "difficulty": "hard",
+      "verified_absent_terms": [
+        "WAC and VNC for your local flying area",
+        "local flying area up to 200km"
+      ],
+      "source_self_check": "self_check-pilot-36-01",
+      "notes": "Chart-reading exercise over the pilot's local area — external charts, not corpus text."
+    },
+    {
+      "id": "refuse-absent-swafts",
+      "question": "What are the SWAFTS check items?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "absent_topic",
+      "content_type": "briefing",
+      "difficulty": "easy",
+      "verified_absent_terms": ["SWAFTS", "S.W.A.F.T.S"],
+      "deferred_id": "A1",
+      "notes": "Re-grepped 2026-07-18 — zero hits in pilot/trainer MD."
+    },
+    {
+      "id": "refuse-absent-maccready-ring-final-glide",
+      "question": "What MacCready ring setting should I use on final glide?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "absent_topic",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": ["MacCready ring", "McCready ring"],
+      "deferred_id": "B1",
+      "notes": "MacCready theory and final glide appear in U38–40, but 'MacCready ring' and a ring setting for final glide do not. U40: final glides not covered in detail."
+    },
+    {
+      "id": "refuse-absent-ridge-soaring-technique",
+      "question": "Explain the ridge-soaring lift technique and how to work a ridge.",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "absent_topic",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": ["ridge-soar", "ridge soaring lift", "how to work a ridge"],
+      "deferred_id": "B2",
+      "notes": "Only regulatory mention of 'ridge or hill soaring' (U23 height rules) — no technique teaching."
+    },
+    {
+      "id": "refuse-absent-silver-c",
+      "question": "What are the Silver C distance requirements, and what outlanding rules apply on a Silver C attempt?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "absent_topic",
+      "content_type": "admin",
+      "difficulty": "medium",
+      "verified_absent_terms": ["Silver C distance", "Silver-C", "Silver C attempt"],
+      "deferred_id": "B3",
+      "notes": "Only 'Silver Coach' in U11 — not the FAI Silver C badge requirements."
+    },
+    {
+      "id": "refuse-absent-rigging-trailer-loading",
+      "question": "Step by step, how do I de-rig a glider and load it into the trailer?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "absent_topic",
+      "content_type": "briefing",
+      "difficulty": "medium",
+      "verified_absent_terms": ["load it into the trailer", "de-rig a glider step", "trailer loading procedure"],
+      "deferred_id": "B4",
+      "notes": "U35 covers trailer/retrieve preparation checklists; U42 mentions supervised rigging — no step-by-step derig/load procedure."
+    },
+    {
+      "id": "refuse-absent-ask21-vne",
+      "question": "What is the VNE and maximum load factor for an ASK-21?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "absent_topic",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": ["ASK-21", "ASK 21", "ASK21"],
+      "deferred_id": "C1",
+      "notes": "ASK-21 never named; VNE only as a generic flight-envelope term."
+    },
+    {
+      "id": "refuse-absent-flutter-onset",
+      "question": "At what airspeed does flutter onset typically occur in a glider?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "absent_topic",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": ["flutter", "flutter onset"],
+      "deferred_id": "C2",
+      "notes": "Re-grepped 2026-07-18 — zero hits."
+    },
+    {
+      "id": "refuse-absent-form2-due",
+      "question": "When is a Form 2 annual inspection due, and what does the Form 2 inspection cover?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "absent_topic",
+      "content_type": "admin",
+      "difficulty": "medium",
+      "verified_absent_terms": [
+        "Form 2 due",
+        "Form 2 inspection cover",
+        "Form 2 contents"
+      ],
+      "deferred_id": "C3",
+      "notes": "Form 2 named as Annual Inspection / inspector role in U42; due interval and inspection contents not specified."
+    },
+    {
+      "id": "refuse-absent-sea-breeze",
+      "question": "How does a sea-breeze front form, and how can it be used for soaring?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "absent_topic",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": ["sea-breeze", "sea breeze", "seabreeze"],
+      "deferred_id": "D1",
+      "notes": "Re-grepped 2026-07-18 — zero hits."
+    },
+    {
+      "id": "refuse-absent-weekend-weather",
+      "question": "What will the weather be like at the club this weekend?",
+      "expected_behavior": "refuse",
+      "expected_answer": "not covered in the guides I have",
+      "citations": [],
+      "category": "out_of_domain",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [
+        "weather this weekend",
+        "weekend weather at the club"
+      ],
+      "deferred_id": "F1",
+      "notes": "Real-time / out-of-domain; scores as refuse under PoC collapse."
+    }
+  ]
+}

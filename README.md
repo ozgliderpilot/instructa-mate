@@ -255,7 +255,8 @@ tests/                               TDD suite against hand-verified goldens
 CONTEXT.md                           domain glossary (ubiquitous language)
 parser-build.md                      stage-1 build handover
 defered-grill.md                     designed-but-unbuilt decisions (stages 2–4)
-evals/                               GPC unit-test fixtures for refuse-or-cite evals
+evals/                               golden_set + GPC fixtures + refusal probes for refuse-or-cite evals
+scripts/run_self_check_qa.py         batch Pilot self_check → answer_question (resume-safe)
 ```
 
 ---

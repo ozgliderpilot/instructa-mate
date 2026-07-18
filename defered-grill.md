@@ -51,23 +51,30 @@ judge verdicts to calibrate). Langfuse for tracing the curve.
 **out-of-corpus refusal set**. `self_check` (Pilot "Self-Check Questions") kept in reserve for thin
 content_type coverage. Persist to `evals/gpc_unit_tests_unit*.json`, schema:
 `{id, question, expected_behavior: refuse|correct|decline, expected_answer, citations:[{source,unit,page}], category, content_type, difficulty, verified_absent_terms:[]}`.
-**Open / to persist:** the ~12 drafted refusal probes below (NOT yet saved anywhere); whether to
-include the false-premise/**Correction** probes in the PoC; final per-category counts.
+**Persisted:** refusal set in `evals/refusal_probes.json` (self_check type/site + re-validated
+deferred list). **PoC lock (#39 grill):** in-corpus gold = Pilot self_check Q&A runs →
+`evals/golden_set.json` (217 answer + 17 refuse after dropping rudder stem that also lives in
+GPC fixtures). **SME-confirmed** (human-checked). **Both** `golden_set.json` and
+`evals/gpc_unit_tests_unit*.json` are eval surfaces. **Guidance (no test):** do not put the same
+question stem in both sets; on the rudder clash, kept GPC and deleted `self_check-pilot-8-08`.
 
 **Three "must-not-fabricate" behaviours (don't lump into one metric):** *Refuse* (topic absent →
 "not covered in the guides I have" — the headline metric), *Correct* (false premise about in-corpus
 content → correct it WITH citation), *Decline* (out-of-domain/real-time/action).
+**PoC lock (#39 grill):** Collapse Refuse+Decline into one eval behaviour `refuse` (same runtime
+signal: `grounded:false` / canonical string). Slice by `category` metadata (`type_specific`,
+`site_local`, `absent_topic`, …) when diagnosing. Reintroduce distinct `decline` only if/when the
+product emits a separate signal or message. **Correction dropped** for PoC (no good probe source).
 
-**Drafted out-of-corpus probes (every topic verified absent via grep against both guides):**
-- A · absent jargon: SWAFTS check items; HASELL pre-aerobatic check.
-- B · beyond syllabus: MacCready ring on final glide; ridge-soaring lift technique; Silver C
-  distance + outlanding; rigging/de-rigging + trailer loading.
-- C · type-specific/numeric: ASK-21 VNE + max load factor; flutter onset airspeed; Form 2 annual
-  inspection due/contents.
-- D · meteorology depth: sea-breeze front formation + soaring use.
-- E · false premise (Correction, not refusal): "since the rudder turns the glider, how much rudder
-  to start a turn?" (Unit 5 teaches rudder yaws ≠ turns → correct w/ citation).
-- F · out-of-domain: this weekend's weather at the club.
+**Drafted out-of-corpus probes (re-validated 2026-07-18 against both guides):**
+- A · absent jargon: SWAFTS ✅ kept; ~~HASELL~~ ❌ DROP (Pilot U18 spells out full checklist).
+- B · beyond syllabus: MacCready *ring* on final glide ✅ (theory present; ring/setting absent);
+  ridge-soaring technique ✅; Silver C distance + outlanding ✅; derig/trailer-load procedure ✅
+  (U35 prep checklist ≠ how-to).
+- C · type-specific/numeric: ASK-21 VNE ✅; flutter onset ✅; Form 2 due/contents ✅ (named, not detailed).
+- D · meteorology: sea-breeze front ✅.
+- E · Correction: ~~dropped for PoC~~.
+- F · out-of-domain: weekend weather ✅ (`category: out_of_domain`).
 (Verified PRESENT, so rejected as probes: crosswind, winch, cable break, spin recovery, thermal,
 airspace, aerobatics, parachute, ballast, stall speed, VHF, GPS.)
 
