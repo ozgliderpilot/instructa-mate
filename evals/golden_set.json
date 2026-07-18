@@ -20,17 +20,17 @@
       "id": "self_check-pilot-1-02",
       "question": "Where is 9 O’clock Low?",
       "expected_behavior": "answer",
-      "expected_answer": "9 o'clock is directly to the left. According to the clock code system, 12 o'clock means directly ahead, 3 o'clock means directly to the right, 6 o'clock means directly behind, and 9 o'clock means directly to the left. This position is further defined by high or low (e.g., 9 o'clock high or 9 o'clock low).",
+      "expected_answer": "9 o'clock is directly to the left. According to the clock code system, 12 o'clock means directly ahead, 3 o'clock means directly to the right, 6 o'clock means directly behind, and 9 o'clock means directly to the left. Positions may also be described as high or low (for example 9 o'clock high or 9 o'clock low).",
       "citations": [
         {
           "source": "pilot",
           "unit": "1",
-          "page": 1
+          "page": 2
         },
         {
           "source": "trainer",
-          "unit": "1",
-          "page": 4
+          "unit": "9",
+          "page": 6
         }
       ],
       "category": "self_check",
@@ -153,24 +153,19 @@
       "expected_answer": "Multiple people can stop a glider launching sequence when something is not right: (1) Anyone outside can abort launch by shouting 'STOP! STOP! STOP!' and holding both hands vertically above head, or by radio call; (2) The pilot can abort by shouting 'STOP! STOP! STOP!' on the radio while releasing the rope; (3) The wing-runner can abort by shouting 'STOP! STOP! STOP!' and holding both hands vertically above head; (4) A forward signaller (if present) can abort by holding both hands vertically above head; (5) The winch driver may terminate the launch if the glider approaches an unsafe position. Safety is a shared responsibility—any person can call and signal STOP.",
       "citations": [
         {
-          "source": "trainer",
-          "unit": "20A",
-          "page": 3
+          "source": "pilot",
+          "unit": "2",
+          "page": 2
         },
         {
           "source": "pilot",
-          "unit": "2",
-          "page": 3
+          "unit": "20A",
+          "page": 1
         },
         {
-          "source": "trainer",
-          "unit": "19",
-          "page": 8
-        },
-        {
-          "source": "trainer",
-          "unit": "2",
-          "page": 4
+          "source": "pilot",
+          "unit": "20S",
+          "page": 1
         }
       ],
       "category": "self_check",
@@ -189,7 +184,17 @@
         {
           "source": "trainer",
           "unit": "2",
+          "page": 6
+        },
+        {
+          "source": "trainer",
+          "unit": "2",
           "page": 4
+        },
+        {
+          "source": "pilot",
+          "unit": "2",
+          "page": 3
         },
         {
           "source": "pilot",
@@ -365,13 +370,23 @@
       "citations": [
         {
           "source": "pilot",
-          "unit": "4",
+          "unit": "5",
           "page": 1
         },
         {
           "source": "pilot",
           "unit": "5",
           "page": 2
+        },
+        {
+          "source": "trainer",
+          "unit": "5",
+          "page": 2
+        },
+        {
+          "source": "trainer",
+          "unit": "5",
+          "page": 4
         }
       ],
       "category": "self_check",
@@ -867,6 +882,11 @@
         {
           "source": "trainer",
           "unit": "8",
+          "page": 5
+        },
+        {
+          "source": "trainer",
+          "unit": "8",
           "page": 4
         }
       ],
@@ -1011,12 +1031,12 @@
         {
           "source": "trainer",
           "unit": "6",
-          "page": 4
+          "page": 7
         },
         {
-          "source": "pilot",
+          "source": "trainer",
           "unit": "6",
-          "page": 1
+          "page": 5
         }
       ],
       "category": "self_check",
@@ -1057,14 +1077,19 @@
       "expected_answer": "When an aircraft reports its position relative to you, you would use a TARGETED SCAN. This involves focusing on the smaller area where that aircraft is reported to be, which has potential increased traffic or greater risk. You should monitor radio and visually identify any aircraft that calls, concentrating your scan on the specific area indicated by the radio report.",
       "citations": [
         {
-          "source": "pilot",
+          "source": "trainer",
           "unit": "9",
           "page": 5
         },
         {
-          "source": "trainer",
+          "source": "pilot",
           "unit": "9",
-          "page": 5
+          "page": 4
+        },
+        {
+          "source": "pilot",
+          "unit": "1",
+          "page": 3
         }
       ],
       "category": "self_check",
@@ -1083,12 +1108,12 @@
         {
           "source": "pilot",
           "unit": "9",
-          "page": 3
+          "page": 4
         },
         {
-          "source": "pilot",
+          "source": "trainer",
           "unit": "9",
-          "page": 5
+          "page": 4
         }
       ],
       "category": "self_check",
@@ -1256,12 +1281,12 @@
       "id": "self_check-pilot-12-01",
       "question": "What are the symptoms of a stall in straight flight?",
       "expected_behavior": "answer",
-      "expected_answer": "The symptoms of a stall in straight flight occur progressively and include: (1) nose position higher than normal, though not necessarily greatly so; (2) continuous backward movement of the stick; (3) quieter cockpit due to lower airflow speed past the canopy; (4) falling airspeed indication on the ASI; (5) less effective flying controls; and (6) possible mild buffeting of the airframe caused by breakdown of smooth airflow over the wing. Additional indicators include loss of lateral damping and increasing descent rate.",
+      "expected_answer": "The symptoms of a stall in straight flight occur progressively and include: (1) nose position higher than normal, though not necessarily greatly so; (2) continuous backward movement of the stick; (3) quieter cockpit due to lower airflow speed past the canopy; (4) falling airspeed indication on the ASI; (5) less effective flying controls; and (6) possible mild buffeting of the airframe caused by breakdown of smooth airflow over the wing.",
       "citations": [
         {
           "source": "pilot",
           "unit": "12",
-          "page": 1
+          "page": 2
         }
       ],
       "category": "self_check",
@@ -1314,7 +1339,7 @@
         {
           "source": "pilot",
           "unit": "18",
-          "page": 3
+          "page": 4
         },
         {
           "source": "pilot",
@@ -1337,18 +1362,13 @@
       "citations": [
         {
           "source": "pilot",
-          "unit": "18",
-          "page": 7
+          "unit": "12",
+          "page": 3
         },
         {
           "source": "pilot",
-          "unit": "12",
-          "page": 2
-        },
-        {
-          "source": "trainer",
-          "unit": "12",
-          "page": 3
+          "unit": "18",
+          "page": 4
         }
       ],
       "category": "self_check",
@@ -1395,13 +1415,13 @@
       "citations": [
         {
           "source": "pilot",
-          "unit": "18",
+          "unit": "12",
           "page": 3
         },
         {
-          "source": "trainer",
-          "unit": "12",
-          "page": 5
+          "source": "pilot",
+          "unit": "18",
+          "page": 4
         }
       ],
       "category": "self_check",
@@ -1496,18 +1516,8 @@
       "citations": [
         {
           "source": "trainer",
-          "unit": "14A",
-          "page": 4
-        },
-        {
-          "source": "trainer",
           "unit": "27",
           "page": 4
-        },
-        {
-          "source": "pilot",
-          "unit": "13A",
-          "page": 2
         },
         {
           "source": "pilot",
@@ -1518,6 +1528,16 @@
           "source": "pilot",
           "unit": "27",
           "page": 1
+        },
+        {
+          "source": "trainer",
+          "unit": "13A",
+          "page": 3
+        },
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 2
         }
       ],
       "category": "self_check",
@@ -1534,14 +1554,9 @@
       "expected_answer": "Before takeoff on aerotow, the trim should be set slightly forward as required during the cockpit check. At lower altitude, there is a small advantage in having a slightly nose heavy trim in case of a rope break, as it helps maintain safe speed near the ground. Once established at a safe height, the trim should be adjusted to reduce workload.",
       "citations": [
         {
-          "source": "pilot",
-          "unit": "14A",
-          "page": 2
-        },
-        {
-          "source": "pilot",
+          "source": "trainer",
           "unit": "13A",
-          "page": 4
+          "page": 7
         }
       ],
       "category": "self_check",
@@ -1603,22 +1618,17 @@
         {
           "source": "pilot",
           "unit": "13S",
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": "13S",
           "page": 2
         },
         {
           "source": "pilot",
           "unit": "13S",
-          "page": 1
-        },
-        {
-          "source": "trainer",
-          "unit": "13S",
           "page": 3
-        },
-        {
-          "source": "trainer",
-          "unit": "13S",
-          "page": 4
         }
       ],
       "category": "self_check",
@@ -1747,8 +1757,13 @@
       "id": "self_check-pilot-13W-05",
       "question": "How do you release the launch cable from the glider?",
       "expected_behavior": "answer",
-      "expected_answer": "To release the launch cable from the glider, use the Locate-Identify-Operate procedure: First, locate and identify the release handle/knob to ensure you have the correct control. Then operate it by pulling the release. For winch launches, pull the release twice as the nose attitude passes through the horizon. The release should be operated while the towrope is still under some tension. After pulling the release, observe the rope go and begin a right turn without delay to obtain maximum clearance from the rope.",
+      "expected_answer": "When the winch closes the throttle at the top of the launch, lower the nose just below the horizon, then Locate-Identify-Operate the cable release twice. Release should be performed manually with as little cable tension as possible. If the cable back-release has already activated, still operate the release to be certain the cable is free.",
       "citations": [
+        {
+          "source": "pilot",
+          "unit": "13W",
+          "page": 1
+        },
         {
           "source": "pilot",
           "unit": "13W",
@@ -1756,13 +1771,8 @@
         },
         {
           "source": "pilot",
-          "unit": "13A",
-          "page": 3
-        },
-        {
-          "source": "trainer",
           "unit": "13W",
-          "page": 7
+          "page": 5
         }
       ],
       "category": "self_check",
@@ -1957,14 +1967,9 @@
       "expected_answer": "For an aerotow takeoff, trim should be set slightly forward as required during the cockpit check. At lower altitudes, there is a small advantage in having a slightly nose-heavy trim in case of a rope break, as it helps maintain safe speed near the ground. Once established at a safe height, the trim should be adjusted to reduce workload.",
       "citations": [
         {
-          "source": "pilot",
-          "unit": "14A",
-          "page": 2
-        },
-        {
-          "source": "pilot",
+          "source": "trainer",
           "unit": "13A",
-          "page": 4
+          "page": 7
         }
       ],
       "category": "self_check",
@@ -2655,11 +2660,6 @@
       "expected_answer": "A stabilised approach involves constant attitude/airspeed, descent rate and track. On approach, attitude/airspeed are controlled with elevator and rate of descent with airbrakes/spoilers. Once established, the airbrake/spoiler setting should ideally remain unaltered until touchdown.",
       "citations": [
         {
-          "source": "pilot",
-          "unit": "17",
-          "page": 1
-        },
-        {
           "source": "trainer",
           "unit": "17",
           "page": 2
@@ -2799,14 +2799,14 @@
       "expected_answer": "To avoid accidentally entering a spin:\n\n1. Maintain safe speed near the ground - ensure all turns are coordinated and never over-rudder a turn\n2. Near the ground, don't turn through more than 90°\n3. Never stretch the glide to land\n4. Do not thermal too close to terrain\n5. If in doubt about whether the aircraft may be entering a spin, move the stick forward\n6. Practice spin entry and recovery regularly so it becomes instinctive\n\nAdditionally, avoid skidding (over-ruddered) turns, maintain safe speed after launch failures before turning, choose safer landing options closer by to maintain airspeed, maintain disciplined break-off heights when thermalling, and be aware of false horizons in hilly terrain that may distort pitch and roll perception.",
       "citations": [
         {
+          "source": "trainer",
+          "unit": "18",
+          "page": 4
+        },
+        {
           "source": "pilot",
           "unit": "18",
           "page": 12
-        },
-        {
-          "source": "trainer",
-          "unit": "18",
-          "page": 5
         }
       ],
       "category": "self_check",
@@ -3029,6 +3029,11 @@
           "source": "pilot",
           "unit": "18",
           "page": 9
+        },
+        {
+          "source": "pilot",
+          "unit": "18",
+          "page": 10
         }
       ],
       "category": "self_check",
@@ -3103,9 +3108,19 @@
       "expected_answer": "With a 25-knot wind, using the clock face rule of thumb: at 15 degrees the crosswind component is 25% (6.25 knots), which is under the 10-knot limit. At 30 degrees the crosswind component is 50% (12.5 knots), which exceeds the 10-knot limit. Therefore, the maximum angle is approximately 15 degrees to stay within a 10-knot crosswind limit.",
       "citations": [
         {
+          "source": "trainer",
+          "unit": "19",
+          "page": 4
+        },
+        {
           "source": "pilot",
           "unit": "19",
           "page": 3
+        },
+        {
+          "source": "trainer",
+          "unit": "19",
+          "page": 7
         }
       ],
       "category": "self_check",
@@ -3124,12 +3139,22 @@
         {
           "source": "pilot",
           "unit": "19",
-          "page": 1
+          "page": 2
         },
         {
           "source": "pilot",
           "unit": "19",
-          "page": 3
+          "page": 4
+        },
+        {
+          "source": "trainer",
+          "unit": "19",
+          "page": 6
+        },
+        {
+          "source": "pilot",
+          "unit": "19",
+          "page": 1
         }
       ],
       "category": "self_check",
@@ -3201,7 +3226,7 @@
         {
           "source": "pilot",
           "unit": "19",
-          "page": 1
+          "page": 2
         }
       ],
       "category": "self_check",
@@ -3322,7 +3347,7 @@
         {
           "source": "pilot",
           "unit": "20A",
-          "page": 3
+          "page": 4
         }
       ],
       "category": "self_check",
@@ -3806,13 +3831,13 @@
       "citations": [
         {
           "source": "pilot",
-          "unit": "22",
-          "page": 4
+          "unit": "36",
+          "page": 5
         },
         {
           "source": "pilot",
-          "unit": "36",
-          "page": 5
+          "unit": "22",
+          "page": 4
         }
       ],
       "category": "self_check",
@@ -3853,14 +3878,14 @@
       "expected_answer": "The five Hazardous Attitudes (HAZATTs) are: (1) Anti-authority - Don't like anyone telling them what to do; Antidote: Follow the rules, they're usually right (and written in blood!). (2) Impulsivity - Need to do something quickly without thinking; Antidote: Not so fast... think first. (3) Invulnerability - Accidents happen to other people, not to me; Antidote: Consider that it could happen to me (or Sometimes it will happen to you). (4) Macho - Always trying to prove themselves better than others; Antidote: Taking chances is foolish. (5) Resignation - I really can't make a difference; Antidote: I'm not helpless, I can make a difference. Never give up.",
       "citations": [
         {
-          "source": "trainer",
+          "source": "pilot",
           "unit": "24",
           "page": 2
         },
         {
           "source": "pilot",
           "unit": "24",
-          "page": 2
+          "page": 3
         }
       ],
       "category": "self_check",
@@ -3901,7 +3926,12 @@
       "expected_answer": "IMSAFE stands for: Illness, Medication/Drugs, Stress, Alcohol, Fatigue, and Eating. It is a mnemonic aid for self-assessment of medical fitness to fly before and during each flight.",
       "citations": [
         {
-          "source": "trainer",
+          "source": "pilot",
+          "unit": "24",
+          "page": 1
+        },
+        {
+          "source": "pilot",
           "unit": "24",
           "page": 2
         }
@@ -3939,7 +3969,7 @@
       "expected_answer": "Eustress refers to the optimum level of stress. It is positioned between underload and overload (distress) as part of the stress spectrum relevant to pilot fitness to fly. Eustress represents the ideal stress level that supports optimal performance.",
       "citations": [
         {
-          "source": "trainer",
+          "source": "pilot",
           "unit": "24",
           "page": 2
         }
@@ -3982,6 +4012,16 @@
       "expected_answer": "The chunks indicate that 8 hours between bottle and throttle may not be enough for a binge drinker, but do not specify a minimum time requirement. The guidance emphasizes that heavy alcohol consumption requires particular consideration during self-assessment for fitness to fly. Additionally, excessive alcohol in the days preceding a flight impacts hydration and concentration.",
       "citations": [
         {
+          "source": "trainer",
+          "unit": "24",
+          "page": 3
+        },
+        {
+          "source": "trainer",
+          "unit": "35",
+          "page": 4
+        },
+        {
           "source": "pilot",
           "unit": "24",
           "page": 2
@@ -3992,9 +4032,9 @@
           "page": 2
         },
         {
-          "source": "trainer",
-          "unit": "35",
-          "page": 4
+          "source": "pilot",
+          "unit": "24",
+          "page": 7
         }
       ],
       "category": "self_check",
@@ -4136,19 +4176,29 @@
       "expected_answer": "A SOP (Standard Operating Procedure) is a set of established procedures and checks that pilots must follow diligently. Examples of SOPs include minimum distance requirements from other aircraft, thermalling rules, and pre-flight checks. Deliberately avoiding SOPs constitutes a violation and is considered an error that can increase the likelihood of an Undesired Aircraft State (UAS).",
       "citations": [
         {
-          "source": "pilot",
-          "unit": "25",
-          "page": 2
-        },
-        {
           "source": "trainer",
           "unit": "25",
           "page": 3
         },
         {
+          "source": "pilot",
+          "unit": "25",
+          "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": "25",
+          "page": 5
+        },
+        {
           "source": "trainer",
           "unit": "25",
-          "page": 4
+          "page": 5
+        },
+        {
+          "source": "pilot",
+          "unit": "25",
+          "page": 6
         }
       ],
       "category": "self_check",
@@ -4186,7 +4236,17 @@
         {
           "source": "trainer",
           "unit": "25",
-          "page": 6
+          "page": 2
+        },
+        {
+          "source": "trainer",
+          "unit": "25",
+          "page": 5
+        },
+        {
+          "source": "pilot",
+          "unit": "25",
+          "page": 5
         },
         {
           "source": "pilot",
@@ -4196,7 +4256,7 @@
         {
           "source": "pilot",
           "unit": "25",
-          "page": 3
+          "page": 6
         }
       ],
       "category": "self_check",
@@ -4379,12 +4439,12 @@
         {
           "source": "pilot",
           "unit": "28",
-          "page": 1
+          "page": 2
         },
         {
-          "source": "trainer",
+          "source": "pilot",
           "unit": "28",
-          "page": 2
+          "page": 3
         }
       ],
       "category": "self_check",
@@ -4464,12 +4524,12 @@
       "citations": [
         {
           "source": "pilot",
-          "unit": "29",
-          "page": 2
+          "unit": "30",
+          "page": 1
         },
         {
-          "source": "pilot",
-          "unit": "30",
+          "source": "trainer",
+          "unit": "29",
           "page": 2
         }
       ],
@@ -4489,7 +4549,12 @@
         {
           "source": "pilot",
           "unit": "30",
-          "page": 4
+          "page": 3
+        },
+        {
+          "source": "trainer",
+          "unit": "30",
+          "page": 2
         }
       ],
       "category": "self_check",
@@ -4508,7 +4573,7 @@
         {
           "source": "trainer",
           "unit": "30",
-          "page": 4
+          "page": 5
         },
         {
           "source": "pilot",
@@ -4556,7 +4621,12 @@
         {
           "source": "pilot",
           "unit": "31",
-          "page": 2
+          "page": 3
+        },
+        {
+          "source": "pilot",
+          "unit": "31",
+          "page": 4
         }
       ],
       "category": "self_check",
@@ -4594,7 +4664,7 @@
         {
           "source": "pilot",
           "unit": "31",
-          "page": 3
+          "page": 4
         }
       ],
       "category": "self_check",
@@ -4613,7 +4683,7 @@
         {
           "source": "pilot",
           "unit": "31",
-          "page": 3
+          "page": 4
         }
       ],
       "category": "self_check",
@@ -4651,17 +4721,12 @@
       "id": "self_check-pilot-32-02",
       "question": "What is the minimum separation from other aircraft at all times?",
       "expected_behavior": "answer",
-      "expected_answer": "The minimum separation from other aircraft at all times is represented by a 60-meter (200 feet) radius \"bubble\" around each glider. No aircraft should ever be inside this bubble. Additionally, when in a thermal, the minimum vertical or horizontal separation between gliders is 200 feet.",
+      "expected_answer": "Imagine a 60 m (200 feet) radius \"bubble\" around each glider. No aircraft should ever be inside your bubble. When entering a thermal, join from the outside of the other gliders’ circle so that at least 60 m separation is maintained.",
       "citations": [
         {
           "source": "pilot",
           "unit": "32",
           "page": 2
-        },
-        {
-          "source": "pilot",
-          "unit": "23",
-          "page": 1
         }
       ],
       "category": "self_check",
@@ -4800,17 +4865,12 @@
       "id": "self_check-pilot-33-03",
       "question": "Would a road make a good thermal source?",
       "expected_behavior": "answer",
-      "expected_answer": "A road would not make a good thermal source. Thermal sources require ground that is heated by the sun to generate buoyant air. Roads are typically made of dark materials that do heat up, but the chunks indicate that good thermal sources are areas like rock, townships, and dark areas early in the day. Roads are linear features rather than broad source areas. However, a road could potentially act as a thermal trigger—a small feature that helps break away a pool of buoyant air—rather than being a source itself. The chunks distinguish that thermal source areas are large (1 square kilometre or more), while triggers are small features.",
+      "expected_answer": "The guides do not discuss roads specifically. Good thermal sources are large areas of ground heated by the sun—darker and drier surfaces such as rock, townships and dark areas early in the day—typically 1 square kilometre or more. Triggers can be small. A road is a small linear feature, so it is a poor match for a thermal source (though it could act as a trigger).",
       "citations": [
         {
           "source": "pilot",
           "unit": "33",
           "page": 2
-        },
-        {
-          "source": "pilot",
-          "unit": "33",
-          "page": 3
         }
       ],
       "category": "self_check",
@@ -4901,12 +4961,12 @@
         {
           "source": "pilot",
           "unit": "34",
-          "page": 1
+          "page": 2
         },
         {
           "source": "pilot",
           "unit": "34",
-          "page": 2
+          "page": 3
         }
       ],
       "category": "self_check",
@@ -4926,6 +4986,11 @@
           "source": "pilot",
           "unit": "34",
           "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": "34",
+          "page": 2
         }
       ],
       "category": "self_check",
@@ -5049,14 +5114,19 @@
       "expected_answer": "Touching down as slow as possible reduces the ground run and means you will hit bumps, holes, and branches on the ground at a much lower speed, resulting in a smooth and safe ground roll.",
       "citations": [
         {
-          "source": "trainer",
+          "source": "pilot",
           "unit": "34",
           "page": 3
         },
         {
-          "source": "trainer",
-          "unit": "17",
+          "source": "pilot",
+          "unit": "34",
           "page": 4
+        },
+        {
+          "source": "pilot",
+          "unit": "34",
+          "page": 2
         }
       ],
       "category": "self_check",
@@ -5195,12 +5265,7 @@
         {
           "source": "pilot",
           "unit": "38",
-          "page": 1
-        },
-        {
-          "source": "pilot",
-          "unit": "38",
-          "page": 1
+          "page": 2
         }
       ],
       "category": "self_check",
@@ -5239,6 +5304,11 @@
           "source": "pilot",
           "unit": "39",
           "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": "39",
+          "page": 3
         }
       ],
       "category": "self_check",
@@ -5406,7 +5476,12 @@
         {
           "source": "pilot",
           "unit": "31",
-          "page": 2
+          "page": 3
+        },
+        {
+          "source": "trainer",
+          "unit": "31",
+          "page": 3
         }
       ],
       "category": "self_check",
