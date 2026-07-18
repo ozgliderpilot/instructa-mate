@@ -1,0 +1,533 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 25 Threat and Error Management (TEM) Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit25-threat-and-error-management",
+      "title": "GPC Unit 25 - Threat and Error Management (TEM)",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLScCTISs1uAk_IWY-joi4CCGm3uXkC7u0KpZLS3RE5HRXvxGcg/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u25-01",
+      "question": "What is a “Pristine Flight”?",
+      "expected_behavior": "answer",
+      "expected_answer": "A flight with no deviations from normal procedures.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 1
+        }
+      ],
+      "category": "pristine_flight",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 1,
+      "choices": [
+        "A flight with no wind.",
+        "One without electronic aids.",
+        "A flight with no deviations from normal procedures.",
+        "One with a perfect landing."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-02",
+      "question": "Which best describes a threat in TEM?",
+      "expected_behavior": "answer",
+      "expected_answer": "An external event that increases error likelihood.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 1
+        }
+      ],
+      "category": "threats",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 2,
+      "choices": [
+        "An external event that increases error likelihood.",
+        "A mistake caused by poor memory.",
+        "Pilot overconfidence.",
+        "A warning from Air Traffic Control (ATC)."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-03",
+      "question": "What is the key distinction between threats and errors?",
+      "expected_behavior": "answer",
+      "expected_answer": "Threats come at you; errors come from you.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 1
+        }
+      ],
+      "category": "threats_vs_errors",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 3,
+      "choices": [
+        "Errors are unpredictable.",
+        "Threats are always avoidable.",
+        "Threats come at you; errors come from you.",
+        "Threats are pilot-driven."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-04",
+      "question": "Which of the following is NOT a type of error in TEM?",
+      "expected_behavior": "answer",
+      "expected_answer": "Pristine.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 2
+        }
+      ],
+      "category": "errors",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 4,
+      "choices": [
+        "Slip.",
+        "Mistake.",
+        "Violation.",
+        "Pristine."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-05",
+      "question": "An Undesired Aircraft State (UAS) is best described as:",
+      "expected_behavior": "answer",
+      "expected_answer": "A pilot-induced condition with reduced safety margins.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 2
+        }
+      ],
+      "category": "uas",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 5,
+      "choices": [
+        "A pilot-induced condition with reduced safety margins.",
+        "An aircraft failure.",
+        "An ATC clearance.",
+        "A strong crosswind."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-06",
+      "question": "Which of the following is a potential UAS?",
+      "expected_behavior": "answer",
+      "expected_answer": "Wheels-up landing.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 2
+        }
+      ],
+      "category": "uas",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 6,
+      "choices": [
+        "Tailwind landing.",
+        "Runway incursion.",
+        "Wheels-up landing.",
+        "Losing a water bottle."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-07",
+      "question": "Which is a violation rather than a mistake?",
+      "expected_behavior": "answer",
+      "expected_answer": "Knowingly breaking a thermalling rule.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 2
+        }
+      ],
+      "category": "violations",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 7,
+      "choices": [
+        "Forgetting a checklist item.",
+        "Flying into a thermal without clearance.",
+        "Knowingly breaking a thermalling rule.",
+        "Misjudging crosswind drift."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-08",
+      "question": "Which example is a “lapse”?",
+      "expected_behavior": "answer",
+      "expected_answer": "Forgetting to raise flaps after landing.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 2
+        }
+      ],
+      "category": "lapses",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 8,
+      "choices": [
+        "Forgetting to raise flaps after landing.",
+        "Turning the wrong way in circuit.",
+        "Skipping the pre-takeoff checks on purpose.",
+        "Flying into cloud."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-09",
+      "question": "What is a suitable TEM strategy for avoiding threats before flight?",
+      "expected_behavior": "answer",
+      "expected_answer": "Conducting a daily self-check (IMSAFE).",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 3
+        }
+      ],
+      "category": "strategies",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 9,
+      "choices": [
+        "Climb performance test.",
+        "Conducting a daily self-check (IMSAFE).",
+        "Doing spins to test controls.",
+        "Planning maximum sink rate."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-10",
+      "question": "Which is a recommended post-flight TEM action?",
+      "expected_behavior": "answer",
+      "expected_answer": "Review what threats and errors occurred.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 3
+        }
+      ],
+      "category": "post_flight",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 10,
+      "choices": [
+        "Check tyre pressure.",
+        "Review what threats and errors occurred.",
+        "Wash the glider.",
+        "Refuel."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-11",
+      "question": "What is a common pilot attitude that creates threats?",
+      "expected_behavior": "answer",
+      "expected_answer": "Get-home-itis.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 3
+        }
+      ],
+      "category": "pressure",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 11,
+      "choices": [
+        "Enthusiasm.",
+        "Confidence.",
+        "Get-home-itis.",
+        "Punctuality."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-12",
+      "question": "Which is a typical external threat during a flight?",
+      "expected_behavior": "answer",
+      "expected_answer": "Airspace restrictions or NOTAMs.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 3
+        }
+      ],
+      "category": "threats",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 12,
+      "choices": [
+        "Slight turbulence.",
+        "Airspace restrictions or NOTAMs.",
+        "Forgetting the CTAF.",
+        "Reading wrong chart."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-13",
+      "question": "How should a pilot respond after an interruption in flight?",
+      "expected_behavior": "answer",
+      "expected_answer": "Pause and ask, “Where was I?”",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 3
+        }
+      ],
+      "category": "interruptions",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 13,
+      "choices": [
+        "Ignore it.",
+        "Re-check the GPS.",
+        "Pause and ask, “Where was I?”",
+        "Change heading immediately."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-14",
+      "question": "Effective use of SOPs contributes to TEM by:",
+      "expected_behavior": "answer",
+      "expected_answer": "Minimising unintentional deviations.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 3
+        }
+      ],
+      "category": "sops",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 14,
+      "choices": [
+        "Reducing aircraft performance.",
+        "Minimising unintentional deviations.",
+        "Avoiding fuel burn.",
+        "Enhancing thermalling skills."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-15",
+      "question": "Which of the following is a valid fatigue mitigation strategy?",
+      "expected_behavior": "answer",
+      "expected_answer": "Limit task ambition if tired.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 3
+        }
+      ],
+      "category": "fatigue",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 15,
+      "choices": [
+        "Skip lunch.",
+        "Drink more coffee.",
+        "Fly only cross-country flights.",
+        "Limit task ambition if tired."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-16",
+      "question": "What should a pilot do if their workload spikes mid-flight?",
+      "expected_behavior": "answer",
+      "expected_answer": "Conduct a situational awareness review.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 3
+        }
+      ],
+      "category": "workload",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 16,
+      "choices": [
+        "Conduct a situational awareness review.",
+        "Look for other gliders.",
+        "Start a steep turn.",
+        "Shut down instruments."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-17",
+      "question": "Which behaviour increases risk of UAS due to distraction?",
+      "expected_behavior": "answer",
+      "expected_answer": "Head-down programming of electronic devices.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 3
+        }
+      ],
+      "category": "distraction",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 17,
+      "choices": [
+        "Regular lookout.",
+        "Cross-checking instruments.",
+        "Head-down programming of electronic devices.",
+        "Verbalising procedures."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-18",
+      "question": "How should you treat advice from experienced glider pilots?",
+      "expected_behavior": "answer",
+      "expected_answer": "Use it to improve threat recognition",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 3
+        }
+      ],
+      "category": "advice",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 18,
+      "choices": [
+        "Politely ignore.",
+        "Consider it only if you agree.",
+        "Use it to challenge your own plan.",
+        "Use it to improve threat recognition"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-19",
+      "question": "Which of these is a proactive TEM practice?",
+      "expected_behavior": "answer",
+      "expected_answer": "Planning tasks within your personal limits.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 3
+        }
+      ],
+      "category": "limits",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 19,
+      "choices": [
+        "Waiting for threats to appear.",
+        "Planning tasks within your personal limits.",
+        "Ignoring your stress level.",
+        "Increasing airspeed at all times."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u25-20",
+      "question": "Which phrase best describes the right mindset for threat and error management?",
+      "expected_behavior": "answer",
+      "expected_answer": "“Every flight has threats – how will I manage them?”",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 4
+        }
+      ],
+      "category": "mindset",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit25-threat-and-error-management",
+      "source_item": 20,
+      "choices": [
+        "“I’ve flown this many times before.”",
+        "“Just get through the day.”",
+        "“Every flight has threats – how will I manage them?”",
+        "“I’ll see how it goes.”"
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

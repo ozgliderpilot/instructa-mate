@@ -1,0 +1,535 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 24 Human Factors & Pilot Limitations Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit24-human-factors-pilot-limitations",
+      "title": "GPC Unit 24 - Human Factors & Pilot Limitations",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSc3ZeiWy3-xxBwII5YR1I_CcxEdzIHQ5IFR2cpyQAZll5poNg/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u24-01",
+      "question": "Which mnemonic is recommended for a pre-flight self-health check?",
+      "expected_behavior": "answer",
+      "expected_answer": "IMSAFE",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 1
+        }
+      ],
+      "category": "imsafe",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 1,
+      "choices": [
+        "SAFE-T",
+        "IMSAFE",
+        "HAZATT",
+        "DECIDE"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-02",
+      "question": "In “IMSAFE” the “S” stands for _____",
+      "expected_behavior": "answer",
+      "expected_answer": "Stress.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 2
+        }
+      ],
+      "category": "imsafe",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 2,
+      "choices": [
+        "Sleep.",
+        "Stress.",
+        "Situational Awareness",
+        "Stamina."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-03",
+      "question": "Gliding Australia notes that roughly what percentage of accidents have a human-factors cause?",
+      "expected_behavior": "answer",
+      "expected_answer": "> 75 %",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 6
+        }
+      ],
+      "category": "human_factors",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 3,
+      "choices": [
+        "< 10 %",
+        "25 %",
+        "50 %",
+        "> 75 %"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-04",
+      "question": "The attitude “Don’t tell me!” corresponds to which HAZATT?",
+      "expected_behavior": "answer",
+      "expected_answer": "Anti-authority.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 2
+        }
+      ],
+      "category": "hazatt",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 4,
+      "choices": [
+        "Impulsive.",
+        "Anti-authority.",
+        "Macho.",
+        "Invulnerability."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-05",
+      "question": "The correct antidote for the “Macho – I can do it” attitude is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Taking chances is foolish.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 3
+        }
+      ],
+      "category": "hazatt",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 5,
+      "choices": [
+        "It can’t happen to me.",
+        "Do something now.",
+        "Taking chances is foolish.",
+        "Follow the rules."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-06",
+      "question": "“Under-load, optimum (eustress) and over-load” describe levels of _____",
+      "expected_behavior": "answer",
+      "expected_answer": "Stress.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 2
+        }
+      ],
+      "category": "stress",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 6,
+      "choices": [
+        "Stress.",
+        "Workload.",
+        "Arousal.",
+        "Fatigue."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-07",
+      "question": "The DECIDE model begins and ends with which two steps?",
+      "expected_behavior": "answer",
+      "expected_answer": "Detect → Evaluate.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 3
+        }
+      ],
+      "category": "decide",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 7,
+      "choices": [
+        "Detect → Decide.",
+        "Choose → Evaluate.",
+        "Detect → Evaluate.",
+        "Identify → Estimate."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-08",
+      "question": "Legally in Australia a sailplane pilot must use supplemental oxygen above (approx.):",
+      "expected_behavior": "answer",
+      "expected_answer": "12 500 ft AMSL",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 3
+        }
+      ],
+      "category": "oxygen",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 8,
+      "choices": [
+        "8 000 ft indicated",
+        "10 000 ft AMSL",
+        "12 500 ft AMSL",
+        "14 000 ft indicated"
+      ],
+      "question_type": "multiple_choice",
+      "note": "CASR Part 91: supplemental O2 required above 12,500 ft (>30 min) and always above 14,000 ft."
+    },
+    {
+      "id": "gpc-u24-09",
+      "question": "The minimum time between drinking alcohol and flying (“bottle-to-throttle”) is _____",
+      "expected_behavior": "answer",
+      "expected_answer": "8 hr (and longer after heavy drinking)",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 2
+        }
+      ],
+      "category": "alcohol",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 9,
+      "choices": [
+        "2 hr",
+        "4 hr",
+        "8 hr (and longer after heavy drinking)",
+        "24 hr"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-10",
+      "question": "Which two physiological senses are most easily fooled in flight, leading to spatial disorientation?",
+      "expected_behavior": "answer",
+      "expected_answer": "Vision & inner ear (vestibular)",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 3
+        }
+      ],
+      "category": "disorientation",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 10,
+      "choices": [
+        "Sight & taste.",
+        "Taste & smell.",
+        "Touch & hearing.",
+        "Vision & inner ear (vestibular)"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-11",
+      "question": "“G-induced Loss of Consciousness (G-LOC)” becomes a risk primarily during _____",
+      "expected_behavior": "answer",
+      "expected_answer": "High-G turns / aerobatics",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 3
+        }
+      ],
+      "category": "g_forces",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 11,
+      "choices": [
+        "Slow flight.",
+        "High-G turns / aerobatics",
+        "Ridge soaring.",
+        "Winch launch ground roll."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-12",
+      "question": "A rapid descent with a head-cold can damage:",
+      "expected_behavior": "answer",
+      "expected_answer": "Eardrums & sinuses.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 1
+        }
+      ],
+      "category": "illness",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 12,
+      "choices": [
+        "Eardrums & sinuses.",
+        "The retina.",
+        "Lung tissue.",
+        "Blood sugar levels."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-13",
+      "question": "Proper hydration and nutrition help prevent which in-flight hazard?",
+      "expected_behavior": "answer",
+      "expected_answer": "Fatigue and impaired decision-making.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 2
+        }
+      ],
+      "category": "eating",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 13,
+      "choices": [
+        "Hypoxia.",
+        "Fatigue and impaired decision-making.",
+        "Spatial disorientation.",
+        "Reduced situational awareness."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-14",
+      "question": "Which stage of situational awareness involves projecting what might happen next?",
+      "expected_behavior": "answer",
+      "expected_answer": "Anticipate / Project.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 4
+        }
+      ],
+      "category": "situational_awareness",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 14,
+      "choices": [
+        "Detect.",
+        "Comprehend.",
+        "Anticipate / Project.",
+        "Recall."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-15",
+      "question": "The “Resignation” hazardous attitude is characterised by thinking:",
+      "expected_behavior": "answer",
+      "expected_answer": "“What’s the use?”",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 3
+        }
+      ],
+      "category": "hazatt",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 15,
+      "choices": [
+        "“I can do it.”",
+        "“What’s the use?”",
+        "“It won’t happen to me.”",
+        "“Do it now!”"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-16",
+      "question": "A pilot who feels unusually relaxed and bored in smooth air may be experiencing which stress level?",
+      "expected_behavior": "answer",
+      "expected_answer": "Under-load stress.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 2
+        }
+      ],
+      "category": "stress",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 16,
+      "choices": [
+        "Eustress.",
+        "Distress.",
+        "Under-load stress.",
+        "Over-G"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-17",
+      "question": "If you must fly while taking medication, the first step is to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Confirm with a doctor it will not impair performance",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 1
+        }
+      ],
+      "category": "medication",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 17,
+      "choices": [
+        "Review the medication label for warnings.",
+        "Confirm with a doctor it will not impair performance",
+        "Assess how you feel before the flight.",
+        "Wait until after the flight to take the dose."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-18",
+      "question": "Which “AIRManship” element covers personal fitness, recency and proficiency?",
+      "expected_behavior": "answer",
+      "expected_answer": "MAN.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 4
+        }
+      ],
+      "category": "airmanship",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 18,
+      "choices": [
+        "AIR.",
+        "SHIP.",
+        "GLOC.",
+        "MAN."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u24-19",
+      "question": "Continuous “head-in-cockpit” programming of electronic devices most commonly degrades which non-technical skill?",
+      "expected_behavior": "answer",
+      "expected_answer": "Lookout & situational awareness.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 22,
+          "page": 4
+        }
+      ],
+      "category": "lookout",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 19,
+      "choices": [
+        "Lookout & situational awareness.",
+        "Aircraft handling.",
+        "Radio discipline.",
+        "Stall recovery."
+      ],
+      "question_type": "multiple_choice",
+      "note": "Aligned with Unit 22 airmanship on electronic aids vs lookout/SA."
+    },
+    {
+      "id": "gpc-u24-20",
+      "question": "The pilot’s obligation during the flight to monitor for developing illness, fatigue or stress is called:",
+      "expected_behavior": "answer",
+      "expected_answer": "Ongoing self-assessment.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 24,
+          "page": 1
+        }
+      ],
+      "category": "self_assessment",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit24-human-factors-pilot-limitations",
+      "source_item": 20,
+      "choices": [
+        "Medical certification.",
+        "Operational control.",
+        "Ongoing self-assessment.",
+        "Aeromedical waiver."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

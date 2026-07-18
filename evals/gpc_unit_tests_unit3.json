@@ -1,0 +1,544 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from club GPC Unit 3 Pre-Flight Preparation (form-tests/). Answers derived from Pilot Guide — form export has no quiz answer key.",
+  "source_forms": [
+    {
+      "id": "gpc-unit3-pre-flight-preparation",
+      "title": "GPC Unit 3 - Pre-Flight Preparation",
+      "path": "form-tests/GPC Unit 3 - Pre-Flight Preparation.html"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u3-01",
+      "question": "What is the primary purpose of obtaining weather and aeronautical information before every flight?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 1
+        }
+      ],
+      "category": "preflight_info",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 1,
+      "choices": [
+        "To brief the duty instructor.",
+        "To confirm the runway and ensure conditions suit the planned operation.",
+        "To complete the club log.",
+        "To update the Maintenance Release"
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "To confirm the runway and ensure conditions suit the planned operation."
+    },
+    {
+      "id": "gpc-u3-02",
+      "question": "Which government website is named in the Guide as a source of up-to-date aviation weather?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 1
+        }
+      ],
+      "category": "preflight_info",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 2,
+      "choices": [
+        "Windy",
+        "SkySight",
+        "BOM MetEye",
+        "National Aeronautical Information Processing System (NAIPS)"
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "National Aeronautical Information Processing System (NAIPS)"
+    },
+    {
+      "id": "gpc-u3-03",
+      "question": "In the A-B-C-D pre-boarding check, what does the letter \"C\" stand for?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 8
+        }
+      ],
+      "category": "abcd_checks",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 3,
+      "choices": [
+        "Canopy.",
+        "Carriage.",
+        "Controls.",
+        "Circuit direction."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Controls."
+    },
+    {
+      "id": "gpc-u3-04",
+      "question": "During the CHAOTIC cockpit check, what does the letter \"O\" require the pilot to verify?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 8
+        }
+      ],
+      "category": "chaotic_checks",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 4,
+      "choices": [
+        "Oil temperature.",
+        "Outside options – clear airspace, launch path & wind.",
+        "Oxygen system.",
+        "Outside air temperature gauge."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Outside options – clear airspace, launch path & wind."
+    },
+    {
+      "id": "gpc-u3-05",
+      "question": "Which item is NOT one of the five reasons for carrying out a Daily Inspection?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 5
+        }
+      ],
+      "category": "daily_inspection",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 5,
+      "choices": [
+        "Check for unreported damage.",
+        "Check for loose tools after maintenance.",
+        "Check that controls are properly connected.",
+        "Check the pilot’s licence validity."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Check the pilot’s licence validity."
+    },
+    {
+      "id": "gpc-u3-06",
+      "question": "If a glider is flown below its minimum pilot weight, what does the Pilot Guide warn may happen?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 4
+        }
+      ],
+      "category": "weight_balance",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 6,
+      "choices": [
+        "Stall at a higher airspeed.",
+        "Become unstable in pitch and possibly uncontrollable.",
+        "Exceed the forward CG limit.",
+        "Over-stress the tailplane in turbulence."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Become unstable in pitch and possibly uncontrollable."
+    },
+    {
+      "id": "gpc-u3-07",
+      "question": "Which document validates the Certificate of Airworthiness and travels with the glider?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 2
+        }
+      ],
+      "category": "documentation",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 7,
+      "choices": [
+        "Daily Inspection Record.",
+        "Maintenance Release.",
+        "Weight-and-balance placard.",
+        "Airframe logbook."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Maintenance Release."
+    },
+    {
+      "id": "gpc-u3-08",
+      "question": "How is a \"sensitive\" altimeter identified?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 6
+        }
+      ],
+      "category": "instruments",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 8,
+      "choices": [
+        "More than one pointer hand to show thousands and hundreds of feet.",
+        "A digital LCD read-out.",
+        "Automatic QNH setting.",
+        "Built-in GPS correction."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "More than one pointer hand to show thousands and hundreds of feet."
+    },
+    {
+      "id": "gpc-u3-09",
+      "question": "What does the Pilot Guide caution students never to do regarding the pitot/ASI?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 6
+        }
+      ],
+      "category": "instruments",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 9,
+      "choices": [
+        "Touch the variometer.",
+        "Adjust the altimeter sub-scale.",
+        "Blow into the pitot head.",
+        "Disconnect the static line."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Blow into the pitot head."
+    },
+    {
+      "id": "gpc-u3-10",
+      "question": "What is the approximate capacity of the variometer's standard reference flask?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 7
+        }
+      ],
+      "category": "instruments",
+      "content_type": "theory",
+      "difficulty": "hard",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 10,
+      "choices": [
+        "0.25 L",
+        "0.35 L",
+        "0.45 L",
+        "0.60 L"
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "0.45 L"
+    },
+    {
+      "id": "gpc-u3-11",
+      "question": "Under the sterile launch-point rule, if a pilot is interrupted during checks, what must they do?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 9
+        },
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 1
+        }
+      ],
+      "category": "sterile_environment",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 11,
+      "choices": [
+        "Continue from where they left off.",
+        "Re-start only the last checklist item.",
+        "Ask the wing-runner to finish the checks.",
+        "Begin the entire checklist again."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Begin the entire checklist again."
+    },
+    {
+      "id": "gpc-u3-12",
+      "question": "When must a Daily Inspection be completed?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 3
+        }
+      ],
+      "category": "daily_inspection",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 12,
+      "choices": [
+        "After every landing.",
+        "Before the first flight of each day.",
+        "Whenever a new pilot boards.",
+        "Only after maintenance work."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Before the first flight of each day."
+    },
+    {
+      "id": "gpc-u3-13",
+      "question": "Where must the Maintenance Release and Daily Inspection Record booklet be kept?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 3
+        }
+      ],
+      "category": "documentation",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 13,
+      "choices": [
+        "In club administration office.",
+        "In the glider cockpit at all times.",
+        "With the tow-plane pilot.",
+        "In the flight line toolbox."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "In the glider cockpit at all times."
+    },
+    {
+      "id": "gpc-u3-14",
+      "question": "If the Daily Inspection date is missing or incorrect, what is the correct action?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 3
+        }
+      ],
+      "category": "daily_inspection",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 14,
+      "choices": [
+        "Fly but report it later.",
+        "Sign the record yourself.",
+        "Do not fly and investigate with maintenance staff.",
+        "Note it in your logbook and continue."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Do not fly and investigate with maintenance staff."
+    },
+    {
+      "id": "gpc-u3-15",
+      "question": "In the CHAOTIC check, which options are NOT what the letter \"H\" requires you to verify?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 8
+        }
+      ],
+      "category": "chaotic_checks",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 15,
+      "choices": [
+        "Head-set volume.",
+        "Harness – belts secure low on hips.",
+        "Hydraulic brake pressure.",
+        "Hook-up rope strength."
+      ],
+      "question_type": "checkboxes",
+      "correct_choices": [
+        "Head-set volume.",
+        "Hydraulic brake pressure.",
+        "Hook-up rope strength."
+      ],
+      "expected_answer": "Head-set volume.; Hydraulic brake pressure.; Hook-up rope strength.",
+      "note": "Form asks to select all WRONG answers; H = Harnesses (not selected): 'Harness – belts secure low on hips.'"
+    },
+    {
+      "id": "gpc-u3-16",
+      "question": "What does the letter \"T\" in CHAOTIC stand for?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 8
+        }
+      ],
+      "category": "chaotic_checks",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 16,
+      "choices": [
+        "Tyres.",
+        "Trim – ballast confirmed and set.",
+        "Transponder.",
+        "Temperature gauges."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Trim – ballast confirmed and set."
+    },
+    {
+      "id": "gpc-u3-17",
+      "question": "Apart from the \"seat-of-the-pants,\" which instrument is described as arguably the most important in a glider?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 7
+        }
+      ],
+      "category": "instruments",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 17,
+      "choices": [
+        "Altimeter.",
+        "Airspeed indicator.",
+        "Compass.",
+        "Variometer."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Variometer."
+    },
+    {
+      "id": "gpc-u3-18",
+      "question": "Before flight, what must a pilot who wears a parachute first do?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 9
+        }
+      ],
+      "category": "parachute",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 18,
+      "choices": [
+        "Jettison the canopy.",
+        "Confirm the parachute’s serviceability.",
+        "Remove seat cushions.",
+        "Disconnect shoulder straps."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Confirm the parachute’s serviceability."
+    },
+    {
+      "id": "gpc-u3-19",
+      "question": "How is the term \"maximum pilot weight\" defined in the Pilot Guide?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 4
+        }
+      ],
+      "category": "weight_balance",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 19,
+      "choices": [
+        "The heaviest person who can sit in the rear seat.",
+        "The heaviest pilot (with parachute) who can fly without exceeding gross weight or the forward CG limit",
+        "The maximum weight shown on the medical certificate.",
+        "The heaviest combination of pilot and ballast allowed in any seat."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "The heaviest pilot (with parachute) who can fly without exceeding gross weight or the forward CG limit"
+    },
+    {
+      "id": "gpc-u3-20",
+      "question": "On a sensitive altimeter, what does the large pointer hand indicate?",
+      "expected_behavior": "answer",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 3,
+          "page": 6
+        }
+      ],
+      "category": "instruments",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit3-pre-flight-preparation",
+      "source_item": 20,
+      "choices": [
+        "Tens of thousands of feet.",
+        "Thousands of feet.",
+        "Hundreds of feet.",
+        "Tens of feet."
+      ],
+      "question_type": "multiple_choice",
+      "expected_answer": "Hundreds of feet."
+    }
+  ]
+}

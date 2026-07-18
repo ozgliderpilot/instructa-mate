@@ -1,0 +1,533 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 13A Launch & Release Aerotow Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit13a-launch-release-aerotow",
+      "title": "GPC Unit 13A - Launch & Release Aerotow",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSfA2RbPsYsEk50GRsmPe-lIAoLwBFRNXhwOWCr_BWnQqDm3SQ/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u13a-01",
+      "question": "Your primary reference for finding and holding the correct towing position is the:",
+      "expected_behavior": "answer",
+      "expected_answer": "Tug’s turbulent slipstream.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 2
+        }
+      ],
+      "category": "tow_position",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 1,
+      "choices": [
+        "Tow-plane’s elevator trim tab.",
+        "Glider’s slip-indicator ball.",
+        "Tug’s turbulent slipstream.",
+        "Distance to the horizon."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-02",
+      "question": "For basic training, Australian clubs use the __________ position because it minimises tug-upset risk",
+      "expected_behavior": "answer",
+      "expected_answer": "Low-tow",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 2
+        }
+      ],
+      "category": "tow_position",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 2,
+      "choices": [
+        "High-tow",
+        "Offset-tow",
+        "Climb-tow",
+        "Low-tow"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-03",
+      "question": "First demonstrations of normal climb should begin at a minimum of about:",
+      "expected_behavior": "answer",
+      "expected_answer": "300–500 ft AGL",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 1
+        }
+      ],
+      "category": "training",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 3,
+      "choices": [
+        "50 ft AGL",
+        "150 ft AGL",
+        "300–500 ft AGL",
+        "1 000 ft AGL"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-04",
+      "question": "When the glider drifts slightly out of station you should first",
+      "expected_behavior": "answer",
+      "expected_answer": "Keep wings parallel with aileron, then ease rudder to re-centre.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 1
+        }
+      ],
+      "category": "out_of_station",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 4,
+      "choices": [
+        "Keep wings parallel with aileron, then ease rudder to re-centre.",
+        "Open a crack of air-brake.",
+        "Pull full opposite rudder.",
+        "Release immediately."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-05",
+      "question": "A common training danger is “tow-plane fixation.” The Pilot Guide says your lookout must include:",
+      "expected_behavior": "answer",
+      "expected_answer": "Horizon ahead and to both sides as well as the tug.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 1
+        }
+      ],
+      "category": "lookout",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 5,
+      "choices": [
+        "Only the slipstream arc.",
+        "Horizon ahead and to both sides as well as the tug.",
+        "Just the tow-rope knots.",
+        "Every cockpit gauge each 5 s."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-06",
+      "question": "To remove a small bow in the rope you should normally:",
+      "expected_behavior": "answer",
+      "expected_answer": "Apply a gentle sideslip with rudder to add drag.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 3
+        }
+      ],
+      "category": "rope_bow",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 6,
+      "choices": [
+        "Push full stick forward.",
+        "Apply a gentle sideslip with rudder to add drag.",
+        "Make a sharp turn left.",
+        "Retract the undercarriage."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-07",
+      "question": "In a shallow turn on tow your nose should point:",
+      "expected_behavior": "answer",
+      "expected_answer": "Slightly outside, toward the tug’s outer wing-tip.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 2
+        }
+      ],
+      "category": "tow_position",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 7,
+      "choices": [
+        "Directly at the tug’s fin.",
+        "Slightly inside the turn.",
+        "Slightly outside, toward the tug’s outer wing-tip.",
+        "Straight down the tow-rope."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-08",
+      "question": "The high-tow position places the glider:",
+      "expected_behavior": "answer",
+      "expected_answer": "Just above the slipstream.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 2
+        }
+      ],
+      "category": "tow_position",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 8,
+      "choices": [
+        "Below the slipstream.",
+        "Level with tug’s cockpit.",
+        "Offset right of the tug.",
+        "Just above the slipstream."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-09",
+      "question": "In straight climb the correct low-tow sight picture is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Both sides of tug visible, nose aimed at its tail.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 2
+        }
+      ],
+      "category": "tow_position",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 9,
+      "choices": [
+        "Nose obscuring the tug entirely.",
+        "Only one side of tug visible.",
+        "Both sides of tug visible, nose aimed at its tail.",
+        "Tow-rope lying slack."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-10",
+      "question": "Low-tow is preferred to high-tow chiefly because it:",
+      "expected_behavior": "answer",
+      "expected_answer": "Reduces risk of tug upset in emergencies.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 2
+        }
+      ],
+      "category": "tow_position",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 10,
+      "choices": [
+        "Improves pilot view of instruments.",
+        "Allows higher climb angle.",
+        "Reduces risk of tug upset in emergencies.",
+        "Uses shorter tow-ropes."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-11",
+      "question": "Immediately before releasing you must (in order):",
+      "expected_behavior": "answer",
+      "expected_answer": "Confirm height/location ➜ Full lookout right & left/below ➜ Locate-Identify-Operate release",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 3
+        }
+      ],
+      "category": "release",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 11,
+      "choices": [
+        "Open air-brakes ➜ L-I-O release",
+        "Lookout right only ➜ Release",
+        "Confirm height/location ➜ Full lookout right & left/below ➜ Locate-Identify-Operate release",
+        "Signal tug ➜ Pull release with slack rope"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-12",
+      "question": "After confirming “rope gone” the glider should:",
+      "expected_behavior": "answer",
+      "expected_answer": "Commence a clearing turn to the right without delay.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 4
+        }
+      ],
+      "category": "release",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 12,
+      "choices": [
+        "Commence a clearing turn to the right without delay.",
+        "Dive straight ahead.",
+        "Turn left behind tug.",
+        "Hold position to watch tug."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-13",
+      "question": "Following release you will normally need to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Reduce air-speed from 65-70 kt to normal cruise.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 4
+        }
+      ],
+      "category": "release",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 13,
+      "choices": [
+        "Trim fully nose-down.",
+        "Reduce air-speed from 65-70 kt to normal cruise.",
+        "Extend half air-brake.",
+        "Open negative flap."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-14",
+      "question": "A glider swinging side-to-side behind the tug is usually caused by:.",
+      "expected_behavior": "answer",
+      "expected_answer": "Using aileron alone, inducing adverse yaw.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 6
+        }
+      ],
+      "category": "common_problems",
+      "content_type": "common_problems",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 14,
+      "choices": [
+        "Excess nose-down trim.",
+        "Rope too long.",
+        "Using aileron alone, inducing adverse yaw.",
+        "Incorrect weak-link colour."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-15",
+      "question": "A student over-controlling on tow can be cured by returning to the:",
+      "expected_behavior": "answer",
+      "expected_answer": "Stable-platform attitude with small relaxed inputs.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 4
+        }
+      ],
+      "category": "common_problems",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 15,
+      "choices": [
+        "High-tow position.",
+        "Full back-stick stall.",
+        "Stable-platform attitude with small relaxed inputs.",
+        "Cross-wind correction exercise."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-16",
+      "question": "For a tiny lateral displacement the recommended correction is to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Apply small rudder while wings remain level.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 2
+        }
+      ],
+      "category": "out_of_station",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 16,
+      "choices": [
+        "Bank 20° and pull up.",
+        "Open one air-brake panel.",
+        "Apply small rudder while wings remain level.",
+        "Slipstream-hunt with elevator only."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-17",
+      "question": "Releasing with a large bow still in the rope can cause:",
+      "expected_behavior": "answer",
+      "expected_answer": "Rings to fly back and strike or tangle with the glider.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 3
+        }
+      ],
+      "category": "rope_bow",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 17,
+      "choices": [
+        "Tow-plane over-speed.",
+        "Immediate rope break always.",
+        "Rings to fly back and strike or tangle with the glider.",
+        "Weak link to jam in release."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-18",
+      "question": "At low height the trim should be set slightly nose-heavy mainly to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Help maintain “safe speed near ground” if rope breaks.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 5
+        }
+      ],
+      "category": "trim",
+      "content_type": "exercise",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 18,
+      "choices": [
+        "Improve aileron response.",
+        "Help maintain “safe speed near ground” if rope breaks.",
+        "Reduce tow-rope bowing.",
+        "Allow easier slipstream entry."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-19",
+      "question": "When transitioning through the slipstream up to high-tow you must hold:",
+      "expected_behavior": "answer",
+      "expected_answer": "A small amount of back-stick so the glider doesn’t settle in the slipstream.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 5
+        }
+      ],
+      "category": "high_tow",
+      "content_type": "exercise",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 19,
+      "choices": [
+        "Full air-brake.",
+        "Opposite rudder",
+        "A small amount of back-stick so the glider doesn’t settle in the slipstream.",
+        "Tow-rope tension with brakes."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u13a-20",
+      "question": "The pre-requisite GPC units that must be completed before starting Unit 13A are:",
+      "expected_behavior": "answer",
+      "expected_answer": "Unit 2, Unit 8, and Unit 9",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": "13A",
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit13a-launch-release-aerotow",
+      "source_item": 20,
+      "choices": [
+        "Unit 5 & 6",
+        "Unit 7 & 11",
+        "Unit 3 only",
+        "Unit 2, Unit 8, and Unit 9"
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

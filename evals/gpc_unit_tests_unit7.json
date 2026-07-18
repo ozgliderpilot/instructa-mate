@@ -1,0 +1,558 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 7 Straight Flight, Various Speeds & Trim Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit7-straight-flight-various-speeds-trim",
+      "title": "GPC Unit 7 - Straight Flight, Various Speeds & Trim",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSfuZc4NCMLeaIoLaeka8EkjUorPa_u5F-AL60cp33pnoHKLGg/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u7-01",
+      "question": "When flying straight and level, what is your primary reference for holding the correct pitch attitude?",
+      "expected_behavior": "answer",
+      "expected_answer": "Natural horizon.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 1
+        }
+      ],
+      "category": "attitude",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 1,
+      "choices": [
+        "Airspeed indicator.",
+        "Yaw string.",
+        "Artificial horizon.",
+        "Natural horizon."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-02",
+      "question": "According to the Guide, how is airspeed changed first?",
+      "expected_behavior": "answer",
+      "expected_answer": "Altering nose attitude with the stick.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 1
+        }
+      ],
+      "category": "speed_trim",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 2,
+      "choices": [
+        "Moving the trim lever.",
+        "Applying rudder pressure.",
+        "Extending the air-brakes.",
+        "Altering nose attitude with the stick."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-03",
+      "question": "What is the correct sequence for trimming after a major speed change?",
+      "expected_behavior": "answer",
+      "expected_answer": "Stick ➜ Wait ➜ Trim.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 2
+        }
+      ],
+      "category": "speed_trim",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 3,
+      "choices": [
+        "Trim ➜ Stick ➜ Wait.",
+        "Stick ➜ Wait ➜ Trim.",
+        "Stick ➜ Trim ➜ Stick.",
+        "Trim ➜ Rudder ➜ Wait."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-04",
+      "question": "Why is it poor technique to \"fly the trim\" (move the trim lever to chase the ASI needle)?",
+      "expected_behavior": "answer",
+      "expected_answer": "Trim is coarse and reacts slowly, leading to wobbling speeds.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 2
+        }
+      ],
+      "category": "speed_trim",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 4,
+      "choices": [
+        "Trim lever is linked to the rudder.",
+        "It over-cools the glider battery.",
+        "Trim is coarse and reacts slowly, leading to wobbling speeds.",
+        "It unlocks the air-brakes."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-05",
+      "question": "To accelerate from 55 kt to 75 kt, what should your first control input be?",
+      "expected_behavior": "answer",
+      "expected_answer": "Push stick forward to a lower attitude.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 1
+        }
+      ],
+      "category": "speed_trim",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 5,
+      "choices": [
+        "Pull stick back, then trim.",
+        "Move trim full forward.",
+        "Push stick forward to a lower attitude.",
+        "Step on left rudder."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-06",
+      "question": "A glider correctly trimmed at 60 kt will, if you release the stick, normally do what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Hold the same attitude and speed.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 2
+        }
+      ],
+      "category": "stability",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 6,
+      "choices": [
+        "Hold the same attitude and speed.",
+        "Pitch sharply up.",
+        "Bank slowly left.",
+        "Enter a gentle dive."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-07",
+      "question": "Large speed excursions while \"trying to hold 60 kt\" usually indicate that the pilot is doing what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Watching the ASI instead of the horizon attitude.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 4
+        }
+      ],
+      "category": "attitude",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 7,
+      "choices": [
+        "Sitting too low.",
+        "Holding full rudder.",
+        "Watching the ASI instead of the horizon attitude.",
+        "Flying with too much ballast."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-08",
+      "question": "The Pilot Guide stresses that a relaxed grip on the stick mainly helps you do what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Feel air movements and fly smoothly.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 2
+        }
+      ],
+      "category": "feel",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 8,
+      "choices": [
+        "Lower stall speed.",
+        "Read instruments faster.",
+        "Centre the rudder pedals.",
+        "Feel air movements and fly smoothly."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-09",
+      "question": "With a strong cross-wind from the right, maintaining a straight track to a distant hill requires you to do what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Turn slightly right of the target to crab up-wind.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 3
+        }
+      ],
+      "category": "straight_flight",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 9,
+      "choices": [
+        "Turn slightly right of the target to crab up-wind.",
+        "Hold straight rudder only.",
+        "Bank briefly left then level.",
+        "Fly exactly toward the hill and accept drift."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-10",
+      "question": "Even a small bank angle (1-2°) that goes unnoticed will cause the glider to do what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Drift off the intended track over time.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 3
+        }
+      ],
+      "category": "straight_flight",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 10,
+      "choices": [
+        "Climb.",
+        "Pitch nose down.",
+        "Over-speed.",
+        "Drift off the intended track over time."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-11",
+      "question": "Why does the manual call a glider a \"stable platform\"?",
+      "expected_behavior": "answer",
+      "expected_answer": "Maintain its present flight path until disturbed.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 1
+        }
+      ],
+      "category": "stability",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 11,
+      "choices": [
+        "Maintain its present flight path until disturbed.",
+        "Level its wings automatically.",
+        "Ignore turbulence.",
+        "Require constant heavy control forces."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-12",
+      "question": "While holding forward stick pressure to keep 80 kt, how should you trim?",
+      "expected_behavior": "answer",
+      "expected_answer": "Moving the trim lever forward until the pressure disappears.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 2
+        }
+      ],
+      "category": "speed_trim",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 12,
+      "choices": [
+        "Pulling trim fully aft.",
+        "Leaving trim untouched.",
+        "Moving the trim lever forward until the pressure disappears.",
+        "Moving rudder pedals together."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-13",
+      "question": "After selecting a new attitude, why should you wait a few seconds before checking the ASI?",
+      "expected_behavior": "answer",
+      "expected_answer": "The ASI lags while the glider accelerates/decelerates.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 1
+        }
+      ],
+      "category": "speed_trim",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 13,
+      "choices": [
+        "The pitot tube must heat.",
+        "The ASI lags while the glider accelerates/decelerates.",
+        "Ventilation air interferes with the pitot.",
+        "Compass deviation must settle."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-14",
+      "question": "Covering the ASI during exercises teaches students to do what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Trust pitch attitude (horizon) rather than chase the needle.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 4
+        }
+      ],
+      "category": "attitude",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 14,
+      "choices": [
+        "Use the variometer instead.",
+        "Trust pitch attitude (horizon) rather than chase the needle.",
+        "Trim by feel of rudder.",
+        "Rely on cockpit vibrations."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-15",
+      "question": "One key message says \"Select the attitude you want with the stick and then…\" what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Adjust trim to help maintain it.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 1
+        }
+      ],
+      "category": "speed_trim",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 15,
+      "choices": [
+        "Pull rudder to centre.",
+        "Check battery voltage.",
+        "Move flaps to positive.",
+        "Adjust trim to help maintain it."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-16",
+      "question": "If you tense your forearm and grip the stick hard, why does trimming become difficult?",
+      "expected_behavior": "answer",
+      "expected_answer": "Tiny involuntary stick movements keep changing attitude.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 4
+        }
+      ],
+      "category": "feel",
+      "content_type": "common_problems",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 16,
+      "choices": [
+        "Ailerons stiffen.",
+        "Tiny involuntary stick movements keep changing attitude.",
+        "Trim lever locks mechanically.",
+        "Elevator becomes overly sensitive."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-17",
+      "question": "When small heading errors appear, what is the correct correction?",
+      "expected_behavior": "answer",
+      "expected_answer": "Co-ordinated aileron and rudder to re-align, then centralise controls.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 3
+        }
+      ],
+      "category": "straight_flight",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 17,
+      "choices": [
+        "Rudder only.",
+        "Trim only.",
+        "Full air-brake for a moment.",
+        "Co-ordinated aileron and rudder to re-align, then centralise controls."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-18",
+      "question": "Which earlier unit is listed as a pre-requisite for GPC Unit 7?",
+      "expected_behavior": "answer",
+      "expected_answer": "Unit 6 Aileron Drag & Rudder Co-ordination.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 18,
+      "choices": [
+        "Unit 3 Pre-flight Preparation.",
+        "Unit 4 Orientation & Stability.",
+        "Unit 6 Aileron Drag & Rudder Co-ordination.",
+        "Unit 8 Sustained Turns."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-19",
+      "question": "Flying straight toward the airfield on an exact up-wind or down-wind leg will result in how much drift?",
+      "expected_behavior": "answer",
+      "expected_answer": "None—heading and track coincide",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 3
+        }
+      ],
+      "category": "straight_flight",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 19,
+      "choices": [
+        "5-10°.",
+        "A constant crab angle.",
+        "Continuous left drift.",
+        "None—heading and track coincide"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u7-20",
+      "question": "If you must pull back-stick pressure to hold 60 kt, which way should you trim?",
+      "expected_behavior": "answer",
+      "expected_answer": "Pull trim aft until pressure is neutral.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 7,
+          "page": 2
+        }
+      ],
+      "category": "speed_trim",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit7-straight-flight-various-speeds-trim",
+      "source_item": 20,
+      "choices": [
+        "Pull trim aft until pressure is neutral.",
+        "Push trim forward.",
+        "Leave trim where it is.",
+        "Move trim to mid-range then."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

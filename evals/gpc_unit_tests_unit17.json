@@ -1,0 +1,541 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 17 Stabilised Approach and Landing Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit17-stabilised-approach-landing",
+      "title": "GPC Unit 17 - Stabilised Approach and Landing",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSei7abYnUMqWxFi2WvroxCNsE875UL0U0qBGtb6mp717fBihA/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u17-01",
+      "question": "A stabilised approach is one in which the glider maintains constant:",
+      "expected_behavior": "answer",
+      "expected_answer": "Attitude/airspeed, descent-rate and track.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 1
+        }
+      ],
+      "category": "stabilised_approach",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 1,
+      "choices": [
+        "Speed, RPM & flap angle.",
+        "Attitude/airspeed, descent-rate and track.",
+        "Slip-ball position only.",
+        "Aiming-point position only."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-02",
+      "question": "On approach the control that directly governs airspeed is the …....",
+      "expected_behavior": "answer",
+      "expected_answer": "Elevator.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 1
+        }
+      ],
+      "category": "controls",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 2,
+      "choices": [
+        "Air-brake.",
+        "Flap lever.",
+        "Trim wheel.",
+        "Elevator."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-03",
+      "question": "Approach speed is set at break-off from the soaring flight using the rule:",
+      "expected_behavior": "answer",
+      "expected_answer": "1.5 Vs + ½ wind speed.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 2
+        }
+      ],
+      "category": "approach_speed",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 3,
+      "choices": [
+        "Best L/D + 10 kt.",
+        "1.3 Vs + gust factor.",
+        "1.5 Vs + ½ wind speed.",
+        "Vne – 40 kt."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-04",
+      "question": "The recommended work-cycle you repeat throughout final is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Speed – Direction – Glideslope.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 1
+        }
+      ],
+      "category": "work_cycle",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 4,
+      "choices": [
+        "Speed – Direction – Glideslope.",
+        "Power – Pitch – Position.",
+        "Attitude – Rudder – Elevator.",
+        "Radio – Trim – Flap."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-05",
+      "question": "Air-brakes/spoilers should first be deployed only when the glider …",
+      "expected_behavior": "answer",
+      "expected_answer": "Is unmistakably overshooting the aiming area and will clear obstacles on half-brake.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 1
+        }
+      ],
+      "category": "airbrakes",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 5,
+      "choices": [
+        "Feels slow.",
+        "Passes 300 ft AGL.",
+        "Reaches the aiming point.",
+        "Is unmistakably overshooting the aiming area and will clear obstacles on half-brake."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-06",
+      "question": "An overshoot is recognised when the aiming point …",
+      "expected_behavior": "answer",
+      "expected_answer": "Disappears under the nose toward the belly.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 3
+        }
+      ],
+      "category": "overshoot",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 6,
+      "choices": [
+        "Moves up toward the horizon.",
+        "Disappears under the nose toward the belly.",
+        "Slides sideways in the canopy.",
+        "Stays fixed yet airspeed falls."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-07",
+      "question": "The correct first action for an overshoot is to …",
+      "expected_behavior": "answer",
+      "expected_answer": "Open the air-brakes further to steepen the path.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 3
+        }
+      ],
+      "category": "overshoot",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 7,
+      "choices": [
+        "Raise the nose.",
+        "Close the brakes.",
+        "Add flap.",
+        "Open the air-brakes further to steepen the path."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-08",
+      "question": "If the aiming point rises toward the horizon you are undershooting; the immediate correction is to …..",
+      "expected_behavior": "answer",
+      "expected_answer": "Reduce air-brake or close it.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 3
+        }
+      ],
+      "category": "undershoot",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 8,
+      "choices": [
+        "Pull back on the stick.",
+        "Reduce air-brake or close it.",
+        "Add nose-down trim.",
+        "Transmit “go-around”."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-09",
+      "question": "When you increase air-brake the nose should be ….",
+      "expected_behavior": "answer",
+      "expected_answer": "Lowered slightly with gentle forward pressure to stop speed decay.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 2
+        }
+      ],
+      "category": "airbrakes",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 9,
+      "choices": [
+        "Held fixed by trim.",
+        "Raised to maintain speed.",
+        "Lowered slightly with gentle forward pressure to stop speed decay.",
+        "Ignored unless ASI drops 5 kt."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-10",
+      "question": "Wind-gradient is best described as …",
+      "expected_behavior": "answer",
+      "expected_answer": "A progressive decrease in wind speed close to the ground causing airspeed decay.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 2
+        }
+      ],
+      "category": "wind_gradient",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 10,
+      "choices": [
+        "A sudden tail-wind gust.",
+        "A progressive decrease in wind speed close to the ground causing airspeed decay.",
+        "Thermal turbulence near trees.",
+        "Increased head-wind in final 50 ft."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-11",
+      "question": "Because of wind-gradient the Pilot Guide adds to 1.5 Vs …",
+      "expected_behavior": "answer",
+      "expected_answer": "Half the measured wind speed.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 2
+        }
+      ],
+      "category": "approach_speed",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 11,
+      "choices": [
+        "Full wind speed.",
+        "A fixed 2 kt.",
+        "No increment—speed is unchanged.",
+        "Half the measured wind speed."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-12",
+      "question": "On an up-slope runway the visual illusion makes the approach look …",
+      "expected_behavior": "answer",
+      "expected_answer": "Too steep, tempting a shallow path.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 5
+        }
+      ],
+      "category": "slope_illusion",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 12,
+      "choices": [
+        "Too shallow, tempting a steep path.",
+        "Too steep, tempting a shallow path.",
+        "Normal but lower than it is.",
+        "Flat then suddenly shallow."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-13",
+      "question": "Conversely, a down-slope runway illusion makes the path appear …..",
+      "expected_behavior": "answer",
+      "expected_answer": "Too shallow, risking a high flare and long float.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 5
+        }
+      ],
+      "category": "slope_illusion",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 13,
+      "choices": [
+        "Steep, inducing more brake.",
+        "Flat then steep.",
+        "Too shallow, risking a high flare and long float.",
+        "Too high above threshold."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-14",
+      "question": "A reliable cue to commence the flare is when …",
+      "expected_behavior": "answer",
+      "expected_answer": "The runway appears to widen rapidly or “rush” upward.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 5
+        }
+      ],
+      "category": "flare",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 14,
+      "choices": [
+        "ASI reads exactly Vs+5.",
+        "The nose hides the aiming point.",
+        "The yaw-string flicks.",
+        "The runway appears to widen rapidly or “rush” upward."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-15",
+      "question": "If the glider balloons during flare you should first …..",
+      "expected_behavior": "answer",
+      "expected_answer": "Reduce brake, hold safe attitude, allow speed to settle, then re-flare gently.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 6
+        }
+      ],
+      "category": "balloon",
+      "content_type": "common_problems",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 15,
+      "choices": [
+        "Reduce brake, hold safe attitude, allow speed to settle, then re-flare gently.",
+        "Pull full brake.",
+        "Push the stick hard forward.",
+        "Retract the wheel."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-16",
+      "question": "If the glider bounces after touchdown the initial recovery action is to …...",
+      "expected_behavior": "answer",
+      "expected_answer": "Maintain back-pressure, reduce brake, let it fly, then re-flare very gently.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 6
+        }
+      ],
+      "category": "bounce",
+      "content_type": "common_problems",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 16,
+      "choices": [
+        "Add more brake.",
+        "Release the stick.",
+        "Re-open spoilers fully.",
+        "Maintain back-pressure, reduce brake, let it fly, then re-flare very gently."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-17",
+      "question": "During the hold-off you aim to keep the glider flying about …..",
+      "expected_behavior": "answer",
+      "expected_answer": "0.5 m (≈ 50 cm) above ground with increasing back-pressure until it settles.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 5
+        }
+      ],
+      "category": "hold_off",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 17,
+      "choices": [
+        "2 m above the ground.",
+        "0.5 m (≈ 50 cm) above ground with increasing back-pressure until it settles.",
+        "One wingspan up.",
+        "Tailwheel clear but mainwheel touching."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-18",
+      "question": "Positive control after touchdown means you keep using …..",
+      "expected_behavior": "answer",
+      "expected_answer": "Elevator, aileron & rudder independently until stopped.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 7
+        }
+      ],
+      "category": "ground_roll",
+      "content_type": "competency",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 18,
+      "choices": [
+        "Elevator only.",
+        "Rudder only.",
+        "Air-brake only.",
+        "Elevator, aileron & rudder independently until stopped."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u17-19",
+      "question": "Which TWO GPC units are listed as pre-requisites for Unit 17?",
+      "expected_behavior": "answer",
+      "expected_answer": "Unit 15 - Break Off & Circuit Planning.; Unit 16 - Circuit Joining & Execution.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 19,
+      "choices": [
+        "Unit 14A - Takeoff (Aerotow).",
+        "Unit 14W - Takeoff (Winch).",
+        "Unit 15 - Break Off & Circuit Planning.",
+        "Unit 16 - Circuit Joining & Execution.",
+        "Unit 17 - Stabilised Approach and Landing",
+        "Unit 18 - Spin / Spiral Dive Avoidance and Recovery.",
+        "Unit 19 - Crosswind Take-off & Landing.",
+        "Unit 20A - Launch Emergencies (Aerotow)."
+      ],
+      "question_type": "checkboxes",
+      "correct_choices": [
+        "Unit 15 - Break Off & Circuit Planning.",
+        "Unit 16 - Circuit Joining & Execution."
+      ]
+    },
+    {
+      "id": "gpc-u17-20",
+      "question": "The Pilot Guide suggests pairing Unit 17 with Unit 19 (Cross-wind) and …",
+      "expected_behavior": "answer",
+      "expected_answer": "Unit 21 - Radio Use and Endorsement.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 17,
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit17-stabilised-approach-landing",
+      "source_item": 20,
+      "choices": [
+        "Unit 18 - Spin / Spiral Dive Avoidance and Recovery.",
+        "Unit 21 - Radio Use and Endorsement.",
+        "Unit 22 - Use of Situational Awareness Aids.",
+        "Unit 23 - Rules of the Air."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

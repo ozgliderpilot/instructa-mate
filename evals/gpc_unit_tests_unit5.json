@@ -1,0 +1,543 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 5 Primary Effects of Controls Google Form. Answers derived from Pilot/Trainer guides — form has no published quiz answer key.",
+  "source_forms": [
+    {
+      "id": "gpc-unit5-primary-effects-of-controls",
+      "title": "GPC Unit 5 - Primary Effects of Controls",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLScZhqZlysKTM8ezyCKgu-egOPEXmHEF_08jKKq41K1X7TBHqg/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u5-01",
+      "question": "What is your primary attitude reference for controlling pitch?",
+      "expected_behavior": "answer",
+      "expected_answer": "Natural horizon.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 2
+        }
+      ],
+      "category": "attitude",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 1,
+      "choices": [
+        "Air-speed indicator.",
+        "Artificial horizon.",
+        "Turn coordinator.",
+        "Natural horizon."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-02",
+      "question": "Which primary control is the only one that directly changes a glider's airspeed?",
+      "expected_behavior": "answer",
+      "expected_answer": "Elevator.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 4
+        }
+      ],
+      "category": "elevator",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 2,
+      "choices": [
+        "Ailerons.",
+        "Rudder.",
+        "Elevator.",
+        "Air-brakes."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-03",
+      "question": "Rolling motion occurs about which of the glider's axes?",
+      "expected_behavior": "answer",
+      "expected_answer": "Longitudinal.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 2
+        }
+      ],
+      "category": "axes",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 3,
+      "choices": [
+        "Lateral.",
+        "Vertical.",
+        "Longitudinal.",
+        "Pitch."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-04",
+      "question": "Moving the stick sideways to the right will first make the glider do what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Bank/roll right.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 5
+        }
+      ],
+      "category": "ailerons",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 4,
+      "choices": [
+        "Yaw right.",
+        "Pitch up.",
+        "Climb.",
+        "Bank/roll right."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-05",
+      "question": "After banking 20° right and then centralising the stick, what will the glider do?",
+      "expected_behavior": "answer",
+      "expected_answer": "Remain at roughly 20° of bank until acted on.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 5
+        }
+      ],
+      "category": "ailerons",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 5,
+      "choices": [
+        "Remain at roughly 20° of bank until acted on.",
+        "Return wings-level by itself.",
+        "Tighten the turn progressively.",
+        "Immediately enter a stall."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-06",
+      "question": "Stick forward, nose down. What is the primary consequence for the glider's speed?",
+      "expected_behavior": "answer",
+      "expected_answer": "Increases.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 4
+        }
+      ],
+      "category": "elevator",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 6,
+      "choices": [
+        "Falls rapidly.",
+        "Increases.",
+        "Stays unchanged.",
+        "Becomes unpredictable."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-07",
+      "question": "According to the Pilot Guide, applying more force to a control surface mainly changes what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Rate at which the aircraft rotates.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 3
+        }
+      ],
+      "category": "controls_general",
+      "content_type": "key_messages",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 7,
+      "choices": [
+        "Direction of rotation.",
+        "Rate at which the aircraft rotates.",
+        "Centre-of-gravity position.",
+        "Trim setting."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-08",
+      "question": "With no external disturbances or control inputs, what will a properly trimmed glider do?",
+      "expected_behavior": "answer",
+      "expected_answer": "Continue flying on its existing flight path.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 2
+        }
+      ],
+      "category": "stability",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 8,
+      "choices": [
+        "Enter a spiral dive.",
+        "Slowly climb and stall.",
+        "Continue flying on its existing flight path.",
+        "Oscillate in pitch and roll."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-09",
+      "question": "Pressing full right rudder causes the nose to yaw right and then what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Stops after a small angle because the fin restores it.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 5
+        }
+      ],
+      "category": "rudder",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 9,
+      "choices": [
+        "Keeps yawing continuously.",
+        "Stops after a small angle because the fin restores it.",
+        "Rolls wings level.",
+        "Pitches nose down automatically."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-10",
+      "question": "In bumpy air a sudden nose-up twitch is best countered by a brief, smooth what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Forward elevator input.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 7
+        }
+      ],
+      "category": "elevator",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 10,
+      "choices": [
+        "Forward elevator input.",
+        "Rudder input.",
+        "Aileron input.",
+        "Reduction in ballast."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-11",
+      "question": "All three axes of rotation intersect at which point on the glider?",
+      "expected_behavior": "answer",
+      "expected_answer": "Centre of Gravity (C of G).",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 3
+        }
+      ],
+      "category": "axes",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 11,
+      "choices": [
+        "Nose.",
+        "Trailing edge.",
+        "Centre of Gravity (C of G).",
+        "Cockpit floor."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-12",
+      "question": "What is a correct hand-over/take-over exchange between crew?",
+      "expected_behavior": "answer",
+      "expected_answer": "“Your aircraft” — “My aircraft”.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 7
+        }
+      ],
+      "category": "control_transfer",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 12,
+      "choices": [
+        "“Take control” — “Okay”.",
+        "“Your aircraft” — “My aircraft”.",
+        "“Clear” — “Roger”.",
+        "“I’m done” — “You’re up”"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-13",
+      "question": "A high nose attitude relative to the horizon indicates the glider is flying how?",
+      "expected_behavior": "answer",
+      "expected_answer": "Too slowly.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 4
+        }
+      ],
+      "category": "attitude",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 13,
+      "choices": [
+        "Exactly at best-L/D.",
+        "Backwards through the air.",
+        "Too fast.",
+        "Too slowly."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-14",
+      "question": "To increase airspeed from 55 kt to 65 kt, what should you first do?",
+      "expected_behavior": "answer",
+      "expected_answer": "Lower the nose with elevator.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 4
+        }
+      ],
+      "category": "elevator",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 14,
+      "choices": [
+        "Roll wings level.",
+        "Apply left rudder.",
+        "Lower the nose with elevator.",
+        "Pull the spoiler handle."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-15",
+      "question": "During a turn, what is the rudder's most useful role?",
+      "expected_behavior": "answer",
+      "expected_answer": "Balance (cancel) adverse yaw from the ailerons.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 5
+        }
+      ],
+      "category": "rudder",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 15,
+      "choices": [
+        "Tighten the turn radius.",
+        "Balance (cancel) adverse yaw from the ailerons.",
+        "Increase rate of climb.",
+        "Reduce stall speed."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-16",
+      "question": "If a forceful left-stick input rolls the glider quickly, what does this demonstrate about larger control deflection?",
+      "expected_behavior": "answer",
+      "expected_answer": "Faster roll rate.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 3
+        },
+        {
+          "source": "trainer",
+          "unit": 5,
+          "page": 4
+        }
+      ],
+      "category": "ailerons",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 16,
+      "choices": [
+        "Higher lift-to-drag ratio.",
+        "Weaker yaw damping.",
+        "Forward C of G shift.",
+        "Faster roll rate."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-17",
+      "question": "Side-to-side movement of the control column actuates which control surfaces?",
+      "expected_behavior": "answer",
+      "expected_answer": "Ailerons.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 2
+        }
+      ],
+      "category": "ailerons",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 17,
+      "choices": [
+        "Ailerons.",
+        "Elevator.",
+        "Flaps.",
+        "Air-brakes."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-18",
+      "question": "Pitch-positive stability is provided primarily by what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Tailplane (horizontal stabiliser).",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 6
+        }
+      ],
+      "category": "stability",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 18,
+      "choices": [
+        "Fin.",
+        "Tailplane (horizontal stabiliser).",
+        "Wing dihedral.",
+        "Drag rudders."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-19",
+      "question": "What is the natural tendency for rolling motion to slow because the down-going wing develops more lift called?",
+      "expected_behavior": "answer",
+      "expected_answer": "Lateral damping.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 6
+        }
+      ],
+      "category": "stability",
+      "content_type": "theory",
+      "difficulty": "hard",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 19,
+      "choices": [
+        "Directional stability.",
+        "Lateral damping.",
+        "Control harmony.",
+        "Induced drag."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u5-20",
+      "question": "Why would an overly stable glider be criticised?",
+      "expected_behavior": "answer",
+      "expected_answer": "Is sluggish and tiring to manoeuvre.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 5,
+          "page": 5
+        }
+      ],
+      "category": "stability",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit5-primary-effects-of-controls",
+      "source_item": 20,
+      "choices": [
+        "Climbs too steeply.",
+        "Spins too easily.",
+        "Is sluggish and tiring to manoeuvre.",
+        "Lacks sufficient rudder authority."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

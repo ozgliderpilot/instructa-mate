@@ -43,13 +43,13 @@ threshold, citation-verification mechanics.
 *style* exemplars; the claim-grounding/faithfulness check (no claim without a supporting chunk);
 provenance-aware rendering (Reference vs Generated never confusable). Feeds the aspect-#2 Unit Guide.
 
-### 5. Eval harness internals + golden-set finalization
+### 5. Eval harness internals + GPC unit-tests finalization
 **Locked:** two-tier eval — fast loop (`recall@k`, `refusal` automated; `citation faithfulness`,
 `groundedness` via LLM-as-judge) + SME milestone (rate `answer correctness`, spot-check ~15–20% of
 judge verdicts to calibrate). Langfuse for tracing the curve.
-**Golden set:** user (SME) provides **~30–40 in-corpus** instructor questions; agent provides the
+**GPC unit tests:** user (SME) provides **~30–40 in-corpus** instructor questions; agent provides the
 **out-of-corpus refusal set**. `self_check` (Pilot "Self-Check Questions") kept in reserve for thin
-content_type coverage. Persist to `evals/golden_set.json`, schema:
+content_type coverage. Persist to `evals/gpc_unit_tests_unit*.json`, schema:
 `{id, question, expected_behavior: refuse|correct|decline, expected_answer, citations:[{source,unit,page}], category, content_type, difficulty, verified_absent_terms:[]}`.
 **Open / to persist:** the ~12 drafted refusal probes below (NOT yet saved anywhere); whether to
 include the false-premise/**Correction** probes in the PoC; final per-category counts.

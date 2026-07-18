@@ -1,0 +1,534 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 28 Sideslipping Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit28-sideslipping",
+      "title": "GPC Unit 28 - Sideslipping",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSfGfnIuJHmtJK668-Lezk0DhXriXzgAXycjRUSgCuzs-e4a4w/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u28-01",
+      "question": "What is the main purpose of a sideslip on approach?",
+      "expected_behavior": "answer",
+      "expected_answer": "Steepen descent without increasing speed.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 1
+        }
+      ],
+      "category": "purpose",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 1,
+      "choices": [
+        "Increase forward speed.",
+        "Reduce drag to extend glide.",
+        "Steepen descent without increasing speed.",
+        "Enter a cross-controlled stall."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-02",
+      "question": "Before attempting landing slips, the Pilot Guide says pilots should first practise sideslips:",
+      "expected_behavior": "answer",
+      "expected_answer": "At altitude using a ground line reference.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 1
+        }
+      ],
+      "category": "practice",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 2,
+      "choices": [
+        "Only in the circuit.",
+        "At altitude using a ground line reference.",
+        "During winch launch.",
+        "With airbrakes fully extended."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-03",
+      "question": "Which control inputs establish a straight sideslip from level flight?",
+      "expected_behavior": "answer",
+      "expected_answer": "Bank with aileron, hold track with opposite rudder.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 1
+        }
+      ],
+      "category": "entry",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 3,
+      "choices": [
+        "Rudder and elevator only.",
+        "Aileron and elevator only.",
+        "Bank with aileron, hold track with opposite rudder.",
+        "Opposite aileron and opposite rudder."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-04",
+      "question": "During a steady sideslip the yaw-string will point:",
+      "expected_behavior": "answer",
+      "expected_answer": "Toward the lowered wing (opposite rudder).",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 2
+        }
+      ],
+      "category": "yaw_string",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 4,
+      "choices": [
+        "Toward the lowered wing (opposite rudder).",
+        "Straight ahead.",
+        "Randomly due to turbulence.",
+        "Directly upward."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-05",
+      "question": "A typical glider cannot hold a stable sideslip beyond ≈ 10° of bank mainly because of:",
+      "expected_behavior": "answer",
+      "expected_answer": "Strong spiral instability",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 2
+        }
+      ],
+      "category": "limits",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 5,
+      "choices": [
+        "Elevator blanking.",
+        "Stall warning.",
+        "Lack of rudder authority.",
+        "Strong spiral instability"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-06",
+      "question": "In a sideslip the ASI reading is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Unreliable—ignore it.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 2
+        }
+      ],
+      "category": "asi",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 6,
+      "choices": [
+        "Perfectly accurate.",
+        "Reads high.",
+        "Reads low by exactly 5 kt.",
+        "Unreliable—ignore it."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-07",
+      "question": "To maintain the correct approach speed while slipping you should rely on:",
+      "expected_behavior": "answer",
+      "expected_answer": "Original nose attitude reference.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 2
+        }
+      ],
+      "category": "speed",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 7,
+      "choices": [
+        "Original nose attitude reference.",
+        "Airspeed indicator.",
+        "Variometer.",
+        "Yaw-string angle."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-08",
+      "question": "Recovery sequence from a sideslip is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Set safe nose attitude, roll wings level, simultaneously centralise rudder.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 2
+        }
+      ],
+      "category": "recovery",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 8,
+      "choices": [
+        "Set safe nose attitude, roll wings level, simultaneously centralise rudder.",
+        "Close airbrake → wings level.",
+        "Reduce bank → then add rudder.",
+        "Apply full opposite rudder, then aileron, then pitch."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-09",
+      "question": "Continuing a strong slip below about 300 ft AGL is discouraged because:",
+      "expected_behavior": "answer",
+      "expected_answer": "Extra height is needed to arrest the high descent rate.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 2
+        }
+      ],
+      "category": "landing",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 9,
+      "choices": [
+        "Controls reverse.",
+        "Extra height is needed to arrest the high descent rate.",
+        "The yaw-string detaches.",
+        "Airbrakes become ineffective."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-10",
+      "question": "Which combination can produce an un-commanded nose-down pitch in some gliders?",
+      "expected_behavior": "answer",
+      "expected_answer": "Slip with airbrakes extended (tail-plane blanking).",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 1
+        }
+      ],
+      "category": "airbrakes",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 10,
+      "choices": [
+        "Slip plus flaps.",
+        "Slip plus trim full forward.",
+        "Slip with airbrakes extended (tail-plane blanking).",
+        "Slip with water ballast."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-11",
+      "question": "When landing in a strong cross-wind, holding the into-wind wing down in a slip helps by:",
+      "expected_behavior": "answer",
+      "expected_answer": "Offsetting drift while increasing sink rate.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 4
+        }
+      ],
+      "category": "crosswind",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 11,
+      "choices": [
+        "Lowering stall speed.",
+        "Offsetting drift while increasing sink rate.",
+        "Reducing nose wheel load.",
+        "Improving ASI accuracy."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-12",
+      "question": "If the nose attitude is too high during recovery, the main risk is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Immediate stall and nose-drop close to ground.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 2
+        }
+      ],
+      "category": "recovery",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 12,
+      "choices": [
+        "Overshoot.",
+        "Immediate stall and nose-drop close to ground.",
+        "Excess rollout distance.",
+        "Tail scrape."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-13",
+      "question": "If the nose attitude is too low after recovery, you will likely:",
+      "expected_behavior": "answer",
+      "expected_answer": "Arrive fast and need extra airbrake/landing distance.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 3
+        }
+      ],
+      "category": "recovery",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 13,
+      "choices": [
+        "Stall again.",
+        "Enter a spin.",
+        "Skip on landing gear.",
+        "Arrive fast and need extra airbrake/landing distance."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-14",
+      "question": "While slipping, forward visibility may actually improve in rain or low sun because:",
+      "expected_behavior": "answer",
+      "expected_answer": "The nose is yawed away from line of flight.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 3
+        }
+      ],
+      "category": "visibility",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 14,
+      "choices": [
+        "The nose is yawed away from line of flight.",
+        "Canopy demists.",
+        "Speed is lower.",
+        "Variometer is muted."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-15",
+      "question": "A slipping turn differs from a straight sideslip because:",
+      "expected_behavior": "answer",
+      "expected_answer": "The glider continues to turn toward the low wing.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 3
+        }
+      ],
+      "category": "slipping_turn",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 15,
+      "choices": [
+        "Only rudder is used.",
+        "The glider continues to turn toward the low wing.",
+        "Descent rate is lower.",
+        "No attitude change is needed."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-16",
+      "question": "Compared with a normal co-ordinated turn, a properly executed slipping turn requires the nose to be held:",
+      "expected_behavior": "answer",
+      "expected_answer": "Higher.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 3
+        }
+      ],
+      "category": "slipping_turn",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 16,
+      "choices": [
+        "Lower.",
+        "Same attitude.",
+        "Higher.",
+        "Slightly left of track."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-17",
+      "question": "Which instruments are most useful inside a sideslip?",
+      "expected_behavior": "answer",
+      "expected_answer": "Pitch attitude reference (horizon) & outside track cues.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 2
+        }
+      ],
+      "category": "instruments",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 17,
+      "choices": [
+        "ASI & VSI.",
+        "GPS & magnetic compass.",
+        "Turn-and-slip & ASI.",
+        "Pitch attitude reference (horizon) & outside track cues."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-18",
+      "question": "Using sideslip and full airbrake together in some types is prohibited unless AFM permits because:",
+      "expected_behavior": "answer",
+      "expected_answer": "Elevator buffet or pitch-down may occur.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 3
+        }
+      ],
+      "category": "airbrakes",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 18,
+      "choices": [
+        "It reduces lift too much.",
+        "Elevator buffet or pitch-down may occur.",
+        "Drag is insufficient.",
+        "It masks stall buffet."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-19",
+      "question": "One situation where a brief sideslip can be helpful even in modern gliders with good airbrakes is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Avoiding cloud suck by adding sink rate.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 28,
+          "page": 4
+        }
+      ],
+      "category": "cloud_suck",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 19,
+      "choices": [
+        "Increasing L/D.",
+        "Avoiding cloud suck by adding sink rate.",
+        "Accelerating in cruise.",
+        "Thermalling in weak lift."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u28-20",
+      "question": "According to GPC Unit 28, acknowledging your vulnerability to errors when practising slips is:",
+      "expected_behavior": "answer",
+      "expected_answer": "A sign of strength and good airmanship.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 25,
+          "page": 4
+        }
+      ],
+      "category": "airmanship",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit28-sideslipping",
+      "source_item": 20,
+      "choices": [
+        "Optional.",
+        "A sign of weakness.",
+        "A sign of strength and good airmanship.",
+        "Only for students"
+      ],
+      "question_type": "multiple_choice",
+      "note": "Wording matches Unit 25 TEM attitude language; Unit 28 quiz attributes it here."
+    }
+  ]
+}

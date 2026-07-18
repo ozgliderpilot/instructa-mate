@@ -1,0 +1,580 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 10 Use of Ancillary Controls Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit10-use-of-ancillary-controls",
+      "title": "GPC Unit 10 - Use of Ancillary Controls",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSe0lh1a2MzYXElY2Wz0fNwlt2bcpdFKqfhFRgEqpGbRAtRlZQ/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u10-01",
+      "question": "The primary purpose of the airbrake in a glider is to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Control the angle / rate of descent.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 2
+        }
+      ],
+      "category": "airbrakes",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 1,
+      "choices": [
+        "Maintain air-speed on approach.",
+        "Change wing camber.",
+        "Provide roll control in turbulence.",
+        "Control the angle / rate of descent."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-02",
+      "question": "When the airbrakes are extended on approach, which control still governs the air-speed?",
+      "expected_behavior": "answer",
+      "expected_answer": "Elevator.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 2
+        }
+      ],
+      "category": "airbrakes",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 2,
+      "choices": [
+        "Airbrake.",
+        "Flap lever.",
+        "Elevator.",
+        "Trim wheel."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-03",
+      "question": "Glider cockpits follow a standard colour code. The airbrake handle is painted:",
+      "expected_behavior": "answer",
+      "expected_answer": "Blue",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 2
+        }
+      ],
+      "category": "colour_code",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 3,
+      "choices": [
+        "Blue",
+        "Red",
+        "Green",
+        "White",
+        "Yellow",
+        "Black"
+      ],
+      "question_type": "multiple_choice",
+      "note": "Live form choices are colour-swatch images (Option 1–6); form answer key is Option 1 (BLUE).",
+      "form_option": "Option 1"
+    },
+    {
+      "id": "gpc-u10-04",
+      "question": "Extending the airbrakes will _________ the wing’s stall speed.",
+      "expected_behavior": "answer",
+      "expected_answer": "Increase.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 1
+        }
+      ],
+      "category": "airbrakes",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 4,
+      "choices": [
+        "Decrease.",
+        "Increase.",
+        "Leave.",
+        "Vary unpredictably."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-05",
+      "question": "Selecting positive flap (e.g. +5 °) has what effect on stall speed?",
+      "expected_behavior": "answer",
+      "expected_answer": "Lowers it",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 3
+        },
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 5
+        }
+      ],
+      "category": "flaps",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 5,
+      "choices": [
+        "Depends on ballast.",
+        "Raises it.",
+        "No effect.",
+        "Lowers it"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-06",
+      "question": "Moving flaps into a negative setting above \"0° will:",
+      "expected_behavior": "answer",
+      "expected_answer": "Raise stall speed.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 3
+        },
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 5
+        }
+      ],
+      "category": "flaps",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 6,
+      "choices": [
+        "Lower stall speed.",
+        "Leave stall speed unchanged.",
+        "Raise stall speed.",
+        "Deploy the wheel automatically."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-07",
+      "question": "Before you move any ancillary control the Pilot Guide insists you first:",
+      "expected_behavior": "answer",
+      "expected_answer": "Locate ➜ Identify ➜ Operate.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 1
+        }
+      ],
+      "category": "locate_identify_operate",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 7,
+      "choices": [
+        "Identify ➜ Locate ➜ Operate.",
+        "Locate ➜ Identify ➜ Operate.",
+        "Operate ➜ Locate ➜ Identify.",
+        "Announce on the radio"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-08",
+      "question": "The tow-release handle is colour-coded:",
+      "expected_behavior": "answer",
+      "expected_answer": "Yellow",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 2
+        }
+      ],
+      "category": "colour_code",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 8,
+      "choices": [
+        "Blue",
+        "Red",
+        "Green",
+        "White",
+        "Yellow",
+        "Black"
+      ],
+      "question_type": "multiple_choice",
+      "note": "Live form choices are colour-swatch images (Option 1–6); form answer key is Option 5 (YELLOW).",
+      "form_option": "Option 5"
+    },
+    {
+      "id": "gpc-u10-09",
+      "question": "The undercarriage selector is normally coloured:",
+      "expected_behavior": "answer",
+      "expected_answer": "Black",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 2
+        }
+      ],
+      "category": "colour_code",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 9,
+      "choices": [
+        "Blue",
+        "Red",
+        "Green",
+        "White",
+        "Yellow",
+        "Black"
+      ],
+      "question_type": "multiple_choice",
+      "note": "Live form choices are colour-swatch images (Option 1–6); form answer key is Option 3 (BLACK).",
+      "form_option": "Option 3"
+    },
+    {
+      "id": "gpc-u10-10",
+      "question": "Gliders have retractable undercarriage primarily to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Reduce aerodynamic drag in flight.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 5
+        }
+      ],
+      "category": "undercarriage",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 10,
+      "choices": [
+        "Shorten the landing roll.",
+        "Carry more ballast.",
+        "Cope with rough strips.",
+        "Reduce aerodynamic drag in flight."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-11",
+      "question": "Most glider undercarriage systems are operated:",
+      "expected_behavior": "answer",
+      "expected_answer": "Manually with no external power.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 5
+        }
+      ],
+      "category": "undercarriage",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 11,
+      "choices": [
+        "Electrically.",
+        "Hydraulically.",
+        "Manually with no external power.",
+        "Automatically by air-speed sensors."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-12",
+      "question": "When transferring from soaring flight to the role of “landing pilot”, the aircraft should be:",
+      "expected_behavior": "answer",
+      "expected_answer": "Configured for landing, including lowering the undercarriage where fitted.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 5
+        }
+      ],
+      "category": "undercarriage",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 12,
+      "choices": [
+        "Trimmed for minimum sink.",
+        "Configured for landing, including lowering the undercarriage where fitted.",
+        "Selected to negative flap.",
+        "Set transponder standby,"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-13",
+      "question": "Maximum permitted speeds for operating flaps, airbrakes or landing gear are found in the:",
+      "expected_behavior": "answer",
+      "expected_answer": "Aircraft Flight Manual (AFM) and cockpit placards.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 4
+        }
+      ],
+      "category": "limitations",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 13,
+      "choices": [
+        "Instructor’s notes.",
+        "Radio handbook.",
+        "Aircraft Flight Manual (AFM) and cockpit placards.",
+        "National Meteorological Chart."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-14",
+      "question": "In gliders with drooping ailerons, selecting the full landing-flap setting should be delayed until:",
+      "expected_behavior": "answer",
+      "expected_answer": "After the turn on to final.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 3
+        }
+      ],
+      "category": "flaps",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 14,
+      "choices": [
+        "Early down-wind.",
+        "Base leg.",
+        "After the turn on to final.",
+        "Immediately after cable release."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-15",
+      "question": "Using positive flap on final approach allows:",
+      "expected_behavior": "answer",
+      "expected_answer": "Lower touch-down speed and a steeper approach.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 4
+        }
+      ],
+      "category": "flaps",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 15,
+      "choices": [
+        "Higher stall speed and flatter path.",
+        "Lower touch-down speed and a steeper approach.",
+        "Faster roll rate.",
+        "Automatic gear extension."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-16",
+      "question": "Some gliders start the take-off run with zero or negative flap chiefly to improve:",
+      "expected_behavior": "answer",
+      "expected_answer": "Aileron control at very low speed.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 3
+        }
+      ],
+      "category": "flaps",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 16,
+      "choices": [
+        "Rudder authority.",
+        "Tow-rope tension.",
+        "Vario accuracy.",
+        "Aileron control at very low speed."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-17",
+      "question": "When a take-off begins with negative flap the pilot should keep the hand nearest to:",
+      "expected_behavior": "answer",
+      "expected_answer": "The cable-release handle.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 3
+        }
+      ],
+      "category": "flaps",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 17,
+      "choices": [
+        "The flap lever.",
+        "The airbrake lever.",
+        "The cable-release handle.",
+        "The undercarriage selector."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-18",
+      "question": "After touch-down, selecting negative flap can:",
+      "expected_behavior": "answer",
+      "expected_answer": "Improve aileron control during the ground-roll.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 4
+        }
+      ],
+      "category": "flaps",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 18,
+      "choices": [
+        "Increase lift.",
+        "Improve aileron control during the ground-roll.",
+        "Lengthen the roll-out.",
+        "Over-cool the wheel-brake."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-19",
+      "question": "The Pilot Guide repeatedly warns: always identify the BLUE handle before use to avoid:",
+      "expected_behavior": "answer",
+      "expected_answer": "Confusing the airbrake with another control.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 6
+        }
+      ],
+      "category": "airbrakes",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 19,
+      "choices": [
+        "Exceeding VNE.",
+        "Forgetting F.U.S.T.",
+        "Spoiling the trim setting.",
+        "Confusing the airbrake with another control."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u10-20",
+      "question": "Leaving a canopy open and unattended in strong wind is  hazardous because it may:",
+      "expected_behavior": "answer",
+      "expected_answer": "Be blown shut or twisted, damaging the canopy.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 5
+        }
+      ],
+      "category": "canopy",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit10-use-of-ancillary-controls",
+      "source_item": 20,
+      "choices": [
+        "Be blown shut or twisted, damaging the canopy.",
+        "Over-heat the cockpit.",
+        "Drain the battery.",
+        "Trigger the gear warning horn."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

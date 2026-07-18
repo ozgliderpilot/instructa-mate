@@ -19,7 +19,7 @@ human audit view only.
 
 - Wording edits (the common case — hand-corrections to the MD) keep their ID and change only
   the hash, so exactly the touched chunks re-embed, and external references to IDs
-  (golden-set citations in `evals/golden_set.json`, saved answers) survive.
+  (GPC unit-test citations in `evals/gpc_unit_tests_unit*.json`, saved answers) survive.
 - Reconciling against the index's actual state is idempotent and self-healing: a half-failed
   sync converges on the next run, a fresh clone or dirty working tree needs no git history,
   and there is no second source of truth to drift (as a committed lock file would).

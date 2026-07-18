@@ -1,0 +1,535 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 15 Break Off & Circuit Planning Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit15-break-off-circuit-planning",
+      "title": "GPC Unit 15 - Break Off & Circuit Planning",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSeZgj_75uFZND5yGE7SAppHcl76glNEhUHUQ7vM5a7ihzxZKw/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u15-01",
+      "question": "The first step in finishing a soaring flight is to change from “Soaring-Pilot” to “Landing-Pilot.” What is the principal purpose of this mental switch?",
+      "expected_behavior": "answer",
+      "expected_answer": "Focus exclusively on the decisions required for a safe landing.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 2
+        }
+      ],
+      "category": "landing_pilot",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 1,
+      "choices": [
+        "Reduce cockpit noise.",
+        "Focus exclusively on the decisions required for a safe landing.",
+        "Increase thermal awareness.",
+        "Reset all instruments."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-02",
+      "question": "You should break-off from soaring only when you have enough height to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Transit to the chosen circuit joining area and still monitor changing weather.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 2
+        }
+      ],
+      "category": "break_off",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 2,
+      "choices": [
+        "Dump all water ballast.",
+        "Transit to the chosen circuit joining area and still monitor changing weather.",
+        "Cruise the airfield at 500 ft.",
+        "Perform a 360° steep turn over the field."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-03",
+      "question": "The Pilot Guide lists three pre-requisite GPC units for this lesson. Which unit is NOT on that list?",
+      "expected_behavior": "answer",
+      "expected_answer": "Unit 12 — Slow Flight & Stalling.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 3,
+      "choices": [
+        "Unit 7 — Straight Flight & Trim.",
+        "Unit 9 — Lookout Scan Procedures.",
+        "Unit 10 — Use of Ancillary Controls.",
+        "Unit 12 — Slow Flight & Stalling."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-04",
+      "question": "The approach speed you must determine at break-off is calculated as:",
+      "expected_behavior": "answer",
+      "expected_answer": "1.5 Vs + ½ wind speed.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 4
+        }
+      ],
+      "category": "approach_speed",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 4,
+      "choices": [
+        "Best-glide + 10 kt.",
+        "1.3 Vs + wind gust factor.",
+        "1.5 Vs + ½ wind speed.",
+        "VNE − 40 kt."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-05",
+      "question": "When selecting a landing direction, which statement is most correct?",
+      "expected_behavior": "answer",
+      "expected_answer": "The landing direction should normally favour into-wind landing, but slope, sun position, obstacles, traffic, and circuit considerations may also be relevant.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 3
+        }
+      ],
+      "category": "landing_direction",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 5,
+      "choices": [
+        "The landing direction should always be directly into wind.",
+        "The landing direction should be chosen mainly to avoid flying a full circuit.",
+        "The landing direction should normally favour into-wind landing, but slope, sun position, obstacles, traffic, and circuit considerations may also be relevant.",
+        "The landing direction should be based on the shortest ground roll, regardless of other factors."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-06",
+      "question": "Which scan technique is emphasised for spotting traffic inside the circuit area before joining?",
+      "expected_behavior": "answer",
+      "expected_answer": "Targeted scan backed up by periodic full scans.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 3
+        }
+      ],
+      "category": "lookout",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 6,
+      "choices": [
+        "Cruise scan only",
+        "Full scan only",
+        "Targeted scan backed up by periodic full scans.",
+        "Instrument scan."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-07",
+      "question": "When leaving soaring flight and transiting to join the circuit, what is the main hazard to avoid?",
+      "expected_behavior": "answer",
+      "expected_answer": "Joining, crossing, or descending in a way that conflicts with established circuit traffic or enters a winch-launch path.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 3
+        }
+      ],
+      "category": "transit",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 7,
+      "choices": [
+        "Overflying the windsock.",
+        "Joining, crossing, or descending in a way that conflicts with established circuit traffic or enters a winch-launch path.",
+        "Crossing midfield above 1,000 ft in all circumstances.",
+        "Making radio position calls."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-08",
+      "question": "A circuit joining area should normally be selected so that the inbound track:",
+      "expected_behavior": "answer",
+      "expected_answer": "Avoids unnecessary flight over the active runway or through the active circuit area before joining downwind.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 5
+        }
+      ],
+      "category": "joining",
+      "content_type": "common_problems",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 8,
+      "choices": [
+        "Avoids unnecessary flight over the active runway or through the active circuit area before joining downwind.",
+        "Takes the shortest route to the aerodrome, even if this requires crossing the active runway.",
+        "Positions the aircraft to join base leg directly, unless traffic is already established.",
+        "Allows the pilot to delay joining until late downwind to maximise soaring opportunities."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-09",
+      "question": "If other traffic forces a late change of plan, you must be prepared to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Modify the circuit pattern or land off-field within the planned circuit area if necessary.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 1
+        }
+      ],
+      "category": "flexibility",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 9,
+      "choices": [
+        "Continue with the original circuit plan, provided you have made a radio call.",
+        "Modify the circuit pattern or land off-field within the planned circuit area if necessary.",
+        "Extend the circuit until the traffic conflict has passed, regardless of height remaining.",
+        "Turn away from the circuit temporarily and rejoin when the area is clear."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-10",
+      "question": "Below 1 000 ft AGL you must fly at or above:",
+      "expected_behavior": "answer",
+      "expected_answer": "1.5 Vs (“safe speed near the ground”).",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 4
+        }
+      ],
+      "category": "safe_speed",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 10,
+      "choices": [
+        "Best-glide",
+        "1.3 Vs (safe manoeuvring speed).",
+        "1.5 Vs (“safe speed near the ground”).",
+        "Maximum L/D."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-11",
+      "question": "Which pair of complementary units does the Guide recommend you study together with Unit 15?",
+      "expected_behavior": "answer",
+      "expected_answer": "Unit 16 Circuit Joining & Execution and Unit 20 Launch Emergencies.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 11,
+      "choices": [
+        "Unit 16 Circuit Joining & Execution and Unit 20 Launch Emergencies.",
+        "Unit 17 Wave & Unit 30 Thermals.",
+        "Unit 18 Navigation & Unit 21 Radio.",
+        "Unit 23 Rules of the Air & Unit 24 Airmanship."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-12",
+      "question": "A student repeatedly selects the same circuit joining point regardless of height or wind. The probable root cause is:",
+      "expected_behavior": "answer",
+      "expected_answer": "Flying by rote instead of assessing current conditions.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 5
+        }
+      ],
+      "category": "common_problems",
+      "content_type": "common_problems",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 12,
+      "choices": [
+        "Weak radio discipline.",
+        "Flying by rote instead of assessing current conditions.",
+        "Excess ballast.",
+        "Over-use of full scan."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-13",
+      "question": "When height is becoming marginal, what is the most important consideration when selecting a circuit joining option?",
+      "expected_behavior": "answer",
+      "expected_answer": "Preserving a safe landing option while maintaining separation from other traffic.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 1
+        }
+      ],
+      "category": "joining",
+      "content_type": "key_messages",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 13,
+      "choices": [
+        "Joining on a 45° entry to downwind whenever possible.",
+        "Preserving a safe landing option while maintaining separation from other traffic.",
+        "Avoiding crosswind joins.",
+        "Completing a standard rectangular circuit regardless of height."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-14",
+      "question": "During circuit planning, what should a pilot do if the planned circuit may bring the aircraft close to obstacles, restricted airspace, or other hazards?",
+      "expected_behavior": "answer",
+      "expected_answer": "Reassess the plan early and adjust the circuit or landing option while maintaining safe separation.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 1
+        }
+      ],
+      "category": "flexibility",
+      "content_type": "key_messages",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 14,
+      "choices": [
+        "Reassess the plan early and adjust the circuit or landing option while maintaining safe separation.",
+        "Continue with the planned circuit unless a GPS ‘airspace’ alert is received.",
+        "Climb above normal circuit height to remain clear of all hazards.",
+        "Fly a wider circuit to create more room, regardless of height or traffic."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-15",
+      "question": "At break-off you set the trim to achieve the planned down-wind speed. If you later need an extra 5 kt, you should:",
+      "expected_behavior": "answer",
+      "expected_answer": "Lower the nose, let the glider accelerate, then re-trim.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 4
+        }
+      ],
+      "category": "trim",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 15,
+      "choices": [
+        "Ignore it—speed is fixed.",
+        "Lower the nose, let the glider accelerate, then re-trim.",
+        "Pull full air-brake briefly.",
+        "Raise the nose and add flap."
+      ],
+      "question_type": "multiple_choice",
+      "note": "Inferred from Unit 7 trim practice + Unit 15 ‘Trim to an appropriate speed’."
+    },
+    {
+      "id": "gpc-u15-16",
+      "question": "Which statement about radio calls is correct?",
+      "expected_behavior": "answer",
+      "expected_answer": "At least one call when joining, plus another on base, this improves situational awareness",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 4
+        }
+      ],
+      "category": "radio",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 16,
+      "choices": [
+        "Calls are optional in gliding circuits.",
+        "You must call on every leg.",
+        "At least one call when joining, plus another on base, this improves situational awareness",
+        "Only the duty instructor may transmit"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-17",
+      "question": "Why is a base leg into wind generally preferred when a choice of circuit direction is available?",
+      "expected_behavior": "answer",
+      "expected_answer": "It provides more time for planning and reduces the likelihood of a rushed turn onto final.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 4
+        }
+      ],
+      "category": "circuit_direction",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 17,
+      "choices": [
+        "It ensures the shortest possible landing distance.",
+        "It provides more time for planning and reduces the likelihood of a rushed turn onto final.",
+        "It eliminates the need to adjust the circuit for wind drift.",
+        "It allows the aircraft to fly a wider circuit without losing height."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-18",
+      "question": "A late decision to break-off often leads to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Rushed planning and a high-workload circuit.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 2
+        }
+      ],
+      "category": "break_off",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 18,
+      "choices": [
+        "Extra soaring time.",
+        "Rushed planning and a high-workload circuit.",
+        "Smoother finals.",
+        "Better obstacle clearance."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u15-19",
+      "question": "During pre-landing checks you discover the undercarriage will not lock down. What is the most appropriate action?",
+      "expected_behavior": "answer",
+      "expected_answer": "Reassess the landing plan and, if possible, select a landing area and surface that will minimise damage if the undercarriage collapses.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 4
+        }
+      ],
+      "category": "emergencies",
+      "content_type": "theory",
+      "difficulty": "hard",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 19,
+      "choices": [
+        "Continue with the planned landing, as the undercarriage may lock itself during touchdown.",
+        "Reassess the landing plan and, if possible, select a landing area and surface that will minimise damage if the undercarriage collapses.",
+        "Return to soaring flight and attempt to rectify the problem before landing.",
+        "Delay making a decision until established on final approach."
+      ],
+      "question_type": "multiple_choice",
+      "note": "Aligned with Unit 15 reassessment / emergency options within the circuit area."
+    },
+    {
+      "id": "gpc-u15-20",
+      "question": "Competence for this unit requires that the glider is fully configured (flaps, gear, straps, radio, ballast, etc.) by:",
+      "expected_behavior": "answer",
+      "expected_answer": "Early on the down-wind leg.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 15,
+          "page": 4
+        }
+      ],
+      "category": "configuration",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit15-break-off-circuit-planning",
+      "source_item": 20,
+      "choices": [
+        "Mid-base leg.",
+        "Short final.",
+        "Early on the down-wind leg.",
+        "50 ft above ground."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

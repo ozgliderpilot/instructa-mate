@@ -1,0 +1,564 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 8 Sustained Turns, All Controls Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit8-sustained-turns-all-controls",
+      "title": "GPC Unit 8 - Sustained Turns, All Controls",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSdFsZn4ttnCFyK2ei5AV7KXYjEoTDgmb5jrtQZf9RDLyt0Fkg/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u8-01",
+      "question": "What action must never be omitted before beginning any turn?",
+      "expected_behavior": "answer",
+      "expected_answer": "Conduct a targeted lookout scan.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 2
+        }
+      ],
+      "category": "lookout",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 1,
+      "choices": [
+        "Trim for the new speed.",
+        "Centre the slip ball.",
+        "Conduct a targeted lookout scan.",
+        "Lower the nose 2 °."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-02",
+      "question": "What is the primary control that produces the bank required to turn a glider?",
+      "expected_behavior": "answer",
+      "expected_answer": "Aileron.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 2
+        }
+      ],
+      "category": "controls",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 2,
+      "choices": [
+        "Elevator.",
+        "Rudder.",
+        "Spoiler.",
+        "Aileron."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-03",
+      "question": "If, while rolling into a turn, the nose hesitates before following the bank, what is the usual cause?",
+      "expected_behavior": "answer",
+      "expected_answer": "Insufficient rudder.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 2
+        }
+      ],
+      "category": "coordination",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 3,
+      "choices": [
+        "Too much elevator.",
+        "Insufficient rudder.",
+        "Excess ballast.",
+        "Stuck aileron."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-04",
+      "question": "During a sustained turn, the mnemonic \"A – R – E\" reminds you to check what?",
+      "expected_behavior": "answer",
+      "expected_answer": "Aileron-Rudder-Elevator.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 3
+        }
+      ],
+      "category": "sustaining_turn",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 4,
+      "choices": [
+        "Altitude-Radio-Engine.",
+        "Aileron-Rudder-Elevator.",
+        "Airspeed-Radius-Energy.",
+        "Attitude-Runway-Exit point."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-05",
+      "question": "At 65 kt a 180° turn using 30° of bank will lose roughly how much height?",
+      "expected_behavior": "answer",
+      "expected_answer": "75 ft.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 4
+        }
+      ],
+      "category": "turn_performance",
+      "content_type": "theory",
+      "difficulty": "hard",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 5,
+      "choices": [
+        "450 ft.",
+        "240 ft.",
+        "125 ft",
+        "75 ft.",
+        "10 ft"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-06",
+      "question": "Increasing the angle of bank while holding the same speed will make the turn radius and time to turn change how?",
+      "expected_behavior": "answer",
+      "expected_answer": "Smaller / shorter.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 4
+        }
+      ],
+      "category": "turn_performance",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 6,
+      "choices": [
+        "Larger / longer.",
+        "Smaller / shorter.",
+        "Smaller / longer.",
+        "Larger / shorter."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-07",
+      "question": "If a steep-banked glider begins to over-bank without pilot input, what should your first corrective action be?",
+      "expected_behavior": "answer",
+      "expected_answer": "Use coordinated opposite aileron and rudder to reduce bank.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 3
+        }
+      ],
+      "category": "overbank",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 7,
+      "choices": [
+        "Use coordinated opposite aileron and rudder to reduce bank.",
+        "Apply opposite rudder only.",
+        "Pull back on the stick.",
+        "Extend a little air-brake."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-08",
+      "question": "What is the secondary effect of rudder in a glider?",
+      "expected_behavior": "answer",
+      "expected_answer": "Roll in the direction of yaw.",
+      "citations": [
+        {
+          "source": "trainer",
+          "unit": 6,
+          "page": 5
+        }
+      ],
+      "category": "rudder",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 8,
+      "choices": [
+        "Pitch change.",
+        "Increase in speed.",
+        "Flap deflection.",
+        "Roll in the direction of yaw."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-09",
+      "question": "While learning sustained turns, what bank angles does the Pilot Guide recommend?",
+      "expected_behavior": "answer",
+      "expected_answer": "Moderate (≈ 20–30 °) bank angles.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 1
+        }
+      ],
+      "category": "bank_angle",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 9,
+      "choices": [
+        "45–60 ° of bank.",
+        "Moderate (≈ 20–30 °) bank angles.",
+        "Rudder only, no aileron.",
+        "Negative flap settings."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-10",
+      "question": "What is the best visual indicator that the turn is properly coordinated?",
+      "expected_behavior": "answer",
+      "expected_answer": "Centred yaw string.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 2
+        },
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 3
+        }
+      ],
+      "category": "coordination",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 10,
+      "choices": [
+        "Centred slip ball.",
+        "Constant compass heading.",
+        "Centred yaw string.",
+        "Level wingtip."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-11",
+      "question": "During a steady, coordinated 30° turn, the nose begins to lower and the airspeed starts to increase while bank remains constant. What should the pilot do first?",
+      "expected_behavior": "answer",
+      "expected_answer": "Increase back-stick/elevator pressure.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 3
+        },
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 5
+        }
+      ],
+      "category": "attitude",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 11,
+      "choices": [
+        "Add right rudder.",
+        "Increase back-stick/elevator pressure.",
+        "Close the air-brakes.",
+        "Reduce bank with opposite aileron only"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-12",
+      "question": "During a steady, coordinated turn, how does the pilot primarily maintain the correct airspeed?",
+      "expected_behavior": "answer",
+      "expected_answer": "Pitch attitude with the elevator.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 1
+        },
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 3
+        }
+      ],
+      "category": "attitude",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 12,
+      "choices": [
+        "Trim lever alone.",
+        "Rudder pressure.",
+        "Pitch attitude with the elevator.",
+        "Bank angle with the ailerons."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-13",
+      "question": "To roll out accurately on a selected heading, when should the pilot begin levelling the wings?",
+      "expected_behavior": "answer",
+      "expected_answer": "Just before the selected heading is reached, allowing for inertia.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 3
+        }
+      ],
+      "category": "exit",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 13,
+      "choices": [
+        "After the heading is reached.",
+        "30° before the selected heading.",
+        "Whenever the slip ball or yaw string is centred.",
+        "Just before the selected heading is reached, allowing for inertia."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-14",
+      "question": "If the pilot continues to hold rudder after the desired bank angle has been reached and the ailerons have been neutralised, what will the glider most likely do?",
+      "expected_behavior": "answer",
+      "expected_answer": "Yaw, causing the nose to swing from side to side.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 3
+        },
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 5
+        }
+      ],
+      "category": "coordination",
+      "content_type": "common_problems",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 14,
+      "choices": [
+        "Yaw, causing the nose to swing from side to side.",
+        "Enter a spiral dive.",
+        "Climb rapidly.",
+        "Stall prematurely."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-15",
+      "question": "Why can gliders with large wingspans tend to over-bank during steep turns?",
+      "expected_behavior": "answer",
+      "expected_answer": "Travels faster and develops more lift.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 3
+        }
+      ],
+      "category": "overbank",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 15,
+      "choices": [
+        "Has less induced drag.",
+        "Travels faster and develops more lift.",
+        "Experiences down-wash.",
+        "Is lighter than the inner wing."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-16",
+      "question": "Good practice for varying the angle of bank is to move controls how?",
+      "expected_behavior": "answer",
+      "expected_answer": "Aileron and rudder together in the same direction.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 3
+        }
+      ],
+      "category": "coordination",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 16,
+      "choices": [
+        "Aileron first, then rudder.",
+        "Rudder first, then aileron.",
+        "Aileron and rudder together in the same direction.",
+        "Only the rudder unless above 45 ° bank."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-17",
+      "question": "While turning, how should your primary scan travel?",
+      "expected_behavior": "answer",
+      "expected_answer": "Along the horizon, back to the nose, and repeat.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 3
+        }
+      ],
+      "category": "lookout",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 17,
+      "choices": [
+        "From ASI to compass.",
+        "Wingtip → cowling → cockpit floor.",
+        "Along the horizon, back to the nose, and repeat.",
+        "Directly at the wingtip to judge angle."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-18",
+      "question": "Which earlier unit is named as a prerequisite for Unit 8?",
+      "expected_behavior": "answer",
+      "expected_answer": "Unit 6 Aileron Drag & Rudder Coordination.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 18,
+      "choices": [
+        "Unit 7 Straight Flight & Trim.",
+        "Unit 6 Aileron Drag & Rudder Coordination.",
+        "Unit 5 Primary Effects.",
+        "Unit 4 Orientation & Stability."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-19",
+      "question": "What does the phrase \"The Nose Knows\" in this unit emphasise?",
+      "expected_behavior": "answer",
+      "expected_answer": "Changes in nose attitude reveal airspeed changes before the ASI does.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 3
+        }
+      ],
+      "category": "attitude",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 19,
+      "choices": [
+        "The yaw string is unreliable,",
+        "Changes in nose attitude reveal airspeed changes before the ASI does.",
+        "Elevator trim moves the C of G.",
+        "Forward slips reduce altitude."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u8-20",
+      "question": "In the Pilot Guide's table, halving the bank angle from 40° to 20° (at 65 kt) roughly does what to the radius of a 180° turn?",
+      "expected_behavior": "answer",
+      "expected_answer": "More than doubles (≈ 450 ft → 1 000 ft)",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 8,
+          "page": 4
+        }
+      ],
+      "category": "turn_performance",
+      "content_type": "theory",
+      "difficulty": "hard",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit8-sustained-turns-all-controls",
+      "source_item": 20,
+      "choices": [
+        "Has no effect.",
+        "Halves.",
+        "Doubles.",
+        "More than doubles (≈ 450 ft → 1 000 ft)"
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}

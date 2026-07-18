@@ -1,0 +1,538 @@
+{
+  "version": 1,
+  "description": "Refuse-or-cite Q&A GPC unit tests. Seeded from live club GPC Unit 12 Slow Flying and Stalling Google Form.",
+  "source_forms": [
+    {
+      "id": "gpc-unit12-slow-flying-and-stalling",
+      "title": "GPC Unit 12 - Slow Flying and Stalling",
+      "path": "https://docs.google.com/forms/d/e/1FAIpQLSeSnRIRzoIY7Kxgh136UTuinhM4uOfm2tpYadV5IHpAnMSY6A/viewform"
+    }
+  ],
+  "items": [
+    {
+      "id": "gpc-u12-01",
+      "question": "The main training aim of this unit is to ensure pilots can:",
+      "expected_behavior": "answer",
+      "expected_answer": "Recognise, prevent and recover from stalls with minimum height loss.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 1
+        }
+      ],
+      "category": "aim",
+      "content_type": "aim",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 1,
+      "choices": [
+        "Identify wave entry points.",
+        "Compute best glide distance.",
+        "Practise side-slips.",
+        "Recognise, prevent and recover from stalls with minimum height loss."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-02",
+      "question": "Immediately below 1 000 ft AGL you must fly at or above a speed equal to?",
+      "expected_behavior": "answer",
+      "expected_answer": "1.5 × Vs (the “safe speed near the ground”)",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 5
+        }
+      ],
+      "category": "safe_speed",
+      "content_type": "competency",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 2,
+      "choices": [
+        "1.2 × Vs",
+        "1.3 × Vs",
+        "1.5 × Vs (the “safe speed near the ground”)",
+        "Vs + 5 kt"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-03",
+      "question": "Which of the following is not an early symptom of the approach-to-stall listed in the Pilot Guide?",
+      "expected_behavior": "answer",
+      "expected_answer": "Sudden increase in variometer climb rate.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 2
+        }
+      ],
+      "category": "stall_symptoms",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 3,
+      "choices": [
+        "Quieter cockpit sounds.",
+        "Back-stick movement.",
+        "Mild buffet.",
+        "Sudden increase in variometer climb rate."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-04",
+      "question": "A stall with little or no nose drop is characterised by:",
+      "expected_behavior": "answer",
+      "expected_answer": "Very high sink rate.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 3
+        }
+      ],
+      "category": "stall_types",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 4,
+      "choices": [
+        "Abrupt nose drop only.",
+        "Wing drop before stall.",
+        "Very high sink rate.",
+        "Immediate spin entry."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-05",
+      "question": "Loss of lateral damping at the stall most commonly results in:",
+      "expected_behavior": "answer",
+      "expected_answer": "One wing dropping further and further.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 3
+        }
+      ],
+      "category": "wing_drop",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 5,
+      "choices": [
+        "Nose pitching up again.",
+        "One wing dropping further and further.",
+        "Instant recovery to normal flight.",
+        "Rudder locking."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-06",
+      "question": "The first recovery action for any stall or approaching stall is always to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Move the stick forward to un-stall the wing.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 3
+        }
+      ],
+      "category": "recovery",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 6,
+      "choices": [
+        "Apply opposite rudder.",
+        "Close airbrakes.",
+        "Bank level.",
+        "Move the stick forward to un-stall the wing."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-07",
+      "question": "During recovery you should hold the stick forward until the speed has increased to roughly",
+      "expected_behavior": "answer",
+      "expected_answer": "1.5 × Vs",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 3
+        }
+      ],
+      "category": "recovery",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 7,
+      "choices": [
+        "Vs",
+        "1.2 × Vs",
+        "1.5 × Vs",
+        "2 × Vs"
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-08",
+      "question": "According to the Key Messages, if the glider “doesn’t feel right” you should:",
+      "expected_behavior": "answer",
+      "expected_answer": "Lower the nose—stick forward.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 1
+        }
+      ],
+      "category": "recovery",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 8,
+      "choices": [
+        "Re-trim immediately.",
+        "Increase back-stick pressure.",
+        "Check the ASI and sit tight.",
+        "Lower the nose—stick forward."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-09",
+      "question": "Which pair of pre-requisite GPC units must be completed before GPC Unit 12?",
+      "expected_behavior": "answer",
+      "expected_answer": "Units 7 & 8.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 1
+        }
+      ],
+      "category": "admin",
+      "content_type": "admin",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 9,
+      "choices": [
+        "Units 5 & 6.",
+        "Units 7 & 8.",
+        "Unit 9 & 10.",
+        "Unit 10 & 11."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-10",
+      "question": "Lowering positive flap generally ________ stall speed, while opening full airbrake _______ it.",
+      "expected_behavior": "answer",
+      "expected_answer": "Lowers / raises.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 6
+        },
+        {
+          "source": "pilot",
+          "unit": 10,
+          "page": 1
+        }
+      ],
+      "category": "stall_speed_factors",
+      "content_type": "self_check",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 10,
+      "choices": [
+        "Raises / raises.",
+        "Raises / lowers.",
+        "Lowers / raises.",
+        "Lowers / no effect."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-11",
+      "question": "After a stall with nose drop, keeping the stick fully back will most likely cause the glider to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Pitch steeply up and restall.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 3
+        }
+      ],
+      "category": "recovery",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 11,
+      "choices": [
+        "Pitch steeply up and restall.",
+        "Level itself automatically.",
+        "Enter a steep spiral dive.",
+        "Accelerate rapidly."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-12",
+      "question": "During slow-flight practice you are asked to trim and maintain 45 kt. If back-pressure is still required, the correct action is to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Re-trim further nose-up.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 4
+        }
+      ],
+      "category": "slow_flight",
+      "content_type": "exercise",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 12,
+      "choices": [
+        "Add ballast.",
+        "Re-trim further nose-up.",
+        "Deploy half airbrake.",
+        "Select negative flap."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-13",
+      "question": "The designer’s use of wash-out delays wing drop by ensuring:",
+      "expected_behavior": "answer",
+      "expected_answer": "Wing-root stalls before the wingtip.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 4
+        }
+      ],
+      "category": "aircraft_design",
+      "content_type": "theory",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 13,
+      "choices": [
+        "Wingtip stalls first.",
+        "Tailplane stalls first.",
+        "Wing-root stalls before the wingtip.",
+        "Ailerons stall before elevators."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-14",
+      "question": "A stall in a turn may show little or no nose-high attitude because:",
+      "expected_behavior": "answer",
+      "expected_answer": "The nose is already pitched down on the horizon reference.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 6
+        }
+      ],
+      "category": "stall_in_turn",
+      "content_type": "self_check",
+      "difficulty": "hard",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 14,
+      "choices": [
+        "The nose is already pitched down on the horizon reference.",
+        "Bank reduces lift vector.",
+        "ASI lags badly.",
+        "Turns cannot stall."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-15",
+      "question": "If a wing drops close to the stall you should apply:",
+      "expected_behavior": "answer",
+      "expected_answer": "Forward stick and just enough rudder to stop the yaw.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 4
+        }
+      ],
+      "category": "wing_drop",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 15,
+      "choices": [
+        "Full opposite rudder only.",
+        "Aileron into the drop.",
+        "Full back-stick to raise the nose.",
+        "Forward stick and just enough rudder to stop the yaw."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-16",
+      "question": "The Pilot Guide recommends looking outside at the horizon during recovery chiefly to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Aid orientation and judge when the wing is flying again.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 3
+        }
+      ],
+      "category": "recovery",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 16,
+      "choices": [
+        "Check compass alignment.",
+        "Monitor GPS groundspeed.",
+        "Aid orientation and judge when the wing is flying again.",
+        "Observe sun angle for drift."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-17",
+      "question": "Stall practice should be introduced high enough to allow recovery; where thermal height is limited, instructors may:",
+      "expected_behavior": "answer",
+      "expected_answer": "Take higher aero-tows or multiple winch launches.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 4
+        }
+      ],
+      "category": "exercise",
+      "content_type": "exercise",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 17,
+      "choices": [
+        "Use ridge lift instead.",
+        "Take higher aero-tows or multiple winch launches.",
+        "Skip the session.",
+        "Practise spins instead."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-18",
+      "question": "A pilot who “does not fly frequently” should:",
+      "expected_behavior": "answer",
+      "expected_answer": "Arrange refresher training to regain stall competence.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 1
+        }
+      ],
+      "category": "currency",
+      "content_type": "key_messages",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 18,
+      "choices": [
+        "Arrange refresher training to regain stall competence.",
+        "Attempt solo stall practice.",
+        "Ignore slow-flight until refreshing circuits.",
+        "Fly with ballast below minimum weight."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-19",
+      "question": "After the wing has unstalled during recovery, pulling back too sharply too soon may cause the glider to:",
+      "expected_behavior": "answer",
+      "expected_answer": "Stall again",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 3
+        }
+      ],
+      "category": "recovery",
+      "content_type": "theory",
+      "difficulty": "easy",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 19,
+      "choices": [
+        "Stall again",
+        "Recover more quickly.",
+        "Lose all rudder authority.",
+        "Enter normal thermalling flight."
+      ],
+      "question_type": "multiple_choice"
+    },
+    {
+      "id": "gpc-u12-20",
+      "question": "A common cause of accidents during a stall is that the pilot:",
+      "expected_behavior": "answer",
+      "expected_answer": "Holds the stick back because the glider appears to be descending toward the ground.",
+      "citations": [
+        {
+          "source": "pilot",
+          "unit": 12,
+          "page": 5
+        }
+      ],
+      "category": "common_problems",
+      "content_type": "common_problems",
+      "difficulty": "medium",
+      "verified_absent_terms": [],
+      "source_form": "gpc-unit12-slow-flying-and-stalling",
+      "source_item": 20,
+      "choices": [
+        "Uses rudder to help stop a wing drop.",
+        "Lowers the nose slightly to reduce angle of attack.",
+        "Holds the stick back because the glider appears to be descending toward the ground.",
+        "Allows the glider to regain flying speed before recovering."
+      ],
+      "question_type": "multiple_choice"
+    }
+  ]
+}
