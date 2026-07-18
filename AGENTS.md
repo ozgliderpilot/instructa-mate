@@ -3,10 +3,11 @@
 ## Cursor Cloud specific instructions
 
 InstructaMate is a **Python 3.12+ library** — a deterministic stage-1 parser that
-turns GFA guide PDFs into verified Markdown, a stage-2 chunker, and stage-3 Atlas
-ingest (explicit Voyage embeddings + Sync Plan). There is **no server, daemon, or
-CLI**; the library is invoked as Python functions and validated with `pytest`.
-Standard build/test commands live in `README.md` (section "Running stage 1–3").
+turns GFA guide PDFs into verified Markdown, a stage-2 chunker, stage-3 Atlas
+ingest/retrieval (explicit Voyage embeddings + Sync Plan + hybrid/rerank), and
+stage-4 refuse-or-cite Q&A. There is **no server, daemon, or CLI**; the library is
+invoked as Python functions and validated with `pytest`.
+Standard build/test commands live in `README.md` (section "Running stage 1–4").
 
 ### Environment
 - Dependencies are installed into a virtualenv at `.venv/` by the startup update script

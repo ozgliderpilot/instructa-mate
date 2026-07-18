@@ -10,6 +10,7 @@ dependencies = [
     "pdfplumber>=0.11", # table sidekick (not used yet in slice 1)
     "pymongo>=4.9",     # Atlas ingest + Vector Search index ensure
     "voyageai>=0.3",    # explicit voyage-4-large embeddings
+    "anthropic>=0.40",  # refuse-or-cite Q&A completion
 ]
 
 [project.optional-dependencies]
