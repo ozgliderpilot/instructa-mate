@@ -36,7 +36,7 @@ __all__ = [
 ]
 
 CANONICAL_REFUSAL = "not covered in the guides I have"
-DEFAULT_COMPLETION_MODEL = "claude-sonnet-4-5"
+DEFAULT_COMPLETION_MODEL = "claude-haiku-4-5"
 
 _SYSTEM_PROMPT = """\
 You are InstructaMate, a citation-safe co-pilot for gliding instructors.
