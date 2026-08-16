@@ -33,6 +33,7 @@ __all__ = [
     "QaResult",
     "answer_from_parents",
     "answer_question",
+    "page_from_token",
 ]
 
 CANONICAL_REFUSAL = "not covered in the guides I have"
@@ -48,14 +49,32 @@ If the chunks do not cover the question, refuse. Do not guess.
 
 Respond with a single JSON object and nothing else:
 - Covered: {"grounded": true, "answer": "<concise answer>", \
-"citations": [{"source": "<pilot|trainer>", "unit": "<unit id>", "page": <int>}]}
+"citations": [{"source": "<pilot|trainer|other>", "unit": "<unit id>", "page": <int>}]}
 - Not covered: {"grounded": false}
 
 Citations must use source/unit/page values that appear on the provided chunks.
-Page is the integer page within the unit (e.g. token "5-2" → page 2).
+Page is the integer page within the unit (e.g. token "5-2" → page 2, or bare "3" → page 3).
 """
 
 _PAGE_TOKEN = re.compile(r"^(?P<unit>.+)-(?P<page>\d+)$")
+_BARE_PAGE_TOKEN = re.compile(r"^(?P<page>\d+)$")
+
+
+def page_from_token(token: str, unit: str) -> int | None:
+    """Parse a Markdown page token into a citation page int, or ``None`` if invalid.
+
+    Guide units use ``{unit}-{page}`` (e.g. ``5-2``, ``13A-1``); other docs may use a
+    bare page number (e.g. ``3``).
+    """
+    match = _PAGE_TOKEN.match(token)
+    if match is not None:
+        if match.group("unit") != unit:
+            return None
+        return int(match.group("page"))
+    bare = _BARE_PAGE_TOKEN.match(token)
+    if bare is not None:
+        return int(bare.group("page"))
+    return None
 
 
 @dataclass(frozen=True)
@@ -256,10 +275,8 @@ def _allowed_citation_keys(
     keys: set[tuple[str, str, int]] = set()
     for parent in parents:
         for token in parent.pages:
-            match = _PAGE_TOKEN.match(token)
-            if match is None:
+            page = page_from_token(token, parent.unit)
+            if page is None:
                 continue
-            if match.group("unit") != parent.unit:
-                continue
-            keys.add((parent.source, parent.unit, int(match.group("page"))))
+            keys.add((parent.source, parent.unit, page))
     return keys

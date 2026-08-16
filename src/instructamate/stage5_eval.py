@@ -15,7 +15,6 @@ Public seams:
 from __future__ import annotations
 
 import json
-import re
 from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
@@ -35,6 +34,7 @@ from instructamate.stage4_qa import (
     Completer,
     QaResult,
     answer_from_parents,
+    page_from_token,
 )
 
 __all__ = [
@@ -60,8 +60,6 @@ __all__ = [
     "run_ablation_curve",
     "score_refusal",
 ]
-
-_PAGE_TOKEN = re.compile(r"^(?P<unit>.+)-(?P<page>\d+)$")
 
 DEFAULT_GOLDEN_SET = (
     Path(__file__).resolve().parents[2] / "evals" / "golden_set.json"
@@ -677,10 +675,8 @@ def _citation_keys_from_parents(
     keys: set[tuple[str, str, int]] = set()
     for parent in parents:
         for token in parent.pages:
-            match = _PAGE_TOKEN.match(token)
-            if match is None:
+            page = page_from_token(token, parent.unit)
+            if page is None:
                 continue
-            if match.group("unit") != parent.unit:
-                continue
-            keys.add((parent.source, parent.unit, int(match.group("page"))))
+            keys.add((parent.source, parent.unit, page))
     return keys

@@ -123,7 +123,11 @@ def _md_tokens(text: str) -> Counter:
 def _md_files() -> list[Path]:
     if not MD_ROOT.exists():
         return []
-    return sorted(MD_ROOT.glob("*/unit-*.md"))
+    # Stage-1 retention only applies to guide Sources with a PDF page map (pilot/trainer).
+    # Hand-verified ``other/`` docs are outside that seam.
+    return sorted(
+        p for p in MD_ROOT.glob("*/unit-*.md") if p.parent.name in SOLO
+    )
 
 
 def _key(md_path: Path) -> str:

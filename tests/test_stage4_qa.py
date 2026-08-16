@@ -116,6 +116,42 @@ def test_unsupported_citation_is_refused():
     assert result.citations == ()
 
 
+def test_bare_page_tokens_are_citable():
+    from instructamate.stage4_qa import page_from_token
+
+    assert page_from_token("3", "aei") == 3
+    assert page_from_token("5-2", "5") == 2
+    assert page_from_token("5-2", "aei") is None
+    assert page_from_token("aei-3", "aei") == 3
+
+    parents = [
+        ParentHit(
+            id="other:aei:privileges-and-limitations",
+            source="other",
+            unit="aei",
+            pages=("2",),
+            heading_path=("Privileges and Limitations",),
+            text="The AEI is not authorised to allow the other person on the controls below 800ft AGL.",
+            content_type="key_messages",
+        )
+    ]
+
+    result = answer_from_parents(
+        "May an AEI hand over controls below 800ft?",
+        parents=parents,
+        completer=_FixedCompleter(
+            {
+                "grounded": True,
+                "answer": "No — not below 800ft AGL.",
+                "citations": [{"source": "other", "unit": "aei", "page": 2}],
+            }
+        ),
+    )
+
+    assert result.grounded is True
+    assert result.citations == (Citation(source="other", unit="aei", page=2),)
+
+
 def test_answer_question_retrieves_then_grounds_or_refuses():
     parents = {
         "pilot:5:key-messages": {
