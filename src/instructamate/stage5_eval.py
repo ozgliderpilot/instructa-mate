@@ -7,13 +7,16 @@ Public seams:
 - :func:`load_golden_set` — load/normalize ``evals/golden_set.json``
 - :func:`retrieve_for_step` — Stage 3 ablation step → parents
 - :func:`judge_citation_faithfulness` / :func:`judge_groundedness` — LLM-as-judge
+- :func:`judge_answer_correctness` — LLM-as-judge vs golden ``expected_answer``
 - :func:`run_ablation_curve` — vector → hybrid → hybrid+rerank metrics
+- :class:`ItemEvalResult` / ``on_item`` — per-item progress callback
 - :class:`EvalTracer` / :class:`NullTracer` / :class:`LangfuseTracer` — curve traces
 """
 from __future__ import annotations
 
 import json
 import re
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Literal, Protocol, Sequence
@@ -39,13 +42,16 @@ __all__ = [
     "AblationPoint",
     "AblationStep",
     "CompleterJudge",
+    "CorrectnessVerdict",
     "DEFAULT_GOLDEN_SET",
     "EvalItem",
     "EvalTracer",
+    "ItemEvalResult",
     "Judge",
     "JudgeVerdict",
     "LangfuseTracer",
     "NullTracer",
+    "judge_answer_correctness",
     "judge_citation_faithfulness",
     "judge_groundedness",
     "load_golden_set",
@@ -87,6 +93,17 @@ Respond with a single JSON object and nothing else:
 Set faithful to true when cited locations (if any) match the evidence pages.
 """
 
+_CORRECTNESS_SYSTEM = """\
+You are judging answer correctness for InstructaMate against a gold answer.
+
+correctness: the candidate answer must convey the same essential facts as the
+expected answer for this question. Paraphrase is fine; missing a required fact,
+contradicting the gold, or refusing when gold answers is incorrect.
+
+Respond with a single JSON object and nothing else:
+{"correct": <bool>, "rationale": "<short reason>"}
+"""
+
 
 @dataclass(frozen=True)
 class EvalItem:
@@ -105,10 +122,18 @@ class EvalItem:
 
 @dataclass(frozen=True)
 class JudgeVerdict:
-    """Structured LLM-as-judge outcome."""
+    """Structured LLM-as-judge outcome for faithfulness / groundedness."""
 
     faithful: bool
     grounded: bool
+    rationale: str
+
+
+@dataclass(frozen=True)
+class CorrectnessVerdict:
+    """Structured LLM-as-judge outcome vs golden ``expected_answer``."""
+
+    correct: bool
     rationale: str
 
 
@@ -121,6 +146,23 @@ class AblationPoint:
     refusal_accuracy: float | None
     faithfulness: float | None
     groundedness: float | None
+    correctness: float | None
+
+
+@dataclass(frozen=True)
+class ItemEvalResult:
+    """One item's scores under one ablation step (for progress callbacks)."""
+
+    step: AblationStep
+    index: int
+    total: int
+    item: EvalItem
+    result: QaResult | None
+    recall: float | None
+    refusal_ok: bool | None
+    faithful: bool | None
+    grounded: bool | None
+    correct: bool | None
 
 
 class Judge(Protocol):
@@ -193,7 +235,7 @@ class LangfuseTracer:
             output=payload,
             metadata={"step": step, "item_id": item_id},
         ) as obs:
-            for key in ("recall", "refusal_ok", "faithful", "grounded"):
+            for key in ("recall", "refusal_ok", "faithful", "grounded", "correct"):
                 if key in payload and payload[key] is not None:
                     value = payload[key]
                     if isinstance(value, bool):
@@ -328,6 +370,21 @@ def judge_groundedness(
     return _parse_verdict(judge.judge(_GROUNDEDNESS_SYSTEM, user))
 
 
+def judge_answer_correctness(
+    question: str,
+    answer: str,
+    expected_answer: str,
+    judge: Judge,
+) -> CorrectnessVerdict:
+    """LLM-as-judge: does ``answer`` match gold ``expected_answer`` in substance?"""
+    user = (
+        f"Question:\n{question}\n\n"
+        f"Expected answer:\n{expected_answer}\n\n"
+        f"Candidate answer:\n{answer}"
+    )
+    return _parse_correctness_verdict(judge.judge(_CORRECTNESS_SYSTEM, user))
+
+
 def run_ablation_curve(
     items: Sequence[EvalItem],
     collection: Any,
@@ -340,13 +397,15 @@ def run_ablation_curve(
     n: int = DEFAULT_N,
     p: int = DEFAULT_P,
     tracer: EvalTracer | None = None,
+    on_item: Callable[[ItemEvalResult], None] | None = None,
 ) -> list[AblationPoint]:
     """Score the three Stage 3 ablation steps on ``items``.
 
     ``recall_at_k`` averages over items with non-empty gold citations.
     ``refusal_accuracy`` averages over all items when ``completer`` is set.
-    Faithfulness / groundedness average over grounded answers when ``judge``
-    is set. Traces land on ``tracer`` when provided.
+    Faithfulness / groundedness / correctness average over grounded answers
+    when ``judge`` is set. ``on_item`` receives each item as it finishes.
+    Traces land on ``tracer`` when provided.
     """
     active = tracer if tracer is not None else NullTracer()
     active.start_run(
@@ -367,6 +426,7 @@ def run_ablation_curve(
                 n=n,
                 p=p,
                 tracer=active,
+                on_item=on_item,
             )
             for step in ABLATION_STEPS
         ]
@@ -387,13 +447,16 @@ def _score_step(
     n: int,
     p: int,
     tracer: EvalTracer,
+    on_item: Callable[[ItemEvalResult], None] | None,
 ) -> AblationPoint:
     recalls: list[float] = []
     refusal_hits: list[float] = []
     faithful_hits: list[float] = []
     grounded_hits: list[float] = []
+    correct_hits: list[float] = []
+    total = len(items)
 
-    for item in items:
+    for index, item in enumerate(items, start=1):
         parents = retrieve_for_step(
             step,
             item.question,
@@ -417,6 +480,7 @@ def _score_step(
 
         faithful: bool | None = None
         grounded: bool | None = None
+        correct: bool | None = None
         if (
             judge is not None
             and result is not None
@@ -436,10 +500,18 @@ def _score_step(
                 parents,
                 judge,
             )
+            correct_verdict = judge_answer_correctness(
+                item.question,
+                result.answer,
+                item.expected_answer,
+                judge,
+            )
             faithful = faith_verdict.faithful
             grounded = ground_verdict.grounded
+            correct = correct_verdict.correct
             faithful_hits.append(1.0 if faithful else 0.0)
             grounded_hits.append(1.0 if grounded else 0.0)
+            correct_hits.append(1.0 if correct else 0.0)
 
         tracer.trace_item(
             step=step,
@@ -448,7 +520,23 @@ def _score_step(
             refusal_ok=refusal_ok,
             faithful=faithful,
             grounded=grounded,
+            correct=correct,
         )
+        if on_item is not None:
+            on_item(
+                ItemEvalResult(
+                    step=step,
+                    index=index,
+                    total=total,
+                    item=item,
+                    result=result,
+                    recall=recall,
+                    refusal_ok=refusal_ok,
+                    faithful=faithful,
+                    grounded=grounded,
+                    correct=correct,
+                )
+            )
 
     return AblationPoint(
         step=step,
@@ -456,6 +544,7 @@ def _score_step(
         refusal_accuracy=_mean_or_none(refusal_hits, enabled=completer is not None),
         faithfulness=_mean_or_none(faithful_hits, enabled=judge is not None),
         groundedness=_mean_or_none(grounded_hits, enabled=judge is not None),
+        correctness=_mean_or_none(correct_hits, enabled=judge is not None),
     )
 
 
@@ -510,6 +599,19 @@ def _parse_verdict(raw: str) -> JudgeVerdict:
     if not isinstance(rationale, str):
         rationale = ""
     return JudgeVerdict(faithful=faithful, grounded=grounded, rationale=rationale.strip())
+
+
+def _parse_correctness_verdict(raw: str) -> CorrectnessVerdict:
+    data = _parse_json_object(raw)
+    if data is None:
+        return CorrectnessVerdict(correct=False, rationale="unparseable judge output")
+    correct = data.get("correct")
+    rationale = data.get("rationale")
+    if not isinstance(correct, bool):
+        return CorrectnessVerdict(correct=False, rationale="invalid judge boolean")
+    if not isinstance(rationale, str):
+        rationale = ""
+    return CorrectnessVerdict(correct=correct, rationale=rationale.strip())
 
 
 def _parse_json_object(raw: str) -> dict[str, Any] | None:

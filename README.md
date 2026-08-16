@@ -153,8 +153,10 @@ Fast-loop metrics on `evals/golden_set.json`:
 
 - automated `recall@k` (gold citations vs top-k parents)
 - automated refusal (structured `grounded:false` / canonical string)
-- LLM-as-judge citation faithfulness + groundedness
-- ablation curve: vector-only → +`$rankFusion` → +parent rerank
+- LLM-as-judge citation faithfulness, groundedness, and answer correctness
+  (vs golden `expected_answer`)
+- ablation curve: vector-only → +`$rankFusion` → +parent rerank (prints each
+  Q/A + metrics as it runs)
 - optional Langfuse traces (`pip install -e ".[eval]"` + Langfuse keys)
 
 ```bash
@@ -286,8 +288,8 @@ scripts/run_eval_ablation.py         Stage 3 ablation curve on golden_set (#40)
       parent `rerank-2.5` (ADR 0005).
 - [~] **Stage 4 — Generation**: refuse-or-cite Q&A (#38); Generated Patter still open.
 - [x] **Eval harness (fast loop)**: `recall@k` + refusal automated; LLM-as-judge
-      faithfulness/groundedness; Stage 3 ablation curve + Langfuse traces (#40).
-      SME answer-correctness milestone still open.
+      faithfulness/groundedness/correctness; Stage 3 ablation curve + Langfuse
+      traces (#40). SME spot-check of judge verdicts still open.
 
 The PoC's two success criteria: (1) citation accuracy at roughly ≥90% on an instructor
 question set, and (2) an instructor-approved, fully-cited static Unit Guide for Unit 5.

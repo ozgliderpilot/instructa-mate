@@ -15,10 +15,13 @@ from instructamate.stage4_qa import CANONICAL_REFUSAL, Citation, QaResult
 from instructamate.stage5_eval import (
     AblationPoint,
     CompleterJudge,
+    CorrectnessVerdict,
     EvalItem,
+    ItemEvalResult,
     JudgeVerdict,
     LangfuseTracer,
     NullTracer,
+    judge_answer_correctness,
     judge_citation_faithfulness,
     judge_groundedness,
     load_golden_set,
@@ -240,6 +243,24 @@ def test_judge_groundedness_parses_structured_verdict() -> None:
     assert "groundedness" in judge.last_system.lower()
 
 
+def test_judge_answer_correctness_compares_to_expected_answer() -> None:
+    judge = _FixedJudge(
+        {"correct": True, "rationale": "Same meaning as gold."}
+    )
+
+    verdict = judge_answer_correctness(
+        question="Where is 9 o'clock?",
+        answer="To the left.",
+        expected_answer="Left.",
+        judge=judge,
+    )
+
+    assert verdict == CorrectnessVerdict(correct=True, rationale="Same meaning as gold.")
+    assert "correctness" in judge.last_system.lower()
+    assert "Left." in judge.last_user
+    assert "To the left." in judge.last_user
+
+
 def test_run_ablation_curve_emits_three_points() -> None:
     items = [
         EvalItem(
@@ -282,10 +303,9 @@ def test_run_ablation_curve_emits_three_points() -> None:
     ]
     collection = _CapturingCollection(child_hits=child_hits, parents=parents)
     completer = _BehaviorCompleter()
-    judge = _FixedJudge(
-        {"faithful": True, "grounded": True, "rationale": "ok"}
-    )
+    judge = _PromptAwareJudge()
     tracer = _RecordingTracer()
+    progress: list[ItemEvalResult] = []
 
     points = run_ablation_curve(
         items,
@@ -296,6 +316,7 @@ def test_run_ablation_curve_emits_three_points() -> None:
         reranker=_IdentityReranker(),
         k=10,
         tracer=tracer,
+        on_item=progress.append,
     )
 
     assert [p.step for p in points] == ["vector", "hybrid", "hybrid_rerank"]
@@ -304,9 +325,17 @@ def test_run_ablation_curve_emits_three_points() -> None:
     assert all(p.refusal_accuracy == 1.0 for p in points)
     assert all(p.faithfulness == 1.0 for p in points)
     assert all(p.groundedness == 1.0 for p in points)
+    assert all(p.correctness == 1.0 for p in points)
     assert tracer.started is True
     assert tracer.ended is True
     assert len(tracer.item_traces) == 6  # 2 items × 3 steps
+    assert len(progress) == 6
+    answered = [r for r in progress if r.item.id == "a-1"]
+    assert answered[0].result is not None
+    assert answered[0].result.answer == "Left."
+    assert answered[0].correct is True
+    assert answered[0].index == 1
+    assert answered[0].total == 2
 
 
 def test_null_tracer_is_safe_noop() -> None:
@@ -345,6 +374,17 @@ def test_langfuse_tracer_records_item_scores() -> None:
     assert len(client.root.child_scores) == 4
     names = {s["name"] for s in client.root.child_scores}
     assert names == {"recall", "refusal_ok", "faithful", "grounded"}
+
+
+def test_langfuse_tracer_records_correct_score() -> None:
+    client = _FakeLangfuseClient()
+    tracer = LangfuseTracer(client=client)
+    tracer.start_run("ablation_curve", {"k": 10})
+    tracer.trace_item(step="vector", item_id="a-1", correct=True)
+    tracer.end_run()
+    assert client.root.child_scores == [
+        {"name": "correct", "value": 1.0, "data_type": "NUMERIC"}
+    ]
 
 
 class _FakeQueryEmbedder:
@@ -403,6 +443,23 @@ class _FixedJudge:
         self.last_system = system
         self.last_user = user
         return json.dumps(self.payload)
+
+
+class _PromptAwareJudge:
+    """Returns verdict JSON shaped for the active judge prompt."""
+
+    def __init__(self) -> None:
+        self.last_system = ""
+        self.last_user = ""
+
+    def judge(self, system: str, user: str) -> str:
+        self.last_system = system
+        self.last_user = user
+        if "correctness" in system.lower():
+            return json.dumps({"correct": True, "rationale": "matches gold"})
+        return json.dumps(
+            {"faithful": True, "grounded": True, "rationale": "ok"}
+        )
 
 
 class _BehaviorCompleter:
