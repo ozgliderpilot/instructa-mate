@@ -147,6 +147,22 @@ Two grounded outputs, both under a strict **refuse-or-cite** contract:
   introduces *no new procedural or factual claims*, is always labelled as an AI suggestion,
   and is rendered visually distinct from Reference Patter (see ADR 0001).
 
+### Stage 5 · Eval harness — **built** (#40)
+
+Fast-loop metrics on `evals/golden_set.json`:
+
+- automated `recall@k` (gold citations vs top-k parents)
+- automated refusal (structured `grounded:false` / canonical string)
+- LLM-as-judge citation faithfulness, groundedness, and answer correctness
+  (vs golden `expected_answer`)
+- ablation curve: vector-only → +`$rankFusion` → +parent rerank (prints each
+  Q/A + metrics as it runs)
+- optional Langfuse traces (`pip install -e ".[eval]"` + Langfuse keys)
+
+```bash
+python scripts/run_eval_ablation.py --limit 20
+```
+
 ---
 
 ## Key design decisions
@@ -246,6 +262,7 @@ src/instructamate/stage2_chunker.py  Markdown → ChunkRecords + Sync Plan
 src/instructamate/stage3_ingest.py   Sync Plan → Voyage embed → Atlas chunks
 src/instructamate/stage3_retrieve.py Child search → expand → parent rerank
 src/instructamate/stage4_qa.py       Refuse-or-cite Q&A over retrieved parents
+src/instructamate/stage5_eval.py     Golden-set metrics + Stage 3 ablation curve
 src/instructamate/data/chunks_vector.json  Vector Search index definition
 terraform/                           Atlas Flex cluster (existing project)
 corpus/                              GFA PDFs — gitignored (copyright)
@@ -257,6 +274,7 @@ parser-build.md                      stage-1 build handover
 defered-grill.md                     designed-but-unbuilt decisions (stages 2–4)
 evals/                               golden_set + GPC fixtures + refusal probes for refuse-or-cite evals
 scripts/run_self_check_qa.py         batch Pilot self_check → answer_question (resume-safe)
+scripts/run_eval_ablation.py         Stage 3 ablation curve on golden_set (#40)
 ```
 
 ---
@@ -269,9 +287,9 @@ scripts/run_self_check_qa.py         batch Pilot self_check → answer_question 
 - [x] **Stage 3 — Retrieval**: Atlas ingest; vector→expand; `$rankFusion` hybrid;
       parent `rerank-2.5` (ADR 0005).
 - [~] **Stage 4 — Generation**: refuse-or-cite Q&A (#38); Generated Patter still open.
-- [ ] **Eval harness**: two-tier (automated `recall@k`/refusal + LLM-as-judge faithfulness,
-      then an SME milestone) validating citation accuracy and an instructor-approved
-      Unit Guide.
+- [x] **Eval harness (fast loop)**: `recall@k` + refusal automated; LLM-as-judge
+      faithfulness/groundedness/correctness; Stage 3 ablation curve + Langfuse
+      traces (#40). SME spot-check of judge verdicts still open.
 
 The PoC's two success criteria: (1) citation accuracy at roughly ≥90% on an instructor
 question set, and (2) an instructor-approved, fully-cited static Unit Guide for Unit 5.
