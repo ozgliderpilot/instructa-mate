@@ -7,10 +7,13 @@ from __future__ import annotations
 
 from typing import Any, Sequence
 
+import pytest
+
 from instructamate.stage3_ingest import SEARCH_INDEX_NAME, VECTOR_INDEX_NAME
 from instructamate.stage3_retrieve import (
     DEFAULT_N,
     DEFAULT_P,
+    GUIDE_SOURCES,
     PRIMARY_CONTENT_TYPES,
     RERANK_MODEL,
     ParentHit,
@@ -151,6 +154,7 @@ def test_retrieve_parents_expands_dedupes_and_returns_citation_metadata():
     assert stage["limit"] == DEFAULT_N
     assert stage["filter"]["kind"] == {"$eq": "child"}
     assert set(stage["filter"]["content_type"]["$in"]) == set(PRIMARY_CONTENT_TYPES)
+    assert "source" not in stage["filter"]
     assert stage["queryVector"] == [0.1, 0.2, 0.3]
 
 
@@ -209,8 +213,11 @@ def test_retrieve_parents_hybrid_uses_rank_fusion_then_expand():
     assert search_stage["compound"]["must"][0]["text"]["path"] == "text"
     filters = search_stage["compound"]["filter"]
     assert {"equals": {"path": "kind", "value": "child"}} in filters
-    content_type_filter = next(f for f in filters if "in" in f)
+    content_type_filter = next(
+        f for f in filters if f.get("in", {}).get("path") == "content_type"
+    )
     assert set(content_type_filter["in"]["value"]) == set(PRIMARY_CONTENT_TYPES)
+    assert not any(f.get("in", {}).get("path") == "source" for f in filters)
     assert pipelines["fullText"][1] == {"$limit": DEFAULT_N}
 
     assert collection.last_pipeline[1] == {"$limit": DEFAULT_N}
@@ -357,3 +364,49 @@ def test_voyage_reranker_uses_rerank_2_5_and_returns_index_order():
     ]
     assert RERANK_MODEL == "rerank-2.5"
     assert DEFAULT_P == 10
+
+
+def test_retrieve_parents_filters_sources_on_vector_search():
+    collection = RetrievingFakeCollection(child_hits=[], parents={})
+
+    retrieve_parents(
+        "AEI privileges",
+        collection,
+        FakeQueryEmbedder(),
+        sources=GUIDE_SOURCES,
+    )
+
+    stage = collection.last_pipeline[0]["$vectorSearch"]
+    assert stage["filter"]["source"] == {"$in": ["pilot", "trainer"]}
+    assert GUIDE_SOURCES == ("pilot", "trainer")
+
+
+def test_retrieve_parents_filters_sources_on_hybrid():
+    collection = RetrievingFakeCollection(child_hits=[], parents={})
+
+    retrieve_parents(
+        "AEI privileges",
+        collection,
+        FakeQueryEmbedder(),
+        fusion="hybrid",
+        sources=("other",),
+    )
+
+    pipelines = collection.last_pipeline[0]["$rankFusion"]["input"]["pipelines"]
+    vector_stage = pipelines["vector"][0]["$vectorSearch"]
+    assert vector_stage["filter"]["source"] == {"$in": ["other"]}
+
+    filters = pipelines["fullText"][0]["$search"]["compound"]["filter"]
+    assert {"in": {"path": "source", "value": ["other"]}} in filters
+
+
+def test_retrieve_parents_rejects_empty_sources():
+    collection = RetrievingFakeCollection(child_hits=[], parents={})
+
+    with pytest.raises(ValueError, match="sources"):
+        retrieve_parents(
+            "q",
+            collection,
+            FakeQueryEmbedder(),
+            sources=(),
+        )

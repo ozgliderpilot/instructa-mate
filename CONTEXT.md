@@ -9,14 +9,16 @@ so design discussions stay precise. It is a glossary only — not a spec.
 **Corpus**:
 The set of GFA source documents the system is allowed to ground answers in. For the PoC this is two
 documents: the **Trainer Guides** and the **Pilot Guides**, both covering Units 1–26 (Solo).
-Supplementary docs (MOSP 2, Ref Cards, theory slides, logbook, syllabus chart) exist in the
-`corpus/` folder but are out of PoC scope. The boundary of "what the system is allowed to know."
+Additional verified Markdown under `corpus/md/other/` (AEI OD, MOSP Part 2 Operations, Training
+Manual, Training Principles & Techniques) expands the corpus beyond that PoC pair; PDFs remain
+gitignored. The boundary of "what the system is allowed to know."
 _Avoid_: "the RAG", "the data", "knowledge base"
 
 **Source**:
-The document a Chunk or Citation comes from — Trainer Guide or Pilot Guide. Mandatory on every
-Chunk and Citation: the same (Unit, page) exists in both documents with different content, so a
-citation without Source is ambiguous. Reference Patter has Source = Trainer Guide only.
+The document a Chunk or Citation comes from — Trainer Guide, Pilot Guide, or an `other` ops/training
+manual unit. Mandatory on every Chunk and Citation: the same (Unit, page) can exist in more than one
+document with different content, so a citation without Source is ambiguous. Reference Patter has
+Source = Trainer Guide only.
 
 **Chunk**:
 A retrievable unit of the Corpus — a passage of source text plus its metadata. Comes in two

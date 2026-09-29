@@ -267,6 +267,9 @@ src/instructamate/data/chunks_vector.json  Vector Search index definition
 terraform/                           Atlas Flex cluster (existing project)
 corpus/                              GFA PDFs — gitignored (copyright)
 corpus/md/<source>/unit-NN.md        verified Markdown — the source of truth
+corpus/md/other/                     AEI, MOSP 2, Training Manual, Training Principles
+scripts/render_other_*.py            one-shot PDF → other/*.md renderers
+scripts/polish_other_md.py           structure-preserving polish for other/*.md
 docs/adr/                            architecture decision records
 tests/                               TDD suite against hand-verified goldens
 CONTEXT.md                           domain glossary (ubiquitous language)
