@@ -10,6 +10,8 @@ from pathlib import Path
 
 import fitz
 
+from other_layout import LayoutState, join_spans, merge_layout
+
 ROOT = Path(__file__).resolve().parents[1]
 PDF = ROOT / "corpus" / "MOSP 2 Operations V9 Jan 2024.pdf"
 OUT = ROOT / "corpus" / "md" / "other" / "unit-mosp2.md"
@@ -135,8 +137,8 @@ def _heading_level_for_number(number: str) -> int:
     return min(2 + dots, 4)
 
 
-def _page_lines(page: fitz.Page) -> list[tuple[str, bool, float]]:
-    out: list[tuple[str, bool, float]] = []
+def _page_lines(page: fitz.Page, state: LayoutState) -> list[tuple[str, bool, float]]:
+    raw: list[tuple[float, float, float, str, bool, float]] = []
     for block in page.get_text("dict")["blocks"]:
         if block.get("type") != 0:
             continue
@@ -144,13 +146,14 @@ def _page_lines(page: fitz.Page) -> list[tuple[str, bool, float]]:
             spans = line.get("spans", [])
             if not spans:
                 continue
-            text = "".join(s["text"] for s in spans).strip()
+            text = join_spans(spans)
             if not text or _CHROME.match(text):
                 continue
             bold = any(s.get("flags", 0) & (1 << 4) for s in spans)
             size = max(s["size"] for s in spans)
-            out.append((text, bold, size))
-    return out
+            x0, y0, _x1, y1 = line["bbox"]
+            raw.append((x0, y0, y1, text, bold, size))
+    return merge_layout(page, raw, state)
 
 
 def _looks_like_title(text: str, bold: bool) -> bool:
@@ -197,6 +200,7 @@ def render() -> str:
     appendix_buf: list[str] = []
     part_buf: list[str] = []
     open_heading = False
+    layout = LayoutState()
 
     def emit_heading(level: int, title: str) -> None:
         nonlocal open_heading, appendix_buf, pending_num, part_buf
@@ -226,7 +230,7 @@ def render() -> str:
         if page_no in _SKIP_PAGES:
             continue
 
-        lines = _page_lines(doc[page_index])
+        lines = _page_lines(doc[page_index], layout)
         if not lines:
             continue
 
@@ -239,7 +243,13 @@ def render() -> str:
 
             # Multi-line appendix title continuation.
             if appendix_buf:
-                if bold and size >= 14 and _APPENDIX.match(text) is None:
+                if (
+                    bold
+                    and size >= 14
+                    and "<br>" not in text
+                    and not text.startswith("|")
+                    and _APPENDIX.match(text) is None
+                ):
                     appendix_buf.append(text)
                     nxt = lines[i + 1] if i + 1 < len(lines) else None
                     more = (
@@ -257,7 +267,13 @@ def render() -> str:
 
             # Multi-line part banner continuation.
             if part_buf:
-                if bold and size >= 14 and _CHAPTER_COMBINED.match(text) is None:
+                if (
+                    bold
+                    and size >= 14
+                    and "<br>" not in text
+                    and not text.startswith("|")
+                    and _CHAPTER_COMBINED.match(text) is None
+                ):
                     part_buf.append(text)
                     nxt = lines[i + 1] if i + 1 < len(lines) else None
                     more = (
@@ -272,6 +288,14 @@ def render() -> str:
                     i += 1
                     continue
                 emit_heading(2, _title_case(" ".join(part_buf)))
+
+            if text.startswith("|") or "<br>" in text:
+                if pending_num is not None:
+                    emit_body(pending_num[0])
+                    pending_num = None
+                emit_body(text)
+                i += 1
+                continue
 
             # Resolve pending number + this line as title or body.
             if pending_num is not None:
@@ -381,7 +405,14 @@ def render() -> str:
                 continue
 
             # Part banners / form titles (large bold).
-            if bold and size >= 14 and len(text) > 8 and not text.endswith((".", ";", ",")):
+            if (
+                bold
+                and size >= 14
+                and "<br>" not in text
+                and not text.startswith("|")
+                and len(text) > 8
+                and not text.endswith((".", ";", ","))
+            ):
                 key = re.sub(r"\s+", " ", text).strip().casefold()
                 if key in _PART_BANNERS or size >= 15.5:
                     # May continue on next line.

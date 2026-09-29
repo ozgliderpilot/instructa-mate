@@ -35,68 +35,37 @@ holders will be advised of approved published revisions. The Gliding Australia w
 be the approved revision. Printed documents should be checked against the online revision to ensure the
 approved revision is used.
 Original Document History
-Prepared
-Approved
-Control
-Signed
-Christopher Thorpe
-Executive Manager,
-Operations
-Board
-Head of Flying
-Operations
-Date
-22 December 2022
-22 December 2022
-22 December 2022
-Derivation
-Authorised by
-No of pages
-Effective date
-Board
-71
+|  | Prepared | Approved | Control |
+| --- | --- | --- | --- |
+| Signed | Christopher Thorpe<br>Executive Manager,<br>Operations | Gliding Australia<br>Board | Head of Flying<br>Operations |
+| Date | 22 December 2022 | 22 December 2022 | 22 December 2022 |
+| Derivation | Initial issue |  |  |
+| Authorised by | No of pages | Effective date |  |
+| Gliding Australia<br>Board | 71 |  |  |
 Record of Amendments
 Revision No
-Prepared
-Approved
-Control
-Signed
-Date
-Précis of changes
-Authorised by
-No of pages
-Effective date
-Board
+|  | Prepared | Approved | Control |
+| --- | --- | --- | --- |
+| Signed |  |  |  |
+| Date |  |  |  |
+| Précis of changes |  |  |  |
+| Authorised by | No of pages | Effective date |  |
+| Gliding Australia<br>Board |  |  |  |
 <!-- page: 4 -->
 
 ### Gliding Australia Feedback/Change Proposal Form
 <!-- content_type: admin -->
 
-Document Title:
-Tracking Details (Office use only)
-Number:
-Date Received:
-Name of person submitting change proposal:
-Email Address:
-Phone:
-Membership
-Number:
-What should be changed? (Include Section or Chapter reference if for a document. Attachments
-if required.)
-Why? Description and Reason for change: (Please include brief description and supporting
-comments as to why the change is needed, or the new initiative or the opportunity for change.
-Attachments if required.)
-Sources for supporting data or details that may assist the review: (Attachments if required.)
-Benefits (How will the proposed change, new initiative or opportunity benefit members or improve
-compliance or safety?)
-NOTE: Please ensure a clear description of the issue / opportunity has been given, supporting data if
-available has be identified and / or attached.
-This form may be sent to Gliding Australia by the following means:
-Email:
-documents@glidingaustralia.org
-Mail:
-Gliding Australia, C4/1-13 The Gateway, Broadmeadows, VIC 3047
-NOTE: Gliding Australia Management of Change Manual (MCM) applies
+| Document Title:<br>Training Principles & Techniques Manual | Tracking Details (Office use only) |  |
+| --- | --- | --- |
+|  | Number: | Date Received: |
+| Name of person submitting change proposal: |  |  |
+| Email Address: | Phone: | Membership Number: |
+| What should be changed? (Include Section or Chapter reference if for a document. Attachments if required.) |  |  |
+| Why? Description and Reason for change: (Please include brief description and supporting comments as to why the change is needed, or the new initiative or the opportunity for change.<br>Attachments if required.) |  |  |
+| Sources for supporting data or details that may assist the review: (Attachments if required.) |  |  |
+| Benefits (How will the proposed change, new initiative or opportunity benefit members or improve compliance or safety?) |  |  |
+| NOTE: Please ensure a clear description of the issue / opportunity has been given, supporting data if available has be identified and / or attached.<br>This form may be sent to Gliding Australia by the following means:<br>Email: documents@glidingaustralia.org<br>Mail: Gliding Australia, C4/1-13 The Gateway, Broadmeadows, VIC 3047<br>NOTE: Gliding Australia Management of Change Manual (MCM) applies |  |  |
 <!-- page: 8 -->
 
 ## Introduction
@@ -110,7 +79,7 @@ communicate effectively and in the case of gliding, use standardised aviation me
 modern techniques for sport coaching.
 Effective trainers:
 - Have mastery of what to teach (i.e. the Content),
-- Know how to teach (i.e. the Process), and
+-     Know how to teach (i.e. the Process), and
 - Have an understanding of behaviour, emotional Intelligence and the ability to motivate the
 student.
 There are 10 modules to become qualified for Gliding Australia’s recognition of Training Principles and
@@ -129,6 +98,7 @@ Module 10 – Incident Causation
 At the successful completion of these modules and assessments, the glider pilot will receive a Certificate
 of Completion “Gliding Australia Training Principles and Techniques”.
 These modules are common prerequisites for all instructor and coach qualification levels.
+*[Diagram / figure — see source PDF.]*
 
 ## The Role of the Trainer
 <!-- content_type: theory -->
@@ -139,15 +109,15 @@ training principles and techniques will improve training outcomes.
 
 Gliding training is a skill-based process, most closely aligned to an apprenticeship. It comprises:
 - Presentation of theory components to one or more students
-- Demonstration of skills
-- Effective questioning
-- Gradual hand over of responsibility
-- Evaluation of progress
-- Remedial approaches to overcome gaps
-- Provision of regular constructive feedback
-- Evaluation of student competency
-- Risk Management
-- Safety leadership
+•    Demonstration of skills
+•    Effective questioning
+•    Gradual hand over of responsibility
+•    Evaluation of progress
+•    Remedial approaches to overcome gaps
+•    Provision of regular constructive feedback
+•    Evaluation of student competency
+•    Risk Management
+•    Safety leadership
 The Glider Pilot Certificate (GPC) Syllabus forms the basis of the Gliding Australia Training System and
 Manual.  There are suitable training resources available to the student that are easily used, and the
 trainer is not required to develop or teach courses to large groups.
@@ -197,11 +167,11 @@ Directives, pending approval of changes by CASA.
 GFA Coaching qualifications, prerequisites, authorisations, responsibilities and training syllabi for post
 GPC training are not subject to CASA regulation and are set by Gliding Australia.
 GFA Instructors must comply with the requirements for:
-- GFA membership,
+-     GFA membership,
 - Medical fitness to fly in accordance with the requirements in MOSP 2,
-- The Glider Pilot Certificate (GPC),
-- Minimum age requirements, and
-- Minimum experience requirements.
+-     The Glider Pilot Certificate (GPC),
+-     Minimum age requirements, and
+-     Minimum experience requirements.
 Note that the training syllabi applicable to Instructors are themselves competency based, approved by
 CASA and GFA, and supplemented by minimum requirements for qualifications and experience.
 
@@ -226,8 +196,7 @@ way they plan and deliver training in the gliding environment.
 This module provides guidance to trainers on a number of learning models and processes which offer
 insights into successful instructing, training, coaching and mentoring strategies, with key advice on
 limitations in learning, skill acquisition and reinforcement.
-Trainers must be well versed in these concepts in order to develop safe and effective solo and cross-
-country pilots.  No single process or model can fully explain the complexities of human behaviour and
+Trainers must be well versed in these concepts in order to develop safe and effective solo and cross-country pilots.  No single process or model can fully explain the complexities of human behaviour and
 learning.  Trainers will need to consolidate instructing and coaching skills and experience and recognise
 the importance of adaptation and flexibility in delivery of training.
 
@@ -240,7 +209,7 @@ responses.
 - Secondly, to provide PILOT TRAINING (skills) as a background for making CONDITIONED
 responses.
 This leads to four requirements:
-1. The aims and objectives of the training1 must be clearly defined, not only as a complete syllabus
+1. The aims and objectives of the training¹ must be clearly defined, not only as a complete syllabus
 of training but also at each stage of the syllabus, covering all required competencies.
 2. The trainer’s knowledge and ability in the subject matter of the syllabus (theory and practice) must
 be of the very highest quality.
@@ -260,8 +229,7 @@ In practice, these processes are not mutually exclusive and they can support eac
 spin recovery the standard recovery procedure is rote-learned, but deeper causal knowledge of
 aerodynamics of stalling and lateral damping will help to support its retention. Similarly, extensive
 practice in the recovery procedure leads to its automatisation as a skill in ‘muscle memory’. The
-taxonomy informs the training methods appropriate for skill and knowledge acquisition, e.g., perceptual-
-motor experience, rote-learning, and education.
+taxonomy informs the training methods appropriate for skill and knowledge acquisition, e.g., perceptual-motor experience, rote-learning, and education.
 The following sections present various adult (experiential) learning and information processing models
 and practices.
 1 The generic term “training” may be assumed to encompass the provision of both knowledge and skills.
@@ -283,6 +251,7 @@ enters the short-term memory.
 rehearsed (i.e. repeated).
 If maintenance rehearsal (repetition/practice) does not occur, then information is forgotten, and lost from
 short term memory through the processes of displacement or decay.
+*[Diagram / figure — see source PDF.]*
 
 #### The Memory Stores
 <!-- content_type: theory -->
@@ -301,26 +270,25 @@ Duration refers to the period of time information can last in the memory stores.
 #### Sensory Memory
 <!-- content_type: theory -->
 
-- Duration: ¼ to ½ second
+-     Duration: ¼ to ½ second
 - Capacity: all sensory experience (v. larger capacity)
 - Encoding: sense specific (e.g. different stores for each sense)
 
 #### Short Term Memory
 <!-- content_type: theory -->
 
-- Duration: 0-18 seconds
-- Capacity: 7 +/- 2 items
-- Encoding: mainly auditory
+-     Duration: 0-18 seconds
+-     Capacity: 7 +/- 2 items
+-     Encoding: mainly auditory
 
 #### Long Term Memory
 <!-- content_type: theory -->
 
-- Duration: unlimited
-- Capacity: unlimited
+-     Duration: unlimited
+-     Capacity: unlimited
 - Encoding: mainly semantic (but can be visual and auditory)
 One strength of the multistore model is that it provides us a good understanding of the structure and
-process of the STM. However, the model is oversimplified, in particular when it suggests that both short-
-term and long-term memory each operate in a single, uniform fashion.  We now know this is not the case.
+process of the STM. However, the model is oversimplified, in particular when it suggests that both short-term and long-term memory each operate in a single, uniform fashion.  We now know this is not the case.
 However, linear models of information processing (input - processing - output) have been largely
 replaced by an understanding of the brain as a ‘prediction machine’ (e.g., Clark, 2015, Surfing
 Uncertainty: Prediction, Action, and the Embodied Mind). That is, the mind generates expectations of the
@@ -377,6 +345,7 @@ function without constantly stopping to think about their next course of action.
 While heuristics can reduce the burden of decision-making and free up limited cognitive resources, they
 can also be costly when they lead individuals to miss critical information or act on unjust biases - they are
 brittle and may lead to error on occasion.
+*[Diagram / figure — see source PDF.]*
 
 ##### Thinking, Fast and Slow
 <!-- content_type: theory -->
@@ -416,6 +385,7 @@ in learning without understanding the Primacy Effect.
 Sometimes we miss the reasoning and facts behind and supporting our learning. We are susceptible to
 the information we get as a result of the recency effect at the end of the lesson, whether such information
 is accurate or not.
+*[Diagram / figure — see source PDF.]*
 
 ##### Primacy
 <!-- content_type: theory -->
@@ -462,8 +432,7 @@ Trainers recognise the law of recency when they plan a lesson summary or a concl
 <!-- content_type: theory -->
 
 In order for effective learning to take place, it is important to plan learning sessions to take advantage of
-both the Primacy and the Recency Effects. Use prime-time windows to teach new information and down-
-time for practice. The primacy time – the beginning of the learning session – and the recency time – the
+both the Primacy and the Recency Effects. Use prime-time windows to teach new information and down-time for practice. The primacy time – the beginning of the learning session – and the recency time – the
 end of the learning session – are the two most effective times for learning. The goal is retention and
 storage in our long-term memory. Retention varies with length of intervention.
 As the lesson time lengthens, the percentage of down-time (when retention is at its lowest) increases
@@ -495,6 +464,7 @@ they consciously review the learned material.
 Memory retention is 100% at the time of learning any particular piece of information. However, it drops
 rapidly to 40% within the first few days, after which, the declination of memory retention slows down
 again.
+*[Diagram / figure — see source PDF.]*
 Figure 1- the Forgetting Curve
 
 ### Learning Styles
@@ -528,34 +498,12 @@ The different stages of the cycle are associated with distinct learning styles. 
 preferred learning styles and recognising this is the first stage in raising students' awareness of the
 alternative approaches possible.
 From the student’s perspective, there are four main experiential learning styles:
-Style:
-Learn by:
-Experience
-Doing
-Students’ preference, actual experience in the
-operating environment, observing cause and effect,
-actions and outcomes – hands on.
-Reflection
-Reflective
-Observation and
-Recall
-The trainer may prompt reflection, or the student
-may self-reflect, unprompted by the trainer.  Without
-reflection, students may repeat earlier mistakes.
-Concepts (Theory)
-Theory and
-Conceptualisation
-Those who like to assimilate information and
-theories, to analyse and think, may have a bias
-towards concepts.
-Practice and
-Visualisation
-Visualisation,
-Rehearsal, and
-Repetition.
-Some students, particularly intuitive types, are
-attracted to practice and visualisation -
-experimentation.
+| Style: | Learn by: |  |
+| --- | --- | --- |
+| Experience | Doing | Students’ preference, actual experience in the operating environment, observing cause and effect, actions and outcomes – hands on. |
+| Reflection | Reflective<br>Observation and<br>Recall | The trainer may prompt reflection, or the student may self-reflect, unprompted by the trainer. Without reflection, students may repeat earlier mistakes. |
+| Concepts (Theory) | Theory and<br>Conceptualisation | Those who like to assimilate information and theories, to analyse and think, may have a bias towards concepts. |
+| Practice and<br>Visualisation | Visualisation,<br>Rehearsal, and<br>Repetition. | Some students, particularly intuitive types, are attracted to practice and visualisation -experimentation. |
 
 ### Adult Learning
 <!-- content_type: theory -->
@@ -638,7 +586,7 @@ of skill, confidence and competence.
 
 Respect, being heard, being listened to, is a primary social need.  Respect can be demonstrated to
 your student by:
-- Taking interest.
+-     Taking interest.
 - Acknowledging the wealth of experiences that the student brings.
 - Regarding them as a colleague who is equal in life experience.
 - Encouraging expression of ideas, reasoning and feedback at every opportunity.
@@ -649,7 +597,7 @@ your student by:
 <!-- content_type: theory -->
 
 - People respond and learn more effectively if they are enjoying the experience.
-- Take the time to make the exercises fun.
+-     Take the time to make the exercises fun.
 - The student needs to remember some part of the flight that was done well, or was fun, or a new
 skill learnt or mastered.  ALWAYS find some aspect of the flight to compliment.
 
@@ -678,6 +626,7 @@ things learned and practiced will be remembered the longest.
 #### Stress
 <!-- content_type: theory -->
 
+*[Diagram / figure — see source PDF.]*
 Figure 2 - Stress-Response Curve
 <!-- page: 21 -->
 
@@ -699,17 +648,14 @@ Two types of overload are recognised:
 Typical human reactions to overload include:
 Omission
 Ignore some signals (or responsibilities) or information.
-Error
-Process information incorrectly.
+Error    Process information incorrectly.
 Queuing
 Delay responses during peak loads; catch up during lulls.
 Filtering
 Systematic omission of certain categories of information according to
 some priority scheme.
-Approximation
-Make a less precise response.
-Escape
-Give up.
+Approximation    Make a less precise response.
+Escape    Give up.
 Tunnel Vision
 The brain sheds tasks and only concentrates on one; heart rate rises;
 sounds can be blanked out.  Limited capacity single channel information
@@ -741,12 +687,12 @@ minutes or so.  This is far less common in the gliding training environment.
 
 Learning a new skill is more effective if the training is undertaken frequently.  Older adults may suffer
 from:
-- A lack of time.
-- Financial barriers.
+-     A lack of time.
+-     Financial barriers.
 - Negative mindset or lack of confidence for learning new skills.
-- A lack of flexibility.
-- Advancing age.
-- Learning slowly as age increases.
+-     A lack of flexibility.
+-     Advancing age.
+-     Learning slowly as age increases.
 Age is often associated with a decline in cognitive abilities for learning new skills. However, the evidence
 is that many forms of motor learning appear to be relatively well preserved with age; however,
 learning tasks that involve associative binding (a process in which multiple items become bound to one
@@ -775,6 +721,7 @@ proficiency is achieved. When plotted on a graph, this decrease in the rate of l
 levelling of the ascending curve that represents progress.  As students achieve the ability to bring
 together other aspects of training, progress then tends to resume its upward climb at a slower but fairly
 constant rate.
+*[Diagram / figure — see source PDF.]*
 <!-- page: 23 -->
 
 The relatively level portion of the learning curve is termed a plateau. It may represent a period of training
@@ -782,13 +729,13 @@ during which the student is perfecting the application of the new skill. The cor
 the other learning tasks may not yet be obvious.
 The rate of progress in learning is affected by so many outside influences that it is not often predictable.
 The rate of learning is affected by such things as:
-- diversions,
-- lagging motivation,
-- emotional disturbances,
-- upset training schedule,
-- weather,
-- equipment breakdown, and
-- unavoidable absences.
+-     diversions,
+-     lagging motivation,
+-     emotional disturbances,
+-     upset training schedule,
+-     weather,
+-     equipment breakdown, and
+-     unavoidable absences.
 Slumps or plateaus in the rate of learning are more likely to occur as the student advances to more
 complicated operations. Often the reason is that a student has failed to master one basic element of the
 operation, and this leads to the appearance of deficiency in the performance of later elements.
@@ -871,15 +818,15 @@ influence how students (and other pilots) behave, make decisions, or take action
 the highest example possible.  Some examples of where you influence:
 <!-- page: 25 -->
 
-- The way you carry out a daily inspection
+-     The way you carry out a daily inspection
 - Deciding to stop flying activities for an impending storm
-- Respecting airspace limitations
-- Correct use of radio terminology
-- Professional briefings
-- Superb airborne demonstrations
-- Knowledge of rules, club processes
-- Adherence to standards, and
-- Even the way you dress!
+-     Respecting airspace limitations
+-     Correct use of radio terminology
+-     Professional briefings
+-     Superb airborne demonstrations
+-     Knowledge of rules, club processes
+-     Adherence to standards, and
+-     Even the way you dress!
 
 ### Self-Discipline
 <!-- content_type: theory -->
@@ -977,8 +924,7 @@ This process continues throughout a pilot’s flying career - through advanced t
 coaching in performance flying and soaring. In the coaching phase, the transfer of responsibility is
 enhanced by the trainer assisting and guiding pilots to undertake more advanced flying techniques and
 challenges.  The trainer may be an important mentor for the pilot, facilitating opportunities for advanced
-coaching and also self-improvement under guidance.  The pilot is increasingly responsible for their self-
-development and assisted development, in concert with trainers and gliding peers.
+coaching and also self-improvement under guidance.  The pilot is increasingly responsible for their self-development and assisted development, in concert with trainers and gliding peers.
 <!-- page: 27 -->
 
 ### Communication
@@ -1167,7 +1113,7 @@ can sometimes be compelled to ‘deliver’ their experience.
 
 - Emphasising urgency, safety, or specific instructions,
 - Reinforcing key nuggets of information, and/or
-- Summarising key messages.
+-     Summarising key messages.
 
 ##### Disadvantages of Statements
 <!-- content_type: theory -->
@@ -1183,9 +1129,9 @@ can sometimes be compelled to ‘deliver’ their experience.
 ##### The Power of Questions
 <!-- content_type: theory -->
 
-- Questions require a response
-- Responses usually have more information
-- Responses may enhance motivation and respect
+-     Questions require a response
+-     Responses usually have more information
+-     Responses may enhance motivation and respect
 - Responses are more likely to highlight gaps in understanding
 - Reflection and visualisation are usually enhanced
 - The student will usually have more buy-in into the exchange
@@ -1204,23 +1150,22 @@ can sometimes be compelled to ‘deliver’ their experience.
 
 There are many different types and subtypes of questions, yet they can be condensed to four major types
 applicable to high effectiveness in training and competency development.  These are:
-- Closed Question (CQ)
+-     Closed Question (CQ)
 <!-- page: 32 -->
 
-- Open Question (OQ)
-- Reflective Question (RQ)
-- Hypothetical Question (HQ).
+-     Open Question (OQ)
+-     Reflective Question (RQ)
+-     Hypothetical Question (HQ).
 
 #### Closed Question
 <!-- content_type: theory -->
 
 A closed question is one that simply requires a Yes or No answer
-Australians love using closed questions! People who are problem-solvers, action-oriented and goal-
-oriented will often default to these types of questions:
-- Do you want to… ?
-- How about we… ?
-- Shouldn’t you go and… ?
-- Will you… ?
+Australians love using closed questions! People who are problem-solvers, action-oriented and goal-oriented will often default to these types of questions:
+-     Do you want to… ?
+-     How about we… ?
+-     Shouldn’t you go and… ?
+-     Will you… ?
 Some people are impatient and will cascade a series of questions together, finishing on a closed question
 seeking agreement to a predetermined solution.  They will often leave no time to respond to earlier
 questions.
@@ -1232,13 +1177,8 @@ to land before the rain squall hits?”.
 <!-- content_type: theory -->
 
 An open question is one that begins with one of these words:
-What….?
-Where…?
-Why…”
-When…?
-Which…?
-Who…?
-How…?
+What….?    Where…?    Why…”
+When…?    Which…?    Who…?    How…?
 In each case, the response requires much more than a simple Yes or No. These questions are particularly
 important for trainers and students, for eliciting more information and also the reasoning behind particular
 actions or decisions. They can also be used in a suggestive context, to spur actions, without resort to
@@ -1257,7 +1197,7 @@ In reinforcing two-way communications and understanding, a briefing or debriefin
 open question:
 <!-- page: 33 -->
 
-- What further questions do you have for me?
+-     What further questions do you have for me?
 
 #### Reflective Questions
 <!-- content_type: theory -->
@@ -1270,8 +1210,7 @@ The purpose of this type of question is for the student to affirm that they have
 understood the trainer correctly.  Reflective questions can be used in combination with open questions to
 ensure key concepts are grasped during reflection.
 For example:
-Trainer
-Student
+Trainer    Student
 What did you see and feel when we flew
 slower? (OQ)
 When we flew slower, the nose attitude was
@@ -1290,10 +1229,10 @@ at higher airspeeds, with a low nose attitude?
 Yes, lower nose, faster, the glider felt much
 better!
 Other forms of Reflective Questions might include:
-- So are you saying that… ?
-- So am I right in hearing you, that… ?
-- Am I understanding you correctly, that… ?
-- So, in summary, do you believe that… ?
+-     So are you saying that… ?
+-     So am I right in hearing you, that… ?
+-     Am I understanding you correctly, that… ?
+-     So, in summary, do you believe that… ?
 Rather than “parroting” the student, we use these reflective questions to help form the building blocks of
 understanding, using their words where possible.
 
@@ -1326,14 +1265,14 @@ In general, Australians are very quick to answer questions, in comparison with m
 tend to be snappy in our responses, with very short pauses, and sometimes start to answer before the
 question has been asked fully.
 The downsides responding too quickly to questions include:
-- Higher risk of an incorrect answer
+-     Higher risk of an incorrect answer
 - Less “brain-space” and time to develop a considered reply
 - Some risk of signalling impatience or disrespect.
 Asking questions slower, lowering the pitch of the voice, and encouraging longer pauses and even
 periods of silence can often lead to more meaningful exchanges, with:
-- More thinking time
-- More precise and considered answers
-- Less interruption or overtalking
+-     More thinking time
+-     More precise and considered answers
+-     Less interruption or overtalking
 - Conveying greater respect and active listening.
 Using the power of the pause, with carefully framed questions, may assist in achieving greater
 understanding, better flight preparation and planning, much less talking inflight with focus on key points,
@@ -1358,11 +1297,11 @@ Active listening also involves reading and interpreting other cues:
 
 Now consider what is definitely not conducive to active listening.  Do not:
 - Talk over or interrupt the student, suppressing their responses
-- Give long, one-way statements and diatribes
-- Be pedantic and nit-pick
-- Raise your voice
-- Give emotionally-laden exchanges
-- Infer or attribute blame
+-     Give long, one-way statements and diatribes
+-     Be pedantic and nit-pick
+-     Raise your voice
+-     Give emotionally-laden exchanges
+-     Infer or attribute blame
 With practice, most trainers can develop good questioning skills and it is an important skill to keep
 practicing and improving.
 
@@ -1450,9 +1389,9 @@ issues
 - Open questions – elicit information, establish rapport, aid reflection
 - Reflective and Hypothetical questions – cement understanding and
 visualization of scenarios
-- Use silence, the power of the pause
-- Listen, provide brain-space, do not inundate
-- Listening builds respect and understanding
+•    Use silence, the power of the pause
+•    Listen, provide brain-space, do not inundate
+•    Listening builds respect and understanding
 - Adjust your communication for your student differences
 - Become aware of non-verbal communication and body language
 <!-- page: 37 -->
@@ -1462,35 +1401,27 @@ visualization of scenarios
 
 The focus of this module discusses Briefings, Demonstration, Student Practice, Monitoring performance,
 and Debriefing.
-- Before the flight:
-o
-Flight planning
-o
+-     Before the flight:
+o    Flight planning
+o    Pre-flight briefing
+-     In the air:
+o    Handover/Takeover
+  - The inflight training and coaching process (DDM)
+    Demonstrate
+    Direct
+    Monitor
+-     After the Flight:
+o    Post-flight debriefing and two-way feedback
 
 ### Pre-flight briefing
 <!-- content_type: briefing -->
 
-- In the air:
-o
-Handover/Takeover
-o
-The inflight training and coaching process (DDM)
-
-Demonstrate
-
-Direct
-
-Monitor
-- After the Flight:
-o
-Post-flight debriefing and two-way feedback
-Pre-flight briefing
 This is a vital part of gliding training, that must NEVER be omitted. A successful pre-flight briefing
 consists of careful analysis of the task to be performed, along the following lines:
-- What stage has the student reached?
-- What is the next stage to be attempted?
-- How do I demonstrate and direct it?
-- How do I link it with the previous stage?
+-     What stage has the student reached?
+-     What is the next stage to be attempted?
+-     How do I demonstrate and direct it?
+-     How do I link it with the previous stage?
 - What standards need to be met for monitoring completion and signoff as competent?
 The pre-flight briefing should be kept short and to the point. It is not a lecture or an endurance
 event. Diagrams should be used where necessary, and it should not be forgotten that the glider itself is a
@@ -1500,10 +1431,10 @@ It is a mistake to get too technical at the pre-flight briefing stage. If techni
 into, it is better done after the flight than before. Use of open questions will elicit the student’s level of
 understanding and may save time in the pre-flight briefing.
 The prime objectives of the pre-flight briefing are to
-- DEFINE the objective of the flight,
+-     DEFINE the objective of the flight,
 - DESCRIBE briefly what the objective consists of, and
-- ALLOCATE RESPONSIBILITY for who does what.
-- Safety considerations
+-     ALLOCATE RESPONSIBILITY for who does what.
+-     Safety considerations
 Be attuned to your student’s learning style.  Some will want detail; others will want diagrams; others will
 want to just try it out in the air without much briefing.
 It is important to only undertake one sequence of the syllabus wherever possible.
@@ -1582,7 +1513,7 @@ repeating the pre-flight briefing during the airborne demonstration. The briefin
 demonstration" are two entirely different things.
 The general pattern of demonstrations will be as follows-
 - Name the exercise and describe the effect(s) to be observed.
-- Pause.
+-     Pause.
 - Ensure the glider is established as a stable platform, with appropriate attitude.
 - Demonstrate clearly the nominated exercise, synchronising the demonstration with the patter.
 Note: this process may not be applicable to coaching experienced pilots.
@@ -1591,9 +1522,9 @@ understand that the trainer is accurately performing the actions previously expl
 unanticipated circumstances, the demonstrations does not closely conform to the explanation, the
 deviation should be immediately acknowledged and explained.
 KEY POINTS
-- Brief Description
-- Start with the stable platform
-- Accuracy of demonstration
+•    Brief Description
+•    Start with the stable platform
+•    Accuracy of demonstration
 - Synchronisation of patter with the demonstrationTrainers DO NOT
 follow through when student is flying
 
@@ -1618,9 +1549,9 @@ Do not allow a situation to get out of hand - there should be no hesitation in t
 prevent a hazardous situation developing. It is important to always be close to, but not on the
 controls, when the student is flying.
 KEY POINTS
-- Start with the stable platform
+•    Start with the stable platform
 - Student has the controls; trainer is off the controls
-- Avoid talking – let the student practice
+•    Avoid talking – let the student practice
 - If student cannot do the manoeuvre or lesson, take back controls
 and re-demonstrate
 
@@ -1652,9 +1583,9 @@ Fault analysis is necessary at all levels of flight training. The ability to deb
 separate the successful instructor from the poor one than above-average flying ability. The sole purpose
 of fault analysis is to improve future student performance. A valid critique contains three essential
 elements:
-- Strengths,
-- Weaknesses, and
-- Specific suggestions for improvement.
+-     Strengths,
+-     Weaknesses, and
+-     Specific suggestions for improvement.
 Without each of these elements, fault analysis is ineffective, as it does not accomplish its sole purpose.
 <!-- page: 41 -->
 
@@ -1787,9 +1718,9 @@ following factors therefore must be taken into account when planning and executi
 coaching flight.
 - The expectations and exact needs of the student on the particular flight
 - The performance and configuration of the glider
-- The weather conditions
-- The launch method
-- Any support required from other parties
+-     The weather conditions
+-     The launch method
+-     Any support required from other parties
 The more advanced the pilot, the higher the expectations will be for them to actually conduct the planning
 (with appropriate guidance and review).  That said, the trainer will need to have their own planning
 perspective, particularly risk management or Threat and Error Management (TEM) aspects.
@@ -1797,10 +1728,10 @@ The essentials of flight planning include:
 - Ensuring the expectations of the student pilot are realistic,
 - Ensuring the goals of the flight are mutually understood,
 - Ensuring the conditions need to be conducive to safety and achieving the learning objectives,
-- Gathering all required information,
+-     Gathering all required information,
 - Ensuring the glider is adequately prepared and configured,
 - Verifying airspace, radio and Search And Rescue (SAR) requirements, and
-- Ensuring others are briefed as required.
+-     Ensuring others are briefed as required.
 It is the duty of the trainer to ensure these essentials are in place before undertaking training activities
 with the student. These requirements apply whether the flight is a pre-solo, post solo or advanced
 coaching.
@@ -1845,8 +1776,7 @@ talking about launch and release procedures as the glider begins its final turn 
 admittedly an extreme example, but it serves to illustrate the point that the trainer must know the
 performance of the glider and plan realistically to take it into account. Wastage of airborne time is an
 enemy of effective training.
-In advanced soaring sequences, glider performance will be a driving issue for average climb rate, cross-
-country speed, penetration into wind, and safety in pushing towards alternate landing areas.
+In advanced soaring sequences, glider performance will be a driving issue for average climb rate, cross-country speed, penetration into wind, and safety in pushing towards alternate landing areas.
 
 #### Weather Conditions
 <!-- content_type: theory -->
@@ -1874,8 +1804,7 @@ without the trainer continually having to take over or do a lot of the flying to
 <!-- content_type: theory -->
 
 Clearly an aerotow or a motor-glider gives the trainer more ability to control flight duration than a winch
-launch. Winch launch pilots have to take what they can get in terms of launch height and in calm, non-
-soaring conditions, flight duration is doomed to be short, especially in low performance gliders.
+launch. Winch launch pilots have to take what they can get in terms of launch height and in calm, non-soaring conditions, flight duration is doomed to be short, especially in low performance gliders.
 The likely duration of a flight affects the pre-flight briefing, which can always be modified or added to in
 flight if unexpected soaring conditions crop up. This means that a trainer must adopt a flexible approach
 to flight management, changing with the conditions and circumstances if necessary.
@@ -1888,7 +1817,7 @@ There are many risks attached to our sport, which have to be managed in such a w
 become a factor in our operations.
 Risk management in aviation terms is the ”identification, analysis and elimination and/or mitigation (to an
 acceptable or tolerable level) of hazards, as well as the subsequent risks, that threaten the viability of an
-organisation.”2
+organisation.”²
 2 (ICAO Doc 9859) https://elibrary.icao.int/home/product-details/229751
 <!-- page: 46 -->
 
@@ -1900,12 +1829,12 @@ the severity (AKA consequence) of the hazard effects are analysed and assessed, 
 of the risk and its acceptability are determined.
 3. Risk mitigation is the third step in the risk management process and is the steps taken to
 control or prevent a hazard from causing harm and to reduce risk to a tolerable or acceptable
-level or even remove it from the system.3
+level or even remove it from the system.³
 When a risk has been found to be unacceptable, control measures need to be introduced. The level of
 risk can be lowered by:
 - Reducing the severity of potential consequences
 - Reducing the probability of occurrence harmful effects
-- Reducing the exposure to that risk
+-     Reducing the exposure to that risk
 in Australia, we practice Risk Management in almost all of our gliding activities.  We have standards,
 procedures, manuals, qualifications, extensive training in airworthiness and operations, glider standards,
 etc.  Many of these aspects have been established over time in response to the identification of risks in
@@ -1959,7 +1888,7 @@ experience of pilot
 A pilot should
 - Employ knowledge, experience and non-tech skills to manage
 threats
-- Employ non-tech skills to manage error
+•    Employ non-tech skills to manage error
 Now - undertake the CASA Threat and Error Management Module
 HF in Sport, recreation and general aviation - Module 5
 This module introduces the concepts underpinning threat and error management (TEM) and provides you
@@ -1977,7 +1906,7 @@ A vitally important tool for trainers is to develop and maintain skills in apply
 Intervention, along with disciplined and clear Handover-Takeover, to manage risk exposure during a
 flight.
 Interventions can take several forms:
-- Verbal Interventions
+-     Verbal Interventions
 ○
 A question designed to direct a student’s attention towards something that might require a
 decision or action; “Is the angle to the runway getting steeper or shallower?”
@@ -1988,21 +1917,18 @@ from this wind.”
 A key word or phrase, a reminder to act. “Elevator - attitude - airspeed”
 ○
 A direction or command to take action. “More speed!”
-○
-A full takeover “MY aircraft”
-- Physical Interventions
+○    A full takeover “MY aircraft”
+-     Physical Interventions
 <!-- page: 48 -->
 
 ○
 Defensive posture, hands around stick in readiness to limit travel
-○
-Tap the stick
+○    Tap the stick
 ○
 Defensive posture used to stop further stick movement in a given direction
 ○
 Use of secondary controls e.g. trim, airbrakes, flaps
-○
-A full takeover of all controls
+○    A full takeover of all controls
 It is self-evident that combinations of interventions can be applied; e.g. a loud verbal command “MY
 aircraft” and “let go of the stick NOW!” accompanied by a stick shake and closing airbrakes plus forward
 pressure on elevator control, to prevent a low level stall on a mishandled approach.
@@ -2128,34 +2054,34 @@ closely to the syllabus, the Training Manual and standardised training technique
 
 Many students face under-confidence at some time during their training, which may stem from multiple
 connected reasons, such as:
-- poor feedback,
-- harsh criticism,
-- self esteem
-- over-progression,
-- fear,
-- a scary incident,
-- frustration with poor progress,
-- peer competition,
-- personality clashes,
-- poor communications,
-- wrong communications style,
-- lack of standardisation in training content,
-- airsickness,
+-     poor feedback,
+-     harsh criticism,
+-     self esteem
+-     over-progression,
+-     fear,
+-     a scary incident,
+-     frustration with poor progress,
+-     peer competition,
+-     personality clashes,
+-     poor communications,
+-     wrong communications style,
+-     lack of standardisation in training content,
+-     airsickness,
 <!-- page: 51 -->
 
-- poor behaviour,
-- disrespect, etc
+-     poor behaviour,
+-     disrespect, etc
 Honesty in feedback and progress is critical. It may help to ask the student who they would like to discuss
 their issues with, to refer them to a trusted person.
 Helpful tactics may include:
 - careful use of questions for reflection and fact-finding,
 - acknowledgement of personal differences and style preferences,
-- solid and objective feedback on “did wells”,
-- realigning expectations
-- reducing competitive pressures,
+-     solid and objective feedback on “did wells”,
+-     realigning expectations
+-     reducing competitive pressures,
 - discussing the syndrome of “Trying Too Hard Disease (TTHD)”,
-- praise
-- accentuating achievements and progress
+-     praise
+-     accentuating achievements and progress
 
 ### Overconfidence
 <!-- content_type: theory -->
@@ -2167,10 +2093,10 @@ be deluded as to their actual skill, knowledge, judgement and achievements.  Som
 the truth; the truth can hurt.
 Helpful tactics may include:
 - Consistency in training panel feedback to the student, regarding gaps and concerns
-- Diligence in honest logbook entries
+-     Diligence in honest logbook entries
 - Careful use of questions for reflection and fact-finding
 - Solid and objective feedback on errors and “do differently next time” issues
-- Realigning expectations
+-     Realigning expectations
 - Insisting on higher standards being consistently demonstrated
 - Using more demanding sequences and standards to allow errors, mistakes and highlight need for
 improvement
@@ -2181,20 +2107,19 @@ improvement
 ### Poor Airmanship and Situational Awareness
 <!-- content_type: airmanship -->
 
-Poor airmanship and situational awareness will require some close assessment and diagnostics, post-
-flight Q&A, to ascertain why the student is making poor judgements or lacking situational awareness of
+Poor airmanship and situational awareness will require some close assessment and diagnostics, post-flight Q&A, to ascertain why the student is making poor judgements or lacking situational awareness of
 key inflight hazards and information.  Issues that may contribute to the poor airmanship or situational
 awareness include:
 - Errors in foundation training, primacy effects
-- Poor eyesight
-- Poor hearing
-- Poor workload management
+-     Poor eyesight
+-     Poor hearing
+-     Poor workload management
 - Trying Too Hard Disease (TTHD) coupled with single input focus
-- Over-progression4
+-     Over-progression⁴
 - Failure to understand key underpinning concepts and theory
-- Overconfidence
-- Stress or fatigue or illness
-- Beyond their capacity, etc.
+-     Overconfidence
+-     Stress or fatigue or illness
+-     Beyond their capacity, etc.
 Again, the abovementioned useful tactics may assist in diagnosis and solving.  With diligence, respect
 4 being progressed too rapidly through the training syllabus
 <!-- page: 52 -->
@@ -2246,7 +2171,7 @@ capabilities, and then applying this knowledge to the design of equipment, tools
 of work. Human factors can use input from many disciplines (e.g. designers, engineers, psychologists,
 managers) and is considered a mix of engineering and psychology. The field of human factors can be
 seen to have four main goals: enhancing safety; reducing error; enhancing comfort; and increasing
-productivity5.
+productivity⁵.
 In an Australian gliding context, we are not concerned with design as such, but with operational
 performance. Succinctly, human factors are the social and personal skills, such as communication and
 decision making which complement our technical skills. These are important for safe and efficient
@@ -2263,9 +2188,9 @@ Factors manual (Reference 1).
 The following CASA modules aim to help you understand the role of human behaviour in flying safely
 (Reference 2):
 The main influences are:
-- People
-- Aircraft or Equipment
-- Environment
+-     People
+-     Aircraft or Equipment
+-     Environment
 
 #### Introduction to human factors in sport, recreation, and general aviation
 <!-- content_type: airmanship -->
@@ -2366,124 +2291,66 @@ An overview of the overall training system is shown on the following page.
 Gliding Australia’s Glider Pilot Certificate training is made up of 44 Units of Competency which have been
 established along recognised training competency guidelines.
 The GPC Pathway units of Competency are shown below.
-#
-UNIT OF COMPETENCY
-#
-UNIT OF COMPETENCY
-1
-Lookout awareness
-23
-Rules of the air
-2
-Ground handling, signals
-24
-Human Factors and Pilot
-Limitations
-3
-Pre-flight preparation
-25
-Threat and Error Management
-4
-Orientation, sailplane stability
-26
-Assessment of competence for
-First Solo
-5
-Primary effects of controls
-27
-Advanced aerotowing
-6
-Aileron drag, rudder co-
-ordination
-28
-Side slipping
-7
-Straight flight, various speeds,
-trim
-29
-Steep turns
-8
-Sustained turns, all controls
-30
-Thermal centring techniques
-9
-Lookout scan procedures
-31
-Thermal entry
-10
-Use of ancillary controls
-32
-Soaring with other gliders
-11
-Introduction to Soaring
-33
-Thermal sources and structure
-12
-Slow flight, stalling
-34
-Outlanding planning,
-demonstration and execution
-13
-Launch and release
-35
-Flight preparation, glider, trailer
-and pilot
-14
-Take-off
-36
-Navigation and airspace
-15
-Break-off and Circuit Planning
-37
-Passenger carrying
-16
-Circuit joining and execution
-38
-Meteorology and flight planning
-17
-Stabilised approach and landing
-39
-Advanced soaring instruments
-and flight computers
-18
-Spin/Spiral Dive avoidance and
-recovery
-40
-Cruising, speed to fly, height
-bands and thermal selection
-19
-Crosswind take-off and landing
-41
-Demonstrated cross country
-capability
-20
-Launch emergencies
-42
-Daily Inspections, Pilot
-Maintenance limits, DI Certificate
-21
-Radio use and endorsement
-43
-Independent operator
-responsibilities
-22
-Use of Situational Awareness
-Aids (FLARM/ADS-B/Radio)
-44
-Glider Pilot Certificate (application
-authorised)
+| # | UNIT OF COMPETENCY | # | UNIT OF COMPETENCY |  |
+| --- | --- | --- | --- | --- |
+| 1 | Lookout awareness | 23 | Rules of the air |  |
+|  | Ground handling, signals | 24 |  | Human Factors and Pilot |
+| 2 |  |  |  |  |
+|  |  |  |  | Limitations |
+| 3 | Pre-flight preparation | 25 | Threat and Error Management |  |
+|  | Orientation, sailplane stability | 26 |  | Assessment of competence for |
+| 4 |  |  |  |  |
+|  |  |  |  | First Solo |
+| 5 | Primary effects of controls | 27 | Advanced aerotowing |  |
+|  | Aileron drag, rudder co- | 28 | Side slipping |  |
+| 6 |  |  |  |  |
+|  | ordination |  |  |  |
+|  | Straight flight, various speeds, | 29 | Steep turns |  |
+| 7 |  |  |  |  |
+|  | trim |  |  |  |
+| 8 | Sustained turns, all controls | 30 | Thermal centring techniques |  |
+| 9 | Lookout scan procedures | 31 | Thermal entry |  |
+| 10 | Use of ancillary controls | 32 | Soaring with other gliders |  |
+| 11 | Introduction to Soaring | 33 | Thermal sources and structure |  |
+|  | Slow flight, stalling | 34 |  | Outlanding planning, |
+| 12 |  |  |  |  |
+|  |  |  |  | demonstration and execution |
+|  | Launch and release | 35 |  | Flight preparation, glider, trailer |
+| 13 |  |  |  |  |
+|  |  |  |  | and pilot |
+| 14 | Take-off | 36 | Navigation and airspace |  |
+| 15 | Break-off and Circuit Planning | 37 | Passenger carrying |  |
+| 16 | Circuit joining and execution | 38 | Meteorology and flight planning |  |
+|  | Stabilised approach and landing | 39 |  | Advanced soaring instruments |
+| 17 |  |  |  |  |
+|  |  |  |  | and flight computers |
+|  | Spin/Spiral Dive avoidance and | 40 |  | Cruising, speed to fly, height |
+| 18 |  |  |  |  |
+|  | recovery |  |  | bands and thermal selection |
+|  | Crosswind take-off and landing | 41 |  | Demonstrated cross country |
+| 19 |  |  |  |  |
+|  |  |  |  | capability |
+|  | Launch emergencies | 42 |  | Daily Inspections, Pilot |
+| 20 |  |  |  |  |
+|  |  |  |  | Maintenance limits, DI Certificate |
+|  | Radio use and endorsement | 43 |  | Independent operator |
+| 21 |  |  |  |  |
+|  |  |  |  | responsibilities |
+|  | Use of Situational Awareness<br>Aids (FLARM/ADS-B/Radio) | 44 | Glider Pilot Certificate (application authorised) | Glider Pilot Certificate (application |
+| 22 |  |  |  |  |
+|  |  |  |  | authorised) |
 The assessment criteria in GPC units uses specific language to define what the student pilot must do to
 demonstrate competence.  These terms include:
-- Describe
-- Demonstrate
-- Discuss
-- Explain
-- Identify
-- Perform
-- Maintain
-- Understand
-- Plan
-- Correct
+-     Describe
+-     Demonstrate
+-     Discuss
+-     Explain
+-     Identify
+-     Perform
+-     Maintain
+-     Understand
+-     Plan
+-     Correct
 <!-- page: 58 -->
 
 These terms can be used in combination, e.g. describe and demonstrate.
@@ -2507,14 +2374,14 @@ to more advanced units.
 Note: Students MUST BE COMPETENT at all units 1 to 9 before moving to the next units.  It is important
 that the student has consolidated the building block units before moving on to more advanced units.
 Flexibility in the order of units may be due to:
-- Launch method
-- Weather conditions
-- Type and performance of glider
-- Average flight duration
-- Prior aviation experience
-- Aptitude and knowledge
+-     Launch method
+-     Weather conditions
+-     Type and performance of glider
+-     Average flight duration
+-     Prior aviation experience
+-     Aptitude and knowledge
 - Opportunity and exposure to favourable or unfavourable conditions
-- Level of learning from mistakes and errors
+-     Level of learning from mistakes and errors
 - Level of learning from practice and visualisation
 - Trainer skills and knowledge applied to pilot benefit
 Pilots may, at any given time, be trained in several units at the same time, yet care must be taken to
@@ -2533,7 +2400,7 @@ Competency for each unit is when the student reliably and consistently:
 - demonstrates competence under a broad range of conditions and
 - can amend actions and decisions to cater for a range of threats and errors
 - can clearly explain options and decisions and
-- can cater for a range of eventualities.
+-     can cater for a range of eventualities.
 On the Training Card, a competency level of 4 or 5 means that new lessons can be introduced.  Some
 aspects of the syllabus will not achieve a full level of competence till later in the training, even though
 <!-- page: 59 -->
@@ -2580,9 +2447,11 @@ All the pathway units are linked, with prerequisites in many cases.  The progres
 the next two pages.
 <!-- page: 60 -->
 
+*[Diagram / figure — see source PDF.]*
 Figure 1 - Progression Chart page 1
 <!-- page: 61 -->
 
+*[Diagram / figure — see source PDF.]*
 Figure 2 - Progression Chart page 2
 <!-- page: 62 -->
 
@@ -2594,13 +2463,13 @@ GPC.  Once they have completed their GPC, they then move to a formal standard lo
 The GPC logbook Is the pilot’s first logbook.  The Introduction explains the use of Trainer’s guide and
 Pilot’s Guide, sign-off process, and flowchart.  It contains:
 - A list of the 44 GPC units, and Theory Lessons
-- The Training progress card
-- GPC sign off by trainers
+-     The Training progress card
+-     GPC sign off by trainers
 - Trainer Notes – provides feedback on student progress and skills acquisition
-- Logbook pages
+-     Logbook pages
 - Logbook Endorsements (Radio, A cert, B cert, C cert, Private Passenger endorsement, Daily
 Inspection rating).
-- Checklists
+-     Checklists
 
 ### Trainer Reference Cards
 <!-- content_type: theory -->
@@ -2706,8 +2575,8 @@ supposed culpability. These have not proven useful, since they require a large n
 along the way, and there is no evidence they contribute to reporting or learning. They focus on the
 individual and their acts, not on the broader systemic conditions that underlie human behaviour.
 Today, Just Culture is increasingly organised around these three questions:
-- Who has been impacted by the incident?
-- What do they need?
+-     Who has been impacted by the incident?
+-     What do they need?
 - Whose obligation or role is it to meet those needs?
 An account, in such a just culture, is not something you get a member to pay or settle, but a story you
 empower them, and others, to tell. You’ll find that the incident impacted more people than just them.
@@ -2717,8 +2586,7 @@ will we know it’s done? This can even include a public apology (‘accounting�
 When dealing with incidents and accidents on the field, adopt this restorative just culture approach. In
 training panel meetings, also adopt the restorative just culture approach, e.g.  Bloggs has a bad ground
 loop incident
-Old Approach
-Just Culture Approach
+Old Approach    Just Culture Approach
 The old approach may have been that
 Bloggs is a hopeless pilot, and always has
 been so the duty instructor grounds him till
@@ -2782,16 +2650,17 @@ reducing accidents.
 
 Professor James Reason hypothesizes that most accidents can be traced to one or more of four levels of
 failure:
-- Organisational influences,
-- Unsafe supervision,
-- Preconditions for unsafe acts, and
-- The unsafe acts themselves.
+-     Organisational influences,
+-     Unsafe supervision,
+-     Preconditions for unsafe acts, and
+-     The unsafe acts themselves.
 In the Swiss Cheese model, an organisation's defences against failure are modelled as a series of
 barriers, represented as slices of the cheese. The holes in the cheese slices represent individual
 weaknesses in individual parts of the system and are continually varying in size and position in all slices.
 The system produces failures when holes in all of the slices momentarily align, permitting "a trajectory of
 accident opportunity", so that a hazard passes through holes in all of the defences, leading to an
 accident.
+*[Diagram / figure — see source PDF.]*
 <!-- page: 68 -->
 
 ### Incident Reporting
@@ -2799,10 +2668,10 @@ accident.
 
 “You can’t improve what you don’t measure”
 Reporting of incidents is important to be able to:
-- Learn from the incident
-- Prevent further incidents
-- Communicate hazards
-- Establish or amend procedures
+-     Learn from the incident
+-     Prevent further incidents
+-     Communicate hazards
+-     Establish or amend procedures
 One key to the successful implementation of incident reporting is to attain a “just culture” reporting
 environment
 This effective reporting culture depends on how those organisations handle blame and punishment. Only
@@ -2815,21 +2684,18 @@ What is needed is a “just culture”, an atmosphere of trust in which people a
 rewarded, for providing essential safety-related information – but in which they are also clear about
 where the line must be drawn between acceptable and unacceptable behaviour.
 The reporting system should have the following qualities:
-Trusted
-Information will not be used against them
+Trusted    Information will not be used against them
 Non-punitive
 Protected against legal, administrative or disciplinary sanctions, except in
 case of gross negligence, wilful violation, criminal activity or intent
 Inclusive
 Targeted at all aspects of aircraft operation, such as flight operation, aircraft
 maintenance, aerodrome operation, etc.
-Confidential
-Confidentiality should be an option
+Confidential    Confidentiality should be an option
 Independent
 The collection and analysis are independent of the operation where the
 incident occurred
-Simple
-System is easily used and administered
+Simple    System is easily used and administered
 Acknowledged
 The reporter of the incident is kept informed and their report acknowledged
 Promoted
@@ -2862,12 +2728,12 @@ Various techniques can be used to investigate incidents, but the principles are 
 instructors generally do not become deeply involved in investigations, some knowledge can add to the
 general safety aspects of the club’s operations.
 A simple description of incident investigation is:
-- Step 1: Gather information
+-     Step 1: Gather information
 - Step 2: Search for and establish facts and immediate causes
 - Step 3: Establish essential contributing factors
-- Step 4: Find root causes
-- Step: 5 Determine corrective actions
-- Step 6: Implement corrective actions
+-     Step 4: Find root causes
+-     Step: 5 Determine corrective actions
+-     Step 6: Implement corrective actions
 Root Cause Analysis is a range of techniques used to uncover the true or root causes of incidents. It is
 unlikely that saying “The pilot should have been more careful” would be a satisfactory reason why an
 incident occurred. Example root causes could include system deficiencies, unsafe acts, poor supervision,
@@ -2902,8 +2768,8 @@ The benefit of learnings from incidents includes:
 - assessment of the safety implications of each incident including previous similar incidents and
 timely corrective actions to prevent recurrence of the incident.
 - ensuring that knowledge of incidents is disseminated so that others may benefit from them.
-- help prevent future accidents,
-- help identify and eliminate hazards
+-     help prevent future accidents,
+-     help identify and eliminate hazards
 - expose deficiencies in processes or equipment
 When reporting is good and there is a lot of data collected, improvements in systems can be identified
 and rectified.  Sometimes a one-off incident report can identify an issue that needs addressing
@@ -2931,7 +2797,7 @@ preserve valuable evidence in order to determine the critical factors underlying
 An example of an IRM may include:
 - a death or serious injury to a person caused by contact with an aircraft, aircraft component or jet
 blast
-- an aircraft is believed missing
+-     an aircraft is believed missing
 - an aircraft is suffering damage, or reasonable grounds exist for believing so
 - a breakdown of separation standards (vertical, lateral or longitudinal) in CTA.
 IRMs require immediate (as soon as practical) reporting by telephone and then a follow-up written report
@@ -2948,17 +2814,14 @@ Act, responsible person must report RRMs within 72 hours of becoming aware of th
 An example of a RRM may include (AIP ENR 1.14):
 - an injury, other than a serious injury, to a person on board the aircraft
 - a flight crew member becoming incapacitated while operating the aircraft
-- an airprox
+-     an airprox
 <!-- page: 71 -->
 
 - an occurrence that results in difficulty controlling the aircraft, including any of the following:
-o
-an aircraft system failure
-o
-a weather phenomenon
-o
+oo    an aircraft system failure
+o    a weather phenomenon
 operation outside the aircraft’s approved flight envelope
-- fuel exhaustion
+-     fuel exhaustion
 - the aircraft’s supply of useable fuel becoming so low (whether or not as a result of fuel starvation)
 that the safety of the aircraft is compromised
 - a collision with an animal, or a bird, on a certified aerodrome.

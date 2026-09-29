@@ -2,7 +2,8 @@
 
 Transforms (structure-preserving, no wording changes beyond whitespace/join):
 - join bare list markers ``(a)`` / ``(i)`` / ``1.`` with the following line
-- join orphan ``-`` / ``●`` bullet markers with the following line
+- join orphan ``-`` / ``●`` / ``o`` / ```` bullet markers with the following line
+- join a trailing line-break hyphen onto the next word (``non-`` + ``compliance``)
 - fix ``- \\ntext`` bullets left by PDF extraction
 - restore common acronyms in headings (GPC, AEI, …)
 - merge appendix title fragments wrongly promoted as ``### Instructor Training``
@@ -29,6 +30,8 @@ _BARE_MARKER = re.compile(
 )
 
 _BARE_BULLET = re.compile(r"^(?:[-*●•]|\-\s*)$")
+# Second- and third-level bullets the PDF draws as a lone glyph.
+_ORPHAN_BULLET = {"o": "  - ", "◦": "  - ", "": "    - ", "▪": "    - "}
 
 _HEADING = re.compile(r"^(#{1,6}) (.+?)\s*$")
 _PAGE = re.compile(r"^<!-- page: \d+ -->\s*$")
@@ -99,12 +102,60 @@ def _is_structural(line: str) -> bool:
     )
 
 
+def _next_content(lines: list[str], start: int) -> int | None:
+    """Index of the next non-empty line, allowing a single blank in between."""
+    j = start
+    blanks = 0
+    while j < len(lines) and not lines[j].strip():
+        blanks += 1
+        j += 1
+        if blanks > 1:
+            return None
+    if j >= len(lines):
+        return None
+    return j
+
+
+def _join_hyphens(lines: list[str]) -> list[str]:
+    """``non-`` / ``compliance`` and ``take-`` / ``off`` from a PDF line wrap."""
+    out: list[str] = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        nxt_i = i + 1
+        if (
+            nxt_i < len(lines)
+            and not _is_structural(line)
+            and not line.lstrip().startswith("|")
+            and re.search(r"[A-Za-z]-$", line.rstrip())
+        ):
+            nxt = lines[nxt_i]
+            if not _is_structural(nxt) and re.match(r"[a-z]", nxt.lstrip()):
+                out.append(line.rstrip() + nxt.lstrip())
+                i += 2
+                continue
+        out.append(line)
+        i += 1
+    return out
+
+
 def _join_markers(lines: list[str]) -> list[str]:
     out: list[str] = []
     i = 0
     while i < len(lines):
         line = lines[i]
         nxt = lines[i + 1] if i + 1 < len(lines) else None
+        orphan = _ORPHAN_BULLET.get(line.strip())
+        if orphan is not None:
+            j = _next_content(lines, i + 1)
+            if j is not None and not _is_structural(lines[j]):
+                out.append(f"{orphan}{lines[j].strip()}")
+                i = j + 1
+                continue
+            if j is not None and _is_structural(lines[j]):
+                # The bullet's text was promoted to a heading.
+                i += 1
+                continue
         if (
             nxt is not None
             and not _is_structural(nxt)
@@ -224,6 +275,7 @@ def polish(md: str) -> str:
             fm, body = "", md
 
     lines = body.splitlines()
+    lines = _join_hyphens(lines)
     lines = _join_markers(lines)
     lines = _join_markers(lines)  # second pass for stacked markers
     lines = _merge_appendix_instructor_fragments(lines)

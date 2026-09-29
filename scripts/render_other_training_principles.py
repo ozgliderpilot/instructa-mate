@@ -11,6 +11,8 @@ from pathlib import Path
 
 import fitz
 
+from other_layout import FIGURE_NOTE, LayoutState, join_spans, merge_layout
+
 ROOT = Path(__file__).resolve().parents[1]
 PDF = ROOT / "corpus" / "Training Principles & Techniques Manual.pdf"
 OUT = ROOT / "corpus" / "md" / "other" / "unit-training-principles.md"
@@ -109,11 +111,8 @@ def _smart_module(text: str) -> str:
     return _fix(text.title()) if text.isupper() else text
 
 
-_FIGURE_NOTE = "*[Diagram / figure — see source PDF.]*"
-
-
-def _page_lines(page: fitz.Page) -> list[str]:
-    out: list[str] = []
+def _page_lines(page: fitz.Page, state: LayoutState) -> list[str]:
+    raw: list[tuple[float, float, float, str, bool, float]] = []
     for block in page.get_text("dict")["blocks"]:
         if block.get("type") != 0:
             continue
@@ -121,14 +120,16 @@ def _page_lines(page: fitz.Page) -> list[str]:
             spans = line.get("spans", [])
             if not spans:
                 continue
-            text = "".join(s["text"] for s in spans).strip()
+            text = join_spans(spans)
             if not text or _CHROME.match(text):
                 continue
-            # Normalize bullets to markdown list markers.
             if text.startswith("●"):
                 text = "- " + text.lstrip("●").strip()
-            out.append(text)
-    return out
+            bold = any(s.get("flags", 0) & (1 << 4) for s in spans)
+            size = max(s["size"] for s in spans)
+            x0, y0, _x1, y1 = line["bbox"]
+            raw.append((x0, y0, y1, text, bold, size))
+    return [text for text, _bold, _size in merge_layout(page, raw, state)]
 
 
 def render() -> str:
@@ -150,6 +151,7 @@ def render() -> str:
     ]
     open_heading = False
     unmatched: list[str] = []
+    layout = LayoutState()
 
     def emit_heading(level: int, title: str) -> None:
         nonlocal open_heading
@@ -178,7 +180,7 @@ def render() -> str:
         if page_no in _SKIP_PAGES:
             continue
 
-        lines = _page_lines(doc[page_index])
+        lines = _page_lines(doc[page_index], layout)
         has_images = bool(doc[page_index].get_images())
         if not lines and not has_images:
             continue
@@ -208,8 +210,8 @@ def render() -> str:
             body_on_page = True
 
         # Figure-only (or heading+figure) pages must still own a citation page.
-        if has_images and not body_on_page:
-            emit_body(_FIGURE_NOTE)
+        if has_images and not body_on_page and FIGURE_NOTE not in lines:
+            emit_body(FIGURE_NOTE)
 
     if toc_i < len(toc):
         unmatched = [f"p{p} L{lv} {t}" for lv, t, p in toc[toc_i:]]

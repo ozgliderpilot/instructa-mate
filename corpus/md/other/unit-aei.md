@@ -436,52 +436,52 @@ Finally, introducing other people to your sport can be very rewarding. You will 
 
 ### Details of flying experience
 
-Fields recorded on the syllabus form:
-
-- Name
-- Date of birth
-- Address
-- Phone (home and work)
-- Email
-- Club
-- Gliding hours (total) / (Last 12 Months)
-- Launches (total) / (Last 12 Months)
-- Badges (or part badges) held
-- Power flying experience (hrs)
-- Tug-pilot?
-- Powered sailplane experience
+| Name | Date of birth |
+| --- | --- |
+| Address |  |
+| Phone (home and work) | Email: |
+| Club |  |
+| Gliding hours (total) | (Last 12 Months) |
+| Launches (total) | (Last 12 Months) |
+| Badges (or part badges) held |  |
+| Power flying experience (hrs) | Tug-pilot? |
+| Powered sailplane experience |  |
 
 Chief Flying Instructors: When a topic is first briefed taught or demonstrated, initial the ‘Brief’ column. Once the trainee has demonstrated proficiency in a topic you may initial the Competent (Comp) column and record the date.
 
 | Exercise | Brief | Comp | Date |
 | --- | --- | --- | --- |
-| PRINCIPLES & METHOD OF FLYING INSTRUCTION | | | |
-| General teaching principles | | | |
-| Flight and Risk Management | | | |
-| Pre- & post-flight briefing | | | |
-| Flying demonstration | | | |
-| Trainee practice | | | |
-| CHECK LISTS | | | |
-| Pre Take-off Checks | | | |
-| Pre landing Checks | | | |
-| LOOKOUT | | | |
-| How to lookout | | | |
-| AIRBORNE TRAINING | | | |
-| Trainee ‘follow through’ | | | |
-| Who has control? | | | |
-| Keeping in range | | | |
-| Elevator | | | |
-| Airspeed Indicator & Speed Monitoring | | | |
-| Stalling | | | |
-| Ailerons | | | |
-| Rudder | | | |
-| Spin and recovery | | | |
-| Spiral dive and recovery | | | |
+| PRINCIPLES & METHOD OF FLYING INSTRUCTION |  |  |  |
+| General teaching principles |  |  |  |
+| Flight and Risk Management |  |  |  |
+| Pre- & post-flight briefing |  |  |  |
+| Flying demonstration |  |  |  |
+| Trainee practice |  |  |  |
+| CHECK LISTS |  |  |  |
+| Pre Take-off Checks |  |  |  |
+| Pre landing Checks |  |  |  |
+| LOOKOUT |  |  |  |
+| How to lookout |  |  |  |
+
+| Exercise | Brief | Comp | Date |
+| --- | --- | --- | --- |
+| AIRBORNE TRAINING |  |  |  |
+| Trainee ‘follow through’ |  |  |  |
+| Who has control? |  |  |  |
+| Keeping in range |  |  |  |
+| Elevator |  |  |  |
+| Airspeed Indicator & Speed<br>Monitoring |  |  |  |
+| Stalling |  |  |  |
+| Ailerons |  |  |  |
+| Rudder |  |  |  |
+| Spin and recovery |  |  |  |
+| Spiral dive and recovery |  |  |  |
 
 Overall Assessment (In the space below, add any comments you feel are appropriate).
 
 I hereby certify that the candidate has been trained as an Air Experience Instructor in accordance with the guidelines and a rating issued.
 
-Signature / Date / Name / CFI
+Signature ............................................................................................ Date: ....................................
+Name ................................................................................................. CFI
 
 NOTE: A duly signed copy of this completed Air Experience Instructor Training Syllabus must be returned to the GFA office.
