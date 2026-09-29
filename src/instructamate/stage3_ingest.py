@@ -18,7 +18,7 @@ import json
 from dataclasses import dataclass
 from importlib import resources
 from pathlib import Path
-from typing import Any, Protocol, Sequence
+from typing import Any, Literal, Protocol, Sequence
 
 from instructamate.stage2_chunker import ChunkRecord, SyncPlan
 
@@ -223,11 +223,12 @@ def ensure_vector_index(collection: Any) -> None:
         expected=load_vector_index_definition(),
         compatible=_vector_definitions_compatible,
         label="vector search index",
+        on_incompatible="raise",
     )
 
 
 def ensure_search_index(collection: Any) -> None:
-    """Create ``chunks_search`` if missing; fail loud if an existing index differs."""
+    """Create ``chunks_search`` if missing; update if the committed definition drifted."""
     _ensure_index(
         collection,
         name=SEARCH_INDEX_NAME,
@@ -235,6 +236,7 @@ def ensure_search_index(collection: Any) -> None:
         expected=load_search_index_definition(),
         compatible=_search_definitions_compatible,
         label="search index",
+        on_incompatible="update",
     )
 
 
@@ -252,6 +254,7 @@ def _ensure_index(
     expected: dict[str, Any],
     compatible: Any,
     label: str,
+    on_incompatible: Literal["raise", "update"] = "raise",
 ) -> None:
     from pymongo.operations import SearchIndexModel
 
@@ -276,10 +279,14 @@ def _ensure_index(
         raise ValueError(
             f"{label} {name!r} exists but has no definition to compare"
         )
-    if not compatible(expected, actual):
-        raise ValueError(
-            f"{label} {name!r} exists but is incompatible with the committed definition"
-        )
+    if compatible(expected, actual):
+        return
+    if on_incompatible == "update":
+        collection.update_search_index(name, expected)
+        return
+    raise ValueError(
+        f"{label} {name!r} exists but is incompatible with the committed definition"
+    )
 
 
 def _find_search_index(collection: Any, name: str) -> dict[str, Any] | None:

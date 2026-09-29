@@ -24,6 +24,10 @@
         "content_type": {
           "type": "token",
           "normalizer": "lowercase"
+        },
+        "source": {
+          "type": "token",
+          "normalizer": "lowercase"
         }
       }
     }

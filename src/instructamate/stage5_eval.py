@@ -315,20 +315,36 @@ def retrieve_for_step(
     reranker: ParentReranker | None = None,
     n: int = DEFAULT_N,
     p: int = DEFAULT_P,
+    sources: Sequence[str] | None = None,
 ) -> list[ParentHit]:
     """Retrieve parents for one Stage 3 ablation step.
 
     ``vector`` → fusion vector, no rerank.
     ``hybrid`` → ``$rankFusion``, no rerank.
     ``hybrid_rerank`` → hybrid + required ``reranker``.
+    ``sources`` is forwarded to :func:`retrieve_parents` (``None`` = whole corpus).
     """
     if step == "vector":
         return retrieve_parents(
-            query, collection, embedder, n=n, p=p, fusion="vector", reranker=None
+            query,
+            collection,
+            embedder,
+            n=n,
+            p=p,
+            fusion="vector",
+            reranker=None,
+            sources=sources,
         )
     if step == "hybrid":
         return retrieve_parents(
-            query, collection, embedder, n=n, p=p, fusion="hybrid", reranker=None
+            query,
+            collection,
+            embedder,
+            n=n,
+            p=p,
+            fusion="hybrid",
+            reranker=None,
+            sources=sources,
         )
     if step == "hybrid_rerank":
         if reranker is None:
@@ -341,6 +357,7 @@ def retrieve_for_step(
             p=p,
             fusion="hybrid",
             reranker=reranker,
+            sources=sources,
         )
     raise ValueError(f"unknown ablation step: {step!r}")
 

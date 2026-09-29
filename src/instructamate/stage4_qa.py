@@ -183,11 +183,14 @@ def answer_question(
     p: int = DEFAULT_P,
     fusion: Literal["vector", "hybrid"] = "hybrid",
     reranker: ParentReranker | None = None,
+    sources: Sequence[str] | None = None,
 ) -> QaResult:
     """Retrieve parents for ``question``, then refuse-or-cite.
 
     Paste-through path for club GPC questions: hybrid retrieval by default
-    (ADR 0005), then :func:`answer_from_parents`.
+    (ADR 0005), then :func:`answer_from_parents`. ``sources`` is unset so Q&A
+    searches the whole corpus (guides + ``other``). Lesson planning should call
+    :func:`retrieve_parents` with ``sources=GUIDE_SOURCES`` instead.
     """
     parents = retrieve_parents(
         question,
@@ -197,6 +200,7 @@ def answer_question(
         p=p,
         fusion=fusion,
         reranker=reranker,
+        sources=sources,
     )
     return answer_from_parents(question, parents, completer)
 

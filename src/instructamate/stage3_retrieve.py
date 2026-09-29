@@ -8,6 +8,7 @@ Public seams (ADR 0005 ablation steps 1–3):
 - :class:`ParentHit` — parent chunk with citation metadata
 - :class:`ParentReranker` / :class:`VoyageReranker` — rerank parent texts
 - :data:`PRIMARY_CONTENT_TYPES` — CONTEXT.md primary roles (query-time filter)
+- :data:`GUIDE_SOURCES` — Pilot+Trainer (lesson planning); Q&A leaves sources unset
 - :data:`DEFAULT_N` / :data:`DEFAULT_P` — ADR 0005 starting widths (N=70, P=10)
 - :data:`RERANK_MODEL` — Voyage ``rerank-2.5``
 """
@@ -22,6 +23,7 @@ from instructamate.stage3_ingest import SEARCH_INDEX_NAME, VECTOR_INDEX_NAME
 __all__ = [
     "DEFAULT_N",
     "DEFAULT_P",
+    "GUIDE_SOURCES",
     "PRIMARY_CONTENT_TYPES",
     "ParentHit",
     "ParentReranker",
@@ -35,6 +37,10 @@ __all__ = [
 DEFAULT_N = 70
 DEFAULT_P = 10
 RERANK_MODEL = "rerank-2.5"
+
+#: Pilot + Trainer guides. Lesson planning filters to this; Q&A leaves ``sources``
+#: unset so ``other`` (MOSP 2, training manuals, AEI) is included.
+GUIDE_SOURCES: tuple[str, ...] = ("pilot", "trainer")
 
 #: Stable ``$in`` list for the vector-search content_type filter.
 _PRIMARY_CONTENT_TYPE_FILTER = sorted(PRIMARY_CONTENT_TYPES)
@@ -135,6 +141,7 @@ def retrieve_parents(
     p: int = DEFAULT_P,
     fusion: Literal["vector", "hybrid"] = "vector",
     reranker: ParentReranker | None = None,
+    sources: Sequence[str] | None = None,
 ) -> list[ParentHit]:
     """Search primary children, expand/dedupe parents, optionally rerank, top ``p``.
 
@@ -147,12 +154,20 @@ def retrieve_parents(
     ``reranker`` (ablation step 3): after expand, rerank unique parent texts with
     Voyage ``rerank-2.5``, then keep top ``p``. Without a reranker, parents stay in
     best-child order (truncated to ``p``).
+
+    ``sources`` is a query-time filter on chunk ``source`` (already a vector-index
+    filter field). ``None`` searches the whole corpus. Lesson planning passes
+    :data:`GUIDE_SOURCES`; Q&A leaves this unset so ``other`` is included.
     """
+    source_filter = _normalize_sources(sources)
     query_vector = embedder.embed_query(query)
     if fusion == "hybrid":
-        pipeline = _hybrid_child_pipeline(query, query_vector, n)
+        pipeline = _hybrid_child_pipeline(query, query_vector, n, source_filter)
     else:
-        pipeline = [_vector_search_stage(query_vector, n), _CHILD_HIT_PROJECT]
+        pipeline = [
+            _vector_search_stage(query_vector, n, source_filter),
+            _CHILD_HIT_PROJECT,
+        ]
 
     child_hits = list(collection.aggregate(pipeline))
     parent_ids = expand_to_unique_parents(child_hits)
@@ -199,13 +214,14 @@ def _hybrid_child_pipeline(
     query: str,
     query_vector: list[float],
     n: int,
+    sources: list[str] | None,
 ) -> list[dict[str, Any]]:
     return [
         {
             "$rankFusion": {
                 "input": {
                     "pipelines": {
-                        "vector": [_vector_search_stage(query_vector, n)],
+                        "vector": [_vector_search_stage(query_vector, n, sources)],
                         "fullText": [
                             {
                                 "$search": {
@@ -219,20 +235,7 @@ def _hybrid_child_pipeline(
                                                 }
                                             }
                                         ],
-                                        "filter": [
-                                            {
-                                                "equals": {
-                                                    "path": "kind",
-                                                    "value": "child",
-                                                }
-                                            },
-                                            {
-                                                "in": {
-                                                    "path": "content_type",
-                                                    "value": _PRIMARY_CONTENT_TYPE_FILTER,
-                                                }
-                                            },
-                                        ],
+                                        "filter": _search_filters(sources),
                                     },
                                 }
                             },
@@ -247,7 +250,11 @@ def _hybrid_child_pipeline(
     ]
 
 
-def _vector_search_stage(query_vector: list[float], n: int) -> dict[str, Any]:
+def _vector_search_stage(
+    query_vector: list[float],
+    n: int,
+    sources: list[str] | None,
+) -> dict[str, Any]:
     return {
         "$vectorSearch": {
             "index": VECTOR_INDEX_NAME,
@@ -255,9 +262,35 @@ def _vector_search_stage(query_vector: list[float], n: int) -> dict[str, Any]:
             "queryVector": query_vector,
             "numCandidates": max(n * 10, 50),
             "limit": n,
-            "filter": {
-                "kind": {"$eq": "child"},
-                "content_type": {"$in": _PRIMARY_CONTENT_TYPE_FILTER},
-            },
+            "filter": _vector_filter(sources),
         }
     }
+
+
+def _normalize_sources(sources: Sequence[str] | None) -> list[str] | None:
+    if sources is None:
+        return None
+    normalized = sorted({name.strip() for name in sources if name.strip()})
+    if not normalized:
+        raise ValueError("sources must be a non-empty sequence of source names")
+    return normalized
+
+
+def _vector_filter(sources: list[str] | None) -> dict[str, Any]:
+    filt: dict[str, Any] = {
+        "kind": {"$eq": "child"},
+        "content_type": {"$in": _PRIMARY_CONTENT_TYPE_FILTER},
+    }
+    if sources is not None:
+        filt["source"] = {"$in": sources}
+    return filt
+
+
+def _search_filters(sources: list[str] | None) -> list[dict[str, Any]]:
+    filters: list[dict[str, Any]] = [
+        {"equals": {"path": "kind", "value": "child"}},
+        {"in": {"path": "content_type", "value": _PRIMARY_CONTENT_TYPE_FILTER}},
+    ]
+    if sources is not None:
+        filters.append({"in": {"path": "source", "value": sources}})
+    return filters

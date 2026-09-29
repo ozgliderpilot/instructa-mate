@@ -7,7 +7,7 @@ from __future__ import annotations
 import json
 from typing import Sequence
 
-from instructamate.stage3_retrieve import ParentHit
+from instructamate.stage3_retrieve import GUIDE_SOURCES, ParentHit
 from instructamate.stage4_qa import (
     CANONICAL_REFUSAL,
     Citation,
@@ -185,6 +185,45 @@ def test_answer_question_retrieves_then_grounds_or_refuses():
 
     assert result.grounded is True
     assert result.citations == (Citation(source="pilot", unit="5", page=2),)
+    assert "source" not in collection.last_pipeline[0]["$rankFusion"]["input"]["pipelines"]["vector"][0]["$vectorSearch"]["filter"]
+
+
+def test_answer_question_forwards_guide_sources_filter():
+    parents = {
+        "pilot:5:key-messages": {
+            "_id": "pilot:5:key-messages",
+            "kind": "parent",
+            "source": "pilot",
+            "unit": "5",
+            "content_type": "key_messages",
+            "heading_path": ["KEY MESSAGES"],
+            "pages": ["5-2"],
+            "text": "Primary attitude reference is the horizon.",
+        }
+    }
+    child_hits = [
+        {"_id": "pilot:5:key-messages:c1", "parent_id": "pilot:5:key-messages"},
+    ]
+    collection = _RetrievingFakeCollection(child_hits=child_hits, parents=parents)
+
+    result = answer_question(
+        "What is your primary attitude reference for controlling pitch?",
+        collection,
+        embedder=_FakeQueryEmbedder(),
+        completer=_FixedCompleter(
+            {
+                "grounded": True,
+                "answer": "The natural horizon.",
+                "citations": [{"source": "pilot", "unit": "5", "page": 2}],
+            }
+        ),
+        fusion="vector",
+        sources=GUIDE_SOURCES,
+    )
+
+    assert result.grounded is True
+    stage = collection.last_pipeline[0]["$vectorSearch"]
+    assert stage["filter"]["source"] == {"$in": ["pilot", "trainer"]}
 
 
 def test_malformed_completion_is_refused():
@@ -258,7 +297,7 @@ class _RetrievingFakeCollection:
         self.parents = parents
 
     def aggregate(self, pipeline: Sequence):
-        del pipeline
+        self.last_pipeline = list(pipeline)
         return list(self.child_hits)
 
     def find(self, filter: dict, projection: dict | None = None):

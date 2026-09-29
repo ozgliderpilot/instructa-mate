@@ -66,6 +66,7 @@ class IndexAwareCollection(FakeCollection):
     ) -> None:
         super().__init__(docs)
         self.created: list[Any] = []
+        self.updated: list[dict[str, Any]] = []
         self._indexes: list[dict[str, Any]] = list(indexes or [])
         self._forbid_create = forbid_create
 
@@ -86,6 +87,14 @@ class IndexAwareCollection(FakeCollection):
             }
         )
         return doc["name"]
+
+    def update_search_index(self, name: str, definition: dict[str, Any]) -> None:
+        self.updated.append({"name": name, "definition": definition})
+        for index in self._indexes:
+            if index.get("name") == name:
+                index["latestDefinition"] = definition
+                return
+        raise AssertionError(f"no search index {name!r} to update")
 
 
 class FakeEmbedder:
@@ -333,6 +342,10 @@ def test_ensure_search_index_creates_when_missing():
     assert coll.created[0]["type"] == "search"
     assert coll.created[0]["definition"] == definition
     assert definition["mappings"]["fields"]["text"]["analyzer"] == "jargon_text"
+    assert definition["mappings"]["fields"]["source"] == {
+        "type": "token",
+        "normalizer": "lowercase",
+    }
 
 
 def test_ensure_search_index_is_noop_when_compatible():
@@ -353,23 +366,27 @@ def test_ensure_search_index_is_noop_when_compatible():
     )
 
 
-def test_ensure_search_index_fails_loud_on_incompatible_existing():
+def test_ensure_search_index_updates_incompatible_existing():
     from instructamate.stage3_ingest import ensure_search_index
 
-    with pytest.raises(ValueError, match="incompatible"):
-        ensure_search_index(
-            IndexAwareCollection(
-                indexes=[
-                    {
-                        "name": SEARCH_INDEX_NAME,
-                        "type": "search",
-                        "latestDefinition": {
-                            "mappings": {"dynamic": True},
-                        },
-                    }
-                ]
-            )
-        )
+    coll = IndexAwareCollection(
+        indexes=[
+            {
+                "name": SEARCH_INDEX_NAME,
+                "type": "search",
+                "latestDefinition": {
+                    "mappings": {"dynamic": True},
+                },
+            }
+        ]
+    )
+
+    ensure_search_index(coll)
+
+    assert coll.created == []
+    assert coll.updated == [
+        {"name": SEARCH_INDEX_NAME, "definition": load_search_index_definition()}
+    ]
 
 
 def test_voyage_embedder_batches_and_sets_document_input_type():
